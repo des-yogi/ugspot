@@ -1,1 +1,1 @@
-# ugspot
+# UGSPOT
