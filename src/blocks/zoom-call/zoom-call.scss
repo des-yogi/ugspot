@@ -1,0 +1,89 @@
+.zoom-call {
+  margin: 64px 0;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner-col {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 12);
+  }
+
+  &__solution,
+  &__zoom {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: $screen-md) {
+      gap: 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-direction: initial;
+      gap: 56px;
+    }
+  }
+
+  &__img {
+    max-width: 610px;
+    margin: 0 auto;
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-xl) {
+      flex: 0 0 492px;
+    }
+
+    img,
+    video {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    @media (min-width: $screen-xl) {
+      flex: 1 1 auto;
+      justify-content: center;
+    }
+  }
+
+  h3,
+  &__text {
+    margin: 0;
+
+    span {
+      color: $main-color;
+    }
+  }
+
+  h3 {
+    font-size: $font-size--h2;
+  }
+
+  &__text {
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__zoom {
+    margin-top: 64px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-direction: row-reverse;
+    }
+  }
+}

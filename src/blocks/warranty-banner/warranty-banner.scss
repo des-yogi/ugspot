@@ -1,0 +1,61 @@
+.warranty-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin: 64px 0;
+  border: 1px solid $border-color;
+
+  @media (min-width: $screen-md) {
+    flex-direction: initial;
+    justify-content: center;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $white;
+    background-repeat: repeat;
+    background-size: 160px;
+    background-position: top center;
+    background-image: svg-load('../blocks/warranty-banner/bg-img/tile-bg.svg');
+    opacity: 0.05;
+  }
+
+  &__img {
+    flex: 0 0 144px;
+    width: 144px;
+    height: 144px;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-weight: 600;
+    }
+
+    span {
+      display: block;
+    }
+  }
+}

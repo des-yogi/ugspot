@@ -1,0 +1,24 @@
+.catalog-3-col {
+  margin: 64px 0;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__row {
+    gap: 24px 0;
+
+    @media (min-width: $screen-md) {
+      gap: 40px 0;
+    }
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 4);
+  }
+}

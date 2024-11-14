@@ -1,0 +1,84 @@
+.page-header {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    .video-call-btn {
+      display: none;
+
+      @media (min-width: $screen-xl) {
+        display: inline-flex;
+      }
+    }
+
+    .burger {
+
+      @media (min-width: $screen-xl) {
+        display: none;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &--icon {
+      width: 40px;
+      height: 40px;
+      color: $color-wa;
+      background-color: rgba($color-wa, 0.16);
+      border-radius: $border-radius;
+      transition: all $transition-time;
+
+      &:hover,
+      &:focus {
+        color: $white;
+        background-color: rgba($color-wa, 1);
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &--phone,
+    &--mail {
+
+      @media (max-width: $screen-md - 1) {
+        display: none;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+  }
+}

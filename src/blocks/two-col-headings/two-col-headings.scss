@@ -1,0 +1,31 @@
+.two-col-headings {
+  margin: 64px 0;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title,
+  &__script {
+    margin-bottom: 24px;
+    text-align: center;;
+  }
+
+  &__script {
+    font-size: 32px;
+    font-family: $font-family--script;
+    line-height: 1.1;
+    color: $main-color;
+  }
+
+  &__text {
+
+    @media (min-width: $screen-md) {
+      column-count: 2;
+      column-gap: 16px;
+      column-fill: balance;
+    }
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+  }
+}

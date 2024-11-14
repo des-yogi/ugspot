@@ -1,0 +1,18 @@
+<!--DEV
+@ @include('blocks/two-col-headings/two-col-headings.html', {
+  "headingLvl": "h1",
+  "headingTxt": "Windows by UGS Ltd",
+  "scriptTxt": "You will love what we do",
+  "text": '<p>UGS Ltd - Supply & Installation of Premium Window Units UGS Ltd offers both supply and installation as well as supply-only services for top-quality window units, manufactured in the UK and Europe. As your direct provider, we offer windows in all materials, including uPVC, aluminium, and timber (softwood and hardwood), available in a variety of types and profiles with extensive personalisation options.</p>
+  <p>We guarantee a tailored solution to match your project specifications and budget, ensuring fast delivery times and swift, high-quality completion. At UGS Ltd, we are committed to delivering windows that combine functionality, aesthetics, and durability for every project.</p>
+  <p>At UGS Ltd, we’re a family-run business where each one of us is dedicated to ensuring your windows are exactly what you envision. We work hard to guarantee they arrive on time and are installed with precision and care. We take great pride in what we do and are passionate about delivering high-quality results for every project. Let us help you open the door to a brighter, more comfortable home with UGS Ltd windows.</p>'
+})
+-->
+
+<section class="container  two-col-headings">
+  <@@headingLvl class="two-col-headings__title">@@headingTxt</@@headingLvl>
+  <p class="two-col-headings__script">@@scriptTxt</p>
+  <div class="two-col-headings__text">
+    @@text
+  </div>
+</section>
