@@ -1,0 +1,26 @@
+.logo {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 148px;
+    height: 40px;
+
+    @media (min-width: $screen-md) {
+      width: 177px;
+      height: 48px;
+    }
+  }
+
+  &--footer {
+
+    img {
+      width: 85px !important;
+      height: 102px !important;
+    }
+  }
+}

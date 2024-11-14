@@ -1,0 +1,37 @@
+<!--DEV
+@ @include('blocks/catalog-3-col/catalog-3-col.html', {
+  "title": "Bespoke Windows by Material",
+})
+-->
+
+<section class="container  catalog-3-col">
+  <h2 class="catalog-3-col__title">@@title</h2>
+
+  <div class="row  catalog-3-col__row">
+
+    <div class="catalog-3-col__col">
+      @@include('../../blocks/win-material-card/win-material-card.html', {
+        "img": "win-material-1",
+        "title": "UPVC windows",
+        "text": "UPVC stands for Unplasticized Polyvinyl Chloride. UPVC windows are made from a type of rigid plastic that is durable, low-maintenance, and provides good insulation. They are commonly used for their energy efficiency and resistance to weathering.",
+      })
+    </div>
+
+    <div class="catalog-3-col__col">
+      @@include('../../blocks/win-material-card/win-material-card.html', {
+        "img": "win-material-2",
+        "title": "Alu windows",
+        "text": "Alu typically refers to aluminum. Alu windows are windows with frames made of aluminum. Aluminum is known for its strength, durability, and resistance to corrosion. Aluminum windows are often chosen for their sleek, modern appearance.",
+      })
+    </div>
+
+    <div class="catalog-3-col__col">
+      @@include('../../blocks/win-material-card/win-material-card.html', {
+        "img": "win-material-3",
+        "title": "Timber windows",
+        "text": "Timber windows are windows with frames made of wood. Timber is a traditional and aesthetically pleasing material, offering a warm and natural look. Wooden windows are often chosen for their classic charm and the ability to be customized.",
+      })
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,86 @@
+.burger {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: rgba($link-color, 0.1);
+  border-radius: $border-radius;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  transition: all $transition-time;
+
+  &:hover,
+  &:focus {
+    background-color: #ffd3d3;
+
+    // & > span {
+    //   background: $link-color--hover;
+
+    //   &::before,
+    //   &::after {
+    //     background: $link-color--hover;
+    //   }
+    // }
+  }
+
+  > span {
+    display: inline-block;
+    width: 20px;
+    height: $toggler-part-height;
+    background: $link-color;
+    position: relative;
+    border-radius: 2px;
+    transition: background $transition-time $transition-time;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: $toggler-part-height;
+      background: $link-color;
+      border-radius: 2px;
+      transform-origin: 50% 50%;
+      transition: top $transition-time $transition-time, transform $transition-time;
+    }
+
+    &::before {
+      top: -7px;
+    }
+
+    &::after {
+      top: 7px;
+    }
+  }
+
+  &--close {
+
+    > span {
+      transition: background $transition-time 0s;
+      background: transparent;
+
+      &::before,
+      &::after {
+        transition: top $transition-time, transform $transition-time $transition-time;
+        top: 0;
+      }
+
+      &::before {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+
+      &::after {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+    }
+  }
+}

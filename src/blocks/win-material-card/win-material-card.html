@@ -1,0 +1,42 @@
+<!--DEV
+@ @include('blocks/win-material-card/win-material-card.html', {
+  "img": "win-material-1",
+  "title": "UPVC windows",
+  "text": "UPVC stands for Unplasticized Polyvinyl Chloride. UPVC windows are made from a type of rigid plastic that is durable, low-maintenance, and provides good insulation. They are commonly used for their energy efficiency and resistance to weathering.",
+})
+-->
+
+<article class="win-material-card">
+  <a href="#" class="embed-responsive embed-responsive--1-1  win-material-card__img" tabindex="-1">
+    <picture>
+      <source srcset="img/@@img.webp,
+                      img/@@img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+      <source srcset="img/@@img.jpg,
+                      img/@@img.jpg 2x" media="(min-width: 1280px)">
+      <!-- 390x390, 585x585 2x -->
+      <source srcset="img/@@img.webp" media="(min-width: 1024px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 1024px)">
+      <!-- 920x920 -->
+      <source srcset="img/@@img.webp" media="(min-width: 480px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 480px)">
+      <!-- 720x720 -->
+      <source srcset="img/@@img.webp" media="(min-width: 320px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 320px)">
+      <!-- 500x500 -->
+      <img src="img/@@img.jpg" alt="Alt text" width="584" height="584" loading="lazy">
+    </picture>
+  </a>
+
+  <div class="win-material-card__text-wrapper">
+    <div class="win-material-card__text">
+      <h3 class="win-material-card__title">
+        <a href="#" tabindex="-1">@@title</a>
+      </h3>
+      <p>@@text</p>
+    </div>
+    <a href="#" class="more-link">
+      <span>More details</span>
+      <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+    </a>
+  </div>
+</article>

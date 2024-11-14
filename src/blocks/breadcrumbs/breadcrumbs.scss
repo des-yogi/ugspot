@@ -1,0 +1,65 @@
+.breadcrumbs {
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    display: flex;
+    //flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    overflow-x: auto;
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+
+    &:not(:last-child)::after {
+      content: '\276F'; // U+276F, HTML-код &#10095; CSS-код  \276F - Прававя угловая скобка
+      display: inline-block;
+      margin-left: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: inherit;
+    }
+
+    &:first-child {
+
+      #{$block-name}__link {
+        transform: translateY(-2px);
+      }
+    }
+
+    &:last-child {
+
+      #{$block-name}__link {
+        text-decoration: none;
+        color: $text-muted;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    font-size: $font-size;
+    font-weight: inherit;
+    color: $text-color;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+      text-decoration: underline;
+    }
+  }
+}

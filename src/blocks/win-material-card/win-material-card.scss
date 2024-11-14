@@ -1,0 +1,52 @@
+.win-material-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  height: 100%;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__img {
+    border-radius: $border-radius;
+
+    &:hover,
+    &:focus {
+
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      transition: transform $transition-time;
+    }
+  }
+
+  &__text-wrapper {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .more-link {
+      margin-top: 8px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 16px;
+
+    a {
+      text-decoration: none;
+      hyphens: none;
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        color: $link-color--hover;
+      }
+    }
+  }
+}

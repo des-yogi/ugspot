@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home page</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>You have JavaScript disabled. We apologize, but this makes it difficult to use this site.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main>
+
+        @@include('blocks/big-banner/big-banner.html')
+
+        @@include('blocks/two-col-headings/two-col-headings.html', {
+          "headingLvl": "h1",
+          "headingTxt": "Windows by UGS Ltd",
+          "scriptTxt": "You will love what we do",
+          "text": '<p><strong>UGS Ltd - Supply & Installation of Premium Window Units</strong><br> UGS Ltd offers both supply and installation as well as supply-only services for top-quality window units, manufactured in the UK and Europe. As your direct provider, we offer windows in all materials, including uPVC, aluminium, and timber (softwood and hardwood), available in a variety of types and profiles with extensive personalisation options.</p><p>We guarantee a tailored solution to match your project specifications and budget, ensuring fast delivery times and swift, high-quality completion. At UGS Ltd, we are committed to delivering windows that combine functionality, aesthetics, and durability for every project.</p><p>At UGS Ltd, we’re a family-run business where each one of us is dedicated to ensuring your windows are exactly what you envision. We work hard to guarantee they arrive on time and are installed with precision and care. We take great pride in what we do and are passionate about delivering high-quality results for every project. Let us help you open the door to a brighter, more comfortable home with UGS Ltd windows.</p>'
+        })
+
+        @@include('blocks/warranty-banner/warranty-banner.html')
+
+        @@include('blocks/zoom-call/zoom-call.html')
+
+        @@include('blocks/certificates-carousel/certificates-carousel.html')
+
+        <hr>
+
+        @@include('blocks/catalog-3-col/catalog-3-col.html', {
+          "title": "Bespoke Windows by Material",
+        })
+
+        <hr>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

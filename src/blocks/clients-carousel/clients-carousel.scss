@@ -1,0 +1,9 @@
+// В этом файле должны быть стили для БЭМ-блока clients-carousel, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.clients-carousel {
+
+  $block-name:                &; // #{$block-name}__element
+
+}

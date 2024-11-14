@@ -1,0 +1,23 @@
+<!--DEV
+@ @include('blocks/big-banner/big-banner.html')
+-->
+
+<div class="container  big-banner" role="presentation">
+  <div class="big-banner__img">
+    <picture>
+      <source srcset="img/big-banner.webp,
+                      img/big-banner.webp 2x" media="(min-width: 1280px)"
+                                              type="image/webp">
+      <source srcset="img/big-banner.jpg,
+                      img/big-banner.jpg 2x" media="(min-width: 1280px)">
+      <!-- 1200x400, 1800x600 -->
+      <source srcset="img/big-banner.webp" media="(min-width: 768px)" type="image/webp">
+      <source srcset="img/big-banner.jpg" media="(min-width: 768px)">
+      <!-- 1200x400 -->
+      <source srcset="img/big-banner.webp" media="(min-width: 320px)" type="image/webp">
+      <source srcset="img/big-banner.jpg" media="(min-width: 320px)">
+      <!-- 720x240 -->
+      <img src="img/big-banner.jpg" alt="" width="1800" height="600">
+    </picture>
+  </div>
+</div>
