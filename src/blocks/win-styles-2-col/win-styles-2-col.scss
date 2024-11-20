@@ -1,9 +1,50 @@
-// В этом файле должны быть стили для БЭМ-блока win-styles-2-col, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .win-styles-2-col {
+  margin: 64px 0;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__header {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__title {
+    hyphens: none;
+  }
+
+  &__row {
+    gap: 24px 0;
+  }
+
+  &__header-col {
+    @include col(xs, 12);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+  }
+
+  &__item-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 5);
+
+    &:first-child {
+      @include col-offset(xl, 1);
+    }
+  }
+
+  &__img {
+    margin-bottom: 16px;
+  }
+
+  &__item-title {
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+
+  &__item-text {
+
+    p + p {
+      margin-top: 16px;
+    }
+  }
 }

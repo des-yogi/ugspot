@@ -1,9 +1,16 @@
-// В этом файле должны быть стили для БЭМ-блока faq, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .faq {
+  margin: 64px 0;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__header {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__header-col {
+    @include col(xs, 12);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+  }
 }

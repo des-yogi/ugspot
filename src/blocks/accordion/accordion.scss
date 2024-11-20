@@ -1,5 +1,110 @@
 .accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__item {
+    padding: 12px 24px;
+    background: $block-bg;
+    border-radius: $border-radius;
+  }
+
+  &__header {
+    margin-bottom: 0;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 16px;
+    width: 100%;
+    min-height: 48px;
+    margin: 0;
+    padding: 0;
+    background: none;;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover,
+    &:focus {
+
+      #{$block-name}__btn-title {
+        color: $link-color;
+      }
+
+      #{$block-name}__btn-icon {
+        border-color: $link-color;
+      }
+    }
+
+    &[aria-expanded=true] {
+
+      #{$block-name}__btn-icon {
+
+        &::after {
+          transform: translate(-50%, -50%) rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__btn-title {
+    margin: 0 !important;
+    text-align: initial;
+    transition: color $transition-time;
+  }
+
+  &__btn-icon {
+    flex: 0 0 48px;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 48px;
+    height: 48px;
+    color: $link-color;
+    border: 2px solid $border-color;
+    border-radius: $border-radius-sm;
+    transition: border $transition-time;
+
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 19px;
+      height: 3px;
+      background: currentColor;
+      border-radius: 3px 3px 3px 3px;
+      transform: translate(-50%, -50%);
+      transition: transform $transition-time;
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+  }
+
+  &__body {
+    padding-top: 12px;
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+
+    & > * {
+      margin-bottom: 0;
+    }
+
+    & > * + * {
+      margin-top: 0.5em;
+    }
+  }
 }

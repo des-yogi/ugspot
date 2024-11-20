@@ -45,7 +45,11 @@
     "gallery": [],
     "faq": [],
     "write-us": [],
-    "copyrights": []
+    "copyrights": [],
+    "win-option-card": [],
+    "special-offers-banner": [],
+    "social-net": [],
+    "social-net-total": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
@@ -53,11 +57,11 @@
     "../../node_modules/bootstrap/scss/_mixins",
     "../../node_modules/bootstrap/scss/_dropdown",
     "../../node_modules/bootstrap/scss/_nav",
-    "../../node_modules/bootstrap/scss/_accordion",
     "../../node_modules/bootstrap/scss/_modal",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "../../node_modules/choices.js/public/assets/styles/choices.min.css",
+    "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.css",
     "../../node_modules/swiper/swiper-bundle.css"
   ],
   "addCssAfter": [
@@ -69,6 +73,7 @@
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
     "./node_modules/choices.js/public/assets/scripts/choices.min.js",
+    "./node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js",
     "./node_modules/swiper/swiper-bundle.min.js"
   ],
   "addJsAfter": [

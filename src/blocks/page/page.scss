@@ -377,6 +377,8 @@ a {
   }
 
   svg {
+    width: 20px;
+    height: 20px;
     transition: transform $transition-time;
   }
 }
@@ -394,12 +396,3 @@ a {
 @include col(md, 6);
 @include col(xl, 4);
 */
-.test-tile {
-  width: 100%;
-  height: 170px;
-  background-position: top left;
-  background-repeat: repeat;
-  background-size: 160px;
-  background-image: url('../img/tile-bg.svg');
-  opacity: 0.05;
-}

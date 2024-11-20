@@ -1,14 +1,18 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
-@ @include('blocks/add-design-opt/add-design-opt.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="add-design-opt">content</div>
-
+@ @include('blocks/add-design-opt/add-design-opt.html', {
+  "title": "Additional Glazing Designs",
+  "intro": "Add Traditional Character to your windows"
+})
 -->
+
+<section class="add-design-opt">
+  <h3 class="add-design-opt__title">@@title</h3>
+  <p class="add-design-opt__intro">@@intro</p>
+
+  <ul class="list-nostyled  row  add-design-opt__list">
+    <li class="add-design-opt__item"><span class="h4">Astragal</span></li>
+    <li class="add-design-opt__item"><span class="h4">Georgian</span></li>
+    <li class="add-design-opt__item"><span class="h4">Leaded</span></li>
+    <li class="add-design-opt__item"><span class="h4">Diamonds</span></li>
+  </ul>
+</section>

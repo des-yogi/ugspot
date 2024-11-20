@@ -3,7 +3,7 @@
     speed: 400,
     spaceBetween: 16,
     slidesPerView: 'auto',
-    centeredSlides: true,
+    //centeredSlides: true,
     autoplay: true,
     grabCursor: true,
     loop: true,

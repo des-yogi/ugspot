@@ -1,0 +1,40 @@
+<!--DEV
+@ @include('blocks/win-option-card/win-option-card.html', {
+  "img": "win-option-double",
+  "title": "Double Glazing"
+})
+-->
+
+<div class="win-option-card" role="listitem">
+  <div class="embed-responsive embed-responsive--4-3  win-option-card__img">
+    <picture>
+      <img src="img/@@img.jpg" alt="Alt text" width="1920" height="1440" loading="lazy">
+    </picture>
+    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+  </div>
+
+  <div class="win-option-card__text-wrapper">
+    <div class="win-option-card__header">
+      <h3 class="win-option-card__title">@@title</h3>
+      <p>Efficient noise reduction. Strong window glass & security</p>
+    </div>
+    <ul class="list-nostyled  win-option-card__list">
+      <li class="win-option-card__list-item">
+        <span class="win-option-card__caption">Energy rating</span>
+        <span class="h4 win-option-card__value">A+</span>
+      </li>
+      <li class="win-option-card__list-item">
+        <span class="win-option-card__caption">R value</span>
+        <span class="h4 win-option-card__value">2+</span>
+      </li>
+      <li class="win-option-card__list-item">
+        <span class="win-option-card__caption">U value</span>
+        <span class="h4 win-option-card__value">1.3</span>
+      </li>
+      <li class="win-option-card__list-item">
+        <span class="win-option-card__caption">G value</span>
+        <span class="h4 win-option-card__value">0.46</span>
+      </li>
+    </ul>
+  </div>
+</div>

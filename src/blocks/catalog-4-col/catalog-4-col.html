@@ -1,14 +1,61 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
-@ @include('blocks/catalog-4-col/catalog-4-col.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="catalog-4-col">content</div>
-
+@ @include('blocks/catalog-4-col/catalog-4-col.html', {
+  "title": "Bespoke Windows Types",
+})
 -->
+
+<section class="container  catalog-4-col">
+  <h2 class="catalog-4-col__title">@@title</h2>
+
+  <div class="row  catalog-4-col__row">
+
+    <div class="catalog-4-col__col">
+      @@include('../../blocks/win-type-card/win-type-card.html', {
+        "img": "win-type-4",
+        "title": "Sash Windows – Timeless Elegance & Classic Design",
+        "text": "Sash windows bring a touch of timeless elegance to any property, combining traditional charm with modern functionality. Known for their classic vertical sliding operation, these windows are ideal for period homes or heritage properties. With excellent ventilation, smooth operation, and customisation options in materials and finishes, sash windows offer both style and performance, seamlessly blending old-world aesthetics with modern efficiency.",
+      })
+    </div>
+
+    <div class="catalog-4-col__col">
+      @@include('../../blocks/win-type-card/win-type-card.html', {
+        "img": "win-type-3",
+        "title": "Tilt & Turn Windows – Versatile & Easy to Use",
+        "text": "Tilt & Turn windows offer a modern, versatile solution with dual-functionality for both ventilation and easy cleaning. With a simple turn of the handle, these windows can either tilt inward at the top for controlled airflow or swing fully open for maximum ventilation and easy access. Ideal for modern homes and high-rise buildings, Tilt & Turn windows provide excellent security, energy efficiency, and convenience.",
+      })
+    </div>
+
+    <div class="catalog-4-col__col">
+      @@include('../../blocks/win-type-card/win-type-card.html', {
+        "img": "win-type-2",
+        "title": "Arched Windows – Graceful Design & Architectural Beauty",
+        "text": "Arched windows add a touch of elegance and architectural sophistication to any property. With their distinctive curved design, these windows create a stunning focal point while allowing more natural light into your space. Perfect for both traditional and contemporary homes, arched windows offer a blend of beauty and functionality, enhancing your property’s aesthetic appeal and charm.",
+      })
+    </div>
+
+    <div class="catalog-4-col__col">
+      @@include('../../blocks/win-type-card/win-type-card.html', {
+        "img": "win-type-1",
+        "title": "Casement Windows – Practicality Meets Classic Style",
+        "text": "Casement windows are a popular choice for their simplicity, practicality, and energy efficiency. Hinged at the side and opening outward, they provide excellent ventilation and unobstructed views. With a sleek design and a secure locking mechanism, casement windows are versatile and suitable for both modern and traditional homes, offering durability and timeless appeal.",
+      })
+    </div>
+
+    <div class="catalog-4-col__col">
+      @@include('../../blocks/win-type-card/win-type-card.html', {
+        "img": "win-type-4",
+        "title": "Sash Windows – Timeless Elegance & Classic Design",
+        "text": "Sash windows bring a touch of timeless elegance to any property, combining traditional charm with modern functionality. Known for their classic vertical sliding operation, these windows are ideal for period homes or heritage properties. With excellent ventilation, smooth operation, and customisation options in materials and finishes, sash windows offer both style and performance, seamlessly blending old-world aesthetics with modern efficiency.",
+      })
+    </div>
+
+    <div class="catalog-4-col__col">
+      @@include('../../blocks/win-type-card/win-type-card.html', {
+        "img": "win-type-3",
+        "title": "Tilt & Turn Windows – Versatile & Easy to Use",
+        "text": "Tilt & Turn windows offer a modern, versatile solution with dual-functionality for both ventilation and easy cleaning. With a simple turn of the handle, these windows can either tilt inward at the top for controlled airflow or swing fully open for maximum ventilation and easy access. Ideal for modern homes and high-rise buildings, Tilt & Turn windows provide excellent security, energy efficiency, and convenience.",
+      })
+    </div>
+
+  </div>
+</section>

@@ -1,14 +1,412 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/gallery/gallery.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="gallery">content</div>
-
 -->
+
+<article class="container  gallery">
+  <div class="row  gallery__header">
+    <div class="gallery__header-col">
+      <h2 class="gallery__title">Our Window Projects</h2>
+      <p class="gallery__intro">We offer impressive window installation solutions, adding unique style and functionality to each project. Our portfolio includes various types of windows, such as bay and bow windows, sash windows, tilt & turn windows, arched windows, casement windows, and vertical sliding systems. Working with us, you can trust in high-quality and personalized solutions for your home or business. Explore our projects to see how we create spaces filled with light and comfort.</p>
+    </div>
+  </div>
+
+  <div class="row  gallery__container" role="list">
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-1.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-1.webp,
+                          img/gallery-1.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-1.jpg,
+                          img/gallery-1.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-1.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-1.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-1.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-1.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-1.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-1.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-1.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-2.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-2.webp,
+                          img/gallery-2.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-2.jpg,
+                          img/gallery-2.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-2.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-2.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-2.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-2.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-2.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-2.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-2.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-3.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-3.webp,
+                          img/gallery-3.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-3.jpg,
+                          img/gallery-3.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-3.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-3.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-3.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-3.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-3.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-3.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-3.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-4.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-4.webp,
+                          img/gallery-4.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-4.jpg,
+                          img/gallery-4.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-4.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-4.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-4.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-4.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-4.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-4.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-4.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-5.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-5.webp,
+                          img/gallery-5.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-5.jpg,
+                          img/gallery-5.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-5.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-5.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-5.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-5.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-5.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-5.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-5.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-6.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-6.webp,
+                          img/gallery-6.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-6.jpg,
+                          img/gallery-6.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-6.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-6.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-6.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-6.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-6.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-6.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-6.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-1.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-1.webp,
+                          img/gallery-1.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-1.jpg,
+                          img/gallery-1.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-1.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-1.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-1.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-1.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-1.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-1.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-1.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-2.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-2.webp,
+                          img/gallery-2.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-2.jpg,
+                          img/gallery-2.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-2.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-2.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-2.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-2.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-2.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-2.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-2.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-3.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-3.webp,
+                          img/gallery-3.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-3.jpg,
+                          img/gallery-3.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-3.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-3.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-3.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-3.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-3.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-3.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-3.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-4.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-4.webp,
+                          img/gallery-4.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-4.jpg,
+                          img/gallery-4.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-4.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-4.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-4.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-4.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-4.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-4.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-4.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-5.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-5.webp,
+                          img/gallery-5.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-5.jpg,
+                          img/gallery-5.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-5.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-5.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-5.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-5.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-5.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-5.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-5.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-6.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-6.webp,
+                          img/gallery-6.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-6.jpg,
+                          img/gallery-6.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-6.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-6.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-6.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-6.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-6.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-6.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-6.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-1.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-1.webp,
+                          img/gallery-1.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-1.jpg,
+                          img/gallery-1.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-1.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-1.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-1.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-1.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-1.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-1.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-1.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-2.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-2.webp,
+                          img/gallery-2.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-2.jpg,
+                          img/gallery-2.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-2.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-2.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-2.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-2.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-2.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-2.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-2.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-3.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-3.webp,
+                          img/gallery-3.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-3.jpg,
+                          img/gallery-3.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-3.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-3.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-3.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-3.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-3.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-3.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-3.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-4.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-4.webp,
+                          img/gallery-4.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-4.jpg,
+                          img/gallery-4.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-4.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-4.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-4.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-4.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-4.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-4.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-4.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-5.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-5.webp,
+                          img/gallery-5.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-5.jpg,
+                          img/gallery-5.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-5.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-5.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-5.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-5.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-5.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-5.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-5.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__item-col" role="listitem">
+      <a href="img/gallery-6.jpg" class="embed-responsive embed-responsive--1-1 gallery__item" data-fancybox="gallery" data-caption="Caption" title="Caption">
+        <picture>
+          <source srcset="img/gallery-6.webp,
+                          img/gallery-6.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/gallery-6.jpg,
+                          img/gallery-6.jpg 2x" media="(min-width: 1280px)">
+          <!-- 187x187, 280x280 2x -->
+          <source srcset="img/gallery-6.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/gallery-6.jpg" media="(min-width: 768px)">
+          <!-- 450x450 -->
+          <source srcset="img/gallery-6.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/gallery-6.jpg" media="(min-width: 480px)">
+          <!-- 400x400 -->
+          <source srcset="img/gallery-6.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/gallery-6.jpg" media="(min-width: 320px)">
+          <!-- 300x300 -->
+          <img src="img/gallery-6.jpg" alt="Alt text" width="450" height="450" loading="lazy">
+        </picture>
+      </a>
+    </div>
+
+  </div>
+</article>

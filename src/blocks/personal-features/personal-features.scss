@@ -1,9 +1,70 @@
-// В этом файле должны быть стили для БЭМ-блока personal-features, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .personal-features {
+  margin: 64px 0;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__header {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  &__header-col {
+    @include col(xs, 12);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+  }
+
+  &__intro {
+
+    & > * {
+      margin: 0;
+    }
+  }
+
+  &__tabpane-header {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &__tabpane-title {
+    margin-top: 0;
+  }
+
+  &__opt-list {
+    gap: 24px 0;
+  }
+
+  &__opt-item {
+    @include col(xs, 6);
+    @include col(sm, 4);
+    @include col(md, 3);
+    @include col(lg, 2);
+    //@include col(xl, 4);
+
+    p {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: 500;
+      text-align: center;
+
+      @media (min-width: $screen-xl) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__opt-img {
+    //height: 100%;
+    aspect-ratio: 155 / 78;
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
 }

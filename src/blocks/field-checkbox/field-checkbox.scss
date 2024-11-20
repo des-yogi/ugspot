@@ -3,7 +3,7 @@
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 
   &__title {
     display: block;
@@ -31,12 +31,12 @@
     line-height: $line-height;
     cursor: pointer;
 
-    &:hover {
+    // &:hover {
 
-      #{$block-name}__name-text {
-        color: $link-color--hover;
-      }
-    }
+    //   #{$block-name}__name-text {
+    //     color: $link-color--hover;
+    //   }
+    // }
   }
 
   &__name-text {
@@ -47,13 +47,13 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 22px;
-      height: 22px;
-      border: 1px solid $border-color;
-      border-radius: $border-radius / 2;
+      width: 24px;
+      height: 24px;
+      border: 1px solid $link-color;
+      border-radius: $border-radius-xs;
 
       @at-root input:checked ~ & {
-        background-color: $border-color;
+        background-color: $link-color;
       }
     }
 
@@ -64,8 +64,8 @@
     &::after {
       content: '';
       position: absolute;
-      top: 5px;
-      left: 5px;
+      top: 6px;
+      left: 6px;
       width: 12px;
       height: 8px;
       opacity: 0;

@@ -1,9 +1,67 @@
-// В этом файле должны быть стили для БЭМ-блока win-options-3-col, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .win-options-3-col {
+  margin: 64px 0;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__header {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__title {
+    hyphens: none;
+  }
+
+  &__header-col {
+    @include col(xs, 12);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+  }
+
+  &__slide {
+    width: 328px;
+
+    @media (min-width: $screen-lg) {
+      width: 360px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 389px;
+    }
+  }
+
+  &__footnote {
+    padding: 16px;
+    margin-top: 24px;
+    font-size: $font-size-sm;
+    text-align: center;
+    background-color: $block-bg;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+
+    & > * {
+      margin: 0;
+    }
+  }
+
+  &__options {
+    gap: 24px 0;
+    margin-top: 24px;
+  }
+
+  &__option-col {
+    @include col(xs, 12);
+    @include col(lg, 4);
+  }
+
+  &__option-title {
+    margin: 0 0 16px;
+  }
+
+  &__option-text {
+
+    p + p {
+      margin-top: 1em;
+    }
+  }
 }

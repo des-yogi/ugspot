@@ -66,6 +66,7 @@
     "yaspeller": "^8.0.0"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
     "bootstrap": "^5.3.2",
     "choices.js": "^11.0.2",
     "focus-visible": "^5.2.0",

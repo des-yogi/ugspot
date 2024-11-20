@@ -3,7 +3,7 @@
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 
   &__name {
     @include field-name;
@@ -14,15 +14,16 @@
   }
 
   &__input {
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
     width: 100%;
-    // height: 2.125em;
-    padding: $field-padding-vertical  $field-padding-horizontal;
+    height: 56px;
+    padding: 0 48px 0 $field-padding-horizontal;
     margin: 0;
     line-height: $line-height;
-    font-size: 1em;
+    font-size: $font-size;
     font-family: inherit;
+    color: $text-color;
     background-color: #fff;
     border: 1px solid $border-color;
     border-radius: $border-radius;
@@ -35,7 +36,9 @@
     &[disabled],
     &[readonly] {
       cursor: default;
-      background-color: $gray-lighter;
+      color: $text-muted;
+      background-color: $block-bg;
+      border-color: $block-bg;
     }
 
     &[type='search']::-webkit-search-cancel-button,
@@ -59,15 +62,52 @@
     }
 
     @at-root textarea#{&} {
-      $textarea-height: ($line-height * 2) + ($field-padding-vertical * 2);
-
       height: auto;
-      min-height: calc(#{$textarea-height} + 2px);
+      min-height: 135px;
+      padding-top: 15px;
+      padding-bottom: 15px;
       resize: vertical;
+    }
+
+    &--required {
+      background-repeat: no-repeat;
+      background-size: 8px;
+      background-position: right 23px top 23px;
+      background-image: svg-load('../blocks/sprite-svg/svg/asterisk.svg', fill=$main-color);
     }
   }
 
   &__help-text {
     @include field-help-text;
+  }
+
+  &--textarea {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    #{$block-name}__name {
+
+      @media (min-width: $screen-md) {
+        flex: 0 0 auto;
+      }
+    }
+
+    #{$block-name}__input-wrap {
+
+      @media (min-width: $screen-md) {
+        flex: 1 1 auto;
+      }
+    }
+
+    #{$block-name}__input {
+
+      @media (min-width: $screen-md) {
+        height: 99%;
+      }
+    }
   }
 }

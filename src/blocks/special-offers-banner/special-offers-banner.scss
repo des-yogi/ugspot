@@ -1,0 +1,74 @@
+.special-offers-banner {
+  margin: 64px 0;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    gap: 24px 0;
+  }
+
+  &__text-col {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 7);
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__img-col {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 5);
+
+    @media (max-width: $screen-xl - 1) {
+      order: -1;
+    }
+  }
+
+  &__text {
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (min-width: $screen-xl) {
+      padding-right: 40px;
+      text-align: initial;
+    }
+  }
+
+  &__list {
+    margin-top: 16px;
+  }
+
+  &__list-item {
+    text-align: inherit;
+
+    & + & {
+      margin-top: 16px;
+    }
+
+    span {
+      color: $main-color;
+    }
+  }
+
+  &__img {
+    border-radius: $border-radius;
+
+    @media (max-width: $screen-xl - 1) {
+      max-width: 735px;
+      margin: 0 auto;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
