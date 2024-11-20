@@ -1,0 +1,46 @@
+.win-option-card {
+  padding: 16px;
+  background-color: $block-bg;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__img {
+    margin-bottom: 24px;
+    border-radius: $border-radius;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__header {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__list-item {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 8px 0;
+    border-bottom: 1px solid #D9D9D9;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  &__value {
+    margin: 0 0 4px;
+  }
+}

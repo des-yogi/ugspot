@@ -1,9 +1,38 @@
-// В этом файле должны быть стили для БЭМ-блока add-design-opt, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .add-design-opt {
+  padding-top: 40px;
+  margin-top: 40px;
+  text-align: center;
+  border-top: 1px solid $border-color;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+    margin: 0 0 16px;
+  }
+
+  &__intro {
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    gap: 16px 0;
+  }
+
+  &__item {
+    @include col(xs, 6);
+    //@include col(sm, 4);
+    @include col(md, 4);
+    @include col(lg, 3);
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 82px;
+      padding: 0 8px;
+      margin: 0;
+      border-radius: $border-radius;
+      border: 1px solid $border-color;
+    }
+  }
 }

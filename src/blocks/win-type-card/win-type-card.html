@@ -1,14 +1,42 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
-@ @include('blocks/win-type-card/win-type-card.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="win-type-card">content</div>
-
+@ @include('blocks/win-type-card/win-type-card.html', {
+  "img": "win-type-1",
+  "title": "Sash Windows – Timeless Elegance & Classic Design",
+  "text": "Sash windows bring a touch of timeless elegance to any property, combining traditional charm with modern functionality. Known for their classic vertical sliding operation, these windows are ideal for period homes or heritage properties. With excellent ventilation, smooth operation, and customisation options in materials and finishes, sash windows offer both style and performance, seamlessly blending old-world aesthetics with modern efficiency.",
+})
 -->
+
+<article class="win-type-card">
+  <a href="#" class="embed-responsive embed-responsive--4-3  win-type-card__img" tabindex="-1">
+    <picture>
+      <source srcset="img/@@img.webp,
+                      img/@@img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+      <source srcset="img/@@img.jpg,
+                      img/@@img.jpg 2x" media="(min-width: 1280px)">
+      <!-- 288x216, 432x324 2x -->
+      <source srcset="img/@@img.webp" media="(min-width: 1024px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 1024px)">
+      <!-- 600x450 -->
+      <source srcset="img/@@img.webp" media="(min-width: 480px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 480px)">
+      <!-- 720x540 -->
+      <source srcset="img/@@img.webp" media="(min-width: 320px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 320px)">
+      <!-- 500x375 -->
+      <img src="img/@@img.jpg" alt="Alt text" width="720" height="540" loading="lazy">
+    </picture>
+  </a>
+
+  <div class="win-type-card__text-wrapper">
+    <div class="win-type-card__text">
+      <h3 class="h4  win-type-card__title">
+        <a href="#" tabindex="-1">@@title</a>
+      </h3>
+      <p>@@text</p>
+    </div>
+    <a href="#" class="more-link">
+      <span>More details</span>
+      <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+    </a>
+  </div>
+</article>

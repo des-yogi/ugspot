@@ -1,4 +1,148 @@
 .page-footer {
+  min-height: 150px;
+  padding-top: 40px;
+  padding-bottom: 24px;
+  color: $white;
+  background-color: $title-color;
+  border-top-left-radius: $border-radius-lg;
+  border-top-right-radius: $border-radius-lg;
 
   $block-name:                &; // #{$block-name}__element
+
+  &__menu,
+  &__about {
+    margin-bottom: 24px;
+  }
+
+  &__menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    @media (min-width: $screen-md) {
+      flex-direction: initial;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__menu-item {
+
+    @media (min-width: $screen-md) {
+      flex: 1 1;
+      flex-basis: calc(50% - 8px);
+    }
+  }
+
+  &__menu-link {
+    font-size: $font-size;
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 0;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+
+    @media (min-width: $screen-md) {
+      flex-direction: initial;
+      align-items: flex-start;
+      gap: 24px 32px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    @media (min-width: $screen-md) {
+      align-items: flex-start;
+      gap: 16px 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex: 1 1 auto;
+      flex-direction: initial;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px 24px;
+
+    @media (min-width: $screen-md) {
+      flex-direction: initial;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    svg {
+      fill: $link-color;
+    }
+  }
+
+  &__contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: $color-wa;
+    background-color: rgba($color-wa, 0.16);
+    border-radius: $border-radius;
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__soc-network {
+  }
 }

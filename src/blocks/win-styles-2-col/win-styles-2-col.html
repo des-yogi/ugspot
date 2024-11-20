@@ -1,14 +1,99 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/win-styles-2-col/win-styles-2-col.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="win-styles-2-col">content</div>
-
 -->
+
+<article class="container  win-styles-2-col">
+
+  <div class="row  win-styles-2-col__header">
+    <div class="win-styles-2-col__header-col">
+      <h2 class="win-styles-2-col__title">Standard vs. Slim Profiles – Finding the Perfect Window Solution</h2>
+      <p class="win-styles-2-col__intro">When choosing windows, the profile type plays a crucial role in both aesthetics and performance. At UGS Ltd, we offer a wide selection of standard and slim profiles, allowing you to find the perfect balance between design, functionality, and energy efficiency for your project.</p>
+    </div>
+  </div>
+
+  <div class="row  win-styles-2-col__row" role="list">
+
+    <div class="win-styles-2-col__item-col" role="listitem">
+      <section class="win-styles-2-col__item">
+        <div class="embed-responsive embed-responsive--4-3  win-styles-2-col__img">
+          <picture>
+            <source srcset="img/profile-standart.webp,
+                            img/profile-standart.webp 2x" media="(min-width: 1280px)"
+                            type="image/webp">
+            <source srcset="img/profile-standart.jpg,
+                            img/profile-standart.jpg 2x" media="(min-width: 1280px)">
+            <!-- 491x368, 737x553 2x -->
+
+            <source srcset="img/profile-standart.webp,
+                            img/profile-standart.webp 2x" media="(min-width: 1024px)"
+                            type="image/webp">
+            <source srcset="img/profile-standart.jpg,
+                            img/profile-standart.jpg 2x" media="(min-width: 1024px)">
+            <!-- 568x426, 852x639 2x -->
+
+            <source srcset="img/profile-standart.webp" media="(min-width: 768px)" type="image/webp">
+            <source srcset="img/profile-standart.jpg" media="(min-width: 768px)">
+            <!-- 720x540 -->
+            <source srcset="img/profile-standart.webp" media="(min-width: 480px)" type="image/webp">
+            <source srcset="img/profile-standart.jpg" media="(min-width: 480px)">
+            <!-- 815x611 -->
+            <source srcset="img/profile-standart.webp" media="(min-width: 320px)" type="image/webp">
+            <source srcset="img/profile-standart.jpg" media="(min-width: 320px)">
+            <!-- 570x428 -->
+
+            <img src="img/profile-standart.jpg" alt="Alt text" width="900" height="675" loading="lazy">
+          </picture>
+        </div>
+        <div class="win-styles-2-col__text-wrapper">
+          <h3 class="win-styles-2-col__item-title">Standart</h3>
+          <div class="win-styles-2-col__item-text">
+            <p>Offer a robust and traditional frame appearance, providing excellent insulation, durability, and support for larger glass panes. These profiles are ideal for those who prioritize structural integrity and maximum thermal performance. These frames are typically more common and versatile, allowing for larger glass panes and providing excellent insulation. The wider frame also supports more customization options in terms of materials and finishes. While they offer great structural support, they can sometimes reduce the amount of visible glass, which slightly affects the natural light entering your space.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="win-styles-2-col__item-col" role="listitem">
+      <section class="win-styles-2-col__item">
+        <div class="embed-responsive embed-responsive--4-3  win-styles-2-col__img">
+          <picture>
+            <source srcset="img/profile-slim.webp,
+                            img/profile-slim.webp 2x" media="(min-width: 1280px)"
+                            type="image/webp">
+            <source srcset="img/profile-slim.jpg,
+                            img/profile-slim.jpg 2x" media="(min-width: 1280px)">
+            <!-- 491x368, 737x553 2x -->
+
+            <source srcset="img/profile-slim.webp,
+                            img/profile-slim.webp 2x" media="(min-width: 1024px)"
+                            type="image/webp">
+            <source srcset="img/profile-slim.jpg,
+                            img/profile-slim.jpg 2x" media="(min-width: 1024px)">
+            <!-- 568x426, 852x639 2x -->
+
+            <source srcset="img/profile-slim.webp" media="(min-width: 768px)" type="image/webp">
+            <source srcset="img/profile-slim.jpg" media="(min-width: 768px)">
+            <!-- 720x540 -->
+            <source srcset="img/profile-slim.webp" media="(min-width: 480px)" type="image/webp">
+            <source srcset="img/profile-slim.jpg" media="(min-width: 480px)">
+            <!-- 815x611 -->
+            <source srcset="img/profile-slim.webp" media="(min-width: 320px)" type="image/webp">
+            <source srcset="img/profile-slim.jpg" media="(min-width: 320px)">
+            <!-- 570x428 -->
+
+            <img src="img/profile-slim.jpg" alt="Alt text" width="900" height="675" loading="lazy">
+          </picture>
+        </div>
+        <div class="win-styles-2-col__text-wrapper">
+          <h3 class="win-styles-2-col__item-title">Slim</h3>
+          <div class="win-styles-2-col__item-text">
+            <p>On the other hand, slim profiles are designed with sleek, narrow frames to maximize glass area and allow more natural light into your space. Perfect for modern designs or properties where a minimalist look is desired, slim profiles provide a refined aesthetic while still maintaining energy efficiency and strength.</p>
+            <p><strong>Cortizo, Deceuninck, Kommerling, Rehau, Reynaers, Schuco and SMART</strong>, ensuring a high-quality selection in both <strong>standard</strong> and <strong>slim profile lines</strong>. Whether you’re looking for bold, classic frames or a sleek, contemporary design, UGS presents all profile options to meet your specific needs.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+</article>

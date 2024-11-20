@@ -3,7 +3,7 @@
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 
   &__name {
     @include field-name;
@@ -27,10 +27,12 @@
 
       &::before {
         @include field-focus;
-        color: $link-color--hover;
-        border-color: $link-color--hover;
-        background-image: svg-load('../blocks/field-file/bg-img/upload-simple.svg', fill=$main-color);
-        //background-color: darken($gray-lightest, 10%); // как у обычных кнопок
+        //color: $link-color--hover;
+        //border-color: $link-color--hover;
+        background-image: svg-load('../blocks/field-file/bg-img/plus.svg', fill=$main-color);
+        outline: 0;
+        border-color: transparent;
+        box-shadow: 0 0 0 1px rgba($color-main, $opacity);
       }
     }
   }
@@ -39,10 +41,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: center;
     width: 100%;
     padding: 0;
-    font-size: 16px;
+    font-size: $font-size;
+    font-weight: 500;
     background-color: $white;
     border-radius: 0;
     white-space: nowrap;
@@ -53,16 +56,17 @@
       content: attr(data-button-text);
       display: block;
       width: 100%;
+      min-height: 56px;
       margin-right: 0;
-      padding: $field-padding-vertical $field-padding-horizontal;
-      padding-right: 60px;
+      padding: 14px 24px 14px 56px;
+      //padding-right: 60px;
       line-height: $line-height;
       color: $main-color;
       //background-color: $white;
       background-repeat: no-repeat;
-      background-position: right 12px center;
+      background-position: left 16px center;
       background-size: 24px;
-      background-image: svg-load('../blocks/field-file/bg-img/upload-simple.svg', fill=$link-color);
+      background-image: svg-load('../blocks/field-file/bg-img/plus.svg', fill=$link-color);
       border: 1px solid $border-color;
       border-radius: $border-radius;
       transition: all $transition-time;
@@ -70,17 +74,20 @@
       pointer-events: auto;
     }
 
-    &:hover,
-    &:focus {
-      //@include field-focus;
+    //&:hover,
+    // &:focus {
+    //   //@include field-focus;
 
-      &::before {
-        color: $link-color--hover;
-        border-color: $link-color--hover;
-        background-image: svg-load('../blocks/field-file/bg-img/upload-simple.svg', fill=$link-color--hover);
-        //background-color: darken($gray-lightest, 10%); // как у обычных кнопок
-      }
-    }
+    //   &::before {
+    //     color: $link-color--hover;
+    //     //border-color: $link-color--hover;
+    //     background-image: svg-load('../blocks/field-file/bg-img/plus.svg', fill=$link-color--hover);
+    //     //background-color: darken($gray-lightest, 10%); // как у обычных кнопок
+    //     outline: 0;
+    //     border-color: transparent;
+    //     box-shadow: 0 0 0 1px rgba($color-main, $opacity);
+    //   }
+    // }
 
     span {
       display: block;

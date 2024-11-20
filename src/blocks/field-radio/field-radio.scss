@@ -40,12 +40,12 @@
     line-height: $line-height;
     cursor: pointer;
 
-    &:hover {
+    // &:hover {
 
-      #{$block-name}__name-text {
-        color: $link-color--hover;
-      }
-    }
+    //   #{$block-name}__name-text {
+    //     color: $link-color--hover;
+    //   }
+    // }
   }
 
   &__name-text {
@@ -56,9 +56,9 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 22px;
-      height: 22px;
-      border: 1px solid $border-color;
+      width: 24px;
+      height: 24px;
+      border: 1px solid $link-color;
       border-radius: 50%;
     }
 
@@ -66,16 +66,20 @@
       @include field-focus;
     }
 
+    @at-root input:checked ~ &::before {
+      background-color: $link-color;
+    }
+
     &::after {
       content: '';
       position: absolute;
-      top: 5px;
-      left: 5px;
-      width: 12px;
-      height: 12px;
+      top: 7px;
+      left: 7px;
+      width: 10px;
+      height: 10px;
       opacity: 0;
       border-radius: 50%;
-      background-color: $border-color;
+      background-color: $white;
       transition: opacity $transition-time;
 
       @at-root input:checked ~ & {

@@ -1,0 +1,46 @@
+<!--DEV
+@ @include('blocks/special-offers-banner/special-offers-banner.html')
+-->
+
+<article class="container  special-offers-banner">
+  <div class="row  special-offers-banner__row">
+
+    <div class="special-offers-banner__text-col">
+      <div class="special-offers-banner__text">
+        <div class="special-offers-banner__header">
+          <h2 class="special-offers-banner__title">Special offers for our customers</h2>
+          <p class="special-offers-banner__info">Mix and match package discounts on all product ranges – all year round</p>
+        </div>
+
+        <ul class="list-nostyled  special-offers-banner__list">
+          <li class="special-offers-banner__list-item">For packages over <span>£10k – get 5% discount</span></li>
+          <li class="special-offers-banner__list-item">For packages over <span>£20k – get 10% discount</span></li>
+          <li class="special-offers-banner__list-item">For packages over <span>£25k – get 15% discount</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="special-offers-banner__img-col">
+      <div class="embed-responsive embed-responsive--4-3  special-offers-banner__img">
+        <picture>
+          <source srcset="img/sp-offer-banner.webp,
+                          img/sp-offer-banner.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/sp-offer-banner.jpg,
+                          img/sp-offer-banner.jpg 2x" media="(min-width: 1280px)">
+          <!-- 491x368, 736x552 2x -->
+          <source srcset="img/sp-offer-banner.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/sp-offer-banner.jpg" media="(min-width: 768px)">
+          <!-- 1100x825 -->
+          <source srcset="img/sp-offer-banner.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/sp-offer-banner.jpg" media="(min-width: 480px)">
+          <!-- 820x615 -->
+          <source srcset="img/sp-offer-banner.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/sp-offer-banner.jpg" media="(min-width: 320px)">
+          <!-- 600x450 -->
+          <img src="img/sp-offer-banner.jpg" alt="" width="1100" height="825" loading="lazy">
+        </picture>
+      </div>
+    </div>
+
+  </div>
+</article>

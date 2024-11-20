@@ -1,14 +1,55 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/faq/faq.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="faq">content</div>
-
 -->
+
+<section class="container  faq">
+
+  <div class="row  faq__header">
+    <div class="faq__header-col">
+      <h2 class="faq__title">Frequently Asked Questions (FAQ)</h2>
+      <p class="faq__intro">Please note that the information provided here is subject to change. For the most up-to-date details, we recommend contacting our company directly.</p>
+    </div>
+  </div>
+
+  <div class="accordion" id="accordionFaq">
+    <div class="accordion__item">
+      <h2 class="accordion__header">
+        <button class="accordion__btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+          <span class="h5  accordion__btn-title">What period product warranty do we offer on sash windows?</span>
+          <span class="accordion__btn-icon" role="presentation"></span>
+        </button>
+      </h2>
+      <div id="collapse-1" class="accordion__collapse collapse show" data-bs-parent="#accordionFaq">
+        <div class="accordion__body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion__body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion__item">
+      <h2 class="accordion__header">
+        <button class="accordion__btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+          <span class="h5  accordion__btn-title">What is the difference between double and triple glazing?</span>
+          <span class="accordion__btn-icon" role="presentation"></span>
+        </button>
+      </h2>
+      <div id="collapse-2" class="accordion__collapse collapse" data-bs-parent="#accordionFaq">
+        <div class="accordion__body">
+          <p>Double glazing consists of two panes of glass with a layer of air or gas between them, while triple glazing has three panes. Both provide excellent insulation, but triple glazing offers superior thermal performance and noise reduction, making it ideal for homes in colder climates or noisy environments.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion__item">
+      <h2 class="accordion__header">
+        <button class="accordion__btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+          <span class="h5  accordion__btn-title"> How long does it take to install new windows?</span>
+          <span class="accordion__btn-icon" role="presentation"></span>
+        </button>
+      </h2>
+      <div id="collapse-3" class="accordion__collapse collapse" data-bs-parent="#accordionFaq">
+        <div class="accordion__body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion__body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

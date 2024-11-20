@@ -1,14 +1,80 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/win-options-3-col/win-options-3-col.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="win-options-3-col">content</div>
-
 -->
+
+<article class="container  win-options-3-col">
+
+  <div class="row  win-options-3-col__header">
+    <div class="win-options-3-col__header-col">
+      <h2 class="win-options-3-col__title">uPVC Window Glazing Options at UGS Ltd</h2>
+      <p class="win-options-3-col__intro">When choosing windows, the profile type plays a crucial role in both aesthetics and performance. At UGS Ltd, we offer a wide selection of standard and slim profiles, allowing you to find the perfect balance between design, functionality, and energy efficiency for your project.</p>
+    </div>
+  </div>
+
+  <div class="swiper  win-options-3-col__slider">
+    <div class="swiper-wrapper" role="list">
+
+      <div class="swiper-slide  win-options-3-col__slide">
+        @@include('../../blocks/win-option-card/win-option-card.html', {
+          "img": "win-option-double",
+          "title": "Double Glazing"
+        })
+      </div>
+
+      <div class="swiper-slide  win-options-3-col__slide">
+        @@include('../../blocks/win-option-card/win-option-card.html', {
+          "img": "win-option-tripple",
+          "title": "Tripple Glazing"
+        })
+      </div>
+
+      <div class="swiper-slide  win-options-3-col__slide">
+        @@include('../../blocks/win-option-card/win-option-card.html', {
+          "img": "win-option-argon",
+          "title": "Argon Filled"
+        })
+      </div>
+
+    </div>
+  </div>
+
+  <div class="win-options-3-col__footnote">
+    <p>* Energy Rating show overall energy efficiency of the product. The entire window (the frame and the glass) is assessed to allow for heat loss, draughts and solar gain, giving a rating that indicates the overall impact of fitting that window in your home.
+      *The R Value Measures resistance to heat gain or loss. Example, a typical insulated wall has an R-value anywhere from 12 to 19.</p>
+    <p>* The U Value of the glass tells us heat loss through the glass, the glass edge and the frame.</p>
+    <p>* The G Value of the glass tells us how well the glass transmits heat from the sun.</p>
+  </div>
+
+  <div class="row  win-options-3-col__options" role="list">
+
+    <div class="win-options-3-col__option-col">
+      <div class="win-options-3-col__option" role="listitem">
+        <h4 class="win-options-3-col__option-title">Double</h4>
+        <div class="win-options-3-col__option-text">
+          <p>At UGS Ltd, we offer a variety of glazing options for our uPVC windows to enhance energy efficiency, security, and comfort in your home. Our windows are available with either double or triple glazing, providing superior insulation and reducing energy costs.</p>
+          <p><strong>Double Glazing</strong>: A popular option, double glazing consists of two glass panes with a gap between them, which significantly reduces heat loss, helps with soundproofing, and enhances overall security.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="win-options-3-col__option-col">
+      <div class="win-options-3-col__option" role="listitem">
+        <h4 class="win-options-3-col__option-title">Tripple</h4>
+        <div class="win-options-3-col__option-text">
+            <p><strong>Triple Glazing</strong>: For even greater performance, triple glazing includes a third pane of glass, offering enhanced insulation, better soundproofing, and improved energy efficiency, making it ideal for colder climates or areas with high levels of external noise.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="win-options-3-col__option-col">
+      <div class="win-options-3-col__option" role="listitem">
+        <h4 class="win-options-3-col__option-title">Benefits of Argon Gas Filling</h4>
+        <div class="win-options-3-col__option-text">
+            <p>Both our double and triple glazing units can be filled with Argon gas, which is denser than air. This gas filling provides additional insulation by reducing heat transfer through the glass, helping to maintain a consistent temperature in your home. Argon-filled glazing improves energy efficiency, lowers heating bills, and reduces the carbon footprint of your home, making it an environmentally friendly option. For character properties or homes in conservation areas where changing the original windows is not allowed, secondary glazing offers the perfect solution. It provides the benefits of improved insulation and noise reduction without altering the external appearance of your property. Feel free to visit our Secondary Glazing Units page for more details on this option.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</article>

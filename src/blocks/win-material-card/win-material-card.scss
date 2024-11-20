@@ -49,4 +49,12 @@
       }
     }
   }
+
+  &__text {
+    font-size: $font-size-sm;
+
+    p {
+      color: $text-muted;
+    }
+  }
 }

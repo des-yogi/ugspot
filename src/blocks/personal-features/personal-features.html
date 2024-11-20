@@ -1,14 +1,446 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/personal-features/personal-features.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="personal-features">content</div>
-
 -->
+
+<section class="container  personal-features">
+
+  <div class="row  personal-features__header">
+    <div class="personal-features__header-col">
+      <h2 class="personal-features__title">Personalized features</h2>
+      <div class="personal-features__intro">
+        <p><strong>Personalise Your Windows with UGS Ltd</strong></p>
+        <p>At UGS Ltd, you can fully personalise your windows with direct manufacturer options, from opening styles to accessories—we’re here to guide you every step of the way. Book your one-on-one Zoom call and design your perfect units in real-time. Using the latest visual technology, we’ll not only help you create your custom windows but also provide a sneak peek of how they’ll look once installed at your property.</p>
+      </div>
+    </div>
+  </div>
+
+  <ul class="nav nav-tabs" id="featuresTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="tab-01" data-bs-toggle="tab" data-bs-target="#tab-01-pane" type="button" role="tab" aria-controls="tab-01-pane" aria-selected="true">Warwick</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab-02" data-bs-toggle="tab" data-bs-target="#tab-02-pane" type="button" role="tab" aria-controls="tab-02-pane" aria-selected="false">Chantilly</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab-03" data-bs-toggle="tab" data-bs-target="#tab-03-pane" type="button" role="tab" aria-controls="tab-03-pane" aria-selected="false">Reeded</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab-04" data-bs-toggle="tab" data-bs-target="#tab-04-pane" type="button" role="tab" aria-controls="tab-04-pane" aria-selected="false">Digital</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab-05" data-bs-toggle="tab" data-bs-target="#tab-05-pane" type="button" role="tab" aria-controls="tab-05-pane" aria-selected="false">Taffeta</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab-06" data-bs-toggle="tab" data-bs-target="#tab-06-pane" type="button" role="tab" aria-controls="tab-06-pane" aria-selected="false">Oak</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab-07" data-bs-toggle="tab" data-bs-target="#tab-07-pane" type="button" role="tab" aria-controls="tab-07-pane" aria-selected="false">Contora</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab-08" data-bs-toggle="tab" data-bs-target="#tab-08-pane" type="button" role="tab" aria-controls="tab-08-pane" aria-selected="false">Charcoal Sticks</button>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="featuresTabContent">
+
+    <section class="tab-pane fade show active  personal-features__tabpane" id="tab-01-pane" role="tabpanel" aria-labelledby="tab-01" tabindex="0">
+      <div class="personal-features__tabpane-header">
+        <h3 class="personal-features__tabpane-title">All Pilkington range</h3>
+        <p>Choose your preferred Glass Texture from the entire Pilkinson Range</p>
+      </div>
+
+      <ul class="list-nostyled  row  personal-features__opt-list">
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/warwick.webp,
+                              img/warwick.webp 2x" type="image/webp">
+              <img src="img/warwick.jpg"
+                   srcset="img/warwick.jpg,
+                           img/warwick.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+              <!-- 234x118, 351x177 2x -->
+            </picture>
+          </div>
+          <p>Warwick</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/chantilly.webp,
+                              img/chantilly.webp 2x" type="image/webp">
+              <img src="img/chantilly.jpg"
+                   srcset="img/chantilly.jpg,
+                           img/chantilly.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+              <!-- 234x118, 351x177 2x -->
+            </picture>
+          </div>
+          <p>Chantilly</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/reeded.webp,
+                              img/reeded.webp 2x" type="image/webp">
+              <img src="img/reeded.jpg"
+                   srcset="img/reeded.jpg,
+                           img/reeded.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Reeded</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/digital.webp,
+                              img/digital.webp 2x" type="image/webp">
+              <img src="img/digital.jpg"
+                   srcset="img/digital.jpg,
+                           img/digital.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Digital</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/taffeta.webp,
+                              img/taffeta.webp 2x" type="image/webp">
+              <img src="img/taffeta.jpg"
+                   srcset="img/taffeta.jpg,
+                           img/taffeta.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Taffeta</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/oak.webp,
+                              img/oak.webp 2x" type="image/webp">
+              <img src="img/oak.jpg"
+                   srcset="img/oak.jpg,
+                           img/oak.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Oak</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/contora.webp,
+                              img/contora.webp 2x" type="image/webp">
+              <img src="img/contora.jpg"
+                   srcset="img/contora.jpg,
+                           img/contora.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Contora</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/charcoal-sticks.webp,
+                              img/charcoal-sticks.webp 2x" type="image/webp">
+              <img src="img/charcoal-sticks.jpg"
+                   srcset="img/charcoal-sticks.jpg,
+                           img/charcoal-sticks.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Charcoal Sticks</p>
+        </li>
+
+      </ul>
+
+      @@include('../../blocks/add-design-opt/add-design-opt.html', {
+        "title": "Additional Glazing Designs",
+        "intro": "Add Traditional Character to your windows"
+      })
+
+    </section>
+
+    <div class="tab-pane fade  personal-features__tabpane" id="tab-02-pane" role="tabpanel" aria-labelledby="tab-02" tabindex="0">
+      <div class="personal-features__tabpane-header">
+        <h3 class="personal-features__tabpane-title">All Pilkington range</h3>
+        <p>Choose your preferred Glass Texture from the entire Pilkinson Range</p>
+      </div>
+
+      <ul class="list-nostyled  row  personal-features__opt-list">
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/warwick.webp,
+                              img/warwick.webp 2x" type="image/webp">
+              <img src="img/warwick.jpg"
+                   srcset="img/warwick.jpg,
+                           img/warwick.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+              <!-- 234x118, 351x177 2x -->
+            </picture>
+          </div>
+          <p>Warwick</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/chantilly.webp,
+                              img/chantilly.webp 2x" type="image/webp">
+              <img src="img/chantilly.jpg"
+                   srcset="img/chantilly.jpg,
+                           img/chantilly.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+              <!-- 234x118, 351x177 2x -->
+            </picture>
+          </div>
+          <p>Chantilly</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/reeded.webp,
+                              img/reeded.webp 2x" type="image/webp">
+              <img src="img/reeded.jpg"
+                   srcset="img/reeded.jpg,
+                           img/reeded.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Reeded</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/digital.webp,
+                              img/digital.webp 2x" type="image/webp">
+              <img src="img/digital.jpg"
+                   srcset="img/digital.jpg,
+                           img/digital.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Digital</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/taffeta.webp,
+                              img/taffeta.webp 2x" type="image/webp">
+              <img src="img/taffeta.jpg"
+                   srcset="img/taffeta.jpg,
+                           img/taffeta.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Taffeta</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/oak.webp,
+                              img/oak.webp 2x" type="image/webp">
+              <img src="img/oak.jpg"
+                   srcset="img/oak.jpg,
+                           img/oak.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Oak</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/contora.webp,
+                              img/contora.webp 2x" type="image/webp">
+              <img src="img/contora.jpg"
+                   srcset="img/contora.jpg,
+                           img/contora.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Contora</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/charcoal-sticks.webp,
+                              img/charcoal-sticks.webp 2x" type="image/webp">
+              <img src="img/charcoal-sticks.jpg"
+                   srcset="img/charcoal-sticks.jpg,
+                           img/charcoal-sticks.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Charcoal Sticks</p>
+        </li>
+
+      </ul>
+
+      @@include('../../blocks/add-design-opt/add-design-opt.html', {
+        "title": "Additional Glazing Designs",
+        "intro": "Add Traditional Character to your windows"
+      })
+    </div>
+
+    <div class="tab-pane fade  personal-features__tabpane" id="tab-03-pane" role="tabpanel" aria-labelledby="tab-03" tabindex="0">
+      <div class="personal-features__tabpane-header">
+        <h3 class="personal-features__tabpane-title">All Pilkington range</h3>
+        <p>Choose your preferred Glass Texture from the entire Pilkinson Range</p>
+      </div>
+
+      <ul class="list-nostyled  row  personal-features__opt-list">
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/warwick.webp,
+                              img/warwick.webp 2x" type="image/webp">
+              <img src="img/warwick.jpg"
+                   srcset="img/warwick.jpg,
+                           img/warwick.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+              <!-- 234x118, 351x177 2x -->
+            </picture>
+          </div>
+          <p>Warwick</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/chantilly.webp,
+                              img/chantilly.webp 2x" type="image/webp">
+              <img src="img/chantilly.jpg"
+                   srcset="img/chantilly.jpg,
+                           img/chantilly.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+              <!-- 234x118, 351x177 2x -->
+            </picture>
+          </div>
+          <p>Chantilly</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/reeded.webp,
+                              img/reeded.webp 2x" type="image/webp">
+              <img src="img/reeded.jpg"
+                   srcset="img/reeded.jpg,
+                           img/reeded.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Reeded</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/digital.webp,
+                              img/digital.webp 2x" type="image/webp">
+              <img src="img/digital.jpg"
+                   srcset="img/digital.jpg,
+                           img/digital.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Digital</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/taffeta.webp,
+                              img/taffeta.webp 2x" type="image/webp">
+              <img src="img/taffeta.jpg"
+                   srcset="img/taffeta.jpg,
+                           img/taffeta.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Taffeta</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/oak.webp,
+                              img/oak.webp 2x" type="image/webp">
+              <img src="img/oak.jpg"
+                   srcset="img/oak.jpg,
+                           img/oak.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Oak</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/contora.webp,
+                              img/contora.webp 2x" type="image/webp">
+              <img src="img/contora.jpg"
+                   srcset="img/contora.jpg,
+                           img/contora.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Contora</p>
+        </li>
+
+        <li class="personal-features__opt-item">
+          <div class="personal-features__opt-img">
+            <picture>
+              <source srcset="img/charcoal-sticks.webp,
+                              img/charcoal-sticks.webp 2x" type="image/webp">
+              <img src="img/charcoal-sticks.jpg"
+                   srcset="img/charcoal-sticks.jpg,
+                           img/charcoal-sticks.jpg 2x"
+                   alt="Pattern name" width="351" height="177" loading="lazy">
+            </picture>
+          </div>
+          <p>Charcoal Sticks</p>
+        </li>
+
+      </ul>
+
+      @@include('../../blocks/add-design-opt/add-design-opt.html', {
+        "title": "Additional Glazing Designs",
+        "intro": "Add Traditional Character to your windows"
+      })
+    </div>
+
+    <div class="tab-pane fade  personal-features__tabpane" id="tab-04-pane" role="tabpanel" aria-labelledby="tab-04" tabindex="0">4...</div>
+
+    <div class="tab-pane fade  personal-features__tabpane" id="tab-05-pane" role="tabpanel" aria-labelledby="tab-05" tabindex="0">5...</div>
+
+    <div class="tab-pane fade  personal-features__tabpane" id="tab-06-pane" role="tabpanel" aria-labelledby="tab-06" tabindex="0">6...</div>
+
+    <div class="tab-pane fade  personal-features__tabpane" id="tab-07-pane" role="tabpanel" aria-labelledby="tab-07" tabindex="0">7...</div>
+
+    <div class="tab-pane fade  personal-features__tabpane" id="tab-08-pane" role="tabpanel" aria-labelledby="tab-08" tabindex="0">8...</div>
+
+  </div>
+
+</section>

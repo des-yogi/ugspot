@@ -2,6 +2,76 @@
 @ @include('blocks/page-footer/page-footer.html')
 -->
 
-<footer class="page-footer">
-  page-footer
+<footer class="container  page-footer">
+
+  <nav class="page-footer__menu">
+    <ul class="list-nostyled  page-footer__menu-list">
+      <li class="page-footer__menu-item">
+        <a href="#" class="page-footer__menu-link">Windows</a>
+      </li>
+      <li class="page-footer__menu-item">
+        <a href="#" class="page-footer__menu-link">Doors</a>
+      </li>
+      <li class="page-footer__menu-item">
+        <a href="#" class="page-footer__menu-link">Roof System</a>
+      </li>
+      <li class="page-footer__menu-item">
+        <a href="#" class="page-footer__menu-link">Glasswork</a>
+      </li>
+      <li class="page-footer__menu-item">
+        <a href="#" class="page-footer__menu-link">Conservatories</a>
+      </li>
+      <li class="page-footer__menu-item">
+        <a href="#" class="page-footer__menu-link">Blog and Media</a>
+      </li>
+      <li class="page-footer__menu-item">
+        <a href="#" class="page-footer__menu-link">Trade</a>
+      </li>
+      <li class="page-footer__menu-item">
+        <a href="#" class="page-footer__menu-link">About Us</a>
+      </li>
+      <li class="page-footer__menu-item">
+        <a href="#" class="page-footer__menu-link">Contacts</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="page-footer__about">
+    <a href="index.html" class="logo  logo--footer" title="Ugspot">
+      <img src="img/ugspot-logo-footer.svg" alt="logo" width="85" height="102" loading="lazy">
+    </a>
+
+    <section class="page-footer__contacts">
+      <h3 class="visually-hidden">Contact us</h3>
+
+      <ul class="list-nostyled  page-footer__contact-list">
+        <li class="page-footer__contact-item">
+          <a href="mailto:info@ugspot.co.uk" class="page-footer__contact-link">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#mail"></use></svg>
+            <span>info@ugspot.co.uk</span>
+          </a>
+        </li>
+
+        <li class="page-footer__contact-item">
+          <a href="tel:+447554766102" class="page-footer__contact-link">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+            <span>+ 44 7554 766 102</span>
+          </a>
+
+          <a href="#" class="page-footer__contact-icon">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#whatsapp"></use></svg>
+          </a>
+        </li>
+      </ul>
+
+      <div class="page-footer__soc-network">
+        @@include('../../blocks/social-net-total/social-net-total.html')
+      </div>
+
+    </section>
+  </div>
+
+  <div class="page-footer__copyrights">
+    @@include('../../blocks/copyrights/copyrights.html')
+  </div>
 </footer>

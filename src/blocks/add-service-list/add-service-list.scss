@@ -1,9 +1,23 @@
-// В этом файле должны быть стили для БЭМ-блока add-service-list, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .add-service-list {
+  margin: 64px 0;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &__list {
+    gap: 40px 0;
+  }
+
+  &__item {
+    @include col(xs, 12);
+    @include col(md, 6);
+  }
+
+  &__item-title {
+    margin-top: 0;
+  }
 }

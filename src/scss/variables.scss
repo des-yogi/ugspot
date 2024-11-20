@@ -16,8 +16,8 @@ $color-success:               #00c14d;
 $color-danger:                #fc2a2a;
 $color-warning:               #ffa800;
 
-//$color-vk:                    #4a76a8;
-//$color-fb:                    #4267b2;
+//$color-inst:                    #4a76a8;
+$color-fb:                      #1877f2;
 //$color-tw:                    #40A2F5;
 //$color-gh:                    #24292e;
 $color-wa:                      #25D366;
@@ -29,9 +29,13 @@ $main-color:                  #940c0c;
 $color-main:                  $main-color;
 $secondary-color:             #cccccc;
 
+$main-pale:                   #ffefef;
+$main-pale--hover:            #ffd3d3;
+$main-pale--active:           #ec9c9c;
+
 $text-color:                  #2a2a2a;
 $title-color:                 #1a1a1a;
-$text-muted:                  #71717a;
+$text-muted:                  #696969;
 
 $body-bg:                     #ffffff;
 $block-bg:                    #f6f6f6;
@@ -47,6 +51,7 @@ $divider-color:               $border-color;
 
 $font-size:                   16px;
 $font-size-sm:                14px;
+$font-size-lg:                20px;
 
 $font-size--h1:               40px;
 $font-size--h2:               28px;
@@ -89,8 +94,8 @@ $grid-gutter-width:           16px;
 
 // Разное
 
-$field-padding-vertical:      5px;
-$field-padding-horizontal:    12px;
+$field-padding-vertical:      11px;
+$field-padding-horizontal:    24px;
 
 $border-radius:               16px;
 $border-radius-lg:            24px;

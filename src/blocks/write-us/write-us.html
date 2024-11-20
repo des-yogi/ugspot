@@ -1,14 +1,149 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/write-us/write-us.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="write-us">content</div>
-
 -->
+
+<article class="container  write-us">
+  <div class="row  write-us__header">
+
+    <div class="write-us__header-col-title">
+      <h2 class="write-us__title">Write to us!</h2>
+      <p class="write-us__info">BOOK YOUR FREE No-OBLIGATION SURVEYING PAGE</p>
+    </div>
+
+    <div class="write-us__header-col-contacts">
+      <ul class="list-nostyled  write-us__contact-list">
+        <li class="write-us__contact-item">
+          <a href="tel:+447554766102" class="write-us__contact-link">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+            <span>+ 44 7554 766 102</span>
+          </a>
+        </li>
+        <li class="write-us__contact-item">
+          <a href="mailto:info@ugspot.co.uk" class="write-us__contact-link">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#mail"></use></svg>
+            <span>info@ugspot.co.uk</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="write-us__header-col-icons">
+      @@include('../../blocks/social-net/social-net.html')
+    </div>
+
+  </div>
+
+  <form class="write-us__form" action="" method="post" enctype="multipart/form-data">
+    <div class="write-us__form-inner">
+      <div class="write-us__input-1">
+        <label class="field-text">
+          <span class="field-text__name">Name</span>
+          <span class="field-text__input-wrap">
+            <input class="field-text__input  field-text__input--required" type="text" name="name" value="">
+            <span class="field-text__help-text" data-error="name"></span>
+          </span>
+        </label>
+      </div>
+      <div class="write-us__input-2">
+        <label class="field-text">
+          <span class="field-text__name">Surname</span>
+          <span class="field-text__input-wrap">
+            <input class="field-text__input" type="text" name="surname" value="">
+            <span class="field-text__help-text" data-error="surname"></span>
+          </span>
+        </label>
+      </div>
+      <div class="write-us__input-3">
+        <label class="field-text">
+          <span class="field-text__name">Postcode of the Project</span>
+          <span class="field-text__input-wrap">
+            <input class="field-text__input  field-text__input--required" type="text" name="postcode" value="">
+            <span class="field-text__help-text" data-error="postcode"></span>
+          </span>
+        </label>
+      </div>
+      <div class="write-us__input-4">
+        <label class="field-text">
+          <span class="field-text__name">Email</span>
+          <span class="field-text__input-wrap">
+            <input class="field-text__input  field-text__input--required" type="text" name="email" value="">
+            <span class="field-text__help-text" data-error="email"></span>
+          </span>
+        </label>
+      </div>
+      <div class="write-us__input-5">
+        <label class="field-text">
+          <span class="field-text__name">Phone number</span>
+          <span class="field-text__input-wrap">
+            <input class="field-text__input  field-text__input--required" type="text" name="tel" value="">
+            <span class="field-text__help-text" data-error="tel"></span>
+          </span>
+        </label>
+      </div>
+      <div class="write-us__input-6">
+        <div class="field-file">
+          <div class="field-file__name">Upload files (png, jpeg)</div>
+          <label class="field-file__input-wrap">
+            <input class="field-file__input" type="file" data-multiple-caption="files selected: {count}" multiple>
+            <span class="field-file__name-text" data-button-text="Upload"></span>
+            <span class="field-file__help-text"></span>
+          </label>
+        </div>
+      </div>
+      <div class="write-us__input-7">
+        <label class="field-text  field-text--textarea">
+          <span class="field-text__name">Your message</span>
+          <span class="field-text__input-wrap">
+            <textarea class="field-text__input" name="message" rows="4" placeholder="Tell us about what is it you are looking for"></textarea>
+            <span class="field-text__help-text" data-error="message"></span>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="write-us__footer">
+      <div class="row  write-us__footer-row">
+
+        <div class="write-us__submit-col">
+          <div class="write-us__agreement">
+
+            <div class="write-us__checker-block">
+              <div class="field-checkbox">
+                <label class="field-checkbox__name">
+                  <input class="field-checkbox__input" type="checkbox" name="" value="">
+                  <span class="field-checkbox__name-text">Availability within the next 2 weeks including weekends</span>
+                </label>
+              </div>
+
+              <div class="field-checkbox">
+                <label class="field-checkbox__name">
+                  <input class="field-checkbox__input" type="checkbox" name="agreement" value="" checked>
+                  <span class="field-checkbox__name-text">I agree to the processing of personal data in accordance with the <a href="#">Privacy Policy</a></span>
+                </label>
+              </div>
+
+            </div>
+
+            <div class="write-us__submit-block">
+              <div class="write-us__captcha">
+                <img src="img/reCaptcha.gif" alt="" width="304">
+              </div>
+
+              <div class="write-us__submit-btn">
+                <button class="btn" type="submit">
+                  <span>Submit</span>
+                  <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="write-us__img-col">
+          <div class="write-us__img" role="presentation"></div>
+        </div>
+
+      </div>
+    </div>
+  </form>
+</article>

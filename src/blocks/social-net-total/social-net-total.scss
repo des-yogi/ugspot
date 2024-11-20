@@ -1,0 +1,45 @@
+.social-net-total {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $link-color;
+    }
+
+    &--fb {
+
+    }
+
+    &--inst {
+
+    }
+
+    &--ytb {
+
+    }
+
+    &--in {
+
+    }
+
+    &--pin {
+
+    }
+  }
+}
