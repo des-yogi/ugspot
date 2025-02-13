@@ -33,7 +33,7 @@
   }
 
   &__text {
-    text-transform: uppercase;
+    //text-transform: uppercase;
     text-align: center;
 
     @media (min-width: $screen-xl) {
@@ -69,6 +69,24 @@
     img {
       object-fit: cover;
       object-position: center;
+    }
+  }
+
+  &--reversed {
+
+    #{$block-name}__row {
+
+      @media (min-width: $screen-xl) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    #{$block-name}__text {
+
+      @media (min-width: $screen-xl) {
+        padding-right: 0;
+        padding-left: 40px;
+      }
     }
   }
 }

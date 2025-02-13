@@ -6,6 +6,10 @@
   &__title {
     margin-bottom: 40px;
     text-align: center;
+
+    &:empty {
+      display: none;
+    }
   }
 
   &__row {

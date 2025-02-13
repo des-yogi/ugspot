@@ -1,0 +1,60 @@
+<!--DEV
+@ @include('blocks/price-card-backfaced/price-card-backfaced.html', {
+  "img1": "price-card-1",
+  "img2": "win-type-1",
+  "title": "VS TYPE 1 –",
+  "descr1": "Lead time 12 working days",
+  "descr2": "Supply & Install staring from:",
+  "price": "£999",
+})
+-->
+
+<article class="price-card-backfaced">
+
+  <div class="price-card-backfaced__img-container" tabindex="0"
+       role="button"
+       aria-label="Карточка с изображением. Наведите или нажмите для смены."
+       aria-live="polite">
+
+    <div class="embed-responsive embed-responsive--4-3  price-card-backfaced__img-main">
+      <picture>
+        <source srcset="img/@@img1.webp,
+                        img/@@img1.webp 2x" media="(min-width: 1280px)" type="image/webp">
+        <source srcset="img/@@img1.jpg,
+                        img/@@img1.jpg 2x" media="(min-width: 1280px)">
+        <!-- 387x290, 580x435 2x -->
+        <source srcset="img/@@img1.webp,
+                        img/@@img1.webp 2x" media="(min-width: 1024px)" type="image/webp">
+        <source srcset="img/@@img1.jpg,
+                        img/@@img1.jpg 2x" media="(min-width: 1024px)">
+        <!-- 566x425, 850x638 2x -->
+        <source srcset="img/@@img1.webp" media="(min-width: 768px)" type="image/webp">
+        <source srcset="img/@@img1.jpg" media="(min-width: 768px)">
+        <!-- 715x536 -->
+        <source srcset="img/@@img1.webp" media="(min-width: 480px)" type="image/webp">
+        <source srcset="img/@@img1.jpg" media="(min-width: 480px)">
+        <!-- 675x506 -->
+        <source srcset="img/@@img1.webp" media="(min-width: 320px)" type="image/webp">
+        <source srcset="img/@@img1.jpg" media="(min-width: 320px)">
+        <!-- 510x383 -->
+        <img src="img/@@img1.jpg" alt="Alt text" width="850" height="638" loading="lazy">
+      </picture>
+    </div>
+
+    <div class="embed-responsive embed-responsive--4-3  price-card-backfaced__img-back" aria-hidden="true">
+      <picture>
+        <!-- см. выше -->
+        <img src="img/@@img2.jpg" alt="Alt text" width="850" height="638" loading="lazy">
+      </picture>
+    </div>
+  </div>
+
+  <div class="price-card-backfaced__text">
+    <h3 class="h4  price-card-backfaced__title">@@title</h3>
+    <p class="price-card-backfaced__descr">
+      <span>@@descr1</span>
+      <span>@@descr2</span>
+    </p>
+    <p class="price-card-backfaced__price">@@price + VAT</p>
+  </div>
+</article>

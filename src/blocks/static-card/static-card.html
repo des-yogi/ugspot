@@ -1,0 +1,38 @@
+<!--DEV
+@ @include('blocks/static-card/static-card.html', {
+  "img": "article-img-1",
+  "title": "Arched Windows – Standard Profile Specifications",
+  "descr": '<p>Our arched windows in the standard profile at UGS Ltd are designed to offer the perfect blend of strength, durability, and style. The standard profile, with its 70mm frame, provides a solid, substantial look that is well-suited for both modern and traditional properties. This profile is engineered to provide excellent insulation, security, and long-lasting performance while maintaining the graceful curves of arched windows.</p><p>The benefits of the standard profile for arched windows are numerous. First, the thicker frame enhances the structural integrity of the window, making it more robust and resistant to wear and tear over time. This sturdier construction also offers superior energy efficiency, helping to retain heat in colder months and keep your home cool in warmer weather, reducing energy consumption and costs. Additionally, the standard profile is highly secure, with the thicker frame providing added strength against potential intrusions.</p><p>The standard profile is also versatile in terms of design. It complements a variety of home styles, from contemporary to more traditional, while still allowing the beauty of the arched shape to take center stage. Its strong, durable frame can be customized with different materials such as uPVC, aluminum, or timber, ensuring that the windows meet your aesthetic and functional needs.</p><p>For homeowners seeking a robust, high-performance window that maintains the elegance of arched designs, the standard profile offers the perfect solution. It delivers on durability, security, and energy efficiency while allowing you to enjoy the timeless appeal of arched windows in any setting.</p>',
+})
+-->
+
+<article class="static-card">
+  <div class="embed-responsive embed-responsive--4-3  static-card__img">
+    <picture>
+      <source srcset="img/@@img.webp,
+                      img/@@img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+      <source srcset="img/@@img.jpg,
+                      img/@@img.jpg 2x" media="(min-width: 1280px)">
+      <!-- 387x290, 580x435 2x -->
+      <source srcset="img/@@img.webp,
+                      img/@@img.webp 2x" media="(min-width: 1024px)" type="image/webp">
+      <source srcset="img/@@img.jpg,
+                      img/@@img.jpg 2x" media="(min-width: 1024px)">
+      <!-- 566x425, 850x638 2x -->
+      <source srcset="img/@@img.webp" media="(min-width: 768px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 768px)">
+      <!-- 715x536 -->
+      <source srcset="img/@@img.webp" media="(min-width: 480px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 480px)">
+      <!-- 675x506 -->
+      <source srcset="img/@@img.webp" media="(min-width: 320px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 320px)">
+      <!-- 510x383 -->
+      <img src="img/@@img.jpg" alt="Alt text" width="850" height="638" loading="lazy">
+    </picture>
+  </div>
+  <div class="static-card__text">
+    <h3 class="static-card__title">@@title</h3>
+    <div class="static-card__descr">@@descr</div>
+  </div>
+</article>

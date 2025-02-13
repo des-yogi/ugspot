@@ -10,7 +10,7 @@ $line-height:                 1.375em !default;
 
   display: flex;
   align-items: center;
-  margin-top: $line-height;
+  margin-top: #{$line-height}px;
   //margin-bottom: ($line-height / 2);
 
   .btn {

@@ -1,0 +1,38 @@
+.static-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px 0;
+  min-height: 100%;
+
+  &__img {
+    flex: 0;
+    border-radius: $border-radius;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  // &__text {
+
+  // }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__descr {
+
+    p {
+      margin: 0.5em 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

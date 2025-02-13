@@ -49,7 +49,20 @@
     "win-option-card": [],
     "special-offers-banner": [],
     "social-net": [],
-    "social-net-total": []
+    "social-net-total": [],
+    "price-card-backfaced": [],
+    "personaliz-card": [],
+    "openers-options": [],
+    "articles": [],
+    "article-card": [],
+    "static-3-col": [],
+    "static-card": [],
+    "brands": [],
+    "two-col-image": [],
+    "multi-pane": [],
+    "two-col-text": [],
+    "media-banner": [],
+    "card-tabs": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

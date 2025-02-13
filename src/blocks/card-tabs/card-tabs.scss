@@ -1,0 +1,111 @@
+.card-tabs {
+  margin: 64px 0;
+
+  $block-name:                &; // #{$block-name}__element
+
+  .special-offers-banner {
+    margin: 0 0 40px;
+  }
+
+  .tab-pane {
+
+    @media (min-width: $screen-md) {
+      column-count: 2;
+      column-gap: 16px;
+      column-fill: balance;
+      text-wrap: pretty;
+      widows: 2;
+      orphans: 2;
+    }
+
+    & > * {
+      margin-bottom: 0;
+    }
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__inner {
+
+  }
+
+  &__nav {
+    gap: 16px;
+    padding: 5px;
+    margin: 0 0 16px;
+    overflow-x: auto;
+
+    @media (max-width: $screen-lg - 1) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    flex: 0 0;
+    flex-basis: 156px;
+
+    @media (min-width: $screen-md) {
+      //flex-basis: 220px;
+      flex-basis: calc(100% / 3 - 10.7px);
+    }
+
+    @media (min-width: $screen-lg) {
+      //flex-basis: 220px;
+      flex-basis: calc(100% / 4 - 12px);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+    width: 100%;
+    height: 100%;
+    padding: 7px;
+    background-color: $border-color;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    transition: border-color $transition-time ease;
+    cursor: pointer;
+
+    // &:hover {
+    //   box-shadow: 0 0 0 4px $main-pale--hover;
+    // }
+    &:hover,
+    &:focus,
+    &.active {
+      border-color: $main-color;
+      outline: $main-color;
+    }
+  }
+
+  &__img {
+    border-radius: $border-radius-sm;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__content {
+
+  }
+
+  &__text {
+    flex: 1 1 auto;
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px 0;
+    height: 100%;
+    margin: 0;
+    text-align: initial;
+  }
+}
