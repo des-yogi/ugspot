@@ -36,7 +36,7 @@
   }
 
   &__title {
-    margin: 0 0 16px;
+    margin: 0;
 
     a {
       text-decoration: none;
@@ -53,8 +53,16 @@
   &__text {
     font-size: $font-size-sm;
 
+    &:has(p:empty) + .more-link {
+      margin-top: 0;
+    }
+
     p {
       color: $text-muted;
+
+      &:empty {
+        display: none;
+      }
     }
   }
 }

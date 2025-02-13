@@ -1,0 +1,29 @@
+<!--DEV
+@ @include('blocks/personaliz-card/personaliz-card.html', {
+  "img": "personaliz-card-1",
+  "title": "Headline"
+})
+-->
+
+<section class="personaliz-card">
+  <div class="embed-responsive embed-responsive--4-3  personaliz-card__img">
+    <picture>
+      <source srcset="img/@@img.webp,
+                      img/@@img.webp 2x" media="(min-width: 1024px)" type="image/webp">
+      <source srcset="img/@@img.jpg,
+                      img/@@img.jpg 2x" media="(min-width: 1024px)">
+        <!-- 286x215, 430x323 2x -->
+      <source srcset="img/@@img.webp" media="(min-width: 768px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 768px)">
+        <!-- 468x351 -->
+      <source srcset="img/@@img.webp" media="(min-width: 480px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 480px)">
+        <!-- 720x540 -->
+      <source srcset="img/@@img.webp" media="(min-width: 320px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 320px)">
+        <!-- 510x383 -->
+      <img src="img/@@img.jpg" alt="Alt text" width="580" height="435" loading="lazy">
+    </picture>
+  </div>
+  <h4 class="personaliz-card__title">@@title</h4>
+</section>

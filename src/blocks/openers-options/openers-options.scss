@@ -1,0 +1,28 @@
+.openers-options {
+  gap: 24px 0;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    @include col(xs, 6);
+    @include col(md, 4);
+    @include col(lg, 3);
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+      border-radius: $border-radius;
+      border: 1px solid $border-color;
+      overflow: hidden;
+    }
+
+    span {
+      padding: 14px 12px;
+
+      &:first-child {
+        border-bottom: 1px solid $border-color;
+      }
+    }
+  }
+}

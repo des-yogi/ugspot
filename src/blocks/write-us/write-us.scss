@@ -52,10 +52,15 @@
     align-items: center;
     gap: 0 8px;
     text-decoration: none;
+    color: $text-color;
 
     &:hover,
     &:focus {
       text-decoration: underline;
+    }
+
+    svg {
+      fill: $main-color;
     }
   }
 
@@ -148,13 +153,13 @@
     @include col(xl, 6);
   }
 
-  &__img-col {
+  // &__img-col {
 
-  }
+  // }
 
-  &__agreement {
+  // &__agreement {
 
-  }
+  // }
 
   &__checker-block,
   &__submit-block {

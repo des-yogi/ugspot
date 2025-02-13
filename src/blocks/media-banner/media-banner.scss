@@ -1,0 +1,55 @@
+.media-banner {
+  margin: 64px 0;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    position: relative;
+    padding: 24px;
+    border-radius: $border-radius-lg;
+    background-color: $text-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    @media (min-width: $screen-md) {
+      padding: 32px 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 64px 24px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba($black, 0.6);
+    }
+  }
+
+  &__row {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col-offset(lg, 1);
+    @include col(lg, 10);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+  }
+
+  &__text {
+    color: $white;
+  }
+
+  &__title {
+    color: inherit;
+  }
+}

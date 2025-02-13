@@ -1,0 +1,57 @@
+<!--DEV
+@ @include('blocks/article-card/article-card.html', {
+  "img": "article-img-1",
+  "title": "Sash Windows - Details matter!",
+  "descr": "Three magic ingredients for designing balanced, sash windows that faithfully replicate the originals",
+  "tag1": "#windows",
+  "tag2": "Experience",
+  "tag3": ""
+})
+-->
+
+<article class="article-card">
+  <div class="embed-responsive embed-responsive--4-3  article-card__img">
+    <picture>
+      <source srcset="img/@@img.webp,
+                      img/@@img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+      <source srcset="img/@@img.jpg,
+                      img/@@img.jpg 2x" media="(min-width: 1280px)">
+      <!-- 387x290, 580x435 2x -->
+      <source srcset="img/@@img.webp,
+                      img/@@img.webp 2x" media="(min-width: 1024px)" type="image/webp">
+      <source srcset="img/@@img.jpg,
+                      img/@@img.jpg 2x" media="(min-width: 1024px)">
+      <!-- 566x425, 850x638 2x -->
+      <source srcset="img/@@img.webp" media="(min-width: 768px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 768px)">
+      <!-- 715x536 -->
+      <source srcset="img/@@img.webp" media="(min-width: 480px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 480px)">
+      <!-- 675x506 -->
+      <source srcset="img/@@img.webp" media="(min-width: 320px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 320px)">
+      <!-- 510x383 -->
+      <img src="img/@@img.jpg" alt="Alt text" width="850" height="638" loading="lazy">
+    </picture>
+
+    <ul class="list-nostyled  article-card__tag-list">
+      <li class="article-card__tag">@@tag1</li>
+      <li class="article-card__tag">@@tag2</li>
+      <li class="article-card__tag">@@tag3</li>
+    </ul>
+  </div>
+  <div class="article-card__text">
+    <div class="article-card__body">
+      <h3 class="h4  article-card__title">
+        <a href="#" tabindex="-1">@@title</a>
+      </h3>
+      <p class="article-card__descr">@@descr</p>
+    </div>
+    <div class="article-card__footer">
+      <a href="#" class="more-link">
+        <span>Read more</span>
+        <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+      </a>
+    </div>
+  </div>
+</article>

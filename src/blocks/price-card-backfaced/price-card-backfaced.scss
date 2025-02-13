@@ -1,0 +1,59 @@
+.price-card-backfaced {
+  display: flex;
+  flex-direction: column;
+  gap: 24px 0;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__img-container {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    perspective: 1000px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      outline: none;
+
+      #{$block-name}__img-main {
+        transform: rotateY(180deg);
+      }
+
+      #{$block-name}__img-back {
+        transform: rotateY(0);
+      }
+    }
+  }
+
+  &__img-main,
+  &__img-back {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.5s ease-in-out;
+    object-fit: cover;
+    object-position: center;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+  }
+
+  &__img-back {
+    transform: rotateY(180deg);
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__descr {
+    font-size: $font-size-sm;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__price {
+    font-size: $font-size-lg;
+    font-weight: 500;
+  }
+}

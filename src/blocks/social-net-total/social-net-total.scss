@@ -5,9 +5,9 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  &__item {
+  // &__item {
 
-  }
+  // }
 
   &__link {
     display: flex;
@@ -22,7 +22,7 @@
       color: $link-color;
     }
 
-    &--fb {
+    /*&--fb {
 
     }
 
@@ -40,6 +40,6 @@
 
     &--pin {
 
-    }
+    }*/
   }
 }

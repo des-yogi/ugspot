@@ -1,0 +1,45 @@
+<!--DEV
+@ @include('blocks/two-col-image/two-col-image.html', {
+  "blockType": "div",
+  "headerType": "h1",
+  "headerAlign": "text-align: center;",
+  "title": "Glazing General",
+  "text": '<p>Our secondary glazing units are tailored to fit your windows perfectly, blending seamlessly into your interiors without compromising the building’s original design.</p><p>Whether you’re looking to enhance comfort, reduce your energy bills, or simply protect your home from the hustle and bustle of the outside world, secondary glazing is a cost-effective and approved solution for listed buildings.</p><p>Preserve your home’s heritage while enjoying the benefits of modern living—choose secondary glazing for your character property.</p><p>Our secondary glazing units are tailored to fit your windows perfectly, blending seamlessly into your interiors without compromising the building’s original design.</p><p>Whether you’re looking to enhance comfort, reduce your energy bills, or simply protect your home from the hustle and bustle of the outside world, secondary glazing is a cost-effective and approved solution for listed buildings.</p><p>Our secondary glazing units are tailored to fit your windows perfectly, blending seamlessly into your interiors without compromising the building’s original design.</p>',
+  "img1": "image-1_16x9",
+  "img2": "image-2_16x9",
+  "hideImg": "style='display:none;'"
+})
+-->
+
+<@@blockType class="container  two-col-image">
+  <@@headerType class="@@headerType  two-col-image__title" style="@@headerAlign">@@title</@@headerType>
+
+  <div class="two-col-image__text-wrapper">
+    @@text
+  </div>
+
+  <div class="row  two-col-image__img-wrapper" @@hideImg>
+    <div class="two-col-image__col-img">
+      <div class="embed-responsive  two-col-image__img">
+        <picture>
+          <source srcset="img/@@img1.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/@@img1.jpg" media="(min-width: 320px)">
+
+          <img src="img/@@img1.jpg" alt="Alt text" width="592" height="333" loading="lazy">
+        </picture>
+      </div>
+    </div>
+
+    <div class="two-col-image__col-img">
+      <div class="embed-responsive  two-col-image__img">
+        <picture>
+          <source srcset="img/@@img2.webp" media="(min-width: 320px)" type="image/webp">
+          <source srcset="img/@@img2.jpg" media="(min-width: 320px)">
+
+          <img src="img/@@img2.jpg" alt="Alt text" width="592" height="333" loading="lazy">
+        </picture>
+      </div>
+    </div>
+  </div>
+</@@blockType>
+

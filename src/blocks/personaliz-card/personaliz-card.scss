@@ -1,0 +1,25 @@
+.personaliz-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  max-width: 480px;
+  margin: 0 auto;
+
+  &__img {
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+  }
+}

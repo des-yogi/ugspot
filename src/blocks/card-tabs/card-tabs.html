@@ -1,0 +1,160 @@
+<!--DEV
+@ @include('blocks/card-tabs/card-tabs.html')
+-->
+
+<section class="container  card-tabs">
+
+  <div class="special-offers-banner">
+    <div class="row  special-offers-banner__row">
+
+      <div class="special-offers-banner__text-col">
+        <div class="special-offers-banner__text">
+          <div class="special-offers-banner__header">
+            <h2 class="special-offers-banner__title">Types of secondary glazing units:</h2>
+            <p>UGS Ltd offers a comprehensive range of secondary glazing units, available in both standard and made-to-measure custom sizes to suit any project. We supply and install secondary glazing in aluminium with options available in both Standard and Heritage (slim) profiles. Choose from a variety of finishes, including the full RAL colour spectrum, and select from single, double or triple glazing to meet your specific needs and budget.</p>
+            <p>Explore our personalisation options for more details, book a free no-obligation survey appointment, or simply fill out our distance quote form for a quick estimate.</p>
+
+            <a href="#" class="btn">
+              <span>Default</span>
+              <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="special-offers-banner__img-col">
+        <div class="embed-responsive embed-responsive--4-3  special-offers-banner__img">
+          <picture>
+            <source srcset="img/sp-offer-banner.webp,
+                            img/sp-offer-banner.webp 2x" media="(min-width: 1280px)" type="image/webp">
+            <source srcset="img/sp-offer-banner.jpg,
+                            img/sp-offer-banner.jpg 2x" media="(min-width: 1280px)">
+            <!-- 491x368, 736x552 2x -->
+            <source srcset="img/sp-offer-banner.webp" media="(min-width: 768px)" type="image/webp">
+            <source srcset="img/sp-offer-banner.jpg" media="(min-width: 768px)">
+            <!-- 1100x825 -->
+            <source srcset="img/sp-offer-banner.webp" media="(min-width: 480px)" type="image/webp">
+            <source srcset="img/sp-offer-banner.jpg" media="(min-width: 480px)">
+            <!-- 820x615 -->
+            <source srcset="img/sp-offer-banner.webp" media="(min-width: 320px)" type="image/webp">
+            <source srcset="img/sp-offer-banner.jpg" media="(min-width: 320px)">
+            <!-- 600x450 -->
+            <img src="img/sp-offer-banner.jpg" alt="" width="1100" height="825" loading="lazy">
+          </picture>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="card-tabs__inner">
+
+    <ul class="nav  card-tabs__nav" id="cards-tab" role="tablist">
+      <li class="card-tabs__item" role="presentation">
+        <button class="card-tabs__card active" id="cards-1-tab" data-bs-toggle="pill" data-bs-target="#cards-1" type="button" role="tab" aria-controls="cards-1" aria-selected="true">
+          <span class="embed-responsive embed-responsive--4-3  card-tabs__img">
+            <picture>
+              <source srcset="img/card-btn-1.webp,
+                              img/card-btn-1.webp 2x" media="(min-width: 1024px)" type="image/webp">
+              <source srcset="img/card-btn-1.jpg,
+                              img/card-btn-1.jpg 2x" media="(min-width: 1024px)">
+              <!-- 272x204, 405x304 2x -->
+              <source srcset="img/card-btn-1.webp" media="(min-width: 768px)" type="image/webp">
+              <source srcset="img/card-btn-1.jpg" media="(min-width: 768px)">
+              <!-- 428x321 -->
+              <source srcset="img/card-btn-1.webp" media="(min-width: 320px)" type="image/webp">
+              <source srcset="img/card-btn-1.jpg" media="(min-width: 320px)">
+              <!-- 210x156 -->
+              <img src="img/card-btn-1.jpg" alt="Alt text" width="272" height="204" loading="lazy">
+            </picture>
+          </span>
+          <span class="card-tabs__text">
+            <span class="h4 card-tabs__descr">
+              <span class="card-tabs__line">Horizontal Sliding Sash</span>
+              <span class="card-tabs__line">£ 359 + VAT</span>
+            </span>
+          </span>
+        </button>
+      </li>
+
+      <li class="card-tabs__item" role="presentation">
+        <button class="card-tabs__card" id="cards-2-tab" data-bs-toggle="pill" data-bs-target="#cards-2" type="button" role="tab" aria-controls="cards-2" aria-selected="false">
+          <span class="embed-responsive embed-responsive--4-3  card-tabs__img">
+            <picture>
+              <source srcset="img/card-btn-2.webp" media="(min-width: 320px)" type="image/webp">
+              <source srcset="img/card-btn-2.jpg" media="(min-width: 320px)">
+
+              <img src="img/card-btn-2.jpg" alt="Alt text" width="272" height="204" loading="lazy">
+            </picture>
+          </span>
+          <span class="card-tabs__text">
+            <span class="h4 card-tabs__descr">
+              <span class="card-tabs__line">Vertical Sliding Sash</span>
+              <span class="card-tabs__line">£ 359 + VAT</span>
+            </span>
+          </span>
+        </button>
+      </li>
+      <li class="card-tabs__item" role="presentation">
+        <button class="card-tabs__card" id="cards-3-tab" data-bs-toggle="pill" data-bs-target="#cards-3" type="button" role="tab" aria-controls="cards-3" aria-selected="false">
+          <span class="embed-responsive embed-responsive--4-3  card-tabs__img">
+            <picture>
+              <source srcset="img/card-btn-3.webp" media="(min-width: 320px)" type="image/webp">
+              <source srcset="img/card-btn-3.jpg" media="(min-width: 320px)">
+
+              <img src="img/card-btn-3.jpg" alt="Alt text" width="272" height="204" loading="lazy">
+            </picture>
+          </span>
+          <span class="card-tabs__text">
+            <span class="h4 card-tabs__descr">
+              <span class="card-tabs__line">Hinged Casement Sash</span>
+              <span class="card-tabs__line">£ 359 + VAT</span>
+            </span>
+          </span>
+        </button>
+      </li>
+      <li class="card-tabs__item" role="presentation">
+        <button class="card-tabs__card" id="cards-4-tab" data-bs-toggle="pill" data-bs-target="#cards-4" type="button" role="tab" aria-controls="cards-4" aria-selected="false">
+          <span class="embed-responsive embed-responsive--4-3  card-tabs__img">
+            <picture>
+              <source srcset="img/card-btn-4.webp" media="(min-width: 320px)" type="image/webp">
+              <source srcset="img/card-btn-4.jpg" media="(min-width: 320px)">
+
+              <img src="img/card-btn-4.jpg" alt="Alt text" width="272" height="204" loading="lazy">
+            </picture>
+          </span>
+          <span class="card-tabs__text">
+            <span class="h4 card-tabs__descr">
+              <span class="card-tabs__line">Fixed Sash</span>
+              <span class="card-tabs__line">£ 359 + VAT</span>
+            </span>
+          </span>
+        </button>
+      </li>
+    </ul>
+
+    <div class="tab-content  card-tabs__content" id="cards-tabContent">
+      <div class="tab-pane fade show active" id="cards-1" role="tabpanel" aria-labelledby="cards-1-tab" tabindex="0">
+        <p>Our Horizontal Sliding Sash Secondary Glazing units are the perfect solution for windows that require easy access and functionality. Designed with smooth sliding panels, this unit type is ideal for wide, horizontally-opening windows, including sash and casement windows. Its slim and discreet design ensures it blends seamlessly with your existing windows, offering excellent thermal insulation and noise reduction while preserving your property’s aesthetic.</p>
+        <p>Perfect for heritage buildings and modern homes alike, Horizontal Sliding Sash units allow for effortless ventilation and easy cleaning access, making them both practical and effective.</p>
+        <p>Our Horizontal Sliding Sash Secondary Glazing units are the perfect solution for windows that require easy access and functionality. Designed with smooth sliding panels, this unit type is ideal for wide, horizontally-opening windows, including sash and casement windows. Its slim and discreet design ensures it blends seamlessly with your existing windows, offering excellent thermal insulation and noise reduction while preserving your property’s aesthetic.</p>
+        <p>Perfect for heritage buildings and modern homes alike, Horizontal Sliding Sash units allow for effortless ventilation and easy cleaning access, making them both practical and effective.</p>
+      </div>
+      <div class="tab-pane fade" id="cards-2" role="tabpanel" aria-labelledby="cards-2-tab" tabindex="0">
+        <p>Perfect for heritage buildings and modern homes alike, Horizontal Sliding Sash units allow for effortless ventilation and easy cleaning access, making them both practical and effective.</p>
+        <p>Our Horizontal Sliding Sash Secondary Glazing units are the perfect solution for windows that require easy access and functionality. Designed with smooth sliding panels, this unit type is ideal for wide, horizontally-opening windows, including sash and casement windows. Its slim and discreet design ensures it blends seamlessly with your existing windows, offering excellent thermal insulation and noise reduction while preserving your property’s aesthetic.</p>
+        <p>Our Horizontal Sliding Sash Secondary Glazing units are the perfect solution for windows that require easy access and functionality. Designed with smooth sliding panels, this unit type is ideal for wide, horizontally-opening windows, including sash and casement windows. Its slim and discreet design ensures it blends seamlessly with your existing windows, offering excellent thermal insulation and noise reduction while preserving your property’s aesthetic.</p>
+        <p>Perfect for heritage buildings and modern homes alike, Horizontal Sliding Sash units allow for effortless ventilation and easy cleaning access, making them both practical and effective.</p>
+      </div>
+      <div class="tab-pane fade" id="cards-3" role="tabpanel" aria-labelledby="cards-3-tab" tabindex="0">
+        <p>Our Horizontal Sliding Sash Secondary Glazing units are the perfect solution for windows that require easy access and functionality. Designed with smooth sliding panels, this unit type is ideal for wide, horizontally-opening windows, including sash and casement windows. Its slim and discreet design ensures it blends seamlessly with your existing windows, offering excellent thermal insulation and noise reduction while preserving your property’s aesthetic.</p>
+        <p>Perfect for heritage buildings and modern homes alike, Horizontal Sliding Sash units allow for effortless ventilation and easy cleaning access, making them both practical and effective.</p>
+        <p>Our Horizontal Sliding Sash Secondary Glazing units are the perfect solution for windows that require easy access and functionality. Designed with smooth sliding panels, this unit type is ideal for wide, horizontally-opening windows, including sash and casement windows. Its slim and discreet design ensures it blends seamlessly with your existing windows, offering excellent thermal insulation and noise reduction while preserving your property’s aesthetic.</p>
+        <p>Perfect for heritage buildings and modern homes alike, Horizontal Sliding Sash units allow for effortless ventilation and easy cleaning access, making them both practical and effective.</p>
+      </div>
+      <div class="tab-pane fade" id="cards-4" role="tabpanel" aria-labelledby="cards-4-tab" tabindex="0">4...</div>
+    </div>
+
+  </div>
+
+</section>

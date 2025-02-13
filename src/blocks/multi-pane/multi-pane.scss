@@ -1,0 +1,59 @@
+.multi-pane {
+  margin: 64px 0;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0 0 16px;
+  }
+
+  &__inner {
+    padding: 24px;
+    border-radius: $border-radius-lg;
+    background-color: $text-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    //background-image: url(../img/image-2_16x9.jpg);
+
+    @media (min-width: $screen-md) {
+      padding: 60px 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 92px 24px;
+    }
+  }
+
+  &__row {
+    gap: 16px 0;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(sm, 6);
+    @include col(md, 4);
+  }
+
+  &__item {
+    display: flex;
+    height: 100%;
+    padding: 16px;
+    margin: 0;
+    text-wrap: balance;
+    color: $title-color;
+    background-color: rgba($white, 0.6);
+    backdrop-filter: blur(11px);
+    border-radius: $border-radius;
+
+    &:has(a) {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
