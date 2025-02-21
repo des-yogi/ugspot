@@ -1,0 +1,78 @@
+<!--DEV
+@ @include('blocks/article-3-col/article-3-col.html', {
+  "title": "Aluminium Door Profiles",
+  "intro": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ducimus dolorum veniam consectetur voluptates, optio, ut at soluta aliquam minima qui, totam consequatur.</p>",
+  "img1": "article-img-1",
+  "img2": "article-img-2",
+  "img3": "article-img-3",
+  "subtitle1": "Introduction to Standard Aluminium Profile for Doors",
+  "subtitle2": "Introduction to Heritage (Slim) Aluminium Profile for Doors",
+  "subtitle3": "Introduction to Flush Aluminium Profile for Doors",
+  "text": "<p>The standard aluminium profile used in doors provides the perfect balance of strength, durability, and modern design. In the UK, the typical profile thickness for aluminium doors is 70mm, ensuring robust structural integrity while maintaining a sleek appearance.</p><p>At UGS Ltd, we offer entrance doors, French doors, patio sliders, and bi-fold doors crafted using standard aluminium profiles. Our doors are available in both standard and custom sizes, providing fully personalisable customisation options to suit individual design preferences and project requirements.</p><p>Key Benefits of Standard Aluminium Profile:</p><p>Strength and Durability: The 70mm aluminium profile ensures long-lasting performance, offering excellent resistance to warping, rust, and corrosion.</p><p>Energy Efficiency: Advanced thermal breaks and seals within the profile improve insulation, helping to maintain comfortable indoor temperatures year-round.</p><p>Design Versatility: Its slim, modern design allows for expansive glass panels and custom finishes, enhancing both aesthetics and functionality.</p><p>Choose UGS Ltd for high-quality aluminium doors with standard profiles, expertly crafted to meet your specific needs.</p>"
+})
+-->
+
+<article class="container  article-3-col">
+  <div class="article-3-col__header">
+    <h2 class="article-3-col__title">@@title</h2>
+    @@intro
+  </div>
+
+  <div class="row  article-3-col__row">
+
+    <div class="article-3-col__col">
+      <section class="article-3-col__block">
+        <div class="embed-responsive embed-responsive--4-3  article-3-col__img">
+          <picture>
+            <source srcset="img/@@img1.webp" media="(min-width: 320px)" type="image/webp">
+            <source srcset="img/@@img1.jpg" media="(min-width: 320px)">
+
+            <img src="img/@@img1.jpg" alt="Alt text" width="" height="" loading="lazy">
+          </picture>
+        </div>
+
+        <div class="article-3-col__text">
+          <h3>@@subtitle1</h3>
+          @@text
+        </div>
+      </section>
+    </div>
+
+    <div class="article-3-col__col">
+      <section class="article-3-col__block">
+        <div class="embed-responsive embed-responsive--4-3  article-3-col__img">
+          <picture>
+            <source srcset="img/@@img2.webp" media="(min-width: 320px)" type="image/webp">
+            <source srcset="img/@@img2.jpg" media="(min-width: 320px)">
+
+            <img src="img/@@img2.jpg" alt="Alt text" width="" height="" loading="lazy">
+          </picture>
+        </div>
+
+        <div class="article-3-col__text">
+          <h3>@@subtitle2</h3>
+          @@text
+        </div>
+      </section>
+    </div>
+
+    <div class="article-3-col__col">
+      <section class="article-3-col__block">
+        <div class="embed-responsive embed-responsive--4-3  article-3-col__img">
+          <picture>
+            <source srcset="img/@@img3.webp" media="(min-width: 320px)" type="image/webp">
+            <source srcset="img/@@img3.jpg" media="(min-width: 320px)">
+
+            <img src="img/@@img3.jpg" alt="Alt text" width="" height="" loading="lazy">
+          </picture>
+        </div>
+
+        <div class="article-3-col__text">
+          <h3>@@subtitle3</h3>
+          @@text
+        </div>
+      </section>
+    </div>
+
+  </div>
+</article>

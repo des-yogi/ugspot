@@ -1,103 +1,86 @@
 document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
 
-
-(function(){
-  // Поддержка формата webp для background-img
-  // 1. Проверяем, можно ли использовать Webp формат
+(function () {
   function canUseWebp() {
-    // Создаем элемент canvas
     let elem = document.createElement('canvas');
-    // Приводим элемент к булеву типу
-    if (!!(elem.getContext && elem.getContext('2d'))) {
-        // Создаем изображение в формате webp, возвращаем индекс искомого элемента и сразу же проверяем его
-        return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
-    }
-    // Иначе Webp не используем
-    return false;
+    return !!(elem.getContext && elem.getContext('2d'))
+      && elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
   }
-  // 2. Заменв формата изображений
-  window.onload = function () {
-    // Получаем все элементы с дата-атрибутом data-bg
-    let images = document.querySelectorAll('[data-bg]');
-    // Проходимся по каждому
-    for (let i = 0; i < images.length; i++) {
-      // Получаем значение каждого дата-атрибута
-      let image = images[i].getAttribute('data-bg');
-      // Каждому найденному элементу задаем свойство background-image с изображение формата jpg
-      images[i].style.backgroundImage = 'url(' + image + ')';
-    }
-    // Проверяем, является ли браузер посетителя сайта Firefox и получаем его версию
-    let isitFirefox = window.navigator.userAgent.match(/Firefox\/([0-9]+)\./);
-    let firefoxVer = isitFirefox ? parseInt(isitFirefox[1]) : 0;
-    // Если есть поддержка Webp или браузер Firefox версии больше или равно 65
-    if (canUseWebp() || firefoxVer >= 65) {
-      // Делаем все то же самое что и для jpg, но уже для изображений формата Webp
-      let imagesWebp = document.querySelectorAll('[data-bg-webp]');
-      for (let i = 0; i < imagesWebp.length; i++) {
-        let imageWebp = imagesWebp[i].getAttribute('data-bg-webp');
-        imagesWebp[i].style.backgroundImage = 'url(' + imageWebp + ')';
-      }
-    }
-  };
-  // Разметка:
-  //<div style="background-image: url('/images/image.webp')" data-bg="/images/image.jpg" data-bg-webp="/images/image.webp"></div>
-}());
 
-// Если на проекте jQuery
-// $( document ).ready(function() {
-//   // code
-// });
+  function loadBackgroundImage(element, fastScroll) {
+    let isWebpSupported = canUseWebp();
+    let bgImage = isWebpSupported
+      ? element.getAttribute('data-bg-webp')
+      : element.getAttribute('data-bg');
 
-// Изоляция без jQuery
-// (function(){
-//   // code
-// }());
+    if (bgImage) {
+      element.style.backgroundImage = `url(${bgImage})`;
+      element.removeAttribute('data-bg');
+      element.removeAttribute('data-bg-webp');
 
-// На проекте нет jQuery, но хочется $( document ).ready...
-// function ready(fn) {
-//   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
-//     fn();
-//   } else {
-//     document.addEventListener('DOMContentLoaded', fn);
-//   }
-// }
-//
-// ready(function(){
-//   // code
-// });
+      // Читаем скорость из атрибута (по умолчанию 1 сек)
+      let speed = parseFloat(element.getAttribute('data-bg-speed')) || 1;
+      if (fastScroll) speed *= 0.5; // Ускоряем при быстрой прокрутке
 
-
-
-// $(document).ready(function(){
-//   if(window.matchMedia('(min-width: 1366px)').matches){
-//   // do functionality on screens bigger than 1366px
-//     $("#sticker").sticky({
-//       topSpacing: 100
-//     });
-//   }
-//   return false;
-// });
-
-/*(function () {
-  //const agreementElems = document.querySelectorAll('.contacts__agreement');
-  const agreementElems = document.querySelectorAll('[class$="__agreement"]');
-
-  for (let i = 0; i < agreementElems.length; i++) {
-    let agreementElem = agreementElems[i];
-    if (!agreementElem) return;
-    //const submitBtn = agreementElem.querySelector('.contacts__submit');
-    const submitBtn = agreementElem.querySelector('button[type=submit]');
-    const agreementCheckbox = agreementElem.querySelector('.agreement-field');
-
-    if (agreementCheckbox) {
-      agreementCheckbox.addEventListener('change', function (e) {
-        if (!e.target.checked) {
-          submitBtn.disabled = true;
-        } else {
-          submitBtn.disabled = false;
-        }
+      // Плавное появление
+      requestAnimationFrame(() => {
+        element.style.transition = `opacity ${speed}s ease-out`;
+        element.style.opacity = 1;
       });
     }
   }
 
-})();*/
+  function observeLazyLoad() {
+    let lazyElements = document.querySelectorAll('[data-bg], [data-bg-webp]');
+
+    lazyElements.forEach(el => {
+      el.style.opacity = '0';
+      el.style.willChange = 'opacity';
+    });
+
+    let lastTime = performance.now();
+    let lastScrollY = window.scrollY;
+
+    if ('IntersectionObserver' in window) {
+      let observer = new IntersectionObserver((entries, obs) => {
+        let now = performance.now();
+        let deltaY = Math.abs(window.scrollY - lastScrollY);
+        let deltaT = now - lastTime;
+        let speed = deltaY / (deltaT || 1);
+        let fastScroll = speed > 1;
+
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            loadBackgroundImage(entry.target, fastScroll);
+            obs.unobserve(entry.target);
+          }
+        });
+
+        lastTime = now;
+        lastScrollY = window.scrollY;
+      }, { rootMargin: '0px', threshold: 0.1 });
+
+      lazyElements.forEach(el => observer.observe(el));
+    } else {
+      lazyElements.forEach(el => loadBackgroundImage(el, false));
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', observeLazyLoad);
+
+  /* Разметка:
+    // Фон появится за 0.5 секунды
+    <div data-bg="/images/image2.jpg" data-bg-webp="/images/image2.webp" data-bg-speed="0.5"></div>
+
+    // Фон появится дефолтно зф 1 сек
+    <div data-bg="/img/image.jpg" data-bg-webp="/img/image.webp"></div>
+  */
+
+})();
+
+
+
+// (function(){
+//   // code
+// }());
+

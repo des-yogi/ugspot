@@ -62,7 +62,12 @@
     "multi-pane": [],
     "two-col-text": [],
     "media-banner": [],
-    "card-tabs": []
+    "card-tabs": [],
+    "article-3-col": [],
+    "doors-catalog-4-col": [],
+    "services": [],
+    "why-us": [],
+    "service-card": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

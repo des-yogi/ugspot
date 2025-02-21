@@ -1,22 +1,25 @@
 <!--DEV
 @ @include('blocks/price-card-backfaced/price-card-backfaced.html', {
+  "addClass": "price-card-backfaced--vertical",
   "img1": "price-card-1",
   "img2": "win-type-1",
   "title": "VS TYPE 1 –",
   "descr1": "Lead time 12 working days",
   "descr2": "Supply & Install staring from:",
   "price": "£999",
+  "aspectRatio": "3-4"
 })
 -->
 
-<article class="price-card-backfaced">
+<article class="price-card-backfaced  @@addClass">
 
   <div class="price-card-backfaced__img-container" tabindex="0"
        role="button"
        aria-label="Карточка с изображением. Наведите или нажмите для смены."
        aria-live="polite">
 
-    <div class="embed-responsive embed-responsive--4-3  price-card-backfaced__img-main">
+    <div class="embed-responsive embed-responsive--@@aspectRatio  price-card-backfaced__img-main">
+      <!-- N.B. Под вертикальные картинки надо пересчитать размеры -->
       <picture>
         <source srcset="img/@@img1.webp,
                         img/@@img1.webp 2x" media="(min-width: 1280px)" type="image/webp">
@@ -41,7 +44,7 @@
       </picture>
     </div>
 
-    <div class="embed-responsive embed-responsive--4-3  price-card-backfaced__img-back" aria-hidden="true">
+    <div class="embed-responsive embed-responsive--@@aspectRatio  price-card-backfaced__img-back" aria-hidden="true">
       <picture>
         <!-- см. выше -->
         <img src="img/@@img2.jpg" alt="Alt text" width="850" height="638" loading="lazy">
@@ -50,11 +53,10 @@
   </div>
 
   <div class="price-card-backfaced__text">
-    <h3 class="h4  price-card-backfaced__title">@@title</h3>
-    <p class="price-card-backfaced__descr">
-      <span>@@descr1</span>
-      <span>@@descr2</span>
-    </p>
+    <div class="price-card-backfaced__body">
+      <h3 class="h4  price-card-backfaced__title">@@title</h3>
+      <p class="price-card-backfaced__descr"><span>@@descr1</span><span>@@descr2</span></p>
+    </div>
     <p class="price-card-backfaced__price">@@price + VAT</p>
   </div>
 </article>
