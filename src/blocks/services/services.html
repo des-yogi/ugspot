@@ -1,0 +1,81 @@
+<!--DEV
+@ @include('blocks/services/services.html', {
+  "title": "ALL our Conservatory Services Include",
+  "intro": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus id aliquet convallis diam dictum euismod sed. Diam dignissim tincidunt amet, sapien, tincidunt aliquam elementum arcu. Id odio nunc consectetur pellentesque. Malesuada consequat sagittis, eu quis interdum maecenas sit.</p>",
+})
+-->
+
+<article class="container  services">
+  <div class="row">
+    <div class="services__header-col">
+      <div class="services__header">
+        <h2 class="services__title">@@title</h2>
+        @@intro
+      </div>
+    </div>
+  </div>
+
+  <ul class="list-nostyled  row  services__row">
+
+    <li class="services__col">
+      @@include('../../blocks/service-card/service-card.html', {
+        "cardType": "div",
+        "href": "",
+        "icon": "phone",
+        "title": "Foundation",
+        "descr": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
+      })
+    </li>
+
+    <li class="services__col">
+      @@include('../../blocks/service-card/service-card.html', {
+        "cardType": "div",
+        "href": "",
+        "icon": "phone",
+        "title": "Brickwork",
+        "descr": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
+      })
+    </li>
+
+    <li class="services__col">
+      @@include('../../blocks/service-card/service-card.html', {
+        "cardType": "div",
+        "href": "",
+        "icon": "phone",
+        "title": "Heating installatin",
+        "descr": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
+      })
+    </li>
+
+    <li class="services__col">
+      @@include('../../blocks/service-card/service-card.html', {
+        "cardType": "div",
+        "href": "",
+        "icon": "phone",
+        "title": "Painting",
+        "descr": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
+      })
+    </li>
+
+    <li class="services__col">
+      @@include('../../blocks/service-card/service-card.html', {
+        "cardType": "div",
+        "href": "",
+        "icon": "phone",
+        "title": "Electricity supply",
+        "descr": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
+      })
+    </li>
+
+    <li class="services__col">
+      @@include('../../blocks/service-card/service-card.html', {
+        "cardType": "a",
+        "href": "href='#'",
+        "icon": "phone",
+        "title": "Get a quatation",
+        "descr": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
+      })
+    </li>
+
+  </ul>
+</article>

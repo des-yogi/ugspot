@@ -39,10 +39,24 @@
     }
   }
 
+  &--3-4 {
+
+    &::before {
+      padding-top: percentage(4 / 3);
+    }
+  }
+
   &--3-2 { // модификатор на случай вставки 3/2
 
     &::before {
       padding-top: percentage(2 / 3);
+    }
+  }
+
+  &--2-3 {
+
+    &::before {
+      padding-top: percentage(3 / 2);
     }
   }
 

@@ -1,0 +1,34 @@
+.services {
+  margin: 64px 0;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header-col {
+    @include col(xs, 12);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+    margin-bottom: 40px;
+  }
+
+  &__header {
+    text-align: center;
+
+    p {
+      text-wrap: balance;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__row {
+    gap: 16px 0;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 4);
+  }
+}

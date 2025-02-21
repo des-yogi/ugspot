@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px 0;
+  height: 100%;
 
   $block-name:                &; // #{$block-name}__element
 
@@ -40,12 +41,27 @@
     transform: rotateY(180deg);
   }
 
+  &__text {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px 0;
+  }
+
   &__title {
-    margin-top: 0;
+    margin: 0;
   }
 
   &__descr {
     font-size: $font-size-sm;
+
+    &:empty,
+    &:has(span:empty) {
+      display: none;
+    }
+
+    &:has(span:empty)
 
     span {
       display: block;
@@ -53,7 +69,15 @@
   }
 
   &__price {
+    margin: 0;
     font-size: $font-size-lg;
     font-weight: 500;
+  }
+
+  &--vertical {
+
+    #{$block-name}__img-container {
+      aspect-ratio: 3 / 4;
+    }
   }
 }

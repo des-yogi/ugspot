@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mega Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .mega-menu {
+      position: relative;
+    }
+    .level-1 {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background: #333;
+
+      position: relative;
+    }
+    .level-1 > li {
+/*       position: relative; */
+    }
+    .level-1 > li > a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+    }
+/*     .level-1 > li:hover > .level-2, */
+    .level-1 > li:focus-within > .level-2 {
+      display: flex;
+    }
+    .level-2 {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border: 1px solid green;
+/*       width: 100%; */
+      transform:  translateY(10px);
+    }
+    .level-2 > li {
+      list-style: none;
+      display: inline-block;
+      vertical-align: top;
+      width: 25%;
+/*       padding-right: 40px; */
+    }
+    .level-2 > li > a {
+      display: block;
+      padding: 10px 0;
+      font-weight: bold;
+    }
+    .level-2 > li > .level-3 {
+      display: block;
+      padding-left: 10px;
+      visibility: visible;
+      opacity: 1;
+    }
+    .level-3 > li {
+      list-style: none;
+/*       position: relative; */
+      a {
+        display: inline-flex;
+        padding: 10px 0;
+      }
+    }
+    .level-3 > li:hover > .level-4,
+    .level-3 > li:focus-within > .level-4 {
+      display: block;
+    }
+    .level-4 {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      background: white;
+      padding: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: mistyrose;
+/*       width: 50%; */
+    }
+    .level-2, .level-4 {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+    .level-1 > li:hover > .level-2,
+    .level-1 > li:focus-within > .level-2,
+    .level-3 > li:hover > .level-4,
+    .level-3 > li:focus-within > .level-4 {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <nav class="mega-menu">
+    <ul class="level-1">
+      <li>
+        <a href="#">Windows</a>
+        <ul class="level-2">
+          <li>
+            <a href="#">Type</a>
+            <ul class="level-3">
+              <li><a href="#">Bay & Bow Windows</a></li>
+              <li><a href="#">Tilt & Turn Windows</a></li>
+              <li><a href="#">Casement Windows</a></li>
+              <li><a href="#">Vertical Slider Windows</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Material</a>
+            <ul class="level-3">
+              <li>
+                <a href="#">Aluminium Windows</a>
+                <ul class="level-4">
+                  <li><a href="#">Bay & Bow Aluminium Windows</a></li>
+                  <li><a href="#">Secondary Aluminium Windows</a></li>
+                  <li><a href="#">Casement Aluminium Windows</a></li>
+                </ul>
+              </li>
+              <li><a href="#">uPVC Windows</a></li>
+              <li><a href="#">Timber Windows</a></li>
+              <li><a href="#">Other</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Doors</a>
+        <ul class="level-2">
+          <li>
+            <a href="#">2 Type</a>
+            <ul class="level-3">
+              <li><a href="#">2 Bay & Bow Windows</a></li>
+              <li><a href="#">2 Tilt & Turn Windows</a></li>
+              <li><a href="#">2 Casement Windows</a></li>
+              <li><a href="#">2 Vertical Slider Windows</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">2 Material</a>
+            <ul class="level-3">
+              <li>
+                <a href="#">2 Aluminium Windows</a>
+                <ul class="level-4">
+                  <li><a href="#">2 Bay & Bow Aluminium Windows</a></li>
+                  <li><a href="#">2 Secondary Aluminium Windows</a></li>
+                  <li><a href="#">2 Casement Aluminium Windows</a></li>
+                </ul>
+              </li>
+              <li><a href="#">uPVC Windows</a></li>
+              <li><a href="#">Timber Windows</a></li>
+              <li><a href="#">Other</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Conservatories</a></li>
+      <li><a href="#">Roof Systems</a></li>
+      <li><a href="#">Glass Works</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll(".mega-menu a").forEach(link => {
+        link.addEventListener("keydown", function(e) {
+          if (e.key === "ArrowRight") {
+            let nextMenu = this.parentElement.querySelector("ul");
+            if (nextMenu) {
+              let firstItem = nextMenu.querySelector("a");
+              if (firstItem) firstItem.focus();
+            }
+          }
+          else if (e.key === "ArrowLeft") {
+            if (!this.closest("ul").closest("li")) return;
+            let parentMenu = this.closest("ul").closest("li").querySelector("a");
+            if (parentMenu) parentMenu.focus();
+          }
+          // else if (e.key === "Escape") {
+          //   this.closest("ul").style.visibility = "hidden";
+          //   this.closest("ul").style.opacity = "0";
+          // }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
