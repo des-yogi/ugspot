@@ -1,5 +1,6 @@
 .write-us {
-  margin: 64px 0;
+  padding-top: 64px;
+  padding-bottom: 64px;
 
   $block-name:                &; // #{$block-name}__element
 
@@ -203,21 +204,29 @@
   }
 
   &__img {
-    min-height: 140px;
-    background-color: #ffefef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //min-height: 140px;
+    aspect-ratio: 3.1186;
+    background-color: #909090;
     border-radius: $border-radius;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('/img/contact-form-img.jpg');
-    background-image: url('/img/contact-form-img.webp');
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-image: url('/img/contact-form-img.jpg');
+    //background-image: url('/img/contact-form-img.webp');
 
     @media (min-width: $screen-md) {
-      height: 236px;
+      //height: 236px;
     }
 
     @media (min-width: $screen-xl) {
-      height: 100%;
+      //height: 100%;
+    }
+
+    img {
+      width: 52%;
     }
   }
 }

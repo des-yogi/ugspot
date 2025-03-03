@@ -1,0 +1,38 @@
+.contractors {
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    padding: 16px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__list-item {
+    flex-shrink: 0;
+    max-width: 285px;
+    max-height: 96px;
+  }
+
+  &__logo {
+
+    img {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<!--DEV
+@ @include('blocks/customer-feedback-card/customer-feedback-card.html', {
+  "name": "Kevin Finegan",
+  "logo": "review-logo-1",
+  "code": "SM4 4DG",
+  "text": "<p><strong>Remove old windows and dispose. Fit new windows front and rear and porch door</strong></p><p>Victor replaced all our windows front and back and the porch door. The initial job was just the front of the house but we were very pleased with the job so got the back done too. Our house is old and had brick damage at the front with was worse than thought. Victor and his colleague found a solution and the new window was in place 3 hrs later, all done and the front wall is now stronger than before.. Little issues were sorted out later with no problems on a later check up visit. Victor was thoroughly professional from start to finish and explained everything to us.</p><p>Highly recommend Victor and his team at Ultimate Glass Solutions to anybody.</p>"
+})
+-->
+<article class="customer-feedback-card">
+
+  <header class="customer-feedback-card__header">
+    <h3 class="h4  customer-feedback-card__name">@@name</h3>
+    <div class="customer-feedback-card__src-logo">
+      <img src="img/@@logo.svg" alt="Alt text" width="112" height="32" loading="lazy">
+    </div>
+  </header>
+
+  <div>
+    <p class="customer-feedback-card__code">@@code</p>
+
+    @@text
+  </div>
+
+</article>
+

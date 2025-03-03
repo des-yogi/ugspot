@@ -1,9 +1,42 @@
-// В этом файле должны быть стили для БЭМ-блока two-col-text, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .two-col-text {
+  padding-top: 64px;
+  padding-bottom: 64px;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__header {
+    max-width: 796px;
+    margin: 0 auto 24px;
+    text-align: center;
+
+    p {
+      hyphens: none;
+    }
+  }
+
+  &__title {
+    margin: 0 0 16px;
+  }
+
+  // &__body {
+
+  // }
+
+  &__features-list {
+    gap: 16px 0;
+  }
+
+  &__feature {
+    @include col(xs, 12);
+    @include col(md, 6);
+    //@include col(xl, 4);
+
+    p {
+      margin: 8px 0 0;
+    }
+  }
+
+  &__feature-title {
+    margin: 0 0 8px;
+  }
 }

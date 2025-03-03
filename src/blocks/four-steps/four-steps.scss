@@ -1,0 +1,72 @@
+.four-steps {
+  $bg-default-color: #4B75B6;
+  //margin: 64px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: $white;
+  background-color: $bg-default-color;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  h2, h3, h4 {
+    color: inherit;
+  }
+
+  &__header {
+    max-width: 796px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0 0 16px;
+  }
+
+  &__list {
+    gap: 16px 0;
+  }
+
+  &__item {
+    @include col(xs, 12);
+    @include col(md, 6);
+  }
+
+  &__item-inner {
+    height: 100%;
+    padding: 24px;
+    background-color: rgba($black, 0.6);
+    border-radius: $border-radius;
+
+    p {
+      margin: 8px 0 0;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 40px;
+
+    .btn {
+      min-width: 230px;
+
+      @media (max-width: $screen-sm - 1) {
+        width: 100%;
+      }
+    }
+  }
+}

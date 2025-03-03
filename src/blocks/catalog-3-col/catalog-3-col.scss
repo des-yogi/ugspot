@@ -1,11 +1,18 @@
 .catalog-3-col {
-  margin: 64px 0;
+  padding-top: 64px;
+  padding-bottom: 64px;
 
   $block-name:                &; // #{$block-name}__element
 
-  &__title {
-    margin-bottom: 40px;
+  &__header {
+    max-width: 796px;
+    margin: 0 auto 40px;
     text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    //text-align: center;
 
     &:empty {
       display: none;

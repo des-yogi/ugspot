@@ -1,14 +1,41 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
-@ @include('blocks/two-col-text/two-col-text.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="two-col-text">content</div>
-
+@ @include('blocks/two-col-text/two-col-text.html', {
+  "title": "Personalisation Features Offered by UGS Ltd",
+  "introText": "<p>At UGS Ltd, we believe that every unit should not only meet functional requirements but also reflect your unique style and preferences. That’s why all our products—whether standard or bespoke—come with extensive personalisation options to suit your specific needs. From back units to French units, sliding patio units, and entrance units, our customisation features ensure your unit perfectly complements your property while delivering exceptional performance.</p>",
+  "col1Text": "",
+  "col2Text": ""
+})
 -->
+
+<article class="container  two-col-text">
+  <div class="two-col-text__header">
+    <h2 class="two-col-text__title">Personalisation Features Offered by UGS Ltd</h2>
+    <p>At UGS Ltd, we believe that every unit should not only meet functional requirements but also reflect your unique style and preferences. That’s why all our products—whether standard or bespoke—come with extensive personalisation options to suit your specific needs. From back units to French units, sliding patio units, and entrance units, our customisation features ensure your unit perfectly complements your property while delivering exceptional performance.</p>
+  </div>
+
+  <div class="two-col-text__body">
+    <ul class="list-nostyled  two-col-text__features-list">
+      <li class="two-col-text__feature">
+        <h3 class="two-col-text__feature-title">Hanging Options</h3>
+        <p>All our units can be customised with various hanging options to fit your installation preferences and space requirements. Whether you need a left- or right-hinged unit, or specific sliding or folding mechanisms, we ensure each unit is installed precisely and operates smoothly within your architectural framework.</p>
+      </li>
+      <li class="two-col-text__feature">
+        <h3 class="two-col-text__feature-title">Colour Options Inside and Out</h3>
+        <p>UGS Ltd offers a broad palette of colour options, allowing you to personalise both the interior and exterior finishes of your units. Choose a single colour for a cohesive look or opt for dual-colour finishes to differentiate the appearance on each side. From classic neutrals to bold, modern shades, our custom colour options ensure your units blend seamlessly with your property’s style and décor.</p>
+      </li>
+      <li class="two-col-text__feature">
+        <h3 class="two-col-text__feature-title">Locking Mechanisms</h3>
+        <p>Security is a top priority, and all our units come with UKAS-approved locking mechanisms as standard. For enhanced protection, we offer additional features such as multi-point locking systems and anti-snap, anti-drill, and anti-bump locks. For added convenience, we also provide smart locks, enabling keyless entry and remote control through smartphone apps, combining cutting-edge technology with top-tier security.</p>
+      </li>
+      <li class="two-col-text__feature">
+        <h3 class="two-col-text__feature-title">Glazing Options</h3>
+        <p>Our range of glazing options enhances both aesthetics and energy performance. Choose from double or triple glazing units, with or without Argon gas, for superior insulation and thermal efficiency. We also offer decorative Pilkington glazing designs, allowing you to personalise your unit with patterns and textures that enhance visual appeal while maintaining privacy and light transmission.</p>
+      </li>
+      <li class="two-col-text__feature">
+        <h3 class="two-col-text__feature-title">Unit Accessories</h3>
+        <p>Our units can be further customised with a variety of premium accessories. From handles, hinges, and letterplates to thresholds and weather seals, every detail is thoughtfully selected to complement the style and function of each unit. These finishing touches ensure a cohesive and polished appearance while enhancing performance and usability.</p>
+        <p>At UGS Ltd, personalisation is central to everything we do. Whether selecting a standard unit or designing a bespoke piece, we provide unmatched flexibility to ensure your unit is the perfect fit for your property and lifestyle.</p>
+      </li>
+    </ul>
+  </div>
+</article>

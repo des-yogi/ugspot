@@ -7,6 +7,10 @@
   border-top-left-radius: $border-radius-lg;
   border-top-right-radius: $border-radius-lg;
 
+  @media (min-width: $screen-md) {
+    padding-top: 48px;
+  }
+
   $block-name:                &; // #{$block-name}__element
 
   &__menu,

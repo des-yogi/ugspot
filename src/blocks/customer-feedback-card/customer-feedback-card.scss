@@ -1,0 +1,38 @@
+.customer-feedback-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  padding: 24px 24px 0;
+  border-radius: $border-radius;
+  background: linear-gradient(to bottom, $block-bg 0%, rgba($white, 0) 100%);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__name {
+    flex: 1 1 auto;
+    margin: 0;
+  }
+
+  &__src-logo {
+    flex: 0 0 112px;
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 112px;
+    }
+  }
+
+  &__code {
+    text-transform: uppercase;
+  }
+}
