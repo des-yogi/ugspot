@@ -1,0 +1,47 @@
+.features-2-col {
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    max-width: 796px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+
+  &__header,
+  &__item {
+
+    span {
+      color: $main-color;
+    }
+  }
+
+
+  &__title,
+  &__item-title {
+    margin-top: 0;
+  }
+
+  &__row {
+    gap: 16px 0;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    //@include col(xl, 4);
+  }
+
+  &__item {
+    height: 100%;
+    padding: 24px;
+    background-color: $block-bg;
+    border-radius: $border-radius;
+  }
+
+  &__item-title {
+    margin-top: 0;
+  }
+}

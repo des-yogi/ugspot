@@ -8,20 +8,20 @@
 
   img {
     display: block;
-    width: 148px;
-    height: 40px;
+    width: 169px;
+    height: 48px;
 
-    @media (min-width: $screen-md) {
-      width: 177px;
-      height: 48px;
-    }
+    // @media (min-width: $screen-md) {
+    //   width: 177px;
+    //   height: 48px;
+    // }
   }
 
   &--footer {
 
     img {
-      width: 85px !important;
-      height: 102px !important;
+      width: 88px !important;
+      height: 92px !important;
     }
   }
 }

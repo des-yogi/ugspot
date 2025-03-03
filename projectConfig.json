@@ -67,7 +67,14 @@
     "doors-catalog-4-col": [],
     "services": [],
     "why-us": [],
-    "service-card": []
+    "service-card": [],
+    "contractors": [],
+    "four-steps": [],
+    "about-us": [],
+    "customer-feedback": [],
+    "features-2-col": [],
+    "hero": [],
+    "customer-feedback-card": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

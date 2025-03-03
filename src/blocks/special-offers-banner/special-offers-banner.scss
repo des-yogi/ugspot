@@ -1,5 +1,6 @@
 .special-offers-banner {
-  margin: 64px 0;
+  padding-top: 64px;
+  padding-bottom: 64px;
 
   $block-name:                &; // #{$block-name}__element
 
@@ -44,6 +45,10 @@
 
   &__list {
     margin-top: 16px;
+
+    & + * {
+      margin-top: 16px;
+    }
   }
 
   &__list-item {

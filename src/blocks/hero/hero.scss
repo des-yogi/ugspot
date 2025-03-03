@@ -1,0 +1,79 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  margin-top: 16px;
+  color: $white;
+  background-color: $text-muted;
+  // background:
+  //  linear-gradient(to bottom, rgba($black, 0) 40%, $black 100%),
+  //  url(/img/hero-bg.jpg) $text-muted 50% / cover no-repeat;
+  border-radius: $border-radius-lg;
+
+  @media (max-width: $screen-md - 1) {
+    min-height: 465px;
+    padding-top: 64px;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: $screen-md) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    aspect-ratio: 2.2;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    aspect-ratio: initial;
+    height: 868px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include col(xs, 12);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+    @include col-offset(xxl, 1);
+    @include col(xxl, 10);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    gap: 24px 0;
+    height: 100%;
+
+    p {
+      margin: 0;
+      font-weight: 500;
+      //text-wrap: balance;
+      hyphens: none;
+    }
+  }
+
+  &__title {
+    color: inherit;
+    margin: 0;
+  }
+
+  &__link-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    @media (min-width: $screen-md) {
+      flex-direction: initial;
+      justify-content: center;
+    }
+
+    .btn {
+      min-width: 235px;
+    }
+  }
+}
