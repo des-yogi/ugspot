@@ -28,7 +28,7 @@
 
     @media (min-width: $screen-xl) {
       flex-direction: initial;
-      align-items: center;
+      align-items: flex-start;
       gap: 56px;
     }
   }
@@ -71,9 +71,9 @@
     }
   }
 
-  h3 {
-    font-size: $font-size--h2;
-  }
+  // h3 {
+  //   font-size: $font-size--h2;
+  // }
 
   &__text {
 

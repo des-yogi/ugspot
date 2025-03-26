@@ -18,18 +18,23 @@
     margin: 0 0 16px;
   }
 
-  // &__body {
-
-  // }
-
   &__features-list {
-    gap: 16px 0;
+    //gap: 16px 0;
+
+    @media (min-width: $screen-md) {
+      column-count: 2;
+      column-gap: 16px;
+      column-fill: balance;
+    }
   }
 
   &__feature {
-    @include col(xs, 12);
-    @include col(md, 6);
-    //@include col(xl, 4);
+    // @include col(xs, 12);
+    // @include col(md, 6);
+
+    & + & {
+      margin-top: 16px;
+    }
 
     p {
       margin: 8px 0 0;
