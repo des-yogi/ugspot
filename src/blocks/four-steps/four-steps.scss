@@ -1,6 +1,10 @@
 .four-steps {
+
+  $block-name:                &; // #{$block-name}__element
+
   $bg-default-color: #4B75B6;
   //margin: 64px 0;
+  position: relative;
   padding-top: 40px;
   padding-bottom: 40px;
   color: $white;
@@ -13,10 +17,24 @@
     padding-bottom: 64px;
   }
 
-  $block-name:                &; // #{$block-name}__element
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($black, 0.4);
+  }
 
   h2, h3, h4 {
     color: inherit;
+  }
+
+  &__header,
+  &__list,
+  &__links {
+    position: relative;
   }
 
   &__header {

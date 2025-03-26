@@ -31,6 +31,7 @@
   @media (min-width: $screen-xxl) {
     aspect-ratio: initial;
     height: 868px;
+    padding-bottom: 194px;
   }
 
   $block-name:                &; // #{$block-name}__element
@@ -43,10 +44,20 @@
     @include col(xxl, 10);
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: flex-end;
     position: relative;
     gap: 24px 0;
     height: 100%;
+    text-align: center;
+
+    @media (min-width: $screen-xl) {
+      gap: 48px 0;
+    }
+
+    @media (min-width: $screen-xxl) {
+      gap: 64px 0;
+    }
 
     p {
       margin: 0;
@@ -56,9 +67,37 @@
     }
   }
 
+  &__logo {
+    width: 288px;
+    height: 82px;
+
+    @media (min-width: $screen-lg) {
+      width: 320px;
+      height: 91px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 384px;
+      height: 109px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      width: 515px;
+      height: 146px;
+    }
+  }
+
   &__title {
+    font-size: 32px;
     color: inherit;
     margin: 0;
+
+    span {
+      display: block;
+      margin-top: 16px;
+      font-size: $font-size;
+      font-weight: 400;
+    }
   }
 
   &__link-wrapper {
