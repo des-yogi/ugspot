@@ -45,6 +45,9 @@
 
   &__title {
     margin: 0 0 16px;
+    padding: 24px;
+    background-color: rgba($black, 0.6);
+    border-radius: $border-radius;
   }
 
   &__list {
