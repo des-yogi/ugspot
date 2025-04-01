@@ -74,7 +74,8 @@
     "customer-feedback": [],
     "features-2-col": [],
     "hero": [],
-    "customer-feedback-card": []
+    "customer-feedback-card": [],
+    "video": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
@@ -106,6 +107,9 @@
   ],
   "addImages": [
     "./src/img/*.{jpg,jpeg,gif,png,svg,ico,webp}"
+  ],
+  "addVideo": [
+    "./src/video/*.{mp4,webm}"
   ],
   "copiedCss": [],
   "copiedJs": [],

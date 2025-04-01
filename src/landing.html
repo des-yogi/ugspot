@@ -220,21 +220,10 @@
 
               <div class="zoom-call__zoom">
                 <div class="embed-responsive embed-responsive--4-3  zoom-call__img">
-                  <picture>
-                    <source srcset="img/desktop.webp,
-                                    img/desktop.webp 2x" media="(min-width: 1280px)"
-                                    type="image/webp">
-                    <source srcset="img/desktop.jpg,
-                                    img/desktop.jpg 2x" media="(min-width: 1280px)">
-                    <!-- 492x369, 984x738 2x -->
-                    <source srcset="img/desktop.webp" media="(min-width: 768px)" type="image/webp">
-                    <source srcset="img/desktop.jpg" media="(min-width: 768px)">
-                    <!-- 920x690 -->
-                    <source srcset="img/desktop.webp" media="(min-width: 320px)" type="image/webp">
-                    <source srcset="img/desktop.jpg" media="(min-width: 320px)">
-                    <!-- 675x506 -->
-                    <img src="img/desktop.jpg" alt="Alt text" width="1920" height="1440" loading="lazy">
-                  </picture>
+                  @@include('blocks/video/video.html', {
+                    "video": "tommy-tinder-video",
+                    "poster": "video-poster"
+                  })
                 </div>
                 <div class="zoom-call__text-wrapper">
                   <h2>Design, Personalise & Visualise Your Units Before Ordering</h2>
