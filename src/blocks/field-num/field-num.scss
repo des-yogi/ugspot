@@ -1,0 +1,106 @@
+.field-num {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  //margin-bottom: $typo-margin-vertical;
+
+  &__name {
+    @include field-name;
+  }
+
+  &__input-wrap {
+    display: block;
+  }
+
+  &__input-and-btns {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-width: 140px;
+    padding: 0 1px;
+  }
+
+  &__input {
+    @include field-text;
+    padding: 4px 45px;
+    text-align: center;
+
+    #{$block-name}:not(#{$block-name}--disabled) button:focus ~ & { // stylelint-disable-line
+     // @include field-focus;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    height: 100%;
+    border: none;
+    padding: 0;
+    font: 0/0 $font-family; // stylelint-disable-line
+    color: transparent;
+    background: transparent;
+    transition: background $transition-time;
+
+    &:hover,
+    &:focus {
+      background-color: $main-pale--hover;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: $main-pale--active;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--plus {
+      right: 0;
+      background: svg-load('../blocks/field-num/bg-img/plus.svg') center no-repeat;
+      background-size: 14px 14px;
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+
+    &--minus {
+      left: 0;
+      background: svg-load('../blocks/field-num/bg-img/minus.svg') center no-repeat;
+      background-size: 14px 14px;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+    }
+
+    #{$block-name}--disabled & {
+      cursor: not-allowed;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__help-text {
+    @include field-help-text;
+  }
+
+
+
+  &--error {
+
+    #{$block-name}__name,
+    #{$block-name}__input,
+    #{$block-name}__help-text {
+      color: $color-danger;
+    }
+
+    #{$block-name}__input {
+      border-color: $color-danger;
+      background-color: lighten($color-danger, 35%);
+    }
+  }
+}

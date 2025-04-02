@@ -1,0 +1,144 @@
+.step-form {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row,
+  &__colors,
+  &__contacts-row {
+    gap: 16px 0;
+  }
+
+  &__colors {
+    justify-content: center;
+  }
+
+  &__col-progress {
+    @include col(xs, 12);
+    @include col-offset(lg, 1);
+    @include col(lg, 10);
+    //@include col(xl, 4);
+  }
+
+  &__col-2-4 {
+    @include col(xs, 12);
+    @include col(sm, 6);
+    @include col(md, 4);
+    @include col(lg, 3);
+  }
+
+  &__col-color {
+    @include col(xs, 6);
+    @include col(sm, 4);
+    @include col(md, 3);
+    @include col(lg, 2);
+  }
+
+  &__col-details {
+    @include col(xs, 12);
+    @include col-offset(lg, 1);
+    @include col(lg, 10);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+  }
+
+  &__col-input {
+    @include col(xs, 12);
+    @include col(md, 6);
+  }
+
+  &__info {
+    text-align: center;
+  }
+
+  &__container {
+
+  }
+
+  &__step-1 {
+
+  }
+
+  &__step-inner {
+    display: block;
+    padding: 64px 0;
+    margin: 0;
+    border: none;
+  }
+
+  &__header {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__step-title {
+    margin-top: 0;
+    font-weight: 600;
+  }
+
+  &__step-radio-btns {
+    display: flex;
+    //flex-wrap: wrap;
+    //align-items: center;
+    justify-content: center;
+    //gap: 16px;
+
+    .field-radio {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 20px;
+      margin: 0;
+    }
+
+    .field-radio__input-wrap {
+      margin: 0;
+    }
+  }
+
+  &__step-2 {
+
+  }
+
+  &__step-3 {
+
+  }
+
+  &__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    //padding: 64px 0 0;
+  }
+
+  &__warning {
+    flex: 1 1 100%;
+    margin: 0;
+    font-size: $font-size;
+    text-align: center;
+    text-wrap: balance;
+    color: $main-color;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__table-wrapper {
+    padding: 24px 16px;
+    background-color: $block-bg;
+    border-radius: $border-radius;
+
+    // @media (min-width: $screen-lg) {
+    //   padding: 24px 32px;
+    // }
+
+    .field-checkbox__name-text {
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+  }
+}

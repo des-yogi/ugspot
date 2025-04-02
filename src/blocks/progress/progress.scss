@@ -1,0 +1,78 @@
+.progress {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-top: 80px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  $transition-time: 0.3s;
+
+  &__road {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    //background: $border-color;
+    //border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &__road-bg {
+    width: 100%;
+    height: 100%;
+    background: $border-color;
+  }
+
+  &__road-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 0%;
+    background: $main-color;
+    border-radius: 3px 3px 3px 3px;
+    transition: width $transition-time ease-in-out;
+  }
+
+  &__car {
+    position: absolute;
+    z-index: 3;
+    top: -35px;
+    left: 0;
+    width: 88px;
+    transition: transform $transition-time ease-in-out;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__flags {
+    position: absolute;
+    z-index: 2;
+    top: -5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__flag {
+    width: 15px;
+    height: 15px;
+    background: $border-color;
+    //border-radius: 50%;
+    border: 3px solid $white;
+    transition: background $transition-time ease-in-out;
+
+    &--active {
+      background: $main-color;
+    }
+  }
+
+  &__slide-num {
+    position: relative;
+    text-align: center;
+    transform: translateY(12px);
+  }
+}

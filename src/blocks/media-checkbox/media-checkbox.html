@@ -1,0 +1,34 @@
+<!--DEV
+@ @include('blocks/media-checkbox/media-checkbox.html', {
+  "img": "material",
+  "title": "Roof Lanterns and/or walk on glass",
+  "name": "name"
+})
+-->
+
+<div class="media-checkbox">
+  <label class="media-checkbox__lbl">
+    <span class="media-checkbox__img"
+          data-bg="img/@@img.jpg"
+          data-bg-webp="img/@@img.webp"
+          data-bg-speed="0.5"
+          role="img"
+          aria-label="Description of the image">
+    </span>
+    <!-- 540x405 img-size -->
+    <input class="media-checkbox__input" type="checkbox" name="@@name" value="@@name">
+    <span class="media-checkbox__name-text">@@title</span>
+  </label>
+
+  <div class="field-num">
+    <span class="field-num__name visually-hidden">Quantity</span>
+    <span class="field-num__input-wrap">
+      <span class="field-num__input-and-btns">
+        <button class="field-num__btn field-num__btn--minus" type="button" aria-label="minus">-</button>
+        <button class="field-num__btn field-num__btn--plus" type="button" aria-label="plus">+</button>
+        <input class="field-num__input" type="number" name="quantity" value="0" max="50" min="0" step="1">
+      </span>
+      <!-- <span class="field-num__help-text"></span> -->
+    </span>
+  </div>
+</div>

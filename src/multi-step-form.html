@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Multi step form</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>You have JavaScript disabled. We apologize, but this makes it difficult to use this site.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main>
+
+        <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
+          <h1 style="text-align: center;">Let us know what you need</h1>
+
+          <form class="form  step-form" action="#" method="post" enctype="multipart/form-data">
+
+            <div class="row">
+              <div class="step-form__col-progress">
+                <div class="progress">
+                  <div class="progress__road">
+                    <div class="progress__road-bg"></div>
+                    <div class="progress__road-line"></div>
+                  </div>
+                  <div class="progress__car">
+                    <img src="img/car.svg" alt="Car">
+                  </div>
+                  <div class="progress__flags">
+                    <span class="progress__flag" data-step="0"></span>
+                    <span class="progress__flag" data-step="1"></span>
+                    <span class="progress__flag" data-step="2"></span>
+                  </div>
+                  <p class="progress__slide-num">(3 step out of 3)</p>
+                </div>
+
+                <p class="step-form__info">Aluminum is known for its strength and durability. It is resistant to rust, corrosion, and other environmental factors.</p>
+              </div>
+            </div>
+
+
+            <div class="swiper  step-form__container">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide  step-form__step-1">
+
+                  <fieldset class="step-form__step-inner">
+                    <div class="row">
+                      <div class="step-form__col-details">
+                        <div class="step-form__header">
+                          <h2 class="step-form__step-title">Selecting the service <span>*</span></h2>
+                        </div>
+                        <div class="step-form__step-radio-btns">
+                          <div class="field-radio">
+                            <div class="field-radio__input-wrap">
+                              <label class="field-radio__name">
+                                <input class="field-radio__input" type="radio" name="service" value="service1" checked>
+                                <span class="field-radio__name-text">I want supply only</span>
+                              </label>
+                              <div class="field-radio__help-text-wrap">
+                                <div class="field-radio__help-text"></div>
+                              </div>
+                            </div>
+                            <div class="field-radio__input-wrap">
+                              <label class="field-radio__name">
+                                <input class="field-radio__input" type="radio" name="service" value="service2">
+                                <span class="field-radio__name-text">I want supply & installation </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="step-form__step-inner">
+                    <div class="step-form__header">
+                      <h2 class="step-form__step-title">Selecting the required element <span>*</span></h2>
+                      <p>Select at least one card and then enter the desired number of items</p>
+                    </div>
+
+                    <div class="row  step-form__row">
+
+                      <div class="step-form__col-2-4">
+                        @@include('blocks/media-checkbox/media-checkbox.html', {
+                          "img": "material",
+                          "title": "Window",
+                          "name": "name"
+                        })
+                      </div>
+
+                      <div class="step-form__col-2-4">
+                        @@include('blocks/media-checkbox/media-checkbox.html', {
+                          "img": "material",
+                          "title": "Entrance and/or back door",
+                          "name": "name"
+                        })
+                      </div>
+
+                      <div class="step-form__col-2-4">
+                        @@include('blocks/media-checkbox/media-checkbox.html', {
+                          "img": "material",
+                          "title": "Slider and/or bi-fold",
+                          "name": "name"
+                        })
+                      </div>
+
+                      <div class="step-form__col-2-4">
+                        @@include('blocks/media-checkbox/media-checkbox.html', {
+                          "img": "material",
+                          "title": "French door",
+                          "name": "name"
+                        })
+                      </div>
+
+                      <div class="step-form__col-2-4">
+                        @@include('blocks/media-checkbox/media-checkbox.html', {
+                          "img": "material",
+                          "title": "Glazed unit and/or secondary window",
+                          "name": "name"
+                        })
+                      </div>
+
+                      <div class="step-form__col-2-4">
+                        @@include('blocks/media-checkbox/media-checkbox.html', {
+                          "img": "material",
+                          "title": "Roof Lanterns and/or walk on glass",
+                          "name": "name"
+                        })
+                      </div>
+
+                      <div class="step-form__col-2-4">
+                        @@include('blocks/media-checkbox/media-checkbox.html', {
+                          "img": "material",
+                          "title": "Crittall Door and/or Wall",
+                          "name": "name"
+                        })
+                      </div>
+
+                      <div class="step-form__col-2-4">
+                        @@include('blocks/media-checkbox/media-checkbox.html', {
+                          "img": "material",
+                          "title": "Conservatory",
+                          "name": "name"
+                        })
+                      </div>
+
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="step-form__step-inner">
+                    <div class="step-form__header">
+                      <h3 class="step-form__step-title">Selecting a color option <span>*</span></h3>
+                      <p>Select at least one item</p>
+                    </div>
+
+                    <div class="row  step-form__colors">
+                      <div class="step-form__col-color">
+                        @@include('blocks/color-checkbox/color-checkbox.html', {
+                          "img": "colors-all",
+                          "title": "Single",
+                          "name": "color variant"
+                        })
+                      </div>
+
+                      <div class="step-form__col-color">
+                        @@include('blocks/color-checkbox/color-checkbox.html', {
+                          "img": "colors-all",
+                          "title": "Dual / different in & out",
+                          "name": "color variant"
+                        })
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="step-form__step-inner">
+                    <div class="row">
+                      <div class="step-form__col-details">
+
+                        <div class="step-form__header">
+                          <h3 class="step-form__step-title">Further details</h3>
+                          <p>Please list types of units i.e window type bay window, approximate sizes of the units, material (upvc, timber/aluminium/ upvc timber-look and any additional details you want us to know about</p>
+                        </div>
+
+                        <label class="field-text">
+                          <!-- <span class="field-text__name">Текст</span> -->
+                          <span class="field-text__input-wrap">
+                            <textarea class="field-text__input  novalidate" name="text-option" placeholder="Type here…" style="padding-right: 24px;"></textarea>
+                            <span class="field-text__help-text"></span>
+                          </span>
+                        </label>
+
+                        <div class="field-file" style="margin-bottom: 0;">
+                          <div class="field-file__name">Upload supporting files (optional)</div>
+                          <label class="field-file__input-wrap">
+                            <input class="field-file__input  novalidate" type="file" data-multiple-caption="files are selected: {count}" multiple>
+                            <span class="field-file__name-text" data-button-text="Select file(s)">Nothing is selected</span>
+                            <div class="field-file__help-text"></div>
+                          </label>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </fieldset>
+
+                </div>
+
+                <div class="swiper-slide  step-form__step-2">
+                  <div class="row">
+                    <div class="step-form__col-details">
+                      <fieldset class="step-form__step-inner">
+                        <div class="step-form__table-wrapper">
+                          <table class="table-responsive">
+                            <thead>
+                              <tr>
+                                <th style="min-width: 256px; white-space: nowrap;">Choose a day</th>
+                                <th>Write down your preferred hours</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td data-label="Choose a day" style="width: 256px;">
+                                  <div class="field-checkbox" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="monday" value="monday">
+                                      <span class="field-checkbox__name-text">Monday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="mondayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td data-label="Choose a day" style="width: 256px;">
+                                  <div class="field-checkbox" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="tuesday" value="tuesday">
+                                      <span class="field-checkbox__name-text">Tuesday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="tuesdayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td data-label="Choose a day" style="width: 256px;">
+                                  <div class="field-checkbox" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="wednesday" value="wednesday">
+                                      <span class="field-checkbox__name-text">Wednesday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="wednesdayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td data-label="Choose a day" style="width: 256px;">
+                                  <div class="field-checkbox" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="thursday" value="thursday">
+                                      <span class="field-checkbox__name-text">Thursday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="thursdayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td data-label="Choose a day" style="width: 256px;">
+                                  <div class="field-checkbox" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="friday" value="friday">
+                                      <span class="field-checkbox__name-text">Friday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="fridayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td data-label="Choose a day" style="width: 256px;">
+                                  <div class="field-checkbox" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="saturday" value="saturday">
+                                      <span class="field-checkbox__name-text">Saturday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="saturdayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                            </tbody>
+                          </table>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide  step-form__step-3">
+                  <fieldset class="write-us  step-form__step-inner">
+                    <div class="row  write-us__header">
+
+                      <div class="write-us__header-col-title">
+                        <h2 class="write-us__title">Let us know how to get in contact with you!</h2>
+                        <!-- <p class="write-us__info"></p> -->
+                      </div>
+
+                      <div class="write-us__header-col-contacts">
+                        <!-- <ul class="list-nostyled  write-us__contact-list">
+                          <li class="write-us__contact-item">
+                            <a href="tel:+447554766102" class="write-us__contact-link">
+                              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                              <span>+ 44 7554 766 102</span>
+                            </a>
+                          </li>
+                          <li class="write-us__contact-item">
+                            <a href="mailto:info@ugspot.co.uk" class="write-us__contact-link">
+                              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#mail"></use></svg>
+                              <span>info@ugspot.co.uk</span>
+                            </a>
+                          </li>
+                        </ul> -->
+                      </div>
+
+                      <div class="write-us__header-col-icons">
+                      </div>
+
+                    </div>
+
+                    <div class="row  step-form__contacts-row">
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Name</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="name" value="">
+                            <span class="field-text__help-text" data-error="name"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Surname</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" name="surname" value="">
+                            <span class="field-text__help-text" data-error="surname"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Email</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="email" value="">
+                            <span class="field-text__help-text" data-error="email"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Contact Phone</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="tel" value="">
+                            <span class="field-text__help-text" data-error="tel"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Project address</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="address" value="">
+                            <span class="field-text__help-text" data-error="address"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Town</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="town" value="">
+                            <span class="field-text__help-text" data-error="town"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Postcode of the Project</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="postcode" value="">
+                            <span class="field-text__help-text" data-error="postcode"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <div class="field-file">
+                          <div class="field-file__name">Upload files (png, jpeg)</div>
+                          <label class="field-file__input-wrap">
+                            <input class="field-file__input  novalidate" type="file" data-multiple-caption="files selected: {count}" multiple>
+                            <span class="field-file__name-text" data-button-text="Upload"></span>
+                            <span class="field-file__help-text"></span>
+                          </label>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="step-form__footer" style="margin-top: 16px;">
+                      <div class="row  step-form__contacts-row">
+
+                        <div class="step-form__col-input">
+                          <div class="field-checkbox">
+                            <p class="h4">Your preferred way of contact:</p>
+
+                            <div class="field-checkbox__input-wrap" style="margin-right: 0;">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input  novalidate" type="checkbox" name="call" value="">
+                                <span class="field-checkbox__name-text">Call Me</span>
+                              </label>
+                              <div class="field-checkbox__help-text-wrap">
+                                <div class="field-checkbox__help-text"></div>
+                              </div>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input  novalidate" type="checkbox" name="whatsapp" value="">
+                                <span class="field-checkbox__name-text">Write me on WhatsApp</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input  novalidate" type="checkbox" name="emailme" value="">
+                                <span class="field-checkbox__name-text">Mail me</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="step-form__col-input">
+                          <div class="step-form__add-info">
+
+                            <div class="field-checkbox">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input  novalidate" type="checkbox" name="agreement" value="" checked>
+                                <span class="field-checkbox__name-text" style="font-size: 14px; font-weight: 500;">I agree to receive to marketing information about offers and launches vie email</span>
+                              </label>
+                            </div>
+
+                            <p style="font-size: 14px; font-weight: 500;">By submitting this form, you agree that the personal information you provide will be used solely for the purposes of responding to your inquiry or providing the requested services. Your information will be treated with the utmost confidentiality and will not be disclosed to third parties without your explicit consent, unless required by law. Ultimate Glass Solutions Ltd. is committed to protecting your personal data and ensuring your privacy in accordance with applicable data protection laws.</p>
+
+                            <div class="step-form__captcha">
+                              <img src="img/reCaptcha.gif" alt="" width="304">
+                            </div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+              </div>
+
+              <div class="step-form__navigation">
+                <button class="btn step-form__btn step-form__btn--prev" type="button" disabled>Prev step</button>
+                <button class="btn step-form__btn step-form__btn--next" type="button">Next step</button>
+                <p class="step-form__warning"></p>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
