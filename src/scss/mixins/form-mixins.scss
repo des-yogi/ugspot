@@ -1,14 +1,14 @@
 @mixin field-text {
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-flex;
+  //vertical-align: middle;
   width: 100%;
-  min-height: calc(#{$line-height}em + #{$field-padding-vertical} + #{$field-padding-vertical} + 2px); // Привет, IE
+  min-height: 40px; // Привет, IE
   margin: 0;
   border: 1px solid $border-color;
   border-radius: $border-radius;
   padding: $field-padding-vertical  $field-padding-horizontal;
   line-height: $line-height;
-  font-size: 1em;
+  font-size: 16px;
   font-family: inherit;
   background-color: #fff;
   -moz-appearance: textfield; // stylelint-disable-line

@@ -75,7 +75,13 @@
     "features-2-col": [],
     "hero": [],
     "customer-feedback-card": [],
-    "video": []
+    "video": [],
+    "step-form": [],
+    "media-checkbox": [],
+    "color-checkbox": [],
+    "table-responsive": [],
+    "progress": [],
+    "field-num": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
@@ -97,6 +103,7 @@
   "addJsBefore": [
     "./node_modules/focus-visible/dist/focus-visible.min.js",
     "./node_modules/svg4everybody/dist/svg4everybody.js",
+    "./node_modules/autosize/dist/autosize.min.js",
     "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
     "./node_modules/choices.js/public/assets/scripts/choices.min.js",
     "./node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js",

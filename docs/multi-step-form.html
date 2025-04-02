@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Multi step form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="MobileOptimized" content="320">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="robots" content="noindex,nofollow">
+  <!-- OpenGraph microdata
+  <meta property="og:url"      content="https://www.your-domain.com/your-page.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Your Website Title" />
+  <meta property="og:description"   content="Your description" />
+  <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+  <meta property="og:locale"        content="uk_UA" />
+  -->
+  <!-- <link rel="canonical" href="https://www.your-domain.com/"> -->
+  <!-- <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/noto-sans-v7-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin> -->
+
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+</head>
+
+<body>
+<noscript>You have JavaScript disabled. We apologize, but this makes it difficult to use this site.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="container  page-header">
+
+        <div class="page-header__head">
+
+          <a href="index.html" class="logo">
+            <img src="img/ugspot-logo-header.svg" alt="UGSPOT logo" width="177" height="48">
+          </a>
+
+          <div class="page-header__contacts">
+
+            <a href="tel:+447554766102" class="page-header__link  page-header__link--phone">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+              <span>+44 7554 766 102</span>
+            </a>
+
+            <a href="https://wa.me/447554766102" class="page-header__link  page-header__link--icon" target="_blank" rel="nofollow noopener">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#whatsapp"></use></svg>
+              <span class="visually-hidden">WhatsApp dialog</span>
+            </a>
+
+            <a href="mailto:info@ugspot.co.uk" class="page-header__link  page-header__link--mail">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#mail"></use></svg>
+              <span>info@ugspot.co.uk</span>
+            </a>
+
+            <button class="burger" id="main-nav-toggler" aria-label="Mobile menu toggler"><span></span></button>
+
+            <button class="video-call-btn">
+              <span>Book a VIDEO CALL</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="page-header__menu">
+          Main menu here
+        </div>
+
+      </header>
+
+      <nav class="container breadcrumbs" aria-label="Breadcrumb">
+        <ol class="list-nostyled breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+            <a href="#" itemprop="item" class="breadcrumbs__link">
+             <span class="visually-hidden" itemprop="name">Home page</span>
+             <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#home"></use></svg>
+            </a>
+            <meta itemprop="position" content="1">
+          </li>
+
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+            <a href="#" itemprop="item" class="breadcrumbs__link">
+              <span itemprop="name">Page heading</span>
+            </a>
+            <meta itemprop="position" content="2">
+          </li>
+
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+            <span class="breadcrumbs__link" aria-current="page">
+              <span itemprop="name">A very long page heading</span>
+            </span>
+            <meta itemprop="position" content="3">
+          </li>
+
+        </ol>
+      </nav>
+
+
+      <main>
+
+        <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
+          <h1 style="text-align: center;">Let us know what you need</h1>
+
+          <form class="form  step-form" action="#" method="post" enctype="multipart/form-data">
+
+            <div class="row">
+              <div class="step-form__col-progress">
+                <div class="progress">
+                  <div class="progress__road">
+                    <div class="progress__road-bg"></div>
+                    <div class="progress__road-line"></div>
+                  </div>
+                  <div class="progress__car">
+                    <img src="img/car.svg" alt="Car">
+                  </div>
+                  <div class="progress__flags">
+                    <span class="progress__flag" data-step="0"></span>
+                    <span class="progress__flag" data-step="1"></span>
+                    <span class="progress__flag" data-step="2"></span>
+                  </div>
+                  <p class="progress__slide-num">(3 step out of 3)</p>
+                </div>
+
+                <p class="step-form__info">Aluminum is known for its strength and durability. It is resistant to rust, corrosion, and other environmental factors.</p>
+              </div>
+            </div>
+
+
+            <div class="swiper  step-form__container">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide  step-form__step-1">
+
+                  <fieldset class="step-form__step-inner">
+                    <div class="row">
+                      <div class="step-form__col-details">
+                        <div class="step-form__header">
+                          <h2 class="step-form__step-title">Selecting the service <span>*</span></h2>
+                        </div>
+                        <div class="step-form__step-radio-btns">
+                          <div class="field-radio">
+                            <div class="field-radio__input-wrap">
+                              <label class="field-radio__name">
+                                <input class="field-radio__input" type="radio" name="service" value="service1" checked>
+                                <span class="field-radio__name-text">I want supply only</span>
+                              </label>
+                              <div class="field-radio__help-text-wrap">
+                                <div class="field-radio__help-text"></div>
+                              </div>
+                            </div>
+                            <div class="field-radio__input-wrap">
+                              <label class="field-radio__name">
+                                <input class="field-radio__input" type="radio" name="service" value="service2">
+                                <span class="field-radio__name-text">I want supply & installation </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="step-form__step-inner">
+                    <div class="step-form__header">
+                      <h2 class="step-form__step-title">Selecting the required element <span>*</span></h2>
+                      <p>Select at least one card and then enter the desired number of items</p>
+                    </div>
+
+                    <div class="row  step-form__row">
+
+                      <div class="step-form__col-2-4">
+
+                        <div class="media-checkbox">
+                          <label class="media-checkbox__lbl">
+                            <span class="media-checkbox__img"
+                                  data-bg="img/material.jpg"
+                                  data-bg-webp="img/material.webp"
+                                  data-bg-speed="0.5"
+                                  role="img"
+                                  aria-label="Description of the image">
+                            </span>
+                            <!-- 540x405 img-size -->
+                            <input class="media-checkbox__input" type="checkbox" name="name" value="name">
+                            <span class="media-checkbox__name-text">Window</span>
+                          </label>
+
+                          <div class="field-num">
+                            <span class="field-num__name visually-hidden">Quantity</span>
+                            <span class="field-num__input-wrap">
+                              <span class="field-num__input-and-btns">
+                                <button class="field-num__btn field-num__btn--minus" type="button" aria-label="minus">-</button>
+                                <button class="field-num__btn field-num__btn--plus" type="button" aria-label="plus">+</button>
+                                <input class="field-num__input" type="number" name="quantity" value="0" max="50" min="0" step="1">
+                              </span>
+                              <!-- <span class="field-num__help-text"></span> -->
+                            </span>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="step-form__col-2-4">
+
+                        <div class="media-checkbox">
+                          <label class="media-checkbox__lbl">
+                            <span class="media-checkbox__img"
+                                  data-bg="img/material.jpg"
+                                  data-bg-webp="img/material.webp"
+                                  data-bg-speed="0.5"
+                                  role="img"
+                                  aria-label="Description of the image">
+                            </span>
+                            <!-- 540x405 img-size -->
+                            <input class="media-checkbox__input" type="checkbox" name="name" value="name">
+                            <span class="media-checkbox__name-text">Entrance and/or back door</span>
+                          </label>
+
+                          <div class="field-num">
+                            <span class="field-num__name visually-hidden">Quantity</span>
+                            <span class="field-num__input-wrap">
+                              <span class="field-num__input-and-btns">
+                                <button class="field-num__btn field-num__btn--minus" type="button" aria-label="minus">-</button>
+                                <button class="field-num__btn field-num__btn--plus" type="button" aria-label="plus">+</button>
+                                <input class="field-num__input" type="number" name="quantity" value="0" max="50" min="0" step="1">
+                              </span>
+                              <!-- <span class="field-num__help-text"></span> -->
+                            </span>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="step-form__col-2-4">
+
+                        <div class="media-checkbox">
+                          <label class="media-checkbox__lbl">
+                            <span class="media-checkbox__img"
+                                  data-bg="img/material.jpg"
+                                  data-bg-webp="img/material.webp"
+                                  data-bg-speed="0.5"
+                                  role="img"
+                                  aria-label="Description of the image">
+                            </span>
+                            <!-- 540x405 img-size -->
+                            <input class="media-checkbox__input" type="checkbox" name="name" value="name">
+                            <span class="media-checkbox__name-text">Slider and/or bi-fold</span>
+                          </label>
+
+                          <div class="field-num">
+                            <span class="field-num__name visually-hidden">Quantity</span>
+                            <span class="field-num__input-wrap">
+                              <span class="field-num__input-and-btns">
+                                <button class="field-num__btn field-num__btn--minus" type="button" aria-label="minus">-</button>
+                                <button class="field-num__btn field-num__btn--plus" type="button" aria-label="plus">+</button>
+                                <input class="field-num__input" type="number" name="quantity" value="0" max="50" min="0" step="1">
+                              </span>
+                              <!-- <span class="field-num__help-text"></span> -->
+                            </span>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="step-form__col-2-4">
+
+                        <div class="media-checkbox">
+                          <label class="media-checkbox__lbl">
+                            <span class="media-checkbox__img"
+                                  data-bg="img/material.jpg"
+                                  data-bg-webp="img/material.webp"
+                                  data-bg-speed="0.5"
+                                  role="img"
+                                  aria-label="Description of the image">
+                            </span>
+                            <!-- 540x405 img-size -->
+                            <input class="media-checkbox__input" type="checkbox" name="name" value="name">
+                            <span class="media-checkbox__name-text">French door</span>
+                          </label>
+
+                          <div class="field-num">
+                            <span class="field-num__name visually-hidden">Quantity</span>
+                            <span class="field-num__input-wrap">
+                              <span class="field-num__input-and-btns">
+                                <button class="field-num__btn field-num__btn--minus" type="button" aria-label="minus">-</button>
+                                <button class="field-num__btn field-num__btn--plus" type="button" aria-label="plus">+</button>
+                                <input class="field-num__input" type="number" name="quantity" value="0" max="50" min="0" step="1">
+                              </span>
+                              <!-- <span class="field-num__help-text"></span> -->
+                            </span>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="step-form__col-2-4">
+
+                        <div class="media-checkbox">
+                          <label class="media-checkbox__lbl">
+                            <span class="media-checkbox__img"
+                                  data-bg="img/material.jpg"
+                                  data-bg-webp="img/material.webp"
+                                  data-bg-speed="0.5"
+                                  role="img"
+                                  aria-label="Description of the image">
+                            </span>
+                            <!-- 540x405 img-size -->
+                            <input class="media-checkbox__input" type="checkbox" name="name" value="name">
+                            <span class="media-checkbox__name-text">Glazed unit and/or secondary window</span>
+                          </label>
+
+                          <div class="field-num">
+                            <span class="field-num__name visually-hidden">Quantity</span>
+                            <span class="field-num__input-wrap">
+                              <span class="field-num__input-and-btns">
+                                <button class="field-num__btn field-num__btn--minus" type="button" aria-label="minus">-</button>
+                                <button class="field-num__btn field-num__btn--plus" type="button" aria-label="plus">+</button>
+                                <input class="field-num__input" type="number" name="quantity" value="0" max="50" min="0" step="1">
+                              </span>
+                              <!-- <span class="field-num__help-text"></span> -->
+                            </span>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="step-form__col-2-4">
+
+                        <div class="media-checkbox">
+                          <label class="media-checkbox__lbl">
+                            <span class="media-checkbox__img"
+                                  data-bg="img/material.jpg"
+                                  data-bg-webp="img/material.webp"
+                                  data-bg-speed="0.5"
+                                  role="img"
+                                  aria-label="Description of the image">
+                            </span>
+                            <!-- 540x405 img-size -->
+                            <input class="media-checkbox__input" type="checkbox" name="name" value="name">
+                            <span class="media-checkbox__name-text">Roof Lanterns and/or walk on glass</span>
+                          </label>
+
+                          <div class="field-num">
+                            <span class="field-num__name visually-hidden">Quantity</span>
+                            <span class="field-num__input-wrap">
+                              <span class="field-num__input-and-btns">
+                                <button class="field-num__btn field-num__btn--minus" type="button" aria-label="minus">-</button>
+                                <button class="field-num__btn field-num__btn--plus" type="button" aria-label="plus">+</button>
+                                <input class="field-num__input" type="number" name="quantity" value="0" max="50" min="0" step="1">
+                              </span>
+                              <!-- <span class="field-num__help-text"></span> -->
+                            </span>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="step-form__col-2-4">
+
+                        <div class="media-checkbox">
+                          <label class="media-checkbox__lbl">
+                            <span class="media-checkbox__img"
+                                  data-bg="img/material.jpg"
+                                  data-bg-webp="img/material.webp"
+                                  data-bg-speed="0.5"
+                                  role="img"
+                                  aria-label="Description of the image">
+                            </span>
+                            <!-- 540x405 img-size -->
+                            <input class="media-checkbox__input" type="checkbox" name="name" value="name">
+                            <span class="media-checkbox__name-text">Crittall Door and/or Wall</span>
+                          </label>
+
+                          <div class="field-num">
+                            <span class="field-num__name visually-hidden">Quantity</span>
+                            <span class="field-num__input-wrap">
+                              <span class="field-num__input-and-btns">
+                                <button class="field-num__btn field-num__btn--minus" type="button" aria-label="minus">-</button>
+                                <button class="field-num__btn field-num__btn--plus" type="button" aria-label="plus">+</button>
+                                <input class="field-num__input" type="number" name="quantity" value="0" max="50" min="0" step="1">
+                              </span>
+                              <!-- <span class="field-num__help-text"></span> -->
+                            </span>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="step-form__col-2-4">
+
+                        <div class="media-checkbox">
+                          <label class="media-checkbox__lbl">
+                            <span class="media-checkbox__img"
+                                  data-bg="img/material.jpg"
+                                  data-bg-webp="img/material.webp"
+                                  data-bg-speed="0.5"
+                                  role="img"
+                                  aria-label="Description of the image">
+                            </span>
+                            <!-- 540x405 img-size -->
+                            <input class="media-checkbox__input" type="checkbox" name="name" value="name">
+                            <span class="media-checkbox__name-text">Conservatory</span>
+                          </label>
+
+                          <div class="field-num">
+                            <span class="field-num__name visually-hidden">Quantity</span>
+                            <span class="field-num__input-wrap">
+                              <span class="field-num__input-and-btns">
+                                <button class="field-num__btn field-num__btn--minus" type="button" aria-label="minus">-</button>
+                                <button class="field-num__btn field-num__btn--plus" type="button" aria-label="plus">+</button>
+                                <input class="field-num__input" type="number" name="quantity" value="0" max="50" min="0" step="1">
+                              </span>
+                              <!-- <span class="field-num__help-text"></span> -->
+                            </span>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="step-form__step-inner">
+                    <div class="step-form__header">
+                      <h3 class="step-form__step-title">Selecting a color option <span>*</span></h3>
+                      <p>Select at least one item</p>
+                    </div>
+
+                    <div class="row  step-form__colors">
+                      <div class="step-form__col-color">
+
+                        <div class="color-checkbox">
+                          <label class="color-checkbox__lbl">
+                            <span class="color-checkbox__img"
+                                  data-bg="img/colors-all.jpg"
+                                  data-bg-webp="img/colors-all.webp"
+                                  data-bg-speed="0.5"
+                                  role="img"
+                                  aria-label="Description of the image">
+                            </span>
+                            <!-- 540x405 img-size -->
+                            <input class="color-checkbox__input  novalidate" type="checkbox" name="color variant" value="">
+                            <span class="color-checkbox__name-text">Single</span>
+                          </label>
+                        </div>
+
+                      </div>
+
+                      <div class="step-form__col-color">
+
+                        <div class="color-checkbox">
+                          <label class="color-checkbox__lbl">
+                            <span class="color-checkbox__img"
+                                  data-bg="img/colors-all.jpg"
+                                  data-bg-webp="img/colors-all.webp"
+                                  data-bg-speed="0.5"
+                                  role="img"
+                                  aria-label="Description of the image">
+                            </span>
+                            <!-- 540x405 img-size -->
+                            <input class="color-checkbox__input  novalidate" type="checkbox" name="color variant" value="">
+                            <span class="color-checkbox__name-text">Dual / different in & out</span>
+                          </label>
+                        </div>
+
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="step-form__step-inner">
+                    <div class="row">
+                      <div class="step-form__col-details">
+
+                        <div class="step-form__header">
+                          <h3 class="step-form__step-title">Further details</h3>
+                          <p>Please list types of units i.e window type bay window, approximate sizes of the units, material (upvc, timber/aluminium/ upvc timber-look and any additional details you want us to know about</p>
+                        </div>
+
+                        <label class="field-text">
+                          <!-- <span class="field-text__name">Текст</span> -->
+                          <span class="field-text__input-wrap">
+                            <textarea class="field-text__input  novalidate" name="text-option" placeholder="Type here…" style="padding-right: 24px;"></textarea>
+                            <span class="field-text__help-text"></span>
+                          </span>
+                        </label>
+
+                        <div class="field-file" style="margin-bottom: 0;">
+                          <div class="field-file__name">Upload supporting files (optional)</div>
+                          <label class="field-file__input-wrap">
+                            <input class="field-file__input  novalidate" type="file" data-multiple-caption="files are selected: {count}" multiple>
+                            <span class="field-file__name-text" data-button-text="Select file(s)">Nothing is selected</span>
+                            <div class="field-file__help-text"></div>
+                          </label>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </fieldset>
+
+                </div>
+
+                <div class="swiper-slide  step-form__step-2">
+                  <div class="row">
+                    <div class="step-form__col-details">
+                      <fieldset class="step-form__step-inner">
+                        <div class="step-form__table-wrapper">
+                          <table class="table-responsive">
+                            <thead>
+                              <tr>
+                                <th style="min-width: 256px; white-space: nowrap;">Choose a day</th>
+                                <th>Write down your preferred hours</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td data-label="Choose a day" style="width: 256px;">
+                                  <div class="field-checkbox" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="monday" value="monday">
+                                      <span class="field-checkbox__name-text">Monday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="mondayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td data-label="Choose a day" style="width: 256px;">
+                                  <div class="field-checkbox" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="tuesday" value="tuesday">
+                                      <span class="field-checkbox__name-text">Tuesday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="tuesdayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td data-label="Choose a day" style="width: 256px;">
+                                  <div class="field-checkbox" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="wednesday" value="wednesday">
+                                      <span class="field-checkbox__name-text">Wednesday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="wednesdayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td data-label="Choose a day" style="width: 256px;">
+                                  <div class="field-checkbox" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="thursday" value="thursday">
+                                      <span class="field-checkbox__name-text">Thursday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="thursdayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td data-label="Choose a day" style="width: 256px;">
+                                  <div class="field-checkbox" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="friday" value="friday">
+                                      <span class="field-checkbox__name-text">Friday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="fridayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td data-label="Choose a day" style="width: 256px;">
+                                  <div class="field-checkbox" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="saturday" value="saturday">
+                                      <span class="field-checkbox__name-text">Saturday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="saturdayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                            </tbody>
+                          </table>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide  step-form__step-3">
+                  <fieldset class="write-us  step-form__step-inner">
+                    <div class="row  write-us__header">
+
+                      <div class="write-us__header-col-title">
+                        <h2 class="write-us__title">Let us know how to get in contact with you!</h2>
+                        <!-- <p class="write-us__info"></p> -->
+                      </div>
+
+                      <div class="write-us__header-col-contacts">
+                        <!-- <ul class="list-nostyled  write-us__contact-list">
+                          <li class="write-us__contact-item">
+                            <a href="tel:+447554766102" class="write-us__contact-link">
+                              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                              <span>+ 44 7554 766 102</span>
+                            </a>
+                          </li>
+                          <li class="write-us__contact-item">
+                            <a href="mailto:info@ugspot.co.uk" class="write-us__contact-link">
+                              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#mail"></use></svg>
+                              <span>info@ugspot.co.uk</span>
+                            </a>
+                          </li>
+                        </ul> -->
+                      </div>
+
+                      <div class="write-us__header-col-icons">
+                      </div>
+
+                    </div>
+
+                    <div class="row  step-form__contacts-row">
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Name</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="name" value="">
+                            <span class="field-text__help-text" data-error="name"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Surname</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" name="surname" value="">
+                            <span class="field-text__help-text" data-error="surname"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Email</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="email" value="">
+                            <span class="field-text__help-text" data-error="email"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Contact Phone</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="tel" value="">
+                            <span class="field-text__help-text" data-error="tel"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Project address</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="address" value="">
+                            <span class="field-text__help-text" data-error="address"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Town</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="town" value="">
+                            <span class="field-text__help-text" data-error="town"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Postcode of the Project</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="postcode" value="">
+                            <span class="field-text__help-text" data-error="postcode"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <div class="field-file">
+                          <div class="field-file__name">Upload files (png, jpeg)</div>
+                          <label class="field-file__input-wrap">
+                            <input class="field-file__input  novalidate" type="file" data-multiple-caption="files selected: {count}" multiple>
+                            <span class="field-file__name-text" data-button-text="Upload"></span>
+                            <span class="field-file__help-text"></span>
+                          </label>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="step-form__footer" style="margin-top: 16px;">
+                      <div class="row  step-form__contacts-row">
+
+                        <div class="step-form__col-input">
+                          <div class="field-checkbox">
+                            <p class="h4">Your preferred way of contact:</p>
+
+                            <div class="field-checkbox__input-wrap" style="margin-right: 0;">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input  novalidate" type="checkbox" name="call" value="">
+                                <span class="field-checkbox__name-text">Call Me</span>
+                              </label>
+                              <div class="field-checkbox__help-text-wrap">
+                                <div class="field-checkbox__help-text"></div>
+                              </div>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input  novalidate" type="checkbox" name="whatsapp" value="">
+                                <span class="field-checkbox__name-text">Write me on WhatsApp</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input  novalidate" type="checkbox" name="emailme" value="">
+                                <span class="field-checkbox__name-text">Mail me</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="step-form__col-input">
+                          <div class="step-form__add-info">
+
+                            <div class="field-checkbox">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input  novalidate" type="checkbox" name="agreement" value="" checked>
+                                <span class="field-checkbox__name-text" style="font-size: 14px; font-weight: 500;">I agree to receive to marketing information about offers and launches vie email</span>
+                              </label>
+                            </div>
+
+                            <p style="font-size: 14px; font-weight: 500;">By submitting this form, you agree that the personal information you provide will be used solely for the purposes of responding to your inquiry or providing the requested services. Your information will be treated with the utmost confidentiality and will not be disclosed to third parties without your explicit consent, unless required by law. Ultimate Glass Solutions Ltd. is committed to protecting your personal data and ensuring your privacy in accordance with applicable data protection laws.</p>
+
+                            <div class="step-form__captcha">
+                              <img src="img/reCaptcha.gif" alt="" width="304">
+                            </div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+              </div>
+
+              <div class="step-form__navigation">
+                <button class="btn step-form__btn step-form__btn--prev" type="button" disabled>Prev step</button>
+                <button class="btn step-form__btn step-form__btn--next" type="button">Next step</button>
+                <p class="step-form__warning"></p>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="container  page-footer">
+
+        <nav class="page-footer__menu">
+          <ul class="list-nostyled  page-footer__menu-list">
+            <li class="page-footer__menu-item">
+              <a href="#" class="page-footer__menu-link">Windows</a>
+            </li>
+            <li class="page-footer__menu-item">
+              <a href="#" class="page-footer__menu-link">Doors</a>
+            </li>
+            <li class="page-footer__menu-item">
+              <a href="#" class="page-footer__menu-link">Roof System</a>
+            </li>
+            <li class="page-footer__menu-item">
+              <a href="#" class="page-footer__menu-link">Glasswork</a>
+            </li>
+            <li class="page-footer__menu-item">
+              <a href="#" class="page-footer__menu-link">Conservatories</a>
+            </li>
+            <li class="page-footer__menu-item">
+              <a href="#" class="page-footer__menu-link">Blog and Media</a>
+            </li>
+            <li class="page-footer__menu-item">
+              <a href="#" class="page-footer__menu-link">Trade</a>
+            </li>
+            <li class="page-footer__menu-item">
+              <a href="#" class="page-footer__menu-link">About Us</a>
+            </li>
+            <li class="page-footer__menu-item">
+              <a href="#" class="page-footer__menu-link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="page-footer__about">
+          <a href="index.html" class="logo  logo--footer" title="Ugspot">
+            <img src="img/ugspot-logo-footer.svg" alt="logo" width="85" height="102" loading="lazy">
+          </a>
+
+          <section class="page-footer__contacts">
+            <h3 class="visually-hidden">Contact us</h3>
+
+            <ul class="list-nostyled  page-footer__contact-list">
+              <li class="page-footer__contact-item">
+                <a href="mailto:info@ugspot.co.uk" class="page-footer__contact-link">
+                  <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#mail"></use></svg>
+                  <span>info@ugspot.co.uk</span>
+                </a>
+              </li>
+
+              <li class="page-footer__contact-item">
+                <a href="tel:+447554766102" class="page-footer__contact-link">
+                  <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                  <span>+ 44 7554 766 102</span>
+                </a>
+
+                <a href="#" class="page-footer__contact-icon">
+                  <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#whatsapp"></use></svg>
+                </a>
+              </li>
+            </ul>
+
+            <div class="page-footer__soc-network">
+
+              <ul class="list-nostyled  social-net-total">
+                <li class="social-net-total__item">
+                  <a href="#" class="social-net-total__link  social-net-total__link--fb" target="_blank" rel="nofollow noopener">
+                    <span class="visually-hidden">Facebook</span>
+                    <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"></use></svg>
+                  </a>
+                </li>
+                <li class="social-net-total__item">
+                  <a href="#" class="social-net-total__link  social-net-total__link--inst" target="_blank" rel="nofollow noopener">
+                    <span class="visually-hidden">Instagram</span>
+                    <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram"></use></svg>
+                  </a>
+                </li>
+                <li class="social-net-total__item">
+                  <a href="#" class="social-net-total__link  social-net-total__link--ytb" target="_blank" rel="nofollow noopener">
+                    <span class="visually-hidden">Youtube</span>
+                    <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#youtube"></use></svg>
+                  </a>
+                </li>
+                <li class="social-net-total__item">
+                  <a href="#" class="social-net-total__link  social-net-total__link--in" target="_blank" rel="nofollow noopener">
+                    <span class="visually-hidden">Linkedin</span>
+                    <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#linkedin"></use></svg>
+                  </a>
+                </li>
+                <li class="social-net-total__item">
+                  <a href="#" class="social-net-total__link  social-net-total__link--pin" target="_blank" rel="nofollow noopener">
+                    <span class="visually-hidden">Pinterest</span>
+                    <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#pinterest"></use></svg>
+                  </a>
+                </li>
+              </ul>
+
+            </div>
+
+          </section>
+        </div>
+
+        <div class="page-footer__copyrights">
+
+          <section class="copyrights">
+            <h3 class="visually-hidden">Rights owners and Terms of Use</h3>
+
+            <p class="copyrights__owner">
+              <span>© 2021 - 2024 Ultimate Glass Solutions Ltd. All rights reserved.</span>
+              <span>Сompany registered in the UK no.12266404.</span>
+              <a href="#" class="copyrights__terms">Terms and Conditions.</a>
+            </p>
+
+            <div class="copyrights__dev">
+              <a href="#" class="copyrights__dev-link">
+                <span>Created by</span>
+                <img src="img/it-doors-logo.svg" alt="IT-Doors Outsourcing developer" width="85" height="32" loading="lazy">
+              </a>
+            </div>
+
+          </section>
+
+
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->
+  <script src="js/script.min.js"></script>
+
+
+</body>
+</html>

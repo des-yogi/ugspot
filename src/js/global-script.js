@@ -78,9 +78,11 @@ document.documentElement.className = document.documentElement.className.replace(
 
 })();
 
-
+(function(){
+ autosize(document.querySelectorAll('textarea'));
+}());
 
 // (function(){
-//   // code
+//   autosize(document.querySelectorAll('textarea'));
 // }());
 

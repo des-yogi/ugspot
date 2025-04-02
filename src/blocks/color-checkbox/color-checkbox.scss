@@ -1,0 +1,72 @@
+.color-checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px 0;
+  height: 100%;
+  padding: 8px;
+  background-color: $block-bg;
+  border: 2px solid $border-color;
+  border-radius: $border-radius;
+  transition: border-color $transition-time;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &:has(#{$block-name}__lbl:hover) {
+    border-color: $main-pale--hover;
+  }
+
+  &:has(input[type=checkbox]:focus) {
+    border-color: $main-pale--active;
+  }
+
+  &:has(input:checked) {
+    border-color: $main-color;
+  }
+
+  &__lbl {
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__img {
+    display: block;
+    aspect-ratio: 16 / 9;
+    background-color: $text-muted;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: $border-radius;
+  }
+
+  &__input {
+    position: absolute;
+    top: 0.7em;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    transform: translateY(-50%);
+
+    &:focus,
+    &:active {
+      @include field-focus;
+    }
+
+    // сокрытие инпута в случае использования своего чекбокса
+    opacity: 0;
+  }
+
+  &__name-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: inherit;
+    line-height: 1.3;
+    text-align: center;
+    text-wrap: balance;
+  }
+}
