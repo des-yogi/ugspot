@@ -5,3 +5,4 @@
 * https://des-yogi.github.io/ugspot/glazing
 * https://des-yogi.github.io/ugspot/glazing-2
 * https://des-yogi.github.io/ugspot/landing
+* https://des-yogi.github.io/ugspot/multi-step-form
