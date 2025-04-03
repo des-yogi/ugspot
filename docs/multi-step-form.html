@@ -135,7 +135,6 @@
               </div>
             </div>
 
-
             <div class="swiper  step-form__container">
               <div class="swiper-wrapper">
 
@@ -438,7 +437,7 @@
                     <div class="row  step-form__colors">
                       <div class="step-form__col-color">
 
-                        <div class="color-checkbox">
+                        <div class="color-checkbox  one-of">
                           <label class="color-checkbox__lbl">
                             <span class="color-checkbox__img"
                                   data-bg="img/colors-all.jpg"
@@ -448,7 +447,7 @@
                                   aria-label="Description of the image">
                             </span>
                             <!-- 540x405 img-size -->
-                            <input class="color-checkbox__input  novalidate" type="checkbox" name="color variant" value="">
+                            <input class="color-checkbox__input" type="checkbox" name="single-color" value="single-color">
                             <span class="color-checkbox__name-text">Single</span>
                           </label>
                         </div>
@@ -457,7 +456,7 @@
 
                       <div class="step-form__col-color">
 
-                        <div class="color-checkbox">
+                        <div class="color-checkbox  one-of">
                           <label class="color-checkbox__lbl">
                             <span class="color-checkbox__img"
                                   data-bg="img/colors-all.jpg"
@@ -467,7 +466,7 @@
                                   aria-label="Description of the image">
                             </span>
                             <!-- 540x405 img-size -->
-                            <input class="color-checkbox__input  novalidate" type="checkbox" name="color variant" value="">
+                            <input class="color-checkbox__input" type="checkbox" name="multi-color" value="multi-color">
                             <span class="color-checkbox__name-text">Dual / different in & out</span>
                           </label>
                         </div>
@@ -481,14 +480,14 @@
                       <div class="step-form__col-details">
 
                         <div class="step-form__header">
-                          <h3 class="step-form__step-title">Further details</h3>
+                          <h3 class="step-form__step-title">Further details <span>*</span></h3>
                           <p>Please list types of units i.e window type bay window, approximate sizes of the units, material (upvc, timber/aluminium/ upvc timber-look and any additional details you want us to know about</p>
                         </div>
 
                         <label class="field-text">
                           <!-- <span class="field-text__name">Текст</span> -->
                           <span class="field-text__input-wrap">
-                            <textarea class="field-text__input  novalidate" name="text-option" placeholder="Type here…" style="padding-right: 24px;"></textarea>
+                            <textarea class="field-text__input" name="text-option" placeholder="Type here…" style="padding-right: 24px;"></textarea>
                             <span class="field-text__help-text"></span>
                           </span>
                         </label>
@@ -524,9 +523,9 @@
                             <tbody>
                               <tr>
                                 <td data-label="Choose a day" style="width: 256px;">
-                                  <div class="field-checkbox" style="margin: 0;">
+                                  <div class="field-checkbox  one-of" style="margin: 0;">
                                     <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="monday" value="monday">
+                                      <input class="field-checkbox__input" type="checkbox" name="monday" value="monday">
                                       <span class="field-checkbox__name-text">Monday</span>
                                     </label>
                                   </div>
@@ -544,9 +543,9 @@
 
                               <tr>
                                 <td data-label="Choose a day" style="width: 256px;">
-                                  <div class="field-checkbox" style="margin: 0;">
+                                  <div class="field-checkbox  one-of" style="margin: 0;">
                                     <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="tuesday" value="tuesday">
+                                      <input class="field-checkbox__input" type="checkbox" name="tuesday" value="tuesday">
                                       <span class="field-checkbox__name-text">Tuesday</span>
                                     </label>
                                   </div>
@@ -564,9 +563,9 @@
 
                               <tr>
                                 <td data-label="Choose a day" style="width: 256px;">
-                                  <div class="field-checkbox" style="margin: 0;">
+                                  <div class="field-checkbox  one-of" style="margin: 0;">
                                     <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="wednesday" value="wednesday">
+                                      <input class="field-checkbox__input" type="checkbox" name="wednesday" value="wednesday">
                                       <span class="field-checkbox__name-text">Wednesday</span>
                                     </label>
                                   </div>
@@ -584,9 +583,9 @@
 
                               <tr>
                                 <td data-label="Choose a day" style="width: 256px;">
-                                  <div class="field-checkbox" style="margin: 0;">
+                                  <div class="field-checkbox  one-of" style="margin: 0;">
                                     <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="thursday" value="thursday">
+                                      <input class="field-checkbox__input" type="checkbox" name="thursday" value="thursday">
                                       <span class="field-checkbox__name-text">Thursday</span>
                                     </label>
                                   </div>
@@ -604,9 +603,9 @@
 
                               <tr>
                                 <td data-label="Choose a day" style="width: 256px;">
-                                  <div class="field-checkbox" style="margin: 0;">
+                                  <div class="field-checkbox  one-of" style="margin: 0;">
                                     <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="friday" value="friday">
+                                      <input class="field-checkbox__input" type="checkbox" name="friday" value="friday">
                                       <span class="field-checkbox__name-text">Friday</span>
                                     </label>
                                   </div>
@@ -624,9 +623,9 @@
 
                               <tr>
                                 <td data-label="Choose a day" style="width: 256px;">
-                                  <div class="field-checkbox" style="margin: 0;">
+                                  <div class="field-checkbox  one-of" style="margin: 0;">
                                     <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input  novalidate" type="checkbox" name="saturday" value="saturday">
+                                      <input class="field-checkbox__input" type="checkbox" name="saturday" value="saturday">
                                       <span class="field-checkbox__name-text">Saturday</span>
                                     </label>
                                   </div>
@@ -707,7 +706,7 @@
                         <label class="field-text">
                           <span class="field-text__name">Email</span>
                           <span class="field-text__input-wrap">
-                            <input class="field-text__input  field-text__input--required" type="text" name="email" value="">
+                            <input class="field-text__input  field-text__input--required" type="email" name="email" value="">
                             <span class="field-text__help-text" data-error="email"></span>
                           </span>
                         </label>
@@ -717,7 +716,7 @@
                         <label class="field-text">
                           <span class="field-text__name">Contact Phone</span>
                           <span class="field-text__input-wrap">
-                            <input class="field-text__input  field-text__input--required" type="text" name="tel" value="">
+                            <input class="field-text__input  field-text__input--required" type="tel" name="tel" value="">
                             <span class="field-text__help-text" data-error="tel"></span>
                           </span>
                         </label>
@@ -827,7 +826,7 @@
               <div class="step-form__navigation">
                 <button class="btn step-form__btn step-form__btn--prev" type="button" disabled>Prev step</button>
                 <button class="btn step-form__btn step-form__btn--next" type="button">Next step</button>
-                <p class="step-form__warning"></p>
+                <div class="step-form__warning" style="margin-top: 16px;"></div>
               </div>
             </div>
 
