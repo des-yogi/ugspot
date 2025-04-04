@@ -116,7 +116,10 @@
 
   &__warning {
     flex: 1 1 100%;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
     font-size: $font-size;
     text-align: center;
     text-wrap: balance;
@@ -124,6 +127,12 @@
 
     &:empty {
       display: none;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
