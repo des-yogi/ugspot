@@ -32,14 +32,15 @@
                     <div class="progress__road-line"></div>
                   </div>
                   <div class="progress__car">
-                    <img src="img/car.svg" alt="Car">
+                    <img src="img/car.svg" alt="UGSPOT car - progress indicator" width="88" height="36">
                   </div>
                   <div class="progress__flags">
-                    <span class="progress__flag" data-step="0"></span>
+                    <!-- Флажки будут добавлены динамически -->
+                    <!-- <span class="progress__flag" data-step="0"></span>
                     <span class="progress__flag" data-step="1"></span>
-                    <span class="progress__flag" data-step="2"></span>
+                    <span class="progress__flag" data-step="2"></span> -->
                   </div>
-                  <p class="progress__slide-num">(3 step out of 3)</p>
+                  <p class="progress__slide-num">(1 step out of 3)</p>
                 </div>
 
                 <p class="step-form__info">Aluminum is known for its strength and durability. It is resistant to rust, corrosion, and other environmental factors.</p>
@@ -221,13 +222,13 @@
                           <table class="table-responsive">
                             <thead>
                               <tr>
-                                <th style="min-width: 256px; white-space: nowrap;">Choose a day</th>
+                                <th style="min-width: 256px; white-space: nowrap;">Choose a day <span>*</span></th>
                                 <th>Write down your preferred hours</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
-                                <td data-label="Choose a day" style="width: 256px;">
+                                <td data-label="Choose a day *" style="width: 256px;">
                                   <div class="field-checkbox  one-of" style="margin: 0;">
                                     <label class="field-checkbox__name">
                                       <input class="field-checkbox__input" type="checkbox" name="monday" value="monday">
@@ -247,7 +248,7 @@
                               </tr>
 
                               <tr>
-                                <td data-label="Choose a day" style="width: 256px;">
+                                <td data-label="Choose a day *" style="width: 256px;">
                                   <div class="field-checkbox  one-of" style="margin: 0;">
                                     <label class="field-checkbox__name">
                                       <input class="field-checkbox__input" type="checkbox" name="tuesday" value="tuesday">
@@ -267,7 +268,7 @@
                               </tr>
 
                               <tr>
-                                <td data-label="Choose a day" style="width: 256px;">
+                                <td data-label="Choose a day *" style="width: 256px;">
                                   <div class="field-checkbox  one-of" style="margin: 0;">
                                     <label class="field-checkbox__name">
                                       <input class="field-checkbox__input" type="checkbox" name="wednesday" value="wednesday">
@@ -287,7 +288,7 @@
                               </tr>
 
                               <tr>
-                                <td data-label="Choose a day" style="width: 256px;">
+                                <td data-label="Choose a day *" style="width: 256px;">
                                   <div class="field-checkbox  one-of" style="margin: 0;">
                                     <label class="field-checkbox__name">
                                       <input class="field-checkbox__input" type="checkbox" name="thursday" value="thursday">
@@ -307,7 +308,7 @@
                               </tr>
 
                               <tr>
-                                <td data-label="Choose a day" style="width: 256px;">
+                                <td data-label="Choose a day *" style="width: 256px;">
                                   <div class="field-checkbox  one-of" style="margin: 0;">
                                     <label class="field-checkbox__name">
                                       <input class="field-checkbox__input" type="checkbox" name="friday" value="friday">
@@ -327,7 +328,7 @@
                               </tr>
 
                               <tr>
-                                <td data-label="Choose a day" style="width: 256px;">
+                                <td data-label="Choose a day *" style="width: 256px;">
                                   <div class="field-checkbox  one-of" style="margin: 0;">
                                     <label class="field-checkbox__name">
                                       <input class="field-checkbox__input" type="checkbox" name="saturday" value="saturday">
@@ -401,7 +402,7 @@
                         <label class="field-text">
                           <span class="field-text__name">Surname</span>
                           <span class="field-text__input-wrap">
-                            <input class="field-text__input" type="text" name="surname" value="">
+                            <input class="field-text__input  field-text__input--required" type="text" name="surname" value="">
                             <span class="field-text__help-text" data-error="surname"></span>
                           </span>
                         </label>
@@ -459,7 +460,7 @@
 
                       <div class="step-form__col-input">
                         <div class="field-file">
-                          <div class="field-file__name">Upload files (png, jpeg)</div>
+                          <div class="field-file__name">Upload supporting files (optional)</div>
                           <label class="field-file__input-wrap">
                             <input class="field-file__input  novalidate" type="file" data-multiple-caption="files selected: {count}" multiple>
                             <span class="field-file__name-text" data-button-text="Upload"></span>
