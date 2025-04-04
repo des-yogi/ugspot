@@ -529,13 +529,21 @@
               </div>
 
               <div class="step-form__navigation">
-                <button class="btn step-form__btn step-form__btn--prev" type="button" disabled>Prev step</button>
-                <button class="btn step-form__btn step-form__btn--next" type="button">Next step</button>
-                <div class="step-form__warning" style="margin-top: 16px;"></div>
+                <button class="btn step-form__btn step-form__btn--prev" type="button" disabled>
+                  <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-left"></use></svg>
+                  <span>Prev step</span>
+                </button>
+                <button class="btn step-form__btn step-form__btn--next" type="button">
+                  <span>Next step</span>
+                  <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+                </button>
+
+                <div class="step-form__warning"></div>
               </div>
             </div>
 
           </form>
+
         </div>
 
       </main>
@@ -552,3 +560,4 @@
 
 </body>
 </html>
+

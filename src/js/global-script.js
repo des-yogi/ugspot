@@ -82,6 +82,18 @@ document.documentElement.className = document.documentElement.className.replace(
  autosize(document.querySelectorAll('textarea'));
 }());
 
+/*(function(){
+  const phoneElems = document.getElementsByClassName('phone-mask');
+  Array.prototype.forEach.call(phoneElems, function (item) {
+    const phoneMask = IMask(
+      item, {
+        mask: '+{44} 0000000000',
+        placeholderChar: '_',
+        lazy: false // make placeholder always visible
+    });
+  });
+}());*/
+
 // (function(){
 //   autosize(document.querySelectorAll('textarea'));
 // }());
