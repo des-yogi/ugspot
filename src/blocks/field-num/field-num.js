@@ -1,4 +1,4 @@
-(function(){
+/*(function(){
   const fields = document.querySelectorAll('.field-num');
 
   if(fields.length) {
@@ -22,3 +22,4 @@
     });
   }
 }());
+*/
