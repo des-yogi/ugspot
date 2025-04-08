@@ -24,6 +24,10 @@
     border-color: $main-color;
   }
 
+  &.checked {
+    border-color: $main-color;
+  }
+
   &__lbl {
     display: block;
     position: relative;

@@ -122,8 +122,11 @@
     margin-top: 24px;
     font-size: $font-size;
     text-align: center;
-    text-wrap: balance;
     color: $main-color;
+
+    @media (min-width: $screen-md) {
+      text-wrap: balance;
+    }
 
     &:empty {
       display: none;
