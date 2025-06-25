@@ -84,7 +84,8 @@
     "field-num": [],
     "contacts": [],
     "contact-card": [],
-    "map": []
+    "map": [],
+    "header-block": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

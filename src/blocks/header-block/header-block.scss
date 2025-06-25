@@ -1,0 +1,24 @@
+.header-block {
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 64px 0;
+
+  &__inner {
+    text-align: center;
+  }
+
+  &__inner-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__intro {
+    font-weight: 500;
+  }
+}

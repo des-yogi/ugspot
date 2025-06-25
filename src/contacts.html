@@ -20,12 +20,11 @@
       <main>
 
         <div class="container  contacts">
-          <div class="contacts__header">
-            <h1 class="contacts__title">Contacts</h1>
-            <div class="contacts__opening-hours">
-              <p>Opening Hours: MON - FRI 8.30 AM - 6 PM. SAT 9 AM - 4 PM</p>
-            </div>
-          </div>
+
+          @@include('blocks/header-block/header-block.html', {
+            "title": "Contacts",
+            "intro": "<p>Opening Hours: MON - FRI 8.30 AM - 6 PM. SAT 9 AM - 4 PM</p>"
+          })
 
           <ul class="row  list-nostyled  contacts__list">
 
