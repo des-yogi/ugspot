@@ -81,7 +81,10 @@
     "color-checkbox": [],
     "table-responsive": [],
     "progress": [],
-    "field-num": []
+    "field-num": [],
+    "contacts": [],
+    "contact-card": [],
+    "map": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

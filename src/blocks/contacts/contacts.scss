@@ -1,0 +1,28 @@
+.contacts {
+  $block-name:                &; // #{$block-name}__element
+
+  margin-top: 64px;
+
+  &__header {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    color: $main-color;
+  }
+
+  &__opening-hours {
+    font-weight: 500;
+  }
+
+  &__list {
+    gap: 16px 0;
+  }
+
+  &__item-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 3);
+  }
+}
