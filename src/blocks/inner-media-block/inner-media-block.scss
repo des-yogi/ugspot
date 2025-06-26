@@ -1,0 +1,78 @@
+.inner-media-block {
+  $block-name:                &; // #{$block-name}__element
+
+  margin: 40px 0;
+
+
+  // & + & {
+  //   margin-top: 40px;
+  // }
+
+  &__row {
+    gap: 24px 0;
+  }
+
+  &__col-text {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(lg, 2);
+    @include col(lg, 8);
+    @include col-offset(xl, 0);
+    @include col(xl, 7);
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+
+    @media (min-width: $screen-xl) {
+      padding-right: 40px;
+    }
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__col-img {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(lg, 2);
+    @include col(lg, 8);
+    @include col-offset(xl, 0);
+    @include col(xl, 5);
+
+    display: flex;
+    align-items: center;
+    order: -1;
+
+    @media (min-width: $screen-xl) {
+      order: initial;
+    }
+  }
+
+  &__img {
+    background-color: $secondary-color;
+    border-radius: $border-radius;
+  }
+
+  &--inverted {
+
+    #{$block-name}__row {
+
+      @media (min-width: $screen-xl) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    #{$block-name}__text {
+
+      @media (min-width: $screen-xl) {
+        padding-right: 0;
+        padding-left: 40px;
+      }
+    }
+  }
+}

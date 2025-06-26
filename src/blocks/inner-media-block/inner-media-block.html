@@ -1,0 +1,42 @@
+<!--DEV
+@ @include('blocks/inner-media-block/inner-media-block.html', {
+  "addClas": "inner-media-block--inverted"
+})
+-->
+
+<section class="inner-media-block  @@addClas">
+  <div class="row  inner-media-block__row">
+
+    <div class="inner-media-block__col-text">
+      <div class="inner-media-block__text">
+        <h3>Heading h3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus placeat odio perspiciatis consequatur non, voluptatum, blanditiis dolores harum. Laborum odit, laudantium nobis, dolore, odio vero perferendis voluptates eos sed facilis corporis, natus tempora accusantium at? Laboriosam, laborum eligendi. Animi aliquam, porro recusandae hic illum laborum quis! Fugit, illo. Suscipit, aliquid, aut. Magnam officia modi, quaerat in laboriosam!</p>
+      </div>
+    </div>
+
+    <div class="inner-media-block__col-img">
+      <div class="embed-responsive  embed-responsive--4-3  inner-media-block__img">
+        <picture>
+          <source srcset="img/sp-offer-banner.webp,
+                          img/sp-offer-banner.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/sp-offer-banner.jpg,
+                          img/sp-offer-banner.jpg 2x" media="(min-width: 1280px)">
+          <!-- 491x368, 736x552 2x -->
+          <source srcset="img/sp-offer-banner.webp,
+                          img/sp-offer-banner.webp 2x" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/sp-offer-banner.jpg,
+                          img/sp-offer-banner.jpg 2x" media="(min-width: 768px)">
+          <!-- 820x615, 1200x900 -->
+          <source srcset="img/sp-offer-banner.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/sp-offer-banner.jpg" media="(min-width: 480px)">
+          <!-- 820x615 -->
+          <source srcset="img/sp-offer-banner.webp" media="(min-width: 300px)" type="image/webp">
+          <source srcset="img/sp-offer-banner.jpg" media="(min-width: 300px)">
+          <!-- 570x428 -->
+          <img src="img/sp-offer-banner.jpg" alt="" width="1200" height="900" loading="lazy">
+        </picture>
+      </div>
+    </div>
+
+  </div>
+</section>
