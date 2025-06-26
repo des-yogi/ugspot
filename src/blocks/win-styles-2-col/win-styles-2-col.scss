@@ -32,6 +32,15 @@
     &:first-child {
       @include col-offset(xl, 1);
     }
+
+    &--mod-3-col {
+      @include col(md, 4);
+      @include col(xl, 4);
+
+      &:first-child {
+        @include col-offset(xl, 0);
+      }
+    }
   }
 
   &__img {
@@ -49,4 +58,27 @@
       margin-top: 16px;
     }
   }
+
+  &__optional {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 40px 0;
+
+    @media (min-width: $screen-md) {
+      flex-direction: initial;
+    }
+  }
+
+  // &__optional-item {
+
+  // }
+
+  &__optional-title {
+    margin-top: 0;
+  }
+
+  // &__optional-text {
+
+  // }
 }

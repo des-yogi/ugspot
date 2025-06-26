@@ -69,4 +69,25 @@
   & > .two-col-image {
     margin-bottom: 40px;
   }
+
+  &__add-block {
+    margin: 40px 0;
+  }
+
+  &__add-subtitle {
+    margin-top: 0;
+  }
+
+  &__add-text {
+
+    @media (min-width: $screen-md) {
+      column-count: 2;
+      column-gap: 16px;
+      column-fill: balance;
+    }
+
+    p {
+      text-wrap: pretty;
+    }
+  }
 }

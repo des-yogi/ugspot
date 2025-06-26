@@ -85,7 +85,8 @@
     "contacts": [],
     "contact-card": [],
     "map": [],
-    "header-block": []
+    "header-block": [],
+    "inner-media-block": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
