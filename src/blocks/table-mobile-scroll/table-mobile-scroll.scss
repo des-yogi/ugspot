@@ -1,7 +1,3 @@
-$line-height:                 1.375em !default;
-
-$border-color:                hsl(0, 0%, 60%) !default;
-
 .table-mobile-scroll {
 
   $block-name:                &; // #{$block-name}__element
@@ -9,20 +5,29 @@ $border-color:                hsl(0, 0%, 60%) !default;
   display: block;
   width: 100%;
   overflow-x: auto;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
   border: 1px solid $border-color;
 
   table {
-    table-layout: fixed;
+    //table-layout: fixed;
+    table-layout: auto;
+    width: auto;      /* Ширина таблицы по контенту */
+    min-width: 100%;    /* Чтобы таблица не была уже контейнера */
     margin: 0;
     border: 0 !important; // stylelint-disable-line  declaration-no-important
-    width: 100%;
   }
 
   tbody,
   thead,
   tfoot {
+
+    td,
+    th {
+      //min-width: min-content;
+      white-space: normal;
+      word-break: normal;
+    }
 
     &:last-child {
 
@@ -40,7 +45,7 @@ $border-color:                hsl(0, 0%, 60%) !default;
 
   caption {
     text-align: left;
-    padding: 0.4em;
+    padding: 8px 16px;
     border-bottom: 1px solid $border-color;
     caption-side: top;
   }

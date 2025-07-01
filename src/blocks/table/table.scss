@@ -1,16 +1,4 @@
-$gray-lightest:               hsl(0, 0%, 90%) !default;
-
-$text-color--muted:           hsl(0, 0%, 50%) !default;
-
-$border-color:                hsl(0, 0%, 60%) !default;
-
-$font-size--small:            0.75em !default;
-
-$line-height:                 1.375em !default;
-
-$field-padding-vertical:      0.3em !default;
-$field-padding-horizontal:    0.7em !default;
-
+table,
 .table {
 
   $block-name:                &; // #{$block-name}__element
@@ -19,12 +7,12 @@ $field-padding-horizontal:    0.7em !default;
   border-collapse: collapse;
   width: 100%;
   border: 1px solid $border-color;
-  margin: 1em 0;
+  margin: 1.5em 0;
 
   caption {
-    padding-top: 0.4em;
-    text-align: right;
-    caption-side: bottom;
+    caption-side: top;
+    padding-bottom: 8px;
+    text-align: left;
     font-size: $font-size-sm;
     line-height: 1em;
     color: $text-muted;
@@ -32,8 +20,9 @@ $field-padding-horizontal:    0.7em !default;
 
   td,
   th {
-    padding: $field-padding-vertical $field-padding-horizontal;
+    padding: 8px 16px;
     vertical-align: top;
+    text-align: center;
     border-bottom: 1px solid $border-color;
 
     &:not(:first-child) {
@@ -41,13 +30,7 @@ $field-padding-horizontal:    0.7em !default;
     }
   }
 
-  th {
-    text-align: left;
-  }
-
-  &__header {}
-
-  &__body {}
-
-  &__footer {}
+  // th {
+  //   text-align: left;
+  // }
 }

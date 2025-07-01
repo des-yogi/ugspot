@@ -1,0 +1,23 @@
+.article-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    flex: 0 1 auto;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 12px;
+    font-weight: 500;
+    text-decoration: none;
+    color: $text-muted;
+    background-color: $block-bg;
+    border-radius: $border-radius;
+  }
+}
