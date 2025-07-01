@@ -86,7 +86,8 @@
     "contact-card": [],
     "map": [],
     "header-block": [],
-    "inner-media-block": []
+    "inner-media-block": [],
+    "reviews": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

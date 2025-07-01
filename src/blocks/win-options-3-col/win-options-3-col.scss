@@ -64,6 +64,10 @@
     p + p {
       margin-top: 1em;
     }
+
+    & > *:first-child {
+      margin-top: 0;
+    }
   }
 
   & > .two-col-image {
