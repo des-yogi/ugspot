@@ -1,0 +1,25 @@
+.reviews {
+  padding: 64px 0;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    column-count: 1;
+    //column-fill: balance;
+
+    @media (min-width: $screen-md) {
+      column-count: 2;
+      column-gap: 16px;
+    }
+
+    @media (min-width: $screen-xl) {
+      column-count: 3;
+    }
+  }
+
+  &__item {
+    margin-bottom: 24px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
