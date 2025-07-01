@@ -465,6 +465,13 @@ a {
   text-transform: initial;
 }
 
+.publishedon {
+  display: inline-flex;
+  font-size: $font-size;
+  font-weight: 500;
+  color: $text-muted;
+}
+
 // background-image: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color);
 // background-image: svg-load('../blocks/sprite-svg/svg/phone.svg', fill=$main-color);
 

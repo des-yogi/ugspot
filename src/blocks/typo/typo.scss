@@ -241,9 +241,25 @@ abbr[title] {
 }
 
 blockquote {
-  padding: 0;
+  position: relative;
+  padding: 64px 24px 30px 24px;
   margin-left: 0;
   margin-right: 0;
+  background-color: $block-bg;
+  border-radius: $border-radius;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: 24px;
+    height: 24px;
+    //background-color: red;
+    background-size: 24px;
+    background-position: center;
+    background-image: svg-load('../blocks/sprite-svg/svg/quote.svg', fill=$text-color);
+  }
 }
 
 dt {

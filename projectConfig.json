@@ -87,7 +87,10 @@
     "map": [],
     "header-block": [],
     "inner-media-block": [],
-    "reviews": []
+    "reviews": [],
+    "blog-article": [],
+    "article-link": [],
+    "article-topics": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
