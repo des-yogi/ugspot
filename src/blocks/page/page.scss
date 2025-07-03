@@ -398,20 +398,36 @@ a {
   gap: 24px;
 }
 
+.swiper-wrapper + .swiper__controls,
+.swiper__controls + .swiper-wrapper {
+  margin-top: 24px;
+}
+
 .swiper-button-prev,
 .swiper-button-next,
 .swiper-pagination {
-  flex: 0 0 auto;
   position: static;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  width: 40px;
-  height: 40px;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
   min-height: auto;
   padding: 0;
+  background-color: $main-pale;
   border-radius: $border-radius;
+  transition: background $transition-time ease;
+
+  &:hover,
+  &:focus {
+    background-color: $main-pale--hover;
+  }
+
+  &:active {
+    background-color: $main-pale--active;
+  }
 
   &::after {
     display: flex;
@@ -440,6 +456,7 @@ a {
 }
 
 .swiper-pagination {
+  flex: 0 0 auto;
   display: flex;
   flex-wrap: wrap;
   //align-items: center;

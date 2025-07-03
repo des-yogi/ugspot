@@ -90,7 +90,8 @@
     "reviews": [],
     "blog-article": [],
     "article-link": [],
-    "article-topics": []
+    "article-topics": [],
+    "door-slider": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

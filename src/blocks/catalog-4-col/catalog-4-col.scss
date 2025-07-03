@@ -19,6 +19,28 @@
     //text-align: center;
   }
 
+  &__text-wrapper {
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      column-count: 2;
+      column-gap: 16px;
+      column-fill: balance;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 24px 0 16px;
+    }
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+  }
+
   &__row {
     gap: 24px 0;
 

@@ -33,7 +33,7 @@
 
   <div class="page__inner">
 
-    <div class="page__content">
+    <div class="page__content">
 
       <header class="container  page-header">
 
@@ -106,7 +106,7 @@
       </nav>
 
 
-      <main>
+      <main>
 
         <div class="container  big-banner" role="presentation">
           <div class="big-banner__img">
@@ -138,7 +138,7 @@
         </section>
 
 
-        <hr>
+        <hr>
 
         <section class="certificates-carousel">
           <h2 class="visually-hidden">Our certifications</h2>
@@ -320,11 +320,28 @@
         <hr>
 
         <section class="container  catalog-4-col">
-          <h2 class="catalog-4-col__title">Block Headline</h2>
+          <div class="catalog-4-col__heaader">
+            <h2 class="catalog-4-col__title">Block Headline</h2>
+            <p class="catalog-4-col__intro">At UGS Ltd, we believe that every timber door should not only meet functional requirements but also reflect your unique style and preferences. That’s why all our timber door products—whether standard or bespoke—come with extensive personalisation options to suit your needs. From entrance doors to bi-fold and sliding patio doors, our customisation features ensure your door perfectly complements your property while offering exceptional performance.</p>
+          </div>
+
+          <div class="catalog-4-col__text-wrapper">
+            <h3>Door Hanging Options</h3>
+            <p>Every door type we offer can be tailored with various hanging options to suit your installation preferences and space requirements. Whether you need a left or right-hinged door or a specific folding or sliding mechanism, we ensure each unit operates seamlessly and fits perfectly within your architectural framework.</p>
+            <h3>Locking Mechanisms</h3>
+            <p>Security is paramount, and our timber doors come with UKAS-approved locking mechanisms as standard, providing peace of mind. For enhanced security, we offer additional features such as multi-point locking systems and anti-snap, anti-drill, and anti-bump locks. For those seeking modern convenience, our range includes smart locks that enable keyless entry and remote control via smartphone apps, combining security with cutting-edge technology.</p>
+            <h3>Unit Accessories</h3>
+            <p>Each timber door can be further personalized with a wide variety of accessories. From handles, hinges, and letterplates to thresholds and weather seals, every detail can be tailored to your preferences. These accessories are carefully selected to complement the style and functionality of each door type, ensuring a cohesive and refined finish.</p>
+            <p>At UGS Ltd, personalisation is at the heart of what we do. Whether you’re selecting a standard unit or designing a bespoke piece, we offer unmatched flexibility to ensure your timber door is a perfect fit for your home and lifestyle.</p>
+            <h3>Colour Options Inside and Out</h3>
+            <p>UGS Ltd offers an extensive palette of colour options, allowing you to personalize the interior and exterior finishes of your timber doors. Choose a single colour for uniformity or opt for dual-colour finishes to differentiate the door’s appearance on each side. From classic wood stains that enhance the natural grain to bold, modern colours, we provide endless possibilities to match your style and décor.</p>
+            <h3>Glazing Options</h3>
+            <p>Our glazing options cater to both aesthetics and performance. Choose from double or triple glazing units with or without Argon gas for superior insulation and energy efficiency. For added customization, we provide Pilkington glazing designs, allowing you to select decorative patterns and textures that enhance the visual appeal of your timber doors while maintaining privacy and light transmission.</p>
+          </div>
 
           <div class="row  catalog-4-col__row">
 
-            <div class="catalog-4-col__col">
+            <div class="catalog-4-col__col">
 
               <article class="price-card-backfaced  price-card-backfaced--vertical">
 
@@ -334,28 +351,29 @@
                      aria-live="polite">
 
                   <div class="embed-responsive embed-responsive--3-4  price-card-backfaced__img-main">
-                    <!-- N.B. Под вертикальные картинки надо пересчитать размеры -->
+                    <!-- N.B. Под вертикальные картинки размеры укзаны вторыми по счету! -->
                     <picture>
                       <source srcset="img/placeholder-3x4.webp,
                                       img/placeholder-3x4.webp 2x" media="(min-width: 1280px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg,
                                       img/placeholder-3x4.jpg 2x" media="(min-width: 1280px)">
-                      <!-- 387x290, 580x435 2x -->
+                      <!-- 387x290, 580x435 2x -->  <!-- 286x381, 430x573 2x -->
                       <source srcset="img/placeholder-3x4.webp,
                                       img/placeholder-3x4.webp 2x" media="(min-width: 1024px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg,
                                       img/placeholder-3x4.jpg 2x" media="(min-width: 1024px)">
-                      <!-- 566x425, 850x638 2x -->
+                      <!-- 566x425, 850x638 2x -->  <!-- 566x755, 850x1133 2x -->
                       <source srcset="img/placeholder-3x4.webp" media="(min-width: 768px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg" media="(min-width: 768px)">
-                      <!-- 715x536 -->
+                      <!-- 715x536 -->  <!-- 715x953 -->
                       <source srcset="img/placeholder-3x4.webp" media="(min-width: 480px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg" media="(min-width: 480px)">
-                      <!-- 675x506 -->
+                      <!-- 675x506 <--> <!-- 675x900 -->
                       <source srcset="img/placeholder-3x4.webp" media="(min-width: 320px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg" media="(min-width: 320px)">
-                      <!-- 510x383 -->
+                      <!-- 510x383 -->  <!-- 570x760 -->
                       <img src="img/placeholder-3x4.jpg" alt="Alt text" width="850" height="638" loading="lazy">
+                      <!-- 850x1133 для вертикальных -->
                     </picture>
                   </div>
 
@@ -370,7 +388,9 @@
                 <div class="price-card-backfaced__text">
                   <div class="price-card-backfaced__body">
                     <h3 class="h4  price-card-backfaced__title">Entrance Doors</h3>
-                    <p class="price-card-backfaced__descr"><span></span><span></span></p>
+                    <p class="price-card-backfaced__descr">
+                      <span>Short description text</span>
+                    </p>
                   </div>
                   <p class="price-card-backfaced__price">£999 + VAT</p>
                 </div>
@@ -378,7 +398,7 @@
 
             </div>
 
-            <div class="catalog-4-col__col">
+            <div class="catalog-4-col__col">
 
               <article class="price-card-backfaced  price-card-backfaced--vertical">
 
@@ -388,28 +408,29 @@
                      aria-live="polite">
 
                   <div class="embed-responsive embed-responsive--3-4  price-card-backfaced__img-main">
-                    <!-- N.B. Под вертикальные картинки надо пересчитать размеры -->
+                    <!-- N.B. Под вертикальные картинки размеры укзаны вторыми по счету! -->
                     <picture>
                       <source srcset="img/placeholder-3x4.webp,
                                       img/placeholder-3x4.webp 2x" media="(min-width: 1280px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg,
                                       img/placeholder-3x4.jpg 2x" media="(min-width: 1280px)">
-                      <!-- 387x290, 580x435 2x -->
+                      <!-- 387x290, 580x435 2x -->  <!-- 286x381, 430x573 2x -->
                       <source srcset="img/placeholder-3x4.webp,
                                       img/placeholder-3x4.webp 2x" media="(min-width: 1024px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg,
                                       img/placeholder-3x4.jpg 2x" media="(min-width: 1024px)">
-                      <!-- 566x425, 850x638 2x -->
+                      <!-- 566x425, 850x638 2x -->  <!-- 566x755, 850x1133 2x -->
                       <source srcset="img/placeholder-3x4.webp" media="(min-width: 768px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg" media="(min-width: 768px)">
-                      <!-- 715x536 -->
+                      <!-- 715x536 -->  <!-- 715x953 -->
                       <source srcset="img/placeholder-3x4.webp" media="(min-width: 480px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg" media="(min-width: 480px)">
-                      <!-- 675x506 -->
+                      <!-- 675x506 <--> <!-- 675x900 -->
                       <source srcset="img/placeholder-3x4.webp" media="(min-width: 320px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg" media="(min-width: 320px)">
-                      <!-- 510x383 -->
+                      <!-- 510x383 -->  <!-- 570x760 -->
                       <img src="img/placeholder-3x4.jpg" alt="Alt text" width="850" height="638" loading="lazy">
+                      <!-- 850x1133 для вертикальных -->
                     </picture>
                   </div>
 
@@ -424,7 +445,9 @@
                 <div class="price-card-backfaced__text">
                   <div class="price-card-backfaced__body">
                     <h3 class="h4  price-card-backfaced__title">Entrance Doors</h3>
-                    <p class="price-card-backfaced__descr"><span></span><span></span></p>
+                    <p class="price-card-backfaced__descr">
+                      <span></span>
+                    </p>
                   </div>
                   <p class="price-card-backfaced__price">£999 + VAT</p>
                 </div>
@@ -432,7 +455,7 @@
 
             </div>
 
-            <div class="catalog-4-col__col">
+            <div class="catalog-4-col__col">
 
               <article class="price-card-backfaced  price-card-backfaced--vertical">
 
@@ -442,28 +465,29 @@
                      aria-live="polite">
 
                   <div class="embed-responsive embed-responsive--3-4  price-card-backfaced__img-main">
-                    <!-- N.B. Под вертикальные картинки надо пересчитать размеры -->
+                    <!-- N.B. Под вертикальные картинки размеры укзаны вторыми по счету! -->
                     <picture>
                       <source srcset="img/placeholder-3x4.webp,
                                       img/placeholder-3x4.webp 2x" media="(min-width: 1280px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg,
                                       img/placeholder-3x4.jpg 2x" media="(min-width: 1280px)">
-                      <!-- 387x290, 580x435 2x -->
+                      <!-- 387x290, 580x435 2x -->  <!-- 286x381, 430x573 2x -->
                       <source srcset="img/placeholder-3x4.webp,
                                       img/placeholder-3x4.webp 2x" media="(min-width: 1024px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg,
                                       img/placeholder-3x4.jpg 2x" media="(min-width: 1024px)">
-                      <!-- 566x425, 850x638 2x -->
+                      <!-- 566x425, 850x638 2x -->  <!-- 566x755, 850x1133 2x -->
                       <source srcset="img/placeholder-3x4.webp" media="(min-width: 768px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg" media="(min-width: 768px)">
-                      <!-- 715x536 -->
+                      <!-- 715x536 -->  <!-- 715x953 -->
                       <source srcset="img/placeholder-3x4.webp" media="(min-width: 480px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg" media="(min-width: 480px)">
-                      <!-- 675x506 -->
+                      <!-- 675x506 <--> <!-- 675x900 -->
                       <source srcset="img/placeholder-3x4.webp" media="(min-width: 320px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg" media="(min-width: 320px)">
-                      <!-- 510x383 -->
+                      <!-- 510x383 -->  <!-- 570x760 -->
                       <img src="img/placeholder-3x4.jpg" alt="Alt text" width="850" height="638" loading="lazy">
+                      <!-- 850x1133 для вертикальных -->
                     </picture>
                   </div>
 
@@ -478,7 +502,9 @@
                 <div class="price-card-backfaced__text">
                   <div class="price-card-backfaced__body">
                     <h3 class="h4  price-card-backfaced__title">Entrance Doors</h3>
-                    <p class="price-card-backfaced__descr"><span></span><span></span></p>
+                    <p class="price-card-backfaced__descr">
+                      <span></span>
+                    </p>
                   </div>
                   <p class="price-card-backfaced__price">£999 + VAT</p>
                 </div>
@@ -486,7 +512,7 @@
 
             </div>
 
-            <div class="catalog-4-col__col">
+            <div class="catalog-4-col__col">
 
               <article class="price-card-backfaced  price-card-backfaced--vertical">
 
@@ -496,28 +522,29 @@
                      aria-live="polite">
 
                   <div class="embed-responsive embed-responsive--3-4  price-card-backfaced__img-main">
-                    <!-- N.B. Под вертикальные картинки надо пересчитать размеры -->
+                    <!-- N.B. Под вертикальные картинки размеры укзаны вторыми по счету! -->
                     <picture>
                       <source srcset="img/placeholder-3x4.webp,
                                       img/placeholder-3x4.webp 2x" media="(min-width: 1280px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg,
                                       img/placeholder-3x4.jpg 2x" media="(min-width: 1280px)">
-                      <!-- 387x290, 580x435 2x -->
+                      <!-- 387x290, 580x435 2x -->  <!-- 286x381, 430x573 2x -->
                       <source srcset="img/placeholder-3x4.webp,
                                       img/placeholder-3x4.webp 2x" media="(min-width: 1024px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg,
                                       img/placeholder-3x4.jpg 2x" media="(min-width: 1024px)">
-                      <!-- 566x425, 850x638 2x -->
+                      <!-- 566x425, 850x638 2x -->  <!-- 566x755, 850x1133 2x -->
                       <source srcset="img/placeholder-3x4.webp" media="(min-width: 768px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg" media="(min-width: 768px)">
-                      <!-- 715x536 -->
+                      <!-- 715x536 -->  <!-- 715x953 -->
                       <source srcset="img/placeholder-3x4.webp" media="(min-width: 480px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg" media="(min-width: 480px)">
-                      <!-- 675x506 -->
+                      <!-- 675x506 <--> <!-- 675x900 -->
                       <source srcset="img/placeholder-3x4.webp" media="(min-width: 320px)" type="image/webp">
                       <source srcset="img/placeholder-3x4.jpg" media="(min-width: 320px)">
-                      <!-- 510x383 -->
+                      <!-- 510x383 -->  <!-- 570x760 -->
                       <img src="img/placeholder-3x4.jpg" alt="Alt text" width="850" height="638" loading="lazy">
+                      <!-- 850x1133 для вертикальных -->
                     </picture>
                   </div>
 
@@ -532,7 +559,123 @@
                 <div class="price-card-backfaced__text">
                   <div class="price-card-backfaced__body">
                     <h3 class="h4  price-card-backfaced__title">Entrance Doors</h3>
-                    <p class="price-card-backfaced__descr"><span></span><span></span></p>
+                    <p class="price-card-backfaced__descr">
+                      <span></span>
+                    </p>
+                  </div>
+                  <p class="price-card-backfaced__price">£999 + VAT</p>
+                </div>
+              </article>
+
+            </div>
+
+            <div class="catalog-4-col__col">
+
+              <article class="price-card-backfaced  price-card-backfaced--vertical">
+
+                <div class="price-card-backfaced__img-container" tabindex="0"
+                     role="button"
+                     aria-label="Карточка с изображением. Наведите или нажмите для смены."
+                     aria-live="polite">
+
+                  <div class="embed-responsive embed-responsive--3-4  price-card-backfaced__img-main">
+                    <!-- N.B. Под вертикальные картинки размеры укзаны вторыми по счету! -->
+                    <picture>
+                      <source srcset="img/placeholder-3x4.webp,
+                                      img/placeholder-3x4.webp 2x" media="(min-width: 1280px)" type="image/webp">
+                      <source srcset="img/placeholder-3x4.jpg,
+                                      img/placeholder-3x4.jpg 2x" media="(min-width: 1280px)">
+                      <!-- 387x290, 580x435 2x -->  <!-- 286x381, 430x573 2x -->
+                      <source srcset="img/placeholder-3x4.webp,
+                                      img/placeholder-3x4.webp 2x" media="(min-width: 1024px)" type="image/webp">
+                      <source srcset="img/placeholder-3x4.jpg,
+                                      img/placeholder-3x4.jpg 2x" media="(min-width: 1024px)">
+                      <!-- 566x425, 850x638 2x -->  <!-- 566x755, 850x1133 2x -->
+                      <source srcset="img/placeholder-3x4.webp" media="(min-width: 768px)" type="image/webp">
+                      <source srcset="img/placeholder-3x4.jpg" media="(min-width: 768px)">
+                      <!-- 715x536 -->  <!-- 715x953 -->
+                      <source srcset="img/placeholder-3x4.webp" media="(min-width: 480px)" type="image/webp">
+                      <source srcset="img/placeholder-3x4.jpg" media="(min-width: 480px)">
+                      <!-- 675x506 <--> <!-- 675x900 -->
+                      <source srcset="img/placeholder-3x4.webp" media="(min-width: 320px)" type="image/webp">
+                      <source srcset="img/placeholder-3x4.jpg" media="(min-width: 320px)">
+                      <!-- 510x383 -->  <!-- 570x760 -->
+                      <img src="img/placeholder-3x4.jpg" alt="Alt text" width="850" height="638" loading="lazy">
+                      <!-- 850x1133 для вертикальных -->
+                    </picture>
+                  </div>
+
+                  <div class="embed-responsive embed-responsive--3-4  price-card-backfaced__img-back" aria-hidden="true">
+                    <picture>
+                      <!-- см. выше -->
+                      <img src="img/win-type-1.jpg" alt="Alt text" width="850" height="638" loading="lazy">
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="price-card-backfaced__text">
+                  <div class="price-card-backfaced__body">
+                    <h3 class="h4  price-card-backfaced__title">Entrance Doors</h3>
+                    <p class="price-card-backfaced__descr">
+                      <span>Short description text</span>
+                    </p>
+                  </div>
+                  <p class="price-card-backfaced__price">£999 + VAT</p>
+                </div>
+              </article>
+
+            </div>
+
+            <div class="catalog-4-col__col">
+
+              <article class="price-card-backfaced  price-card-backfaced--vertical">
+
+                <div class="price-card-backfaced__img-container" tabindex="0"
+                     role="button"
+                     aria-label="Карточка с изображением. Наведите или нажмите для смены."
+                     aria-live="polite">
+
+                  <div class="embed-responsive embed-responsive--3-4  price-card-backfaced__img-main">
+                    <!-- N.B. Под вертикальные картинки размеры укзаны вторыми по счету! -->
+                    <picture>
+                      <source srcset="img/placeholder-3x4.webp,
+                                      img/placeholder-3x4.webp 2x" media="(min-width: 1280px)" type="image/webp">
+                      <source srcset="img/placeholder-3x4.jpg,
+                                      img/placeholder-3x4.jpg 2x" media="(min-width: 1280px)">
+                      <!-- 387x290, 580x435 2x -->  <!-- 286x381, 430x573 2x -->
+                      <source srcset="img/placeholder-3x4.webp,
+                                      img/placeholder-3x4.webp 2x" media="(min-width: 1024px)" type="image/webp">
+                      <source srcset="img/placeholder-3x4.jpg,
+                                      img/placeholder-3x4.jpg 2x" media="(min-width: 1024px)">
+                      <!-- 566x425, 850x638 2x -->  <!-- 566x755, 850x1133 2x -->
+                      <source srcset="img/placeholder-3x4.webp" media="(min-width: 768px)" type="image/webp">
+                      <source srcset="img/placeholder-3x4.jpg" media="(min-width: 768px)">
+                      <!-- 715x536 -->  <!-- 715x953 -->
+                      <source srcset="img/placeholder-3x4.webp" media="(min-width: 480px)" type="image/webp">
+                      <source srcset="img/placeholder-3x4.jpg" media="(min-width: 480px)">
+                      <!-- 675x506 <--> <!-- 675x900 -->
+                      <source srcset="img/placeholder-3x4.webp" media="(min-width: 320px)" type="image/webp">
+                      <source srcset="img/placeholder-3x4.jpg" media="(min-width: 320px)">
+                      <!-- 510x383 -->  <!-- 570x760 -->
+                      <img src="img/placeholder-3x4.jpg" alt="Alt text" width="850" height="638" loading="lazy">
+                      <!-- 850x1133 для вертикальных -->
+                    </picture>
+                  </div>
+
+                  <div class="embed-responsive embed-responsive--3-4  price-card-backfaced__img-back" aria-hidden="true">
+                    <picture>
+                      <!-- см. выше -->
+                      <img src="img/win-type-1.jpg" alt="Alt text" width="850" height="638" loading="lazy">
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="price-card-backfaced__text">
+                  <div class="price-card-backfaced__body">
+                    <h3 class="h4  price-card-backfaced__title">Entrance Doors</h3>
+                    <p class="price-card-backfaced__descr">
+                      <span></span>
+                    </p>
                   </div>
                   <p class="price-card-backfaced__price">£999 + VAT</p>
                 </div>
@@ -541,7 +684,389 @@
             </div>
 
           </div>
-        </section>
+        </section>
+
+        <hr>
+
+        <section class="container  door-slider">
+          <div class="door-slider__header">
+            <h2 class="door-slider__block-title">Door Styles</h2>
+            <p class="door-slider__block-intro">Introtext if nedded</p>
+          </div>
+
+          <div class="swiper  door-slider__content">
+            <h3 class="door-slider__slider-title">Classic Line</h3>
+
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+            </div>
+
+            <div class="swiper__controls">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+
+          <div class="swiper  door-slider__content">
+            <h3 class="door-slider__slider-title">Modern Line</h3>
+
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+            </div>
+
+            <div class="swiper__controls">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+
+          <div class="swiper  door-slider__content">
+            <h3 class="door-slider__slider-title">Cottage Line</h3>
+
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+              <div class="swiper-slide  door-slider__slide">
+                <figure class="door-slider__img">
+                  <picture>
+                    <source srcset="img/door-style.webp,
+                                    img/door-style.webp 2x" type="image/webp">
+                    <img src="img/door-style.jpg"
+                         srcset="img/door-style.jpg, img/door-style.jpg 2x"
+                         alt="Alt text" width="372" height="620" loading="lazy">
+                    <!-- 188x313, 282x469 2x -->
+                  </picture>
+                  <figcaption class="visually-hidden">Caption for slide</figcaption>
+                </figure>
+              </div>
+
+            </div>
+
+            <div class="swiper__controls">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+
+        </section>
+
+
+        <hr>
+
+        <article class="container  two-col-text">
+          <div class="two-col-text__header">
+            <h2 class="two-col-text__title">Personalisation Features Offered by UGS Ltd</h2>
+            <p>At UGS Ltd, we believe that every unit should not only meet functional requirements but also reflect your unique style and preferences. That’s why all our products—whether standard or bespoke—come with extensive personalisation options to suit your specific needs. From back units to French units, sliding patio units, and entrance units, our customisation features ensure your unit perfectly complements your property while delivering exceptional performance.</p>
+          </div>
+
+          <div class="two-col-text__body">
+            <ul class="list-nostyled  two-col-text__features-list">
+              <li class="two-col-text__feature">
+                <h3 class="two-col-text__feature-title">Hanging Options</h3>
+                <p>All our units can be customised with various hanging options to fit your installation preferences and space requirements. Whether you need a left- or right-hinged unit, or specific sliding or folding mechanisms, we ensure each unit is installed precisely and operates smoothly within your architectural framework.</p>
+              </li>
+              <li class="two-col-text__feature">
+                <h3 class="two-col-text__feature-title">Colour Options Inside and Out</h3>
+                <p>UGS Ltd offers a broad palette of colour options, allowing you to personalise both the interior and exterior finishes of your units. Choose a single colour for a cohesive look or opt for dual-colour finishes to differentiate the appearance on each side. From classic neutrals to bold, modern shades, our custom colour options ensure your units blend seamlessly with your property’s style and décor.</p>
+              </li>
+              <li class="two-col-text__feature">
+                <h3 class="two-col-text__feature-title">Locking Mechanisms</h3>
+                <p>Security is a top priority, and all our units come with UKAS-approved locking mechanisms as standard. For enhanced protection, we offer additional features such as multi-point locking systems and anti-snap, anti-drill, and anti-bump locks. For added convenience, we also provide smart locks, enabling keyless entry and remote control through smartphone apps, combining cutting-edge technology with top-tier security.</p>
+              </li>
+              <li class="two-col-text__feature">
+                <h3 class="two-col-text__feature-title">Glazing Options</h3>
+                <p>Our range of glazing options enhances both aesthetics and energy performance. Choose from double or triple glazing units, with or without Argon gas, for superior insulation and thermal efficiency. We also offer decorative Pilkington glazing designs, allowing you to personalise your unit with patterns and textures that enhance visual appeal while maintaining privacy and light transmission.</p>
+              </li>
+              <li class="two-col-text__feature">
+                <h3 class="two-col-text__feature-title">Unit Accessories</h3>
+                <p>Our units can be further customised with a variety of premium accessories. From handles, hinges, and letterplates to thresholds and weather seals, every detail is thoughtfully selected to complement the style and function of each unit. These finishing touches ensure a cohesive and polished appearance while enhancing performance and usability.</p>
+                <p>At UGS Ltd, personalisation is central to everything we do. Whether selecting a standard unit or designing a bespoke piece, we provide unmatched flexibility to ensure your unit is the perfect fit for your property and lifestyle.</p>
+              </li>
+            </ul>
+          </div>
+        </article>
 
         <section class="container  warranty-banner">
           <h2 class="visually-hidden">Our warranties: Up to 25 year warranty across all product ranges</h2>
@@ -624,7 +1149,7 @@
         </section>
 
 
-        <hr>
+        <hr>
 
         <section class="container  catalog-3-col">
           <div class="catalog-3-col__header">
@@ -755,7 +1280,7 @@
         </section>
 
 
-        <hr>
+        <hr>
 
         <section class="clients-carousel">
           <h2 class="visually-hidden">Our clients</h2>
@@ -977,7 +1502,7 @@
         </section>
 
 
-        <hr>
+        <hr>
 
         <article class="container  win-styles-2-col">
 
@@ -1175,7 +1700,7 @@
           <div class="swiper  win-options-3-col__slider">
             <div class="swiper-wrapper" role="list">
 
-              <div class="swiper-slide  win-options-3-col__slide">
+              <div class="swiper-slide  win-options-3-col__slide">
 
                 <div class="win-option-card" role="listitem">
                   <div class="embed-responsive embed-responsive--4-3  win-option-card__img">
@@ -1213,7 +1738,7 @@
 
               </div>
 
-              <div class="swiper-slide  win-options-3-col__slide">
+              <div class="swiper-slide  win-options-3-col__slide">
 
                 <div class="win-option-card" role="listitem">
                   <div class="embed-responsive embed-responsive--4-3  win-option-card__img">
@@ -1251,7 +1776,7 @@
 
               </div>
 
-              <div class="swiper-slide  win-options-3-col__slide">
+              <div class="swiper-slide  win-options-3-col__slide">
 
                 <div class="win-option-card" role="listitem">
                   <div class="embed-responsive embed-responsive--4-3  win-option-card__img">
@@ -1348,7 +1873,7 @@
               </div>
 
               <ul class="list-nostyled  row  personal-features__openings-list">
-                <li class="personal-features__openings-item">
+                <li class="personal-features__openings-item">
 
                   <section class="personaliz-card">
                     <div class="embed-responsive embed-responsive--4-3  personaliz-card__img">
@@ -1375,7 +1900,7 @@
 
                 </li>
 
-                <li class="personal-features__openings-item">
+                <li class="personal-features__openings-item">
 
                   <section class="personaliz-card">
                     <div class="embed-responsive embed-responsive--4-3  personaliz-card__img">
@@ -1402,7 +1927,7 @@
 
                 </li>
 
-                <li class="personal-features__openings-item">
+                <li class="personal-features__openings-item">
 
                   <section class="personaliz-card">
                     <div class="embed-responsive embed-responsive--4-3  personaliz-card__img">
@@ -1432,7 +1957,7 @@
 
               <section class="add-design-opt">
                 <h4 class="h3  add-design-opt__title">Openers at Upper & Lower Pane</h4>
-                <p class="add-design-opt__intro">Text…</p>
+                <p class="add-design-opt__intro">Text…</p>
 
                 <ul class="list-nostyled  row  openers-options">
                   <li class="openers-options__item">
@@ -1484,7 +2009,7 @@
               </div>
 
               <ul class="list-nostyled  row  personal-features__openings-list">
-                <li class="personal-features__openings-item">
+                <li class="personal-features__openings-item">
 
                   <section class="personaliz-card">
                     <div class="embed-responsive embed-responsive--4-3  personaliz-card__img">
@@ -1511,7 +2036,7 @@
 
                 </li>
 
-                <li class="personal-features__openings-item">
+                <li class="personal-features__openings-item">
 
                   <section class="personaliz-card">
                     <div class="embed-responsive embed-responsive--4-3  personaliz-card__img">
@@ -1538,7 +2063,7 @@
 
                 </li>
 
-                <li class="personal-features__openings-item">
+                <li class="personal-features__openings-item">
 
                   <section class="personaliz-card">
                     <div class="embed-responsive embed-responsive--4-3  personaliz-card__img">
@@ -1568,7 +2093,7 @@
 
               <section class="add-design-opt">
                 <h4 class="h3  add-design-opt__title">Openers at Upper & Lower Pane</h4>
-                <p class="add-design-opt__intro">Text…</p>
+                <p class="add-design-opt__intro">Text…</p>
 
                 <ul class="list-nostyled  row  openers-options">
                   <li class="openers-options__item">
@@ -1619,7 +2144,7 @@
               </div>
 
               <ul class="list-nostyled  row  personal-features__openings-list">
-                <li class="personal-features__openings-item">
+                <li class="personal-features__openings-item">
 
                   <section class="personaliz-card">
                     <div class="embed-responsive embed-responsive--4-3  personaliz-card__img">
@@ -1646,7 +2171,7 @@
 
                 </li>
 
-                <li class="personal-features__openings-item">
+                <li class="personal-features__openings-item">
 
                   <section class="personaliz-card">
                     <div class="embed-responsive embed-responsive--4-3  personaliz-card__img">
@@ -1673,7 +2198,7 @@
 
                 </li>
 
-                <li class="personal-features__openings-item">
+                <li class="personal-features__openings-item">
 
                   <section class="personaliz-card">
                     <div class="embed-responsive embed-responsive--4-3  personaliz-card__img">
@@ -1703,7 +2228,7 @@
 
               <section class="add-design-opt">
                 <h4 class="h3  add-design-opt__title">Openers at Upper & Lower Pane</h4>
-                <p class="add-design-opt__intro">Text…</p>
+                <p class="add-design-opt__intro">Text…</p>
 
                 <ul class="list-nostyled  row  openers-options">
                   <li class="openers-options__item">
@@ -1805,7 +2330,7 @@
         </article>
 
 
-        <hr>
+        <hr>
 
         <article class="container  add-service-list">
           <h2 class="add-service-list__title">UGS Services - DESIGNED with you in MIND</h2>
@@ -1865,7 +2390,7 @@
 
           <div class="row  catalog-4-col__row">
 
-            <div class="catalog-4-col__col">
+            <div class="catalog-4-col__col">
 
               <article class="win-type-card">
                 <a href="#" class="embed-responsive embed-responsive--4-3  win-type-card__img" tabindex="-1">
@@ -1904,7 +2429,7 @@
 
             </div>
 
-            <div class="catalog-4-col__col">
+            <div class="catalog-4-col__col">
 
               <article class="win-type-card">
                 <a href="#" class="embed-responsive embed-responsive--4-3  win-type-card__img" tabindex="-1">
@@ -1943,7 +2468,7 @@
 
             </div>
 
-            <div class="catalog-4-col__col">
+            <div class="catalog-4-col__col">
 
               <article class="win-type-card">
                 <a href="#" class="embed-responsive embed-responsive--4-3  win-type-card__img" tabindex="-1">
@@ -1982,7 +2507,7 @@
 
             </div>
 
-            <div class="catalog-4-col__col">
+            <div class="catalog-4-col__col">
 
               <article class="win-type-card">
                 <a href="#" class="embed-responsive embed-responsive--4-3  win-type-card__img" tabindex="-1">
@@ -2024,7 +2549,7 @@
           </div>
         </section>
 
-        <hr>
+        <hr>
 
         <article class="container  gallery">
           <div class="row  gallery__header">
@@ -2436,7 +2961,7 @@
         </article>
 
 
-        <hr>
+        <hr>
 
         <section class="container  faq">
 
@@ -2497,7 +3022,7 @@
           <h2 class="visually-hidden">Заголовок</h2>
 
           <div class="row  articles__row">
-            <div class="articles__col">
+            <div class="articles__col">
 
               <article class="article-card">
                 <div class="embed-responsive embed-responsive--4-3  article-card__img">
@@ -2548,7 +3073,7 @@
 
             </div>
 
-            <div class="articles__col">
+            <div class="articles__col">
 
               <article class="article-card">
                 <div class="embed-responsive embed-responsive--4-3  article-card__img">
@@ -2599,7 +3124,7 @@
 
             </div>
 
-            <div class="articles__col">
+            <div class="articles__col">
 
               <article class="article-card">
                 <div class="embed-responsive embed-responsive--4-3  article-card__img">
@@ -2652,7 +3177,7 @@
           </div>
         </section>
 
-        <hr>
+        <hr>
 
         <article class="container  write-us">
           <div class="row  write-us__header">
