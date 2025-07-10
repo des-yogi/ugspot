@@ -33,9 +33,9 @@
 <body>
 <noscript>You have JavaScript disabled. We apologize, but this makes it difficult to use this site.</noscript>
 
-  <div class="page__inner">
+  <div id="page" class="page__inner">
 
-    <div class="page__content">
+    <div class="page__content">
 
       <header class="container  page-header">
 
@@ -62,7 +62,7 @@
               <span>info@ugspot.co.uk</span>
             </a>
 
-            <button class="burger" id="main-nav-toggler" aria-label="Mobile menu toggler"><span></span></button>
+            <button class="burger" id="mmenu-toggler" aria-label="Mobile menu toggler"><span></span></button>
 
             <button class="video-call-btn">
               <span>Book a VIDEO CALL</span>
@@ -71,10 +71,366 @@
         </div>
 
         <div class="page-header__menu">
-          Main menu here
+
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item  main-nav__item--parent">
+                <!-- active -->
+                <a href="#" class="main-nav__link">
+                  <span>Windows</span>
+                </a>
+
+                <div class="main-nav__inner">
+                  <ul class="main-nav__list-lvl-2">
+                    <li class="main-nav__item  level-2">
+                      <span>Type</span>
+                      <ul class="main-nav__list-lvl-3">
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Bay & Bow Windows</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Tilt & Turn Windows</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Casement Windows</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Vertical Slider Windows</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Flush Windows</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Secondary Windows</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-nav__item  level-2">
+                      <span>Material</span>
+                      <ul class="main-nav__list-lvl-3">
+                        <li class="main-nav__item   main-nav__item--parent">
+                          <a href="#" class="main-nav__link">Aluminium Windows</a>
+
+                          <ul class="main-nav__list-lvl-4">
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Bay & Bow</a>
+                            </li>
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Tilt & Turn</a>
+                            </li>
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Casement</a>
+                            </li>
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Vertical Slider</a>
+                            </li>
+
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Bay & Bow</a>
+                            </li>
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Tilt & Turn</a>
+                            </li>
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Casement</a>
+                            </li>
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Vertical Slider</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="main-nav__item   main-nav__item--parent">
+                          <a href="#" class="main-nav__link">uPVC Windows</a>
+
+                          <ul class="main-nav__list-lvl-4">
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Bay & Bow</a>
+                            </li>
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Tilt & Turn</a>
+                            </li>
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Casement</a>
+                            </li>
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Vertical Slider</a>
+                            </li>
+
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Bay & Bow</a>
+                            </li>
+
+                          </ul>
+                        </li>
+                        <li class="main-nav__item   main-nav__item--parent">
+                          <a href="#" class="main-nav__link">Timber Windows</a>
+
+                          <ul class="main-nav__list-lvl-4">
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Bay & Bow</a>
+                            </li>
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Tilt & Turn</a>
+                            </li>
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Casement</a>
+                            </li>
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Vertical Slider</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="main-nav__item  level-2">
+                      <span>Other</span>
+                      <ul class="main-nav__list-lvl-3">
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">General Glazing</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Secondary Glazing</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Vacuum Glazing</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Integral Blids</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                </div>
+              </li>
+
+              <li class="main-nav__item  main-nav__item--parent">
+                <a href="#" class="main-nav__link">
+                  <span>Doors</span>
+                </a>
+
+                <div class="main-nav__inner">
+                  <ul class="main-nav__list-lvl-2">
+                    <li class="main-nav__item  level-2">
+                      <span>Type</span>
+                      <ul class="main-nav__list-lvl-3">
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Entrance Doors</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Bi-Fold Doors</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Sliding Doors</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">French Doors</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-nav__item  level-2">
+                      <span>Material</span>
+                      <ul class="main-nav__list-lvl-3">
+                        <li class="main-nav__item   main-nav__item--parent">
+                          <a href="#" class="main-nav__link">Aluminum Doors</a>
+
+                          <ul class="main-nav__list-lvl-4">
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Aluminium Entrance Doors</a>
+                            </li>
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Timber Entrance Doors</a>
+                            </li>
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">uPVC Entrance Doors</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="main-nav__item   main-nav__item--parent">
+                          <a href="#" class="main-nav__link">uPVC Doors</a>
+
+                          <ul class="main-nav__list-lvl-4">
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Bay & Bow</a>
+                            </li>
+
+                          </ul>
+                        </li>
+                        <li class="main-nav__item   main-nav__item--parent">
+                          <a href="#" class="main-nav__link">Timber Doors</a>
+
+                          <ul class="main-nav__list-lvl-4">
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Bay & Bow</a>
+                            </li>
+
+                          </ul>
+                        </li>
+                        <li class="main-nav__item   main-nav__item--parent">
+                          <a href="#" class="main-nav__link">Timber look uPVC Doors</a>
+
+                          <ul class="main-nav__list-lvl-4">
+                            <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Bay & Bow</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="main-nav__item  level-2">
+                      <span>Other</span>
+                      <ul class="main-nav__list-lvl-3">
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">General Glazing</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Secondary Glazing</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Vacuum Glazing</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Integral Blids</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                </div>
+              </li>
+
+              <li class="main-nav__item  main-nav__item--parent">
+                <a href="#" class="main-nav__link">
+                  <span>Conservatories</span>
+                </a>
+
+                <div class="main-nav__inner  main-nav__inner--local">
+                  <ul class="main-nav__list-lvl-2">
+                    <li class="main-nav__item  level-2">
+                      <span>Type</span>
+                      <ul class="main-nav__list-lvl-3">
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Entrance Doors</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Bi-Fold Doors</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Sliding Doors</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">French Doors</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-nav__item  level-2">
+                      <span>Material</span>
+                      <ul class="main-nav__list-lvl-3">
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Aluminum Doors</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">uPVC Doors</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Timber Doors</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Timber look uPVC Doors</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                </div>
+              </li>
+
+              <li class="main-nav__item  main-nav__item--parent">
+                <a href="#" class="main-nav__link">
+                  <span>Roof Systems</span>
+                </a>
+
+                <div class="main-nav__inner  main-nav__inner--local">
+                  <ul class="main-nav__list-lvl-2">
+                    <li class="main-nav__item  level-2">
+                      <!-- <span>Type</span> -->
+                      <ul class="main-nav__list-lvl-3">
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Type 1</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Type 2</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Type 3</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Type 4</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                </div>
+              </li>
+
+              <li class="main-nav__item  main-nav__item--parent">
+                <a href="#" class="main-nav__link">
+                  <span>Glass Works</span>
+                </a>
+
+                <div class="main-nav__inner  main-nav__inner--local">
+                  <ul class="main-nav__list-lvl-2">
+                    <li class="main-nav__item  level-2">
+                      <span>Type</span>
+                      <ul class="main-nav__list-lvl-3">
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Type 1</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Type 2</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Type 3</a>
+                        </li>
+                        <li class="main-nav__item">
+                          <a href="#" class="main-nav__link">Type 4</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                </div>
+              </li>
+
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  <span>Blog and Media</span>
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  <span>About Us</span>
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  <span>Contacts</span>
+                </a>
+              </li>
+            </ul>
+
+            <a href="#" class="main-nav__link  main-nav__link--apart">
+              <span>Default</span>
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#briefcase"></use></svg>
+            </a>
+          </nav>
+
         </div>
 
-      </header>
+      </header>
 
       <nav class="container breadcrumbs" aria-label="Breadcrumb">
         <ol class="list-nostyled breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -108,7 +464,7 @@
       </nav>
 
 
-      <main>
+      <main>
 
         <div class="container  big-banner" role="presentation">
           <div class="big-banner__img">
@@ -396,7 +752,7 @@
         </section>
 
 
-        <hr>
+        <hr>
 
         <section class="container  catalog-3-col">
           <div class="catalog-3-col__header">
@@ -992,7 +1348,7 @@
         </section>
 
 
-        <hr>
+        <hr>
 
         <article class="container  win-styles-2-col">
 
@@ -1144,7 +1500,7 @@
         </article>
 
 
-        <hr>
+        <hr>
 
         <article class="container  win-options-3-col">
 
@@ -1404,7 +1760,7 @@
         </article>
 
 
-        <hr>
+        <hr>
 
         <section class="container  personal-features">
 
@@ -1920,7 +2276,7 @@
         </article>
 
 
-        <hr>
+        <hr>
 
         <article class="container  add-service-list">
           <h2 class="add-service-list__title">UGS Services - DESIGNED with you in MIND</h2>
@@ -1973,7 +2329,7 @@
         </article>
 
 
-        <hr>
+        <hr>
 
         <article class="container  gallery">
           <div class="row  gallery__header">
@@ -2385,7 +2741,7 @@
         </article>
 
 
-        <hr>
+        <hr>
 
         <section class="container  faq">
 
@@ -2440,7 +2796,7 @@
         </section>
 
 
-        <hr>
+        <hr>
 
         <article class="container  write-us">
           <div class="row  write-us__header">
@@ -2749,6 +3105,297 @@
     </div>
 
   </div>
+
+  <nav id="menu" class="mmenu">
+    <ul class="level-1">
+      <li class="li-level-1">
+        <a href="/">Home</a>
+      </li>
+
+      <li class="li-level-1">
+        <a href="/windows/">Windows</a>
+        <ul class="ul-level-2">
+          <li class="li-level-2">
+            <span>Type</span>
+            <ul class="ul-level-3">
+              <li>
+                <a href="/link/">Bay & Bow Windows</a>
+              </li>
+              <li>
+                <a href="/link/">Tilt & Turn Windows</a>
+              </li>
+              <li>
+                <a href="/link/">Casement Windows</a>
+              </li>
+              <li>
+                <a href="/link/">Vertical Slider Windows</a>
+              </li>
+              <li>
+                <a href="/link/">Flush Windows</a>
+              </li>
+              <li>
+                <a href="/link/">Secondary Windows</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="li-level-2  active">
+            <span>Material</span>
+            <ul class="ul-level-3">
+              <li class="li-level-3  active">
+                <a href="/windows-allu">Aluminium Windows</a>
+
+                <ul class="ul-level-4">
+                  <li class="li-level-4 active">
+                    <a href="/link/">Bay & Bow</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Tilt & Turn</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Casement</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Vertical Slider</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="li-level-3">
+                <a href="/link/">uPVC Windows</a>
+
+                <ul class="ul-level-4">
+                  <li class="li-level-4">
+                    <a href="/link/">Bay & Bow</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Tilt & Turn</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Casement</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Vertical Slider</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="li-level-3">
+                <a href="/link/">Timber Windows</a>
+
+                <ul class="ul-level-4">
+                  <li class="li-level-4">
+                    <a href="/link/">Bay & Bow</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Tilt & Turn</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Casement</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Vertical Slider</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="li-level-3">
+                <a href="/link/">Timber look uPVC</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="li-level-2">
+            <span>Other</span>
+            <ul class="ul-level-3">
+              <li class="li-level-3">
+                <a href="/windows-allu">Other link</a>
+              </li>
+              <li class="li-level-3">
+                <a href="/windows-allu">Other link</a>
+              </li>
+              <li class="li-level-3">
+                <a href="/windows-allu">Other link</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li class="li-level-1">
+        <a href="/doors/">Doors</a>
+        <ul class="ul-level-2">
+          <li class="li-level-2">
+            <span>Type</span>
+            <ul class="ul-level-3">
+              <li>
+                <a href="/link/">Bay & Bow Doors</a>
+              </li>
+              <li>
+                <a href="/link/">Tilt & Turn Doors</a>
+              </li>
+              <li>
+                <a href="/link/">Casement Doors</a>
+              </li>
+              <li>
+                <a href="/link/">Vertical Slider Doors</a>
+              </li>
+              <li>
+                <a href="/link/">Flush Doors</a>
+              </li>
+              <li>
+                <a href="/link/">Secondary Doors</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="li-level-2">
+            <span>Material</span>
+            <ul class="ul-level-3">
+              <li class="li-level-3">
+                <a href="/Doors-allu">Aluminium Doors</a>
+
+                <ul class="ul-level-4">
+                  <li class="li-level-4">
+                    <a href="/link/">Bay & Bow</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Tilt & Turn</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Casement</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Vertical Slider</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="li-level-3">
+                <a href="/link/">uPVC Doors</a>
+
+                <ul class="ul-level-4">
+                  <li class="li-level-4">
+                    <a href="/link/">Bay & Bow</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Tilt & Turn</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Casement</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Vertical Slider</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="li-level-3">
+                <a href="/link/">Timber Doors</a>
+
+                <ul class="ul-level-4">
+                  <li class="li-level-4">
+                    <a href="/link/">Bay & Bow</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Tilt & Turn</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Casement</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Vertical Slider</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="li-level-3">
+                <a href="/link/">Timber look uPVC</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="li-level-2">
+            <span>Other</span>
+            <ul class="ul-level-3">
+              <li class="li-level-3">
+                <a href="/Doors-allu">Other link</a>
+              </li>
+              <li class="li-level-3">
+                <a href="/Doors-allu">Other link</a>
+              </li>
+              <li class="li-level-3">
+                <a href="/Doors-allu">Other link</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li><a href="/contact/">Conservatories</a></li>
+      <li><a href="/contact/">Glass Works</a></li>
+      <li><a href="/contact/">Roog Systems</a></li>
+      <li><a href="/contact/">Blog</a></li>
+      <li><a href="/contact/">About us</a></li>
+      <li><a href="/contact/">About us</a></li>
+      <li><a href="/contact/">Contacts</a></li>
+    </ul>
+  </nav>
+
+
+
+
+  <script>
+    document.addEventListener(
+      "DOMContentLoaded", () => {
+
+        const mmenu = new Mmenu( "#menu", {
+          "offCanvas": {
+            "position": "left-front"
+          },
+          "theme": "white",
+          "navbars": [
+            {
+              "position": "top",
+              "content": [
+                "prev",
+                "title"
+              ]
+            },
+            {
+              "position": "bottom",
+              "content": [
+                "<a href='tel:+447554766102' class='mmenu__link'><svg width='24' height='24' aria-hidden='true'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite-svg.svg#phone'></use></svg><span>+44 7554 766 102</span></a>"
+              ]
+            }
+          ]
+        }, {
+          // configuration
+          classNames: {
+            selected: "active"
+          }
+        });
+
+        const api = mmenu.API;
+        const toggler = document.getElementById('mmenu-toggler');
+        toggler.addEventListener(
+          "click", () => {
+            api.open();
+            setTogglerClose();
+          }
+        );
+
+        // Подписываемся на событие закрытия меню
+        // 100% сущестыующие события для 9.3: "open:after" и "close:after"
+        // https://mmenujs.com/docs/core/off-canvas.html - самый низ
+        api.bind("close:after", () => {
+          setTogglerBurger();
+        });
+
+        function setTogglerClose() {
+          toggler.classList.add('burger--close');
+        }
+
+        function setTogglerBurger() {
+          toggler.classList.remove('burger--close');
+        }
+      }
+    );
+  </script>
 
   <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->
   <script src="js/script.min.js"></script>

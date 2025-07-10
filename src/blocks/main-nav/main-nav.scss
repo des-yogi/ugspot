@@ -1,162 +1,268 @@
-// В этом файле должны быть стили для БЭМ-блока main-nav, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
-$gray-lightest:               hsl(0, 0%, 90%) !default;
-
-$screen-xs:                   0 !default;
-$screen-sm:                   480px !default;
-$screen-md:                   768px !default;
-$screen-lg:                   992px !default;
-$screen-xl:                   1200px !default;
-$screen-xxl:                  1800px !default;
-
-$menu-desktop-width:          $screen-xl !default;
-$toggler-part-height:         3px !default;
-$toggler-part-bg-color:       #000 !default;
-
-$transition-time:             0.3s !default;
-
 .main-nav {
+  display: flex;
+  align-items: initial;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
 
   $block-name:                &; // #{$block-name}__element
 
-  position: relative;
-  z-index: 10;
-
-  // первый уровень
   &__list {
-    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
     padding: 0;
+    margin: 0;
+    font-weight: 500;
     list-style: none;
+  }
 
-    // мобильный вид списка
-    @media (max-width: ($menu-desktop-width - 1)) {
+  &__inner {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding-top: 12px;
 
-      // открытие/закрытие меню только в случае работающего JS
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
 
-      .js & {
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.2s;
-      }
-
-      .js #{$block-name}--open & {
-        max-height: 100vh;
-        transition: max-height 0.6s;
-      }
+    &.active,
+    &:focus-within {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
     }
 
-    // настольный вид списка
-    @media (min-width: $menu-desktop-width) {
-      display: flex;
-      flex-wrap: wrap;
+    &--local {
+      left: initial;
+      right: initial;
+
+      #{$block-name}__item {
+        min-width: 278px;
+      }
     }
   }
 
   &__item {
-    position: relative;
 
-    &--active {
+    &.active {
 
       & > #{$block-name}__link {
-        color: red;
+        color: $link-color--hover;
+        background-color: $main-pale--hover;
+
+        &::after {
+          background-image: svg-load('../blocks/sprite-svg/svg/chevron-down.svg', fill=$link-color--active);
+        }
+      }
+    }
+
+    &.level-2 {
+      display: flex;
+      flex-direction: column;
+
+      .main-nav__item--parent {
+
+        &:hover,
+        &:focus-within {
+
+          & > #{$block-name}__list-lvl-4 {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+          }
+        }
+      }
+    }
+
+    &--parent {
+
+      & > #{$block-name}__link {
+
+        &:hover,
+        &:focus {
+
+          &::after {
+            background-image: svg-load('../blocks/sprite-svg/svg/chevron-down.svg', fill=$link-color--hover);
+          }
+        }
+
+        &:active {
+
+          &::after {
+            background-image: svg-load('../blocks/sprite-svg/svg/chevron-down.svg', fill=$link-color--active);
+          }
+        }
+
+        &::after {
+          display: block;
+          content: "";
+          width: 16px;
+          height: 16px;
+          margin-left: 4px;
+          background-position: center;
+          background-size: 16px;
+          background-image: svg-load('../blocks/sprite-svg/svg/chevron-down.svg', fill=$text-color);
+        }
       }
     }
   }
 
   &__link {
-    display: block;
-    padding: 0.5em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 12px;
     text-decoration: none;
-    background-color: #fff;
+    white-space: nowrap;
+    color: inherit;
+    border-radius: $border-radius-sm;
 
     &:hover,
     &:focus {
-      text-decoration: none;
-      background-color: aquamarine;
+      color: $link-color--hover;
+      background-color: $main-pale--hover;
     }
 
-    &--lvl-2 {
+    &:focus {
 
-      @media (max-width: ($menu-desktop-width - 1)) {
-        padding-left: 1.2em;
+      & + #{$block-name}__inner {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
       }
     }
 
-    &--lvl-3 {
+    &:active {
+      color: $link-color--active;
+      background-color: $main-pale--active;
+    }
 
-      @media (max-width: ($menu-desktop-width - 1)) {
-        padding-left: 2.4em;
-      }
+    &--apart {
+      font-weight: 600;
+      color: $main-color;
     }
   }
 
-  &__sublist-wrapper {
-
-    &--lvl-2 {
-
-      @media (min-width: $menu-desktop-width) {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        transition: opacity $transition-time;
-
-        // stylelint-disable  max-nesting-depth
-        #{$block-name}__item--show-child > &,
-        #{$block-name}__item:hover & {
-          opacity: 1;
-          height: auto;
-          overflow: visible;
-        }
-        // stylelint-enable
-      }
-    }
-
-    &--lvl-3 {
-
-      @media (min-width: $menu-desktop-width) {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 100%;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        transition: opacity $transition-time;
-
-        // stylelint-disable  max-nesting-depth
-        #{$block-name}__item--show-child > &,
-        #{$block-name}__item--lvl-2:hover & {
-          opacity: 1;
-          height: auto;
-          overflow: visible;
-        }
-        // stylelint-enable
-      }
-    }
-  }
-
-
-
-  // переключатель
-
-  &__toggler {
-    display: inline-block;
+  &__list-lvl-2,
+  &__list-lvl-3,
+  &__list-lvl-4 {
+    list-style: none;
     padding: 0;
-    background: none;
-    border: none;
+    margin: 0;
+  }
 
-    .no-js & {
-      display: none;
+  &__list-lvl-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: initial;
+    gap: 16px 20px;
+    width: 100%;
+    padding: 20px 12px;
+    background-color: $body-bg;
+    border-radius: $border-radius;
+    position: relative;
+    border: 1px solid $border-color;
+    transition: opacity 0.3s ease;
+
+    & > li:nth-child(1),
+    & > li:nth-child(2) {
+      flex: 0 1;
+      flex-basis: calc(25% - 15px);
     }
 
-    @media (min-width: $menu-desktop-width) {
-      display: none;
+    & > li:nth-child(3) {
+      flex: 0 1 100%;
+      padding-top: 16px;
+      border-top: 1px solid $border-color;
+
+      & > ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+    }
+
+    & > li > span {
+      display: block;
+      padding: 0 12px 4px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+
+  &__list-lvl-3 {
+    flex: 1 1 100%;
+    position: relative;
+
+    li + li {
+      margin-top: 4px;
+    }
+
+    #{$block-name}__item.active {
+
+      #{$block-name}__list-lvl-4 {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    #{$block-name}__link {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      &::after {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__list-lvl-4 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px 10px;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 100%;
+    width: 578px;
+    height: 100%;
+    padding-left: 22px;
+    background-color: $body-bg;
+
+    // &.active {
+    //   visibility: visible;
+    //   opacity: 1;
+    // }
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 12px;
+      width: 1px;
+      height: 100%;
+      background-color: $border-color;
+    }
+
+    & > li {
+      display: inline-flex;
+      justify-content: initial;
+      flex: 0 1;
+      width: calc(50% - 12px);
     }
   }
 }

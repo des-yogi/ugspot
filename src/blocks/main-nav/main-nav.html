@@ -1,61 +1,359 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/main-nav/main-nav.html')
+-->
 
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<nav id="main-nav" class="main-nav" role="navigation">
-  <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+<nav class="main-nav">
   <ul class="main-nav__list">
-    <li class="main-nav__item  main-nav__item--active">
-      <a href="" class="main-nav__link">
-        Страницы
+    <li class="main-nav__item  main-nav__item--parent">
+      <!-- active -->
+      <a href="#" class="main-nav__link">
+        <span>Windows</span>
       </a>
-      <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-2">
-        <ul class="main-nav__list  main-nav__list--lvl-2">
-          <li class="main-nav__item  main-nav__item--lvl-2">
-            <a href="" class="main-nav__link  main-nav__link--lvl-2">
-              Контакты
-            </a>
+
+      <div class="main-nav__inner">
+        <ul class="main-nav__list-lvl-2">
+          <li class="main-nav__item  level-2">
+            <span>Type</span>
+            <ul class="main-nav__list-lvl-3">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Bay & Bow Windows</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Tilt & Turn Windows</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Casement Windows</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Vertical Slider Windows</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Flush Windows</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Secondary Windows</a>
+              </li>
+            </ul>
           </li>
-          <li class="main-nav__item  main-nav__item--lvl-2">
-            <a href="" class="main-nav__link  main-nav__link--lvl-2">
-              Услуги
-            </a>
-            <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-3">
-              <ul class="main-nav__list  main-nav__list--lvl-3">
-                <li class="main-nav__item  main-nav__item--lvl-3">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                    Вёрстка HTML-CSS
-                  </a>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-3">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                    Стриптиз
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <li class="main-nav__item  level-2">
+            <span>Material</span>
+            <ul class="main-nav__list-lvl-3">
+              <li class="main-nav__item   main-nav__item--parent">
+                <a href="#" class="main-nav__link">Aluminium Windows</a>
+
+                <ul class="main-nav__list-lvl-4">
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Bay & Bow</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Tilt & Turn</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Casement</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Vertical Slider</a>
+                  </li>
+
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Bay & Bow</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Tilt & Turn</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Casement</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Vertical Slider</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="main-nav__item   main-nav__item--parent">
+                <a href="#" class="main-nav__link">uPVC Windows</a>
+
+                <ul class="main-nav__list-lvl-4">
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Bay & Bow</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Tilt & Turn</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Casement</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Vertical Slider</a>
+                  </li>
+
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Bay & Bow</a>
+                  </li>
+
+                </ul>
+              </li>
+              <li class="main-nav__item   main-nav__item--parent">
+                <a href="#" class="main-nav__link">Timber Windows</a>
+
+                <ul class="main-nav__list-lvl-4">
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Bay & Bow</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Tilt & Turn</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Casement</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Vertical Slider</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="main-nav__item  level-2">
+            <span>Other</span>
+            <ul class="main-nav__list-lvl-3">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">General Glazing</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Secondary Glazing</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Vacuum Glazing</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Integral Blids</a>
+              </li>
+            </ul>
           </li>
         </ul>
+
       </div>
     </li>
+
+    <li class="main-nav__item  main-nav__item--parent">
+      <a href="#" class="main-nav__link">
+        <span>Doors</span>
+      </a>
+
+      <div class="main-nav__inner">
+        <ul class="main-nav__list-lvl-2">
+          <li class="main-nav__item  level-2">
+            <span>Type</span>
+            <ul class="main-nav__list-lvl-3">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Entrance Doors</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Bi-Fold Doors</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Sliding Doors</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">French Doors</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-nav__item  level-2">
+            <span>Material</span>
+            <ul class="main-nav__list-lvl-3">
+              <li class="main-nav__item   main-nav__item--parent">
+                <a href="#" class="main-nav__link">Aluminum Doors</a>
+
+                <ul class="main-nav__list-lvl-4">
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Aluminium Entrance Doors</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Timber Entrance Doors</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">uPVC Entrance Doors</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="main-nav__item   main-nav__item--parent">
+                <a href="#" class="main-nav__link">uPVC Doors</a>
+
+                <ul class="main-nav__list-lvl-4">
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Bay & Bow</a>
+                  </li>
+
+                </ul>
+              </li>
+              <li class="main-nav__item   main-nav__item--parent">
+                <a href="#" class="main-nav__link">Timber Doors</a>
+
+                <ul class="main-nav__list-lvl-4">
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Bay & Bow</a>
+                  </li>
+
+                </ul>
+              </li>
+              <li class="main-nav__item   main-nav__item--parent">
+                <a href="#" class="main-nav__link">Timber look uPVC Doors</a>
+
+                <ul class="main-nav__list-lvl-4">
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Bay & Bow</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="main-nav__item  level-2">
+            <span>Other</span>
+            <ul class="main-nav__list-lvl-3">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">General Glazing</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Secondary Glazing</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Vacuum Glazing</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Integral Blids</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </li>
+
+    <li class="main-nav__item  main-nav__item--parent">
+      <a href="#" class="main-nav__link">
+        <span>Conservatories</span>
+      </a>
+
+      <div class="main-nav__inner  main-nav__inner--local">
+        <ul class="main-nav__list-lvl-2">
+          <li class="main-nav__item  level-2">
+            <span>Type</span>
+            <ul class="main-nav__list-lvl-3">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Entrance Doors</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Bi-Fold Doors</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Sliding Doors</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">French Doors</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-nav__item  level-2">
+            <span>Material</span>
+            <ul class="main-nav__list-lvl-3">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Aluminum Doors</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">uPVC Doors</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Timber Doors</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Timber look uPVC Doors</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </li>
+
+    <li class="main-nav__item  main-nav__item--parent">
+      <a href="#" class="main-nav__link">
+        <span>Roof Systems</span>
+      </a>
+
+      <div class="main-nav__inner  main-nav__inner--local">
+        <ul class="main-nav__list-lvl-2">
+          <li class="main-nav__item  level-2">
+            <!-- <span>Type</span> -->
+            <ul class="main-nav__list-lvl-3">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Type 1</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Type 2</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Type 3</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Type 4</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </li>
+
+    <li class="main-nav__item  main-nav__item--parent">
+      <a href="#" class="main-nav__link">
+        <span>Glass Works</span>
+      </a>
+
+      <div class="main-nav__inner  main-nav__inner--local">
+        <ul class="main-nav__list-lvl-2">
+          <li class="main-nav__item  level-2">
+            <span>Type</span>
+            <ul class="main-nav__list-lvl-3">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Type 1</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Type 2</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Type 3</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Type 4</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </li>
+
     <li class="main-nav__item">
-      <a href="https://github.com/nicothin/NTH-start-project" class="main-nav__link">
-        Репозиторий
+      <a href="#" class="main-nav__link">
+        <span>Blog and Media</span>
       </a>
     </li>
     <li class="main-nav__item">
-      <a href="http://nicothin.pro/" class="main-nav__link">
-        Сайт автора
+      <a href="#" class="main-nav__link">
+        <span>About Us</span>
+      </a>
+    </li>
+    <li class="main-nav__item">
+      <a href="#" class="main-nav__link">
+        <span>Contacts</span>
       </a>
     </li>
   </ul>
-</nav>
 
--->
+  <a href="#" class="main-nav__link  main-nav__link--apart">
+    <span>Default</span>
+    <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#briefcase"></use></svg>
+  </a>
+</nav>

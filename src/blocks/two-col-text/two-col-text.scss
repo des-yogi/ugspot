@@ -26,6 +26,10 @@
       column-gap: 16px;
       column-fill: balance;
     }
+
+    & > *:first-child {
+      margin-top: 0;
+    }
   }
 
   &__feature {
