@@ -91,7 +91,8 @@
     "blog-article": [],
     "article-link": [],
     "article-topics": [],
-    "door-slider": []
+    "door-slider": [],
+    "mmenu": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
@@ -104,6 +105,7 @@
     "./src/scss/mixins.scss",
     "../../node_modules/choices.js/public/assets/styles/choices.min.css",
     "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.css",
+    "../../node_modules/mmenu-js/dist/mmenu.css",
     "../../node_modules/swiper/swiper-bundle.css"
   ],
   "addCssAfter": [
@@ -117,6 +119,7 @@
     "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
     "./node_modules/choices.js/public/assets/scripts/choices.min.js",
     "./node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js",
+    "./node_modules/mmenu-js/dist/mmenu.js",
     "./node_modules/swiper/swiper-bundle.min.js"
   ],
   "addJsAfter": [

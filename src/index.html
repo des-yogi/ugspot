@@ -12,7 +12,7 @@
 <body>
 <noscript>You have JavaScript disabled. We apologize, but this makes it difficult to use this site.</noscript>
 
-  <div class="page__inner">
+  <div id="page" class="page__inner">
 
     <div class="page__content">
       @@include('blocks/page-header/page-header.html')
@@ -91,6 +91,66 @@
     </div>
 
   </div>
+
+  @@include('blocks/mmenu/mmenu.html')
+
+  <script>
+    document.addEventListener(
+      "DOMContentLoaded", () => {
+
+        const mmenu = new Mmenu( "#menu", {
+          "offCanvas": {
+            "position": "left-front"
+          },
+          "theme": "white",
+          "navbars": [
+            {
+              "position": "top",
+              "content": [
+                "prev",
+                "title"
+              ]
+            },
+            {
+              "position": "bottom",
+              "content": [
+                "<a href='tel:+447554766102' class='mmenu__link'><svg width='24' height='24' aria-hidden='true'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite-svg.svg#phone'></use></svg><span>+44 7554 766 102</span></a>"
+              ]
+            }
+          ]
+        }, {
+          // configuration
+          classNames: {
+            selected: "active"
+          }
+        });
+
+        const api = mmenu.API;
+        const toggler = document.getElementById('mmenu-toggler');
+        toggler.addEventListener(
+          "click", () => {
+            api.open();
+            setTogglerClose();
+          }
+        );
+
+        // Подписываемся на событие закрытия меню
+        // 100% сущестыующие события для 9.3: "open:after" и "close:after"
+        // https://mmenujs.com/docs/core/off-canvas.html - самый низ
+        api.bind("close:after", () => {
+          setTogglerBurger();
+        });
+
+        function setTogglerClose() {
+          toggler.classList.add('burger--close');
+        }
+
+        function setTogglerBurger() {
+          toggler.classList.remove('burger--close');
+        }
+      }
+    );
+  </script>
 
   @@include('_include/page_bottom.html')
 

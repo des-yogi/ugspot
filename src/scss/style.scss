@@ -14,6 +14,7 @@
 @import './src/scss/mixins.scss';
 @import '../../node_modules/choices.js/public/assets/styles/choices.min.css';
 @import '../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.css';
+@import '../../node_modules/mmenu-js/dist/mmenu.css';
 @import '../../node_modules/swiper/swiper-bundle.css';
 @import './src/blocks/accordion/accordion.scss';
 @import './src/blocks/breadcrumbs/breadcrumbs.scss';
@@ -107,4 +108,5 @@
 @import './src/blocks/article-link/article-link.scss';
 @import './src/blocks/article-topics/article-topics.scss';
 @import './src/blocks/door-slider/door-slider.scss';
+@import './src/blocks/mmenu/mmenu.scss';
 @import './src/scss/print.scss';

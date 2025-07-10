@@ -1,0 +1,64 @@
+.mmenu {
+
+  $block-name:                &; // #{$block-name}__element
+
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    color: $text-color !important;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: $main-color;
+    }
+  }
+}
+
+:root {
+  --mm-min-size: 260px;
+  --mm-max-size: 400px;
+}
+
+// Overriding attr
+.mm-navbar {
+  border-top: 1px solid $border-color;
+}
+
+.mm-navbar__title,
+.mm-listitem__text {
+  font-weight: 600;
+}
+
+.mm-navbar__title {
+  font-size: 18px;
+  color: $text-color !important;
+}
+
+.mm-btn {
+
+  &.mm-listitem__btn,
+  &.mm-navbar__btn {
+
+    &::before,
+    &::after {
+      border-color: $text-color !important;
+    }
+  }
+}
+
+.mm-menu .mm-listitem.active {
+  color: $link-color--active;
+  background-color: $main-pale--hover !important;
+  opacity: 1;
+}

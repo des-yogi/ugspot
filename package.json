@@ -71,6 +71,7 @@
     "bootstrap": "^5.3.2",
     "choices.js": "^11.0.2",
     "focus-visible": "^5.2.0",
+    "mmenu-js": "^9.3.0",
     "svg4everybody": "^2.1.9",
     "swiper": "^11.1.14"
   }
