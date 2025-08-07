@@ -1,0 +1,68 @@
+.timber-info {
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    max-width: 796px;
+    margin: 0 auto 24px;
+    text-align: center;
+
+    p {
+      hyphens: none;
+    }
+  }
+
+  &__title {
+    margin: 0 0 16px;
+  }
+
+  // &__intro {
+
+  // }
+
+  &__list {
+    gap: 16px 0;
+  }
+
+  &__item {
+    @include col(xs, 12);
+    @include col(md, 6);
+  }
+
+  // &__item-title {
+
+  // }
+
+  &__item-descr {
+    margin-bottom: 16px;
+  }
+
+  &__item-img {
+    border-radius: $border-radius;
+  }
+
+  &__footer {
+    margin-top: 40px;
+  }
+
+  &__footer-title {
+    margin: 0 0 16px;
+    text-align: center;
+  }
+
+  &__footer-text {
+    text-wrap: pretty;
+
+    @media (min-width: $screen-md) {
+      column-count: 2;
+      column-gap: 16px;
+      column-fill: balance;
+    }
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+  }
+}
