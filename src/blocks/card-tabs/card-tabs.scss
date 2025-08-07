@@ -28,9 +28,9 @@
     }
   }
 
-  &__inner {
+  // &__inner {
 
-  }
+  // }
 
   &__nav {
     gap: 16px;
@@ -65,7 +65,7 @@
     width: 100%;
     height: 100%;
     padding: 7px;
-    background-color: $border-color;
+    background-color: $block-bg;
     border: 1px solid $border-color;
     border-radius: $border-radius;
     transition: border-color $transition-time ease;
@@ -91,9 +91,9 @@
     }
   }
 
-  &__content {
+  // &__content {
 
-  }
+  // }
 
   &__text {
     flex: 1 1 auto;

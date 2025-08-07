@@ -92,7 +92,8 @@
     "article-link": [],
     "article-topics": [],
     "door-slider": [],
-    "mmenu": []
+    "mmenu": [],
+    "timber-info": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
