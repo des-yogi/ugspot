@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     fileInput.addEventListener('change', function() {
         const files = this.files;
-
+    
         if (files.length === 1) {
             const filename = files[0].name;
             filenameElement.textContent = filename;
@@ -27,4 +27,5 @@ document.addEventListener('DOMContentLoaded', function() {
             filenameElement.textContent = 'Файл не выбран';
         }
     });
+
 });
