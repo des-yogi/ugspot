@@ -15,8 +15,25 @@
     @include col(xl, 8);
   }
 
+  &__social {
+
+    .social-net__list {
+      justify-content: center;
+    }
+  }
+
+  &__social-title {
+
+    span {
+      color: $main-color;
+    }
+  }
+
   &__container {
     gap: 16px 0;
+    transition: max-height 400ms ease;
+    will-change: max-height;
+    overflow: hidden;
   }
 
   &__item-col {
@@ -40,6 +57,23 @@
       object-fit: cover;
       object-position: center;
       transition: transform $transition-time;
+    }
+  }
+
+  &__more-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    .btn {
+
+      &.is-open {
+
+        svg {
+          transform: rotate(180deg);
+          transition: transform $transition-time;
+        }
+      }
     }
   }
 }
