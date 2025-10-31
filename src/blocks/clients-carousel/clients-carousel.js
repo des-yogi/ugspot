@@ -3,10 +3,11 @@
     speed: 400,
     spaceBetween: 16,
     slidesPerView: 'auto',
-    //centeredSlides: true,
+    centerInsufficientSlides: true, // Not intended to be used loop mode and grid.rows
     autoplay: true,
-    //grabCursor: true,
-    loop: true,
+    rewind: true,
+    grabCursor: true,
+    //loop: true,
     a11y: {
       enabled: true,
       slideRole: 'listitem',
