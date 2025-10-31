@@ -1,0 +1,60 @@
+<!--DEV
+@ @include('blocks/cards-slider/cards-slider.html')
+-->
+
+<section class="container  cards-slider">
+
+  <div class="cards-slider__heaader">
+    <h2 class="cards-slider__title">Headline</h2>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Rem sed rerum doloribus, placeat temporibus quo maxime molestiae cum sint ea quam pariatur.</p> -->
+  </div>
+
+  <div class="swiper  cards-slider__container">
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide  cards-slider__slide">
+        @@include('../../blocks/win-type-card/win-type-card.html', {
+          "img": "win-type-1",
+          "title": "Sash Windows. Timeless Elegance & Classic Design",
+          "text": ""
+        })
+      </div>
+
+      <div class="swiper-slide  cards-slider__slide">
+        @@include('../../blocks/win-type-card/win-type-card.html', {
+          "img": "win-type-2",
+          "title": "Tilt & Turn Windows",
+          "text": ""
+        })
+      </div>
+
+      <div class="swiper-slide  cards-slider__slide">
+        @@include('../../blocks/win-type-card/win-type-card.html', {
+          "img": "win-type-3",
+          "title": "Arched Windows",
+          "text": ""
+        })
+      </div>
+
+      <div class="swiper-slide  cards-slider__slide">
+        @@include('../../blocks/win-type-card/win-type-card.html', {
+          "img": "win-type-4",
+          "title": "Casement Windows",
+          "text": ""
+        })
+      </div>
+
+
+
+    </div>
+
+    <div class="swiper__controls">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+  </div>
+
+</section>
