@@ -1,0 +1,114 @@
+/* Базовые переменные */
+:root {
+  --fab-bg: #940c0c;
+  --fab-bg-hover: #680909;
+  --fab-bg-active: #540101;
+  --fab-fg: #ffffff;
+
+  --fab-size: 56px;        /* целевая высота и базовая ширина без текста */
+  --icon-size: 24px;       /* размер иконки */
+  --pad-x: calc((var(--fab-size) - var(--icon-size)) / 2); /* 56 = 24 + 16 + 16 */
+
+  --radius: 16px;
+  --gap-expanded: 10px;    /* интервал между иконкой и текстом в раскрытом состоянии */
+  --label-max: 22ch;       /* максимум для подписи (можно заменить скриптом на auto-ширину) */
+  --easing: cubic-bezier(.2,.7,.2,1);
+
+  --info-panel-backdrop-alpha: 0.38;
+  --info-panel-easing: cubic-bezier(.2,.7,.2,1);
+}
+
+/* Кнопка */
+.fab {
+  position: fixed;
+  bottom: 24px;
+  left: 16px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+
+  /* Высота всегда 56; ширина — по содержимому.
+     Когда текст скрыт, содержимое = иконка (24) + 2*паддинг (16) => ровно 56 */
+  block-size: var(--fab-size);
+  padding-inline: var(--pad-x);
+
+  font-size: $font-size;
+  font-weight: 600;
+  font-family: $font-family;
+
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--fab-bg);
+  color: var(--fab-fg);
+  //box-shadow: 0 6px 16px rgba(0,0,0,.2);
+  //transition: background-color .25s var(--easing), box-shadow .25s var(--easing);
+  cursor: pointer;
+  user-select: none;
+
+
+  @media (min-width: $screen-md) {
+    left: 24px;
+  }
+
+  @media (min-width: 1600px) {
+    left: 64px;
+    bottom: 36px;
+  }
+
+  &:active {
+    background: var(--fab-bg-active) !important;
+  }
+}
+
+/* Иконка фиксированного размера */
+.fab .icon {
+  display: inline-grid;
+  place-items: center;
+  inline-size: var(--icon-size);
+  block-size: var(--icon-size);
+}
+
+/* Текст — скрыт по умолчанию (без hover) */
+.fab .label {
+  overflow: hidden;
+  white-space: nowrap;
+  max-inline-size: 0;       /* свёрнутая ширина */
+  opacity: 0;
+  translate: -4px 0;
+  margin-inline-end: 0;   /* нет «зазора» рядом с иконкой */
+
+  will-change: max-inline-size, opacity, translate, margin-inline-start;
+  transition:
+    max-inline-size .45s var(--easing),
+    opacity .2s var(--easing),
+    translate .45s var(--easing),
+    margin-inline-end .45s var(--easing);
+}
+
+/* На устройствах с hover + точным указателем включаем раскрытие */
+@media (hover: hover) and (pointer: fine) {
+
+  .fab:hover,
+  .fab:focus-visible {
+    background: var(--fab-bg-hover);
+    //box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  }
+
+  .fab:hover .label,
+  .fab:focus-visible .label {
+    /* текст показываем — ширина растёт «по содержимому», высота остаётся 56 */
+    max-inline-size: var(--label-max);
+    opacity: 1;
+    translate: 0 0;
+    margin-inline-end: var(--gap-expanded); /* интервал между иконкой и текстом */
+  }
+}
+
+/* Предпочтение сниженной анимации */
+@media (prefers-reduced-motion: reduce) {
+  .fab,
+  .fab .label {
+    transition: none;
+  }
+}

@@ -23,6 +23,7 @@
   background-color: $link-color;
   user-select: none;
   cursor: pointer;
+  transition: all $transition-time ease;
 
   svg {
     width: 20px;

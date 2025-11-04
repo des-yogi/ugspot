@@ -94,7 +94,9 @@
     "door-slider": [],
     "mmenu": [],
     "timber-info": [],
-    "cards-slider": []
+    "cards-slider": [],
+    "request-btn": [],
+    "info-panel": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

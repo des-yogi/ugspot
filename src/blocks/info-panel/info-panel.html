@@ -1,0 +1,59 @@
+<!--DEV
+@ @include('blocks/info-panel/info-panel.html')
+-->
+
+<div class="modal fade  modal--anchored  info-panel"
+     id="infoModal" tabindex="-1"
+     aria-labelledby="infoModalLabel"
+     aria-hidden="true"
+     data-bs-backdrop="false"
+>
+
+  <div class="modal-dialog  info-panel__dialog">
+    <div class="modal-content  info-panel__content">
+      <div class="modal-header  info-panel__header">
+        <h4 class="modal-title  visually-hidden" id="infoModalLabel">Request a Service</h4>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+
+        <!-- размер фонового изображения 340х150 -->
+        <div class="info-panel__hero"
+             data-bg="img/info-panel-bg.jpg"
+             data-bg-webp="img/info-panel-bg.webp"
+             data-bg-speed="0.1"
+             aria-hidden="true"
+        >
+          <div class="info-panel__icon-viewport">
+            <div class="info-panel__icon-track">
+               <span class="info-panel__icon  info-panel__icon--logo  first"></span>
+               <span class="info-panel__icon  info-panel__icon--mail"></span>
+               <span class="info-panel__icon  info-panel__icon--headphones"></span>
+               <span class="info-panel__icon  info-panel__icon--tablet"></span>
+               <span class="info-panel__icon  info-panel__icon--bus"></span>
+               <span class="info-panel__icon  info-panel__icon--logo  first"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-body  info-panel__body">
+        <ul class="list-nostyled  info-panel__list">
+          <li class="info-panel__item">
+            <a href="https://ugspot.co.uk/surveying-visit" class="info-panel__link">
+              NO Obligation Surveying <span>request</span>
+            </a>
+          </li>
+          <li class="info-panel__item">
+            <a href="https://ugspot.co.uk/free-quote" class="info-panel__link">
+              Distance Quoting <span>request</span>
+            </a>
+          </li>
+          <li class="info-panel__item">
+            <a href="#" class="info-panel__link">
+              No-Obligation Zoom Call <span>request</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
