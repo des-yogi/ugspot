@@ -1,0 +1,164 @@
+/*$info-panel-width:   320px !default;
+$info-panel-radius:  20px   !default;
+$info-panel-divider: #f0e9ea !default;*/
+
+// Добавка к вашим текущим стилям с вложенностями
+
+.info-panel {
+  $block-name: &;
+
+  &__dialog {
+
+    &.modal-dialog {
+      position: fixed;
+      width: 320px;
+      max-width: 320px !important;
+      margin: 0;
+      transform: none !important; // гасим смещение BS5 .fade
+    }
+  }
+
+  &__content {
+    // Чтобы шапка фиксировалась сверху, а тело скролилось
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh; // можно заменить на, например, 640px, если хотите строго в px
+
+    border-radius: 32px;
+    box-shadow: 10px 10px 50px 3px rgba(148, 12, 12, 0.24);
+    overflow: hidden;
+  }
+
+  &__header {
+    position: relative;
+    padding: 18px 16px 0;
+
+    .btn-close {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+  }
+
+  &__hero {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    aspect-ratio: 340/150;
+    background: $main-pale;
+    border-radius: $border-radius-lg; //24
+    pointer-events: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: rgba($black, 0.5);
+    }
+  }
+
+  &__icon-viewport {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: none;
+    overflow: hidden;
+  }
+
+  &__icon-track {
+    display: flex;
+    will-change: transform;
+  }
+
+  &__icon {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+
+    &--logo {
+      background-image: svg-load('../blocks/info-panel/bg-img/logo.svg', fill=$white);
+    }
+
+    &--mail {
+      background-image: svg-load('../blocks/info-panel/bg-img/mail.svg', fill=$white);
+    }
+
+    &--headphones {
+      background-image: svg-load('../blocks/info-panel/bg-img/headphones.svg', fill=$white);
+    }
+
+    &--tablet {
+      background-image: svg-load('../blocks/info-panel/bg-img/tablet.svg', fill=$white);
+    }
+
+    &--bus {
+      background-image: svg-load('../blocks/info-panel/bg-img/bus.svg', fill=$white);
+    }
+  }
+
+  &__body {
+    padding: 16px 16px 18px;
+    overflow: auto;      // внутренний скролл
+    max-height: 100%;    // вместе с max-height у content ограничит высоту
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+    position: relative;
+
+    & + & {
+      margin-top: 24px;
+
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: -12px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: $border-color;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: $font-size-lg;
+    font-weight: 500;
+    color: $text-color;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover,
+    &:focus {
+      color: $text-color;
+
+      span {
+        text-decoration: underline;
+      }
+    }
+
+    span {
+      flex: 1 1 100%;
+      display: block;
+      font-size: $font-size;
+      font-weight: 400;
+      color: $main-color;
+    }
+  }
+}
+

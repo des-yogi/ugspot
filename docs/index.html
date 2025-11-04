@@ -31,11 +31,11 @@
 </head>
 
 <body>
-<noscript>You have JavaScript disabled. We apologize, but this makes it difficult to use this site.</noscript>
+  <noscript>You have JavaScript disabled. We apologize, but this makes it difficult to use this site.</noscript>
 
   <div id="page" class="page__inner">
 
-    <div class="page__content">
+    <div class="page__content">
 
       <div class="page-header__wrapper">
         <header id="header" class="container  page-header">
@@ -466,7 +466,7 @@
       </nav>
 
 
-      <main>
+      <main>
 
         <div class="container  big-banner" role="presentation">
           <div class="big-banner__img">
@@ -699,7 +699,7 @@
         </section>
 
 
-        <hr>
+        <hr>
 
         <section class="container  catalog-3-col">
           <div class="catalog-3-col__header">
@@ -1197,7 +1197,7 @@
         </section>
 
 
-        <hr>
+        <hr>
 
         <article class="container  win-styles-2-col">
 
@@ -1349,7 +1349,7 @@
         </article>
 
 
-        <hr>
+        <hr>
 
         <article class="container  win-options-3-col">
 
@@ -1609,7 +1609,7 @@
         </article>
 
 
-        <hr>
+        <hr>
 
         <section class="container  personal-features">
 
@@ -2125,7 +2125,7 @@
         </article>
 
 
-        <hr>
+        <hr>
 
         <article class="container  add-service-list">
           <h2 class="add-service-list__title">UGS Services - DESIGNED with you in MIND</h2>
@@ -2178,7 +2178,7 @@
         </article>
 
 
-        <hr>
+        <hr>
 
         <article class="container  gallery">
 
@@ -2629,7 +2629,7 @@
         </article>
 
 
-        <hr>
+        <hr>
 
         <section class="container  faq">
 
@@ -2684,7 +2684,7 @@
         </section>
 
 
-        <hr>
+        <hr>
 
         <article class="container  write-us">
           <div class="row  write-us__header">
@@ -2992,7 +2992,7 @@
 
     </div>
 
-  </div>
+  </div>
 
   <nav id="menu" class="mmenu">
     <ul class="level-1">
@@ -3224,7 +3224,74 @@
     </ul>
   </nav>
 
+  <button class="fab  request-btn"
+          type="button"
+          aria-label="Request a service"
+          data-bs-toggle="modal"
+          data-bs-target="#infoModal"
+  >
+    <span class="label  request-btn__label" aria-hidden="true">Request a service</span>
+    <span class="icon  request-btn__icon" aria-hidden="true">
+      <!-- Замените на свою SVG-иконку -->
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#truck"></use></svg>
+    </span>
+  </button>
 
+  <div class="modal fade  modal--anchored  info-panel"
+       id="infoModal" tabindex="-1"
+       aria-labelledby="infoModalLabel"
+       aria-hidden="true"
+       data-bs-backdrop="false"
+  >
+
+    <div class="modal-dialog  info-panel__dialog">
+      <div class="modal-content  info-panel__content">
+        <div class="modal-header  info-panel__header">
+          <h4 class="modal-title  visually-hidden" id="infoModalLabel">Request a Service</h4>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+
+          <!-- размер фонового изображения 340х150 -->
+          <div class="info-panel__hero"
+               data-bg="img/info-panel-bg.jpg"
+               data-bg-webp="img/info-panel-bg.webp"
+               data-bg-speed="0.1"
+               aria-hidden="true"
+          >
+            <div class="info-panel__icon-viewport">
+              <div class="info-panel__icon-track">
+                 <span class="info-panel__icon  info-panel__icon--logo  first"></span>
+                 <span class="info-panel__icon  info-panel__icon--mail"></span>
+                 <span class="info-panel__icon  info-panel__icon--headphones"></span>
+                 <span class="info-panel__icon  info-panel__icon--tablet"></span>
+                 <span class="info-panel__icon  info-panel__icon--bus"></span>
+                 <span class="info-panel__icon  info-panel__icon--logo  first"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-body  info-panel__body">
+          <ul class="list-nostyled  info-panel__list">
+            <li class="info-panel__item">
+              <a href="https://ugspot.co.uk/surveying-visit" class="info-panel__link">
+                NO Obligation Surveying <span>request</span>
+              </a>
+            </li>
+            <li class="info-panel__item">
+              <a href="https://ugspot.co.uk/free-quote" class="info-panel__link">
+                Distance Quoting <span>request</span>
+              </a>
+            </li>
+            <li class="info-panel__item">
+              <a href="#" class="info-panel__link">
+                No-Obligation Zoom Call <span>request</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <script>
