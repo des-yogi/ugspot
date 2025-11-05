@@ -1,14 +1,18 @@
 .win-option-card {
-  padding: 16px;
+  padding: 8px;
   background-color: $block-bg;
   border-radius: $border-radius;
   border: 1px solid $border-color;
+
+  @media (min-width: $screen-md) {
+    padding: 16px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
   &__img {
     margin-bottom: 24px;
-    border-radius: $border-radius;
+    border-radius: $border-radius * 0.65;
 
     img {
       object-fit: cover;
@@ -22,6 +26,10 @@
 
   &__title {
     margin-top: 0;
+
+    @media (max-width: $screen-md - 1) {
+      font-size: $font-size;
+    }
   }
 
   &__list-item {
@@ -42,5 +50,16 @@
 
   &__value {
     margin: 0 0 4px;
+
+    @media (max-width: $screen-md - 1) {
+      font-size: $font-size;
+    }
+  }
+
+  &__caption {
+
+    @media (max-width: $screen-md - 1) {
+      font-size: $font-size-sm;
+    }
   }
 }
