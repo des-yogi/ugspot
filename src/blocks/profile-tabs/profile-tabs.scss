@@ -1,0 +1,88 @@
+.profile-tabs {
+  $block-name:                &; // #{$block-name}__element
+
+  margin-top: -16px;
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 0 16px;
+    padding: 16px 16px 24px;
+    overflow-x: auto;
+  }
+
+  &__nav-link {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 216px;
+    width: 216px;
+    padding: 8px 8px 16px;
+    background-color: $block-bg;
+    border: 1px solid $block-bg;
+    border-radius: $border-radius;
+    cursor: pointer;
+    user-select: none;
+    transition: all $transition-time ease;
+
+    &:hover,
+    &:focus {
+      box-shadow: $red-shadow;
+    }
+
+    &.active {
+      border-color: $main-color;
+      box-shadow: $red-shadow;
+    }
+  }
+
+  &__img {
+    border-radius: $border-radius * 0.6;
+    background-color: $secondary-color;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__label {
+    margin: 10px 0 0;
+    text-align: center;
+  }
+
+  &__content {
+    margin-top: 24px;
+  }
+
+  // &__content-row {
+
+  // }
+
+  &__col-img {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(lg, 2);
+    @include col(lg, 8);
+    @include col-offset(xl, 0);
+    @include col(xl, 6);
+  }
+
+  &__col-text {
+    @include col(xs, 12);
+    //@include col(md, 6);
+    @include col(xl, 6);
+  }
+
+  // &__pane {
+
+  // }
+
+  &__title {
+    margin-top: 0;
+  }
+}
