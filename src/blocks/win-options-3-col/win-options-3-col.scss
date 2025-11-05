@@ -20,15 +20,15 @@
   }
 
   &__slide {
-    width: 328px;
+    width: 172px; //328
 
-    @media (min-width: $screen-lg) {
-      width: 360px;
-    }
+    // @media (min-width: $screen-md) {
+    //   width: 229px;
+    // }
 
-    @media (min-width: $screen-xl) {
-      width: 389px;
-    }
+    // @media (min-width: $screen-xl) {
+    //   width: 389px;
+    // }
   }
 
   &__footnote {

@@ -10,17 +10,25 @@
       enabled: true,
       slideRole: 'listitem',
     },
+    centerInsufficientSlides: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: false,
+    },
     breakpoints: {
-      // 480: {
-      //   slidesPerView: 1.5,
-      //   spaceBetween: 30
-      // },
+      600: {
+       slidesPerView: 3,
+      },
       // 768: {
-      //   slidesPerView: 2.5,
+      //  slidesPerView: 3,
       // },
-      1200: {
-        slidesPerView: 3,
-      }
+      // 1200: {
+      //   slidesPerView: 3,
+      // }
     }
   });
 }());
