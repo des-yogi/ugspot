@@ -1780,7 +1780,7 @@
         </section>
 
 
-        <hr>
+        <hr>
 
         <article class="container  win-styles-2-col">
 
@@ -1843,91 +1843,210 @@
             </section>
           </div>
 
-          <div class="row  win-styles-2-col__row" role="list">
+          <div class="profile-tabs">
+            <nav class="profile-tabs__nav">
+              <div class="profile-tabs__nav-list" id="profile-pane-2Tab" role="tablist">
+                <button class="profile-tabs__nav-link active" id="profile-tab-1" data-bs-toggle="tab" data-bs-target="#profile-pane-1" type="button" role="tab" aria-controls="profile-pane-1" aria-selected="true">
+                  <span class="embed-responsive  embed-responsive--4-3  profile-tabs__img">
+                    <picture>
+                      <source srcset="img/profile-standart.webp,
+                                      img/profile-standart.webp 2x"
+                              type="image/webp">
+                      <!-- 200x150, 300x225 2x -->
+                      <img src="img/profile-standart.jpg"
+                           srcset="img/profile-standart.jpg,
+                                   img/profile-standart.jpg 2x"
+                           alt=""
+                           width="300"
+                           height="225"
+                           loading="lazy">
+                    </picture>
+                  </span>
+                  <span class="h4  profile-tabs__label">Standard Profile</span>
+                </button>
 
-            <!-- Add mod "win-styles-2-col__item-col--mod-3-col" for 3 columns -->
-            <div class="win-styles-2-col__item-col" role="listitem">
-              <section class="win-styles-2-col__item">
-                <div class="embed-responsive embed-responsive--4-3  win-styles-2-col__img">
+                <button class="profile-tabs__nav-link" id="profile-tab-2" data-bs-toggle="tab" data-bs-target="#profile-pane-2" type="button" role="tab" aria-controls="profile-pane-2" aria-selected="false">
+                  <span class="embed-responsive  embed-responsive--4-3  profile-tabs__img">
+                    <picture>
+                      <source srcset="img/profile-slim.webp,
+                                      img/profile-slim.webp 2x"
+                              type="image/webp">
+                      <!-- 200x150, 300x225 2x -->
+                      <img src="img/profile-slim.jpg"
+                           srcset="img/profile-slim.jpg,
+                                   img/profile-slim.jpg 2x"
+                           alt=""
+                           width="300"
+                           height="225"
+                           loading="lazy">
+                    </picture>
+                  </span>
+                  <span class="h4  profile-tabs__label">Slim Profile</span>
+                </button>
+
+                <button class="profile-tabs__nav-link" id="profile-tab-3" data-bs-toggle="tab" data-bs-target="#profile-pane-3" type="button" role="tab" aria-controls="profile-pane-3" aria-selected="false">
+                  <span class="embed-responsive  embed-responsive--4-3  profile-tabs__img">
+                    <picture>
+                      <source srcset="img/profile-standart.webp,
+                                      img/profile-standart.webp 2x"
+                              type="image/webp">
+                      <!-- 200x150, 300x225 2x -->
+                      <img src="img/profile-standart.jpg"
+                           srcset="img/profile-standart.jpg,
+                                   img/profile-standart.jpg 2x"
+                           alt=""
+                           width="300"
+                           height="225"
+                           loading="lazy">
+                    </picture>
+                  </span>
+                  <span class="h4  profile-tabs__label">Fire-Resistant Glass</span>
+                </button>
+              </div>
+            </nav>
+
+            <div class="tab-content  profile-tabs__content" id="profile-pane-2Content">
+
+              <section class="tab-pane  profile-tabs__pane fade show active" id="profile-pane-1" role="tabpanel" aria-labelledby="profile-tab-1" tabindex="0">
+                <div class="row  profile-tabs__content-row">
+                  <div class="profile-tabs__col-img">
+                    <div class="embed-responsive  embed-responsive--4-3  profile-tabs__content-img">
+                      <picture>
+                        <source srcset="img/profile-standart.webp,
+                                        img/profile-standart.webp 2x" media="(min-width: 1280px)" type="image/webp">
+                        <source srcset="img/profile-standart.jpg,
+                                        img/profile-standart.jpg 2x" media="(min-width: 1280px)">
+                        <!-- 592x444, 900х675 2х -->
+                        <source srcset="img/profile-standart.webp,
+                                        img/profile-standart.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                        <source srcset="img/profile-standart.jpg,
+                                        img/profile-standart.jpg 2x" media="(min-width: 1200px)">
+                        <!-- 764x573, 1150х863 2х -->
+                        <source srcset="img/profile-standart.webp" media="(min-width: 1024px)" type="image/webp">
+                        <source srcset="img/profile-standart.jpg" media="(min-width: 1024px)">
+                        <!-- 980x735 -->
+                        <source srcset="img/profile-standart.webp" media="(min-width: 480px)" type="image/webp">
+                        <source srcset="img/profile-standart.jpg" media="(min-width: 480px)">
+                        <!-- 675x506 -->
+                        <source srcset="img/profile-standart.webp" media="(min-width: 300px)" type="image/webp">
+                        <source srcset="img/profile-standart.jpg" media="(min-width: 300px)">
+                        <!-- 570x428 -->
+                        <img src="img/profile-standart.jpg" alt="" width="1200" height="900" loading="lazy">
+                      </picture>
+                    </div>
+                  </div>
+
+                  <div class="profile-tabs__col-text">
+                    <div class="profile-tabs__content-text">
+                      <h3 class="profile-tabs__title">Standard Profile</h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi eveniet doloribus ducimus dignissimos exercitationem totam nihil veritatis dicta sint unde deleniti laboriosam magnam omnis sunt, atque facilis deserunt laborum ex vel magni. Nobis distinctio nesciunt non quae eveniet mollitia veniam quia labore illo voluptatum, porro maxime asperiores blanditiis nam alias dolores laborum consequatur.</p>
+                      <p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, ab, fugiat. Aperiam sed quas officia aut dolorem.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="tab-pane  profile-tabs__pane fade" id="profile-pane-2" role="tabpanel" aria-labelledby="profile-tab-2" tabindex="0">
+                <div class="row  profile-tabs__content-row">
+                  <div class="profile-tabs__col-img">
+                    <div class="embed-responsive  embed-responsive--4-3  profile-tabs__content-img">
+                      <picture>
+                        <!-- <source srcset="img/profile-standart.webp,
+                                        img/profile-standart.webp 2x" type="image/webp"> -->
+                        <source srcset="img/profile-slim.webp" media="(min-width: 300px)" type="image/webp">
+                        <source srcset="img/profile-slim.jpg" media="(min-width: 300px)">
+
+                        <!-- 200x150, 300x225 2x -->
+                        <img src="img/profile-slim.jpg"
+                             alt=""
+                             width="300"
+                             height="225"
+                             loading="lazy">
+                      </picture>
+                    </div>
+                  </div>
+
+                  <div class="profile-tabs__col-text">
+                    <div class="profile-tabs__content-text">
+                      <h3 class="profile-tabs__title">Slim Profile</h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi eveniet doloribus ducimus dignissimos exercitationem totam nihil veritatis dicta sint unde deleniti laboriosam magnam omnis sunt, atque facilis deserunt laborum ex vel magni. Nobis distinctio nesciunt non quae eveniet mollitia veniam quia labore illo voluptatum, porro maxime asperiores blanditiis nam alias dolores laborum consequatur.</p>
+                      <p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, ab, fugiat. Aperiam sed quas officia aut dolorem.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="tab-pane  profile-tabs__pane fade" id="profile-pane-3" role="tabpanel" aria-labelledby="profile-tab-3" tabindex="0">
+                <div class="row  profile-tabs__content-row">
+                  <div class="profile-tabs__col-img">
+                    <div class="embed-responsive  embed-responsive--4-3  profile-tabs__content-img">
+                      <picture>
+                        <!-- <source srcset="img/profile-standart.webp,
+                                        img/profile-standart.webp 2x" type="image/webp"> -->
+                        <source srcset="img/profile-standart.webp" media="(min-width: 300px)" type="image/webp">
+                        <source srcset="img/profile-standart.jpg" media="(min-width: 300px)">
+
+                        <!-- 200x150, 300x225 2x -->
+                        <img src="img/profile-standart.jpg"
+                             alt=""
+                             width="300"
+                             height="225"
+                             loading="lazy">
+                      </picture>
+                    </div>
+                  </div>
+
+                  <div class="profile-tabs__col-text">
+                    <div class="profile-tabs__content-text">
+                      <h3 class="profile-tabs__title">Fire-Resistant Glass </h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi eveniet doloribus ducimus dignissimos exercitationem totam nihil veritatis dicta sint unde deleniti laboriosam magnam omnis sunt, atque facilis deserunt laborum ex vel magni. Nobis distinctio nesciunt non quae eveniet mollitia veniam quia labore illo voluptatum, porro maxime asperiores blanditiis nam alias dolores laborum consequatur.</p>
+                      <p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, ab, fugiat. Aperiam sed quas officia aut dolorem.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+
+          <section class="profile-tabs__pane" style="margin-top: 40px;">
+            <div class="row  profile-tabs__content-row">
+              <div class="profile-tabs__col-img">
+                <div class="embed-responsive  embed-responsive--4-3  profile-tabs__content-img">
                   <picture>
                     <source srcset="img/profile-standart.webp,
-                                    img/profile-standart.webp 2x" media="(min-width: 1280px)"
-                                    type="image/webp">
+                                    img/profile-standart.webp 2x" media="(min-width: 1280px)" type="image/webp">
                     <source srcset="img/profile-standart.jpg,
                                     img/profile-standart.jpg 2x" media="(min-width: 1280px)">
-                    <!-- 491x368, 737x553 2x -->
-
+                    <!-- 592x444, 900х675 2х -->
                     <source srcset="img/profile-standart.webp,
-                                    img/profile-standart.webp 2x" media="(min-width: 1024px)"
-                                    type="image/webp">
+                                    img/profile-standart.webp 2x" media="(min-width: 1200px)" type="image/webp">
                     <source srcset="img/profile-standart.jpg,
-                                    img/profile-standart.jpg 2x" media="(min-width: 1024px)">
-                    <!-- 568x426, 852x639 2x -->
-
-                    <source srcset="img/profile-standart.webp" media="(min-width: 768px)" type="image/webp">
-                    <source srcset="img/profile-standart.jpg" media="(min-width: 768px)">
-                    <!-- 720x540 -->
+                                    img/profile-standart.jpg 2x" media="(min-width: 1200px)">
+                    <!-- 764x573, 1150х863 2х -->
+                    <source srcset="img/profile-standart.webp" media="(min-width: 1024px)" type="image/webp">
+                    <source srcset="img/profile-standart.jpg" media="(min-width: 1024px)">
+                    <!-- 980x735 -->
                     <source srcset="img/profile-standart.webp" media="(min-width: 480px)" type="image/webp">
                     <source srcset="img/profile-standart.jpg" media="(min-width: 480px)">
-                    <!-- 815x611 -->
-                    <source srcset="img/profile-standart.webp" media="(min-width: 320px)" type="image/webp">
-                    <source srcset="img/profile-standart.jpg" media="(min-width: 320px)">
+                    <!-- 675x506 -->
+                    <source srcset="img/profile-standart.webp" media="(min-width: 300px)" type="image/webp">
+                    <source srcset="img/profile-standart.jpg" media="(min-width: 300px)">
                     <!-- 570x428 -->
-
-                    <img src="img/profile-standart.jpg" alt="Alt text" width="900" height="675" loading="lazy">
+                    <img src="img/profile-standart.jpg" alt="" width="1200" height="900" loading="lazy">
                   </picture>
                 </div>
-                <div class="win-styles-2-col__text-wrapper">
-                  <h3 class="win-styles-2-col__item-title">Standart</h3>
-                  <div class="win-styles-2-col__item-text">
-                    <p>Offer a robust and traditional frame appearance, providing excellent insulation, durability, and support for larger glass panes. These profiles are ideal for those who prioritize structural integrity and maximum thermal performance. These frames are typically more common and versatile, allowing for larger glass panes and providing excellent insulation. The wider frame also supports more customization options in terms of materials and finishes. While they offer great structural support, they can sometimes reduce the amount of visible glass, which slightly affects the natural light entering your space.</p>
-                  </div>
+              </div>
+
+              <div class="profile-tabs__col-text">
+                <div class="profile-tabs__content-text">
+                  <h3 class="profile-tabs__title">ОПЦІОНАЛЬНИЙ БЛОК</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi eveniet doloribus ducimus dignissimos exercitationem totam nihil veritatis dicta sint unde deleniti laboriosam magnam omnis sunt, atque facilis deserunt laborum ex vel magni. Nobis distinctio nesciunt non quae eveniet mollitia veniam quia labore illo voluptatum, porro maxime asperiores blanditiis nam alias dolores laborum consequatur.</p>
+                  <p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, ab, fugiat. Aperiam sed quas officia aut dolorem.</p>
                 </div>
-              </section>
+              </div>
             </div>
-
-            <div class="win-styles-2-col__item-col" role="listitem">
-              <section class="win-styles-2-col__item">
-                <div class="embed-responsive embed-responsive--4-3  win-styles-2-col__img">
-                  <picture>
-                    <source srcset="img/profile-slim.webp,
-                                    img/profile-slim.webp 2x" media="(min-width: 1280px)"
-                                    type="image/webp">
-                    <source srcset="img/profile-slim.jpg,
-                                    img/profile-slim.jpg 2x" media="(min-width: 1280px)">
-                    <!-- 491x368, 737x553 2x -->
-
-                    <source srcset="img/profile-slim.webp,
-                                    img/profile-slim.webp 2x" media="(min-width: 1024px)"
-                                    type="image/webp">
-                    <source srcset="img/profile-slim.jpg,
-                                    img/profile-slim.jpg 2x" media="(min-width: 1024px)">
-                    <!-- 568x426, 852x639 2x -->
-
-                    <source srcset="img/profile-slim.webp" media="(min-width: 768px)" type="image/webp">
-                    <source srcset="img/profile-slim.jpg" media="(min-width: 768px)">
-                    <!-- 720x540 -->
-                    <source srcset="img/profile-slim.webp" media="(min-width: 480px)" type="image/webp">
-                    <source srcset="img/profile-slim.jpg" media="(min-width: 480px)">
-                    <!-- 815x611 -->
-                    <source srcset="img/profile-slim.webp" media="(min-width: 320px)" type="image/webp">
-                    <source srcset="img/profile-slim.jpg" media="(min-width: 320px)">
-                    <!-- 570x428 -->
-
-                    <img src="img/profile-slim.jpg" alt="Alt text" width="900" height="675" loading="lazy">
-                  </picture>
-                </div>
-                <div class="win-styles-2-col__text-wrapper">
-                  <h3 class="win-styles-2-col__item-title">Slim</h3>
-                  <div class="win-styles-2-col__item-text">
-                    <p>On the other hand, slim profiles are designed with sleek, narrow frames to maximize glass area and allow more natural light into your space. Perfect for modern designs or properties where a minimalist look is desired, slim profiles provide a refined aesthetic while still maintaining energy efficiency and strength.</p>
-                    <p><strong>Cortizo, Deceuninck, Kommerling, Rehau, Reynaers, Schuco and SMART</strong>, ensuring a high-quality selection in both <strong>standard</strong> and <strong>slim profile lines</strong>. Whether you’re looking for bold, classic frames or a sleek, contemporary design, UGS presents all profile options to meet your specific needs.</p>
-                  </div>
-                </div>
-              </section>
-            </div>
-
-          </div>
+          </section>
 
         </article>
 

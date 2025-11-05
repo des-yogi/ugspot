@@ -96,7 +96,8 @@
     "timber-info": [],
     "cards-slider": [],
     "request-btn": [],
-    "info-panel": []
+    "info-panel": [],
+    "profile-tabs": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
