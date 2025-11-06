@@ -97,7 +97,9 @@
     "cards-slider": [],
     "request-btn": [],
     "info-panel": [],
-    "profile-tabs": []
+    "profile-tabs": [],
+    "spec-glass-tabs": [],
+    "timberlook-relevance": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

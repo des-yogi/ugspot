@@ -1,0 +1,45 @@
+.timberlook-relevance {
+  $block-name:                &; // #{$block-name}__element
+
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  &__header {
+
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &__row {
+    gap: 24px 0;
+  }
+
+  &__text-col,
+  &__img-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+  }
+
+  &__img-col {
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__text {
+    max-width: 495px;
+  }
+
+  &__subtitle {
+    margin-top: 0;
+  }
+
+  &__img {
+
+  }
+}

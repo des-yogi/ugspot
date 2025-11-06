@@ -503,5 +503,9 @@ a {
 @include col(xs, 12);
 @include col(md, 6);
 @include col(xl, 4);
+
+@media (min-width: $screen-md) {}
+@media (min-width: $screen-lg) {}
+@media (min-width: $screen-xl) {}
 */
 
