@@ -58,9 +58,9 @@
     margin-top: 24px;
   }
 
-  // &__content-row {
-
-  // }
+  &__content-row {
+    gap: 16px 0;
+  }
 
   &__col-img {
     @include col(xs, 12);
