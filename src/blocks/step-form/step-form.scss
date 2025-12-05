@@ -2,6 +2,10 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  // .swiper-wrapper {
+  //   margin-bottom: 64px;
+  // }
+
   &__row,
   &__colors,
   &__contacts-row {
@@ -17,6 +21,18 @@
     @include col-offset(lg, 1);
     @include col(lg, 10);
     //@include col(xl, 4);
+  }
+
+  &__col-1-2 {
+    @include col(xs, 12);
+    @include col(sm, 6);
+    //@include col(md, 6);
+    //@include col(lg, 3);
+
+    &--ext {
+      @include col(sm, 12);
+      @include col(md, 6);
+    }
   }
 
   &__col-2-4 {
@@ -51,19 +67,22 @@
   }
 
   &__container {
-
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
   }
 
-  &__step-1 {
-
-  }
 
   &__step-inner {
     display: block;
-    padding-top: 0;
-    padding: 64px 0;
+    //padding-top: 0;
+    padding: 0 0 64px;
     margin: 0;
     border: none;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 
   &__header {
@@ -74,6 +93,10 @@
   &__step-title {
     margin-top: 0;
     font-weight: 600;
+
+    & > span {
+      color: $main-color;
+    }
   }
 
   &__step-radio-btns {
@@ -111,6 +134,7 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
+    margin-top: 64px;
     //padding: 64px 0 0;
   }
 
@@ -148,10 +172,56 @@
     //   padding: 24px 32px;
     // }
 
+    .table-responsive {
+      margin: 0;
+    }
+
     .field-checkbox__name-text {
       font-size: 18px;
       line-height: 1.2;
       font-weight: 500;
+    }
+
+    tr {
+
+      &:not(:last-child) {
+
+        @media (max-width: $screen-md - 1) {
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+
+    th {
+      height: 56px;
+      vertical-align: middle;
+    }
+
+    td {
+
+      @media (max-width: $screen-md - 1) {
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+    }
+
+    td:has(.field-checkbox.one-of) {
+
+      @media (min-width: $screen-md) {
+        height: 73px;
+      }
+    }
+
+    .field-checkbox {
+
+      &.one-of {
+
+        @media (min-width: $screen-md) {
+          display: flex;
+          align-items: center;
+          height: 100%;
+        }
+      }
     }
   }
 }
