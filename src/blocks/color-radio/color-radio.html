@@ -1,0 +1,22 @@
+<!--DEV
+@ @include('blocks/color-radio/color-radio.html', {
+  "img": "colors-all",
+  "title": "Single",
+  "name": "name"
+})
+-->
+
+<div class="color-radio  one-only">
+  <label class="color-radio__lbl">
+    <span class="color-radio__img"
+          data-bg="img/@@img.jpg"
+          data-bg-webp="img/@@img.webp"
+          data-bg-speed="0.5"
+          role="img"
+          aria-label="Description of the image">
+    </span>
+    <!-- 540x405 img-size -->
+    <input class="color-radio__input" type="radio" name="@@name" value="@@name">
+    <span class="color-radio__name-text">@@title</span>
+  </label>
+</div>

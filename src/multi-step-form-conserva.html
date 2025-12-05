@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Multi step form</title>
+  <title>Multi step form Conservatories</title>
   @@include('_include/page_head.html')
 </head>
 
@@ -22,7 +22,7 @@
         <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
           <h1 style="text-align: center;">Let us know what you need</h1>
 
-          <form class="form  step-form" action="#" method="post" enctype="multipart/form-data">
+          <form class="form  step-form  step-form-conserva" action="#" method="post" enctype="multipart/form-data">
 
             <div class="row">
               <div class="step-form__col-progress">
@@ -40,7 +40,7 @@
                     <span class="progress__flag" data-step="1"></span>
                     <span class="progress__flag" data-step="2"></span> -->
                   </div>
-                  <p class="progress__slide-num">(1 step out of 3)</p>
+                  <p class="progress__slide-num">(1 step out of 4)</p>
                 </div>
 
                 <p class="step-form__info">Aluminum is known for its strength and durability. It is resistant to rust, corrosion, and other environmental factors.</p>
@@ -52,172 +52,349 @@
 
                 <div class="swiper-slide  step-form__step-1">
 
-                  <fieldset class="step-form__step-inner">
-                    <div class="row">
-                      <div class="step-form__col-details">
-                        <div class="step-form__header">
-                          <h2 class="step-form__step-title">Selecting the service <span>*</span></h2>
-                        </div>
-                        <div class="step-form__step-radio-btns">
-                          <div class="field-radio">
-                            <div class="field-radio__input-wrap">
-                              <label class="field-radio__name">
-                                <input class="field-radio__input" type="radio" name="service" value="service1" checked>
-                                <span class="field-radio__name-text">I want supply only</span>
-                              </label>
-                              <div class="field-radio__help-text-wrap">
-                                <div class="field-radio__help-text"></div>
-                              </div>
-                            </div>
-                            <div class="field-radio__input-wrap">
-                              <label class="field-radio__name">
-                                <input class="field-radio__input" type="radio" name="service" value="service2">
-                                <span class="field-radio__name-text">I want supply & installation </span>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
+                  <fieldset class="step-form__step-inner  step-form__group"
+                            data-required-radio-group="true"
+                            data-group-title="We start the project by...">
+                    <div class="step-form__header">
+                      <h2 class="h3  step-form__step-title">We start the project by... <span>*</span></h2>
+                      <!-- <p>Select at least one card and then enter the desired number of items</p> -->
+                    </div>
+
+                    <div class="row  step-form__row">
+
+                      <div class="step-form__col-1-2">
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
+                          "img": "material",
+                          "title": "Build New",
+                          "name": "start"
+                        })
                       </div>
+
+                      <div class="step-form__col-1-2">
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
+                          "img": "material",
+                          "title": "Replace Existing",
+                          "name": "start"
+                        })
+                      </div>
+
                     </div>
                   </fieldset>
 
-                  <fieldset class="step-form__step-inner">
+                </div>
+
+                <div class="swiper-slide  step-form__step-2">
+
+                  <fieldset class="step-form__step-inner  step-form__group"
+                            data-required-radio-group="true"
+                            data-group-title="Choose your material">
                     <div class="step-form__header">
-                      <h2 class="step-form__step-title">Selecting the required element <span>*</span></h2>
-                      <p>Select at least one card and then enter the desired number of items</p>
+                      <h2 class="h3  step-form__step-title">Choose your material <span>*</span></h2>
+                      <!-- <p>Select at least one card and then enter the desired number of items</p> -->
                     </div>
 
                     <div class="row  step-form__row">
 
                       <div class="step-form__col-2-4">
-                        @@include('blocks/media-checkbox/media-checkbox.html', {
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
                           "img": "material",
                           "title": "Window",
-                          "name": "name"
+                          "name": "material"
                         })
                       </div>
 
                       <div class="step-form__col-2-4">
-                        @@include('blocks/media-checkbox/media-checkbox.html', {
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
                           "img": "material",
                           "title": "Entrance and/or back door",
-                          "name": "name"
+                          "name": "material"
                         })
                       </div>
 
                       <div class="step-form__col-2-4">
-                        @@include('blocks/media-checkbox/media-checkbox.html', {
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
                           "img": "material",
                           "title": "Slider and/or bi-fold",
-                          "name": "name"
+                          "name": "material"
                         })
                       </div>
 
                       <div class="step-form__col-2-4">
-                        @@include('blocks/media-checkbox/media-checkbox.html', {
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
                           "img": "material",
                           "title": "French door",
-                          "name": "name"
+                          "name": "material"
                         })
                       </div>
 
                       <div class="step-form__col-2-4">
-                        @@include('blocks/media-checkbox/media-checkbox.html', {
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
                           "img": "material",
                           "title": "Glazed unit and/or secondary window",
-                          "name": "name"
+                          "name": "material"
                         })
                       </div>
 
                       <div class="step-form__col-2-4">
-                        @@include('blocks/media-checkbox/media-checkbox.html', {
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
                           "img": "material",
                           "title": "Roof Lanterns and/or walk on glass",
-                          "name": "name"
+                          "name": "material"
                         })
                       </div>
 
                       <div class="step-form__col-2-4">
-                        @@include('blocks/media-checkbox/media-checkbox.html', {
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
                           "img": "material",
                           "title": "Crittall Door and/or Wall",
-                          "name": "name"
+                          "name": "material"
                         })
                       </div>
 
                       <div class="step-form__col-2-4">
-                        @@include('blocks/media-checkbox/media-checkbox.html', {
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
                           "img": "material",
                           "title": "Conservatory",
-                          "name": "name"
+                          "name": "material"
                         })
                       </div>
 
                     </div>
                   </fieldset>
 
-                  <fieldset class="step-form__step-inner">
+                  <fieldset class="step-form__step-inner  step-form__group"
+                            data-required-radio-group="true"
+                            data-group-title="Choose your type">
+                    <div class="step-form__header">
+                      <h2 class="h3  step-form__step-title">Choose your type <span>*</span></h2>
+                      <!-- <p>Select at least one card and then enter the desired number of items</p> -->
+                    </div>
+
+                    <div class="row  step-form__row">
+
+                      <div class="step-form__col-2-4">
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
+                          "img": "material",
+                          "title": "Window",
+                          "name": "type"
+                        })
+                      </div>
+
+                      <div class="step-form__col-2-4">
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
+                          "img": "material",
+                          "title": "Entrance and/or back door",
+                          "name": "type"
+                        })
+                      </div>
+
+                      <div class="step-form__col-2-4">
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
+                          "img": "material",
+                          "title": "Slider and/or bi-fold",
+                          "name": "type"
+                        })
+                      </div>
+
+                      <div class="step-form__col-2-4">
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
+                          "img": "material",
+                          "title": "French door",
+                          "name": "type"
+                        })
+                      </div>
+
+                      <div class="step-form__col-2-4">
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
+                          "img": "material",
+                          "title": "Glazed unit and/or secondary window",
+                          "name": "type"
+                        })
+                      </div>
+
+                      <div class="step-form__col-2-4">
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
+                          "img": "material",
+                          "title": "Roof Lanterns and/or walk on glass",
+                          "name": "type"
+                        })
+                      </div>
+
+                      <div class="step-form__col-2-4">
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
+                          "img": "material",
+                          "title": "Crittall Door and/or Wall",
+                          "name": "type"
+                        })
+                      </div>
+
+                      <div class="step-form__col-2-4">
+                        @@include('blocks/media-radiobtn/media-radiobtn.html', {
+                          "img": "material",
+                          "title": "Conservatory",
+                          "name": "type"
+                        })
+                      </div>
+
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="step-form__step-inner  step-form__group">
+                    <div class="row  step-form-conserva__sizes-row">
+
+                      <div class="step-form__col-1-2  step-form__col-1-2--ext">
+                        <section class="step-form-conserva__sizes">
+                          <div class="step-form__header">
+                            <h3 class="step-form__step-title">Measurements (optional)</h3>
+                          </div>
+
+                          <div class="step-form-conserva__group-wrapper">
+                            <label class="field-text">
+                              <span class="field-text__name">Depth, mm</span>
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input"
+                                       type="text"
+                                       name="depth"
+                                       inputmode="numeric"
+                                       data-validate="number-mm"
+                                       placeholder="0">
+                                <span class="field-text__help-text"></span>
+                              </span>
+                            </label>
+
+                            <label class="field-text">
+                              <span class="field-text__name">Width, mm</span>
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input"
+                                       type="text"
+                                       name="width"
+                                       inputmode="numeric"
+                                       data-validate="number-mm"
+                                       placeholder="0">
+                                <span class="field-text__help-text"></span>
+                              </span>
+                            </label>
+
+                            <label class="field-text">
+                              <span class="field-text__name">Height, mm</span>
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input"
+                                       type="text"
+                                       name="height"
+                                       inputmode="numeric"
+                                       data-validate="number-mm"
+                                       placeholder="0">
+                                <span class="field-text__help-text"></span>
+                              </span>
+                            </label>
+
+                            <p class="step-form-conserva__sizes-info">
+                              ℹ️ If you do not have measurements, skip these fields
+                            </p>
+                          </div>
+                        </section>
+                      </div>
+
+                      <div class="step-form__col-1-2  step-form__col-1-2--ext">
+                        <section class="step-form-conserva__extra-info">
+                          <div class="step-form__header">
+                            <h3 class="step-form__step-title">Extra information (optional)</h3>
+                          </div>
+
+                          <label class="field-text" style="margin-bottom: 0;">
+                              <span class="field-text__name  visually-hidden">Extra information textarea</span>
+                              <span class="field-text__input-wrap">
+                                <textarea class="field-text__input"
+                                          name="extra-info"
+                                          placeholder="Extra information you would like us to know"
+                                          rows="7"></textarea>
+                                <span class="field-text__help-text"></span>
+                              </span>
+                            </label>
+                        </section>
+                      </div>
+
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="step-form__step-inner  step-form__group"
+                            data-required-radio-group="true"
+                            data-group-title="Select a color option">
                     <div class="step-form__header">
                       <h3 class="step-form__step-title">Selecting a color option <span>*</span></h3>
-                      <p>Select at least one item</p>
+                      <!-- <p>Select at least one</p> -->
                     </div>
 
                     <div class="row  step-form__colors">
                       <div class="step-form__col-color">
-                        @@include('blocks/color-checkbox/color-checkbox.html', {
+                        @@include('blocks/color-radio/color-radio.html', {
                           "img": "colors-all",
-                          "title": "Single",
-                          "name": "single-color"
+                          "title": "White",
+                          "name": "color"
                         })
                       </div>
 
                       <div class="step-form__col-color">
-                        @@include('blocks/color-checkbox/color-checkbox.html', {
+                        @@include('blocks/color-radio/color-radio.html', {
                           "img": "colors-all",
-                          "title": "Dual / different in & out",
-                          "name": "multi-color"
+                          "title": "Black",
+                          "name": "color"
+                        })
+                      </div>
+
+                      <div class="step-form__col-color">
+                        @@include('blocks/color-radio/color-radio.html', {
+                          "img": "colors-all",
+                          "title": "Anthracite grey",
+                          "name": "color"
+                        })
+                      </div>
+
+                      <div class="step-form__col-color">
+                        @@include('blocks/color-radio/color-radio.html', {
+                          "img": "colors-all",
+                          "title": "Other color",
+                          "name": "color"
                         })
                       </div>
                     </div>
                   </fieldset>
 
-                  <fieldset class="step-form__step-inner">
-                    <div class="row">
-                      <div class="step-form__col-details">
+                  <fieldset class="step-form__step-inner  step-form__group"
+                            data-required-radio-group="true"
+                            data-group-title="Permission">
+                    <div class="step-form__header">
+                      <h3 class="step-form__step-title">Planning permission obtained? <span>*</span></h3>
+                      <!-- <p>Select at least one item</p> -->
+                    </div>
 
-                        <div class="step-form__header">
-                          <h3 class="step-form__step-title">Further details <span>*</span></h3>
-                          <p>Please list types of units i.e window type bay window, approximate sizes of the units, material (upvc, timber/aluminium/ upvc timber-look and any additional details you want us to know about</p>
-                        </div>
+                    <div class="step-form-conserva__radio-btn-wrapper">
 
-                        <label class="field-text">
-                          <!-- <span class="field-text__name">Текст</span> -->
-                          <span class="field-text__input-wrap">
-                            <textarea class="field-text__input" name="text-option" placeholder="Type here…" style="padding-right: 24px;"></textarea>
-                            <span class="field-text__help-text"></span>
-                          </span>
-                        </label>
+                      @@include('blocks/radio-btn/radio-btn.html', {
+                        "name": "permission",
+                        "title": "Yes"
+                      })
 
-                        <div class="field-file" style="margin-bottom: 0;">
-                          <div class="field-file__name">Upload supporting files (optional)</div>
-                          <label class="field-file__input-wrap">
-                            <input class="field-file__input  novalidate" type="file" data-multiple-caption="files are selected: {count}" multiple>
-                            <span class="field-file__name-text" data-button-text="Select file(s)">Nothing is selected</span>
-                            <div class="field-file__help-text"></div>
-                          </label>
-                        </div>
+                      @@include('blocks/radio-btn/radio-btn.html', {
+                        "name": "permission",
+                        "title": "No"
+                      })
 
-                      </div>
+                      @@include('blocks/radio-btn/radio-btn.html', {
+                        "name": "permission",
+                        "title": "Not applicable"
+                      })
+
                     </div>
 
                   </fieldset>
 
                 </div>
 
-                <div class="swiper-slide  step-form__step-2">
+                <div class="swiper-slide  step-form__step-3">
                   <div class="row">
                     <div class="step-form__col-details">
-                      <fieldset class="step-form__step-inner">
+                      <fieldset class="step-form__step-inner  step-form__group">
                         <div class="step-form__table-wrapper">
                           <table class="table-responsive">
                             <thead>
@@ -355,8 +532,8 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide  step-form__step-3">
-                  <fieldset class="write-us  step-form__step-inner">
+                <div class="swiper-slide  step-form__step-4">
+                  <fieldset class="write-us  step-form__step-inner  step-form__group">
                     <div class="row  write-us__header">
 
                       <div class="write-us__header-col-title">
@@ -559,7 +736,7 @@
 
   @@include('_include/page_bottom.html')
 
-  <script src="js/step-form.js" defer></script>
+  <script src="js/step-form-conserva.js" defer></script>
 
 </body>
 </html>

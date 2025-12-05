@@ -46,6 +46,7 @@
 
         &::before { // stylelint-disable-line  max-nesting-depth
           display: block;
+          //min-height: 32px;
           margin-bottom: 8px;
           font-weight: 700;
           content: attr(data-label);
