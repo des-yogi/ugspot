@@ -73,6 +73,10 @@
     margin-top: 24px;
   }
 
+  &__content-row {
+    gap: 24px 0;
+  }
+
   &__content-text {
 
     @media (min-width: $screen-xl) {
