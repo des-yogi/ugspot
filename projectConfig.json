@@ -103,7 +103,8 @@
     "step-form-conserva": [],
     "media-radiobtn": [],
     "color-radio": [],
-    "radio-btn": []
+    "radio-btn": [],
+    "service-areas": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
