@@ -104,7 +104,9 @@
     "media-radiobtn": [],
     "color-radio": [],
     "radio-btn": [],
-    "service-areas": []
+    "service-areas": [],
+    "smarter-roof": [],
+    "header-animation": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

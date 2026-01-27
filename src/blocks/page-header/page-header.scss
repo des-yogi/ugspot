@@ -42,6 +42,17 @@
     }
   }
 
+  &__logo-wrapper {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+
+    .logo {
+      flex: 0 0 auto;
+    }
+  }
+
   &__contacts {
     display: flex;
     flex-wrap: wrap;

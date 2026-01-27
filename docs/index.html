@@ -35,16 +35,23 @@
 
   <div id="page" class="page__inner">
 
-    <div class="page__content">
+    <div class="page__content">
 
       <div class="page-header__wrapper">
         <header id="header" class="container  page-header">
 
           <div class="page-header__head">
 
-            <a href="index.html" class="logo">
-              <img src="img/ugspot-logo-header.svg" alt="UGSPOT logo" width="177" height="48">
-            </a>
+            <div class="page-header__logo-wrapper">
+              <a href="index.html" class="logo">
+                <img src="img/ugspot-logo-header.svg" alt="UGSPOT logo" width="177" height="48">
+              </a>
+
+              <div class="header-animation">
+                <img src="img/car.svg" alt="" width="89" height="36">
+              </div>
+
+            </div>
 
             <div class="page-header__contacts">
 
@@ -71,7 +78,7 @@
             </div>
           </div>
 
-          <div class="page-header__menu">
+          <div class="page-header__menu">
 
             <nav class="main-nav">
               <ul class="main-nav__list">
@@ -432,7 +439,7 @@
           </div>
 
         </header>
-      </div>
+      </div>
 
       <nav class="container breadcrumbs" aria-label="Breadcrumb">
         <ol class="list-nostyled breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -3347,7 +3354,7 @@
       <li><a href="/contact/">About us</a></li>
       <li><a href="/contact/">Contacts</a></li>
     </ul>
-  </nav>
+  </nav>
 
   <button class="fab  request-btn"
           type="button"
@@ -3357,10 +3364,9 @@
   >
     <span class="label  request-btn__label" aria-hidden="true">Request a service</span>
     <span class="icon  request-btn__icon" aria-hidden="true">
-      <!-- Замените на свою SVG-иконку -->
       <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#truck"></use></svg>
     </span>
-  </button>
+  </button>
 
   <div class="modal fade  modal--anchored  info-panel"
        id="infoModal" tabindex="-1"

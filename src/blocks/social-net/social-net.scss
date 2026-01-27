@@ -55,5 +55,16 @@
         background-color: rgba($color-wa, 1);
       }
     }
+
+    &--ln {
+      color: $color-ln;
+      background-color: rgba($color-ln, 0.16);
+
+      &:hover,
+      &:focus {
+        color: $white;
+        background-color: rgba($color-ln, 1);
+      }
+    }
   }
 }

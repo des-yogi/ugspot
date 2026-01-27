@@ -1,7 +1,8 @@
 .header-block {
   $block-name:                &; // #{$block-name}__element
 
-  padding: 64px 0;
+  padding-top: 64px;
+  padding-bottom: 64px;
 
   &__inner {
     text-align: center;

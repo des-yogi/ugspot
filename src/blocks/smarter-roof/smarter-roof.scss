@@ -1,0 +1,72 @@
+.smarter-roof {
+  $block-name:                &; // #{$block-name}__element
+
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  &__row {
+    gap: 16px 0;
+  }
+
+  &__img-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 4);
+    display: flex;
+  }
+
+  &__text-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 8);
+  }
+
+  &__img {
+    max-width: 388px;
+    margin: auto auto 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px 0;
+    height: 100%;
+  }
+
+  // &__header {
+  // }
+
+  //&__title {
+  //}
+
+  // &__intro {
+  // }
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: $screen-xl) {
+      flex-direction: initial;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    flex: 1 1 min-content;
+
+    // @media (min-width: $screen-xl) {
+    //   flex-basis: min-content;
+    // }
+  }
+}
