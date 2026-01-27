@@ -16,6 +16,40 @@
 
   --info-panel-backdrop-alpha: 0.38;
   --info-panel-easing: cubic-bezier(.2,.7,.2,1);
+
+  --fab-car-duration: 3.2s; //2.6              /* длительность полного цикла */
+  --fab-car-easing: cubic-bezier(.22,.9,.35,1);
+  /* Смещения: теперь старт — слева за контейнером (отрицательное значение),
+     enter/center положительные/близкие к нулю, end — справа за контейнером */
+  --car-offset-start: -140%;              /* где начинается (за левой границей) */
+  --car-offset-enter: -28%;               /* позиция, где машина уже видна */
+  --car-offset-center: 8%;                /* центральный участок движения */
+  --car-offset-end: 140%;                 /* куда уезжает (за правую границу) */
+}
+
+@keyframes pulse-shadow {
+  0% {
+    box-shadow: 0 0 6px 0 var(--fab-bg),
+                0 0 6px 0 var(--fab-bg);
+  }
+  40% {
+    box-shadow: 0 0 6px 6px rgba($black, 0),
+                0 0 3px 12px rgba($black, 0);
+  }
+  41% {
+    box-shadow: none;
+  }
+  60% {
+    box-shadow: none;
+  }
+  // 61% {
+  //   box-shadow: 0 0 6px 0 var(--fab-bg),
+  //               0 0 6px 0 var(--fab-bg);
+  // }
+  100% {
+    box-shadow: 0 0 6px 6px rgba($black, 0),
+                0 0 3px 12px rgba($black, 0);
+  }
 }
 
 /* Кнопка */
@@ -45,6 +79,8 @@
   //transition: background-color .25s var(--easing), box-shadow .25s var(--easing);
   cursor: pointer;
   user-select: none;
+  animation: pulse-shadow 2.2s infinite linear;
+  overflow-x: hidden;
 
 
   @media (min-width: $screen-md) {
@@ -77,6 +113,7 @@
   opacity: 0;
   translate: -4px 0;
   margin-inline-end: 0;   /* нет «зазора» рядом с иконкой */
+  padding-right: 2px;
 
   will-change: max-inline-size, opacity, translate, margin-inline-start;
   transition:
@@ -92,6 +129,7 @@
   .fab:hover,
   .fab:focus-visible {
     background: var(--fab-bg-hover);
+    animation: none;
     //box-shadow: 0 8px 20px rgba(0,0,0,.25);
   }
 
@@ -110,5 +148,97 @@
   .fab,
   .fab .label {
     transition: none;
+  }
+}
+
+/* Контейнер иконки — фиксированная область, чтобы label не сдвигал svg */
+.fab .request-btn__icon {
+  display: inline-block;
+  flex: none;
+  position: relative;                /* контейнер для абсолютного svg */
+  inline-size: var(--icon-size);
+  block-size: var(--icon-size);
+  //overflow: visible;                 /* чтобы svg мог выходить за границы области */
+  overflow: none;
+}
+
+/* Анимируем сам svg (без добавления элементов DOM) */
+.fab .request-btn__icon svg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  /* стартуем слева за границей своей зоны и центрируем по вертикали */
+  transform: translate3d(var(--car-offset-start), -50%, 0);
+  transform-origin: center;
+  will-change: transform, opacity;
+
+  /* Параметры анимации */
+  animation-name: car-carousel;
+  animation-duration: var(--fab-car-duration);
+  animation-timing-function: var(--fab-car-easing);
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-delay: 0.2s;
+
+  /* GPU-ускорение */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Keyframes: заезд слева -> видимый -> центр -> уход направо */
+@keyframes car-carousel {
+  0% {
+    transform: translate3d(var(--car-offset-start), -50%, 0) scale(.96);
+    opacity: 0;
+  }
+
+  // 12% {
+  //   transform: translate3d(var(--car-offset-enter), -50%, 0) scale(1);
+  //   opacity: 1;
+  // }
+  20% {
+    transform: translate3d(var(--car-offset-center), -50%, 0) scale(1);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translate3d(var(--car-offset-center), -50%, 0) scale(1);
+    opacity: 1;
+  }
+  // 50% {
+  //   transform: translate3d(var(--car-offset-center), -50%, 0) scale(1);
+  //   opacity: 1;
+  // }
+
+  // 88% {
+  //   transform: translate3d(var(--car-offset-end), -50%, 0) scale(.96);
+  //   opacity: 0;
+  // }
+
+  100% {
+    transform: translate3d(var(--car-offset-end), -50%, 0) scale(.96);
+    opacity: 0;
+  }
+}
+
+/* Поведение при hover/focus: принудительно показываем машину в центре */
+.fab:hover .request-btn__icon svg,
+.fab:focus-visible .request-btn__icon svg {
+  /* Полностью отменяем animation, чтобы transform можно было переопределить */
+  animation: none !important;
+
+  /* Гарантированно видимая позиция — центр */
+  transform: translate3d(var(--car-offset-center), -50%, 0) scale(1);
+  opacity: 1;
+
+  /* Плавный переход в центр (синхронизируйте с переходом .label, если нужно) */
+  transition: transform .35s var(--easing), opacity .2s var(--easing);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .fab .request-btn__icon svg {
+    animation: none !important;
+    transition: none !important;
   }
 }
