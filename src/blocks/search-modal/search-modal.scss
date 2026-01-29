@@ -1,0 +1,19 @@
+.search-modal {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__dialog {
+    margin-top: 120px;
+  }
+
+  &__header {
+    align-items: center;
+  }
+}
+
+.mm-wrapper:has(.page-header--slideUp) {
+
+  .search-modal__dialog {
+    margin-top: 56px;
+  }
+}

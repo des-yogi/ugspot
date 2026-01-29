@@ -1,0 +1,26 @@
+<!--DEV
+@ @include('blocks/search-modal/search-modal.html')
+-->
+
+<!-- Search Modal -->
+<div class="modal fade  search-modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true" role="dialog">
+  <div class="modal-dialog  search-modal__dialog">
+    <div class="modal-content">
+      <div class="modal-header  search-modal__header">
+        <h4 class="modal-title" id="searchModalLabel">Website search form</h4>
+        <button type="button" class="btn  btn--pale  btn-close  close" data-bs-dismiss="modal" aria-label="Close" title="Close modal"><span></span></button>
+      </div>
+      <div class="modal-body">
+        <form id="simplesearch-search-form  searchForm" class="search-modal__form" action="#" method="post">
+          <label class="field-text" style="margin-bottom: 0;">
+            <span class="field-text__name  visually-hidden">Please enter your query here</span>
+            <span class="field-text__input-wrap">
+              <input id="search-input" class="field-text__input" type="search" name="search" value="" placeholder="Enter your query here…">
+              <span class="field-text__help-text"></span>
+            </span>
+          </label>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
