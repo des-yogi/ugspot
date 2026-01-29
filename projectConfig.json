@@ -106,7 +106,8 @@
     "radio-btn": [],
     "service-areas": [],
     "smarter-roof": [],
-    "header-animation": []
+    "header-animation": [],
+    "search-modal": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

@@ -96,9 +96,17 @@
   @@include('blocks/request-btn/request-btn.html')
   @@include('blocks/info-panel/info-panel.html')
 
+  @@include('blocks/search-modal/search-modal.html')
+
   <script>
     document.addEventListener(
       "DOMContentLoaded", () => {
+
+        const searchHtml = `
+          <form id="mob-search-form" class="simplesearch-search-form mmenu__search custom-search" action="#" method="get">
+            <input id="mob-search" class="mmenu__input" type="search" name="search" value="" placeholder="Enter your query here…">
+          </form>
+        `;
 
         const mmenu = new Mmenu( "#menu", {
           "offCanvas": {
@@ -106,6 +114,10 @@
           },
           "theme": "white",
           "navbars": [
+            {
+              "position": "top",
+              "content": [ searchHtml ]
+            },
             {
               "position": "top",
               "content": [

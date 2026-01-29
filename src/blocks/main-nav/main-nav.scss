@@ -114,6 +114,7 @@
   &__link {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     padding: 11px 12px;
     text-decoration: none;
@@ -144,6 +145,9 @@
     &--apart {
       font-weight: 600;
       color: $main-color;
+      background-color: $body-bg;
+      border: none;
+      cursor: pointer;
     }
   }
 
@@ -264,5 +268,11 @@
       flex: 0 1;
       width: calc(50% - 12px);
     }
+  }
+
+  &__right {
+    display: inline-flex;
+    justify-content: flex-end;
+    gap: 8px;
   }
 }
