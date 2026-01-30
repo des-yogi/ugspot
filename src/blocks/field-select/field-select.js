@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const selects = document.querySelectorAll('.field-select__select');
   selects.forEach(function(item){
     new Choices(item, {
-      searchEnabled: true,
+      searchEnabled: false,
       searchPlaceholderValue: 'Search bar',
       //placeholderValue: 'Select',
       itemSelectText: 'Press to select',

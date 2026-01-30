@@ -107,7 +107,8 @@
     "service-areas": [],
     "smarter-roof": [],
     "header-animation": [],
-    "search-modal": []
+    "search-modal": [],
+    "step-form-glazing": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
@@ -149,7 +150,8 @@
   "copiedCss": [],
   "copiedJs": [
     "./src/js/libs/step-form.js",
-    "./src/js/libs/step-form-conserva.js"
+    "./src/js/libs/step-form-conserva.js",
+    "./src/js/libs/step-form-glazing.js"
   ],
   "dirs": {
     "srcPath": "./src/",
