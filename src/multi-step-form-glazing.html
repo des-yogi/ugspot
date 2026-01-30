@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Multi step form Secondary Glazing</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>You have JavaScript disabled. We apologize, but this makes it difficult to use this site.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main>
+
+        <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
+          <h1 style="text-align: center;">Let us know what you need</h1>
+
+          <form class="form  step-form  step-form-conserva  step-form-glazing" action="#" method="post" enctype="multipart/form-data">
+
+            <div class="row">
+              <div class="step-form__col-progress">
+                <div class="progress">
+                  <div class="progress__road">
+                    <div class="progress__road-bg"></div>
+                    <div class="progress__road-line"></div>
+                  </div>
+                  <div class="progress__car">
+                    <img src="img/car.svg" alt="UGSPOT car - progress indicator" width="88" height="36">
+                  </div>
+                  <div class="progress__flags">
+                    <!-- Флажки будут добавлены динамически -->
+                    <!-- <span class="progress__flag" data-step="0"></span>
+                    <span class="progress__flag" data-step="1"></span>
+                    <span class="progress__flag" data-step="2"></span> -->
+                  </div>
+                  <p class="progress__slide-num">(1 step out of 3)</p>
+                </div>
+
+                <p class="step-form__info">Aluminum is known for its strength and durability. It is resistant to rust, corrosion, and other environmental factors.</p>
+              </div>
+            </div>
+
+            <div class="swiper  step-form__container">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide  step-form__step-1">
+
+                  <div class="step-form-glazing__units" data-units-container></div>
+
+                  <template id="unit-template">
+                    <section class="step-form-glazing__unit">
+                      <div class="step-form-glazing__unit-header">
+                        <h2 class="step-form-glazing__unit-title">Unit type 1</h2>
+
+                        <button class="btn btn--pale step-form-glazing__unit-remove"
+                                type="button"
+                                data-action="remove-unit">
+                          <span>Remove</span>
+                        </button>
+                      </div>
+
+                      <!-- ВАЖНО: base name'ы остаются "чистыми": name="width", name="design", ... -->
+                      <!-- JS сам превратит их в unit1_width, unit2_width, ... -->
+                      <fieldset class="step-form__step-inner  step-form__group"
+                              data-required-radio-group="true"
+                              data-group-title="Unit design option">
+                        <div class="step-form__header">
+                          <legend class="h3  step-form__step-title">Choose UNIT DESIGN OPTION <span>*</span></legend>
+                          <!-- <p>Select at least one card and then enter the desired number of items</p> -->
+                        </div>
+
+                        <div class="row  step-form__row">
+
+                          <div class="step-form__col-2-4">
+                            @@include('blocks/media-radiobtn/media-radiobtn.html', {
+                              "img": "material",
+                              "title": "Option name",
+                              "name": "design"
+                            })
+                          </div>
+
+                          <div class="step-form__col-2-4">
+                            @@include('blocks/media-radiobtn/media-radiobtn.html', {
+                              "img": "material",
+                              "title": "Option name",
+                              "name": "design"
+                            })
+                          </div>
+
+                          <div class="step-form__col-2-4">
+                            @@include('blocks/media-radiobtn/media-radiobtn.html', {
+                              "img": "material",
+                              "title": "Option name",
+                              "name": "design"
+                            })
+                          </div>
+
+                          <div class="step-form__col-2-4">
+                            @@include('blocks/media-radiobtn/media-radiobtn.html', {
+                              "img": "material",
+                              "title": "Option name",
+                              "name": "design"
+                            })
+                          </div>
+
+                        </div>
+                      </fieldset>
+
+                      <div class="step-form__step-inner  step-form__group">
+                        <div class="row  step-form__row  step-form__row--ext">
+
+                          <div class="step-form-glazing__col-1-1-2">
+                            <fieldset class="step-form-glazing__fieldset">
+                              <div class="step-form__header">
+                                <legend class="h3  step-form__step-title">Choose a colour <span>*</span></legend>
+                              </div>
+
+                              <div class="step-form-glazing__select-wrapper">
+
+                                <div class="field-select" style="margin-bottom: 0;">
+                                  <label class="field-select__select-wrap">
+                                    <span class="field-select__name">Colour options <span>*</span></span>
+                                    <select class="field-select__select  field-select__select--required" name="color-primary" data-placeholder="Colour option">
+                                      <option value="" selected disabled>Choose a colour</option>
+                                      <option value="value1">Option 1</option>
+                                      <option value="value2">Option 2</option>
+                                      <option value="value3">Option 3</option>
+                                      <option value="value4">Option 4</option>
+                                    </select>
+                                    <!-- <small class="field-select__help-text error"></small> -->
+                                  </label>
+                                </div>
+
+                                <div class="field-select" style="margin-bottom: 0;">
+                                  <label class="field-select__select-wrap">
+                                    <span class="field-select__name">Colour options #2</span>
+                                    <select class="field-select__select  novalidate" name="color-add" data-placeholder="Second colour option">
+                                      <option value="" selected disabled>Choose a colour</option>
+                                      <option value="value1">Option 1</option>
+                                      <option value="value2">Option 2</option>
+                                      <option value="value3">Option 3</option>
+                                      <option value="value4">Option 4</option>
+                                    </select>
+                                    <!-- <small class="field-select__help-text error"></small> -->
+                                  </label>
+                                </div>
+
+                                <p class="step-form-glazing__warning">ℹ️ If you do not have measurements, skip these fields</p>
+                              </div>
+
+                            </fieldset>
+                          </div>
+
+                          <div class="step-form-glazing__col-1-1-2">
+                            <fieldset class="step-form-glazing__fieldset">
+                              <div class="step-form__header">
+                                <legend class="h3  step-form__step-title">Measurements</legend>
+                              </div>
+
+                              <div class="step-form-glazing__select-wrapper">
+
+                                <label class="field-text" style="margin-bottom: 0;">
+                                  <span class="field-text__name">Width, mm</span>
+                                  <span class="field-text__input-wrap">
+                                    <input class="field-text__input"
+                                           type="text"
+                                           name="width"
+                                           inputmode="numeric"
+                                           data-validate="number-mm"
+                                           placeholder="0">
+                                    <span class="field-text__help-text"></span>
+                                  </span>
+                                </label>
+
+                                <label class="field-text" style="margin-bottom: 0;">
+                                  <span class="field-text__name">Height, mm</span>
+                                  <span class="field-text__input-wrap">
+                                    <input class="field-text__input"
+                                           type="text"
+                                           name="height"
+                                           inputmode="numeric"
+                                           data-validate="number-mm"
+                                           placeholder="0">
+                                    <span class="field-text__help-text"></span>
+                                  </span>
+                                </label>
+
+                                <p class="step-form-glazing__warning">ℹ️ If you do not have measurements, skip these fields</p>
+                              </div>
+
+                            </fieldset>
+                          </div>
+
+                          <div class="step-form__col-1-2  step-form__col-1-2--ext">
+                            <fieldset class="step-form-glazing__fieldset">
+                              <div class="step-form__header">
+                                <legend class="h3  step-form__step-title">Choose a glazing type <span>*</span></legend>
+                              </div>
+
+                              <div class="step-form-glazing__select-wrapper">
+
+                                <div class="field-select" style="margin-bottom: 0;">
+                                  <label class="field-select__select-wrap">
+                                    <span class="field-select__name">Glazing options</span>
+                                    <select class="field-select__select  field-select__select--required" name="glaz-type-options" data-placeholder="Glazing type">
+                                      <option value="" selected disabled>Glazing type</option>
+                                      <option value="value1">Option 1</option>
+                                      <option value="value2">Option 2</option>
+                                      <option value="value3">Option 3</option>
+                                      <option value="value4">Option 4</option>
+                                    </select>
+                                    <!-- <small class="field-select__help-text error"></small> -->
+                                  </label>
+                                </div>
+
+                              </div>
+
+                            </fieldset>
+                          </div>
+
+                          <div class="step-form__col-1-2  step-form__col-1-2--ext">
+                            <fieldset class="step-form-glazing__fieldset">
+                              <div class="step-form__header">
+                                <legend class="h3  step-form__step-title">Number of units <span>*</span></legend>
+                              </div>
+
+                              <div class="step-form-glazing__select-wrapper">
+
+                                <div class="field-num">
+                                  <span class="field-num__name">Quantity</span>
+                                  <span class="field-num__input-wrap">
+                                    <span class="field-num__input-and-btns">
+                                      <button class="field-num__btn field-num__btn--minus" type="button" aria-label="minus">-</button>
+                                      <button class="field-num__btn field-num__btn--plus" type="button" aria-label="plus">+</button>
+                                      <input class="field-num__input  field-num__input--required" type="number" name="french_door_quantity" value="0" max="50" min="0" step="1">
+                                    </span>
+                                    <span class="field-num__help-text"></span>
+                                  </span>
+                                </div>
+
+                              </div>
+
+                            </fieldset>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="step-form-glazing__unit-footer">
+                        <div class="step-form-glazing__unit-add-ctrl">
+                          <button class="btn btn--pale step-form-glazing__unit-add"
+                                  type="button"
+                                  data-action="add-unit">
+                            <span>Add unit type 2</span>
+                          </button>
+                        </div>
+
+                        <div class="step-form-glazing__unit-extra">
+                          <label class="h3  field-text  step-form-glazing__unit-extra-label" style="margin-bottom: 0;">
+                            <span class="visually-hidden">Extra information</span>
+                            <textarea class="field-text__input" name="extra-info" rows="7" placeholder="Extra information you would like us to know"></textarea>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- сюда будем рендерить ошибки конкретного юнита -->
+                      <div class="step-form-glazing__unit-errors"></div>
+
+                    </section>
+                  </template>
+
+                </div>
+
+                <div class="swiper-slide  step-form__step-2">
+                  <div class="row">
+                    <div class="step-form__col-details">
+                      <fieldset class="step-form__step-inner  step-form__group">
+                        <div class="step-form__table-wrapper">
+                          <table class="table-responsive">
+                            <thead>
+                              <tr>
+                                <th style="min-width: 256px; white-space: nowrap;">Choose a day <span>*</span></th>
+                                <th>Write down your preferred hours</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td data-label="Choose a day *" >
+                                  <div class="field-checkbox  one-of" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox" name="monday" value="monday">
+                                      <span class="field-checkbox__name-text">Monday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="mondayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td data-label="Choose a day *" >
+                                  <div class="field-checkbox  one-of" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox" name="tuesday" value="tuesday">
+                                      <span class="field-checkbox__name-text">Tuesday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="tuesdayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td data-label="Choose a day *" >
+                                  <div class="field-checkbox  one-of" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox" name="wednesday" value="wednesday">
+                                      <span class="field-checkbox__name-text">Wednesday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="wednesdayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td data-label="Choose a day *" >
+                                  <div class="field-checkbox  one-of" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox" name="thursday" value="thursday">
+                                      <span class="field-checkbox__name-text">Thursday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="thursdayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td data-label="Choose a day *" >
+                                  <div class="field-checkbox  one-of" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox" name="friday" value="friday">
+                                      <span class="field-checkbox__name-text">Friday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="fridayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td data-label="Choose a day *" >
+                                  <div class="field-checkbox  one-of" style="margin: 0;">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox" name="saturday" value="saturday">
+                                      <span class="field-checkbox__name-text">Saturday</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td data-label="Write down your preferred hours">
+                                  <label class="field-text" style="margin: 0;">
+                                    <span class="field-text__name visually-hidden">Write down your preferred hours</span>
+                                    <span class="field-text__input-wrap">
+                                      <input class="field-text__input  novalidate" type="text" name="saturdayHour" value="" placeholder="Write here…">
+                                      <span class="field-text__help-text"></span>
+                                    </span>
+                                  </label>
+                                </td>
+                              </tr>
+
+                            </tbody>
+                          </table>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide  step-form__step-3">
+                  <fieldset class="write-us  step-form__step-inner  step-form__group">
+                    <div class="row  write-us__header">
+
+                      <div class="write-us__header-col-title">
+                        <h2 class="write-us__title">Let us know how to get in contact with you!</h2>
+                        <!-- <p class="write-us__info"></p> -->
+                      </div>
+
+                      <div class="write-us__header-col-contacts">
+                        <!-- <ul class="list-nostyled  write-us__contact-list">
+                          <li class="write-us__contact-item">
+                            <a href="tel:+447554766102" class="write-us__contact-link">
+                              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                              <span>+ 44 7554 766 102</span>
+                            </a>
+                          </li>
+                          <li class="write-us__contact-item">
+                            <a href="mailto:info@ugspot.co.uk" class="write-us__contact-link">
+                              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#mail"></use></svg>
+                              <span>info@ugspot.co.uk</span>
+                            </a>
+                          </li>
+                        </ul> -->
+                      </div>
+
+                      <div class="write-us__header-col-icons">
+                      </div>
+
+                    </div>
+
+                    <div class="row  step-form__contacts-row">
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Name</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="name" value="">
+                            <span class="field-text__help-text" data-error="name"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Surname</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="surname" value="">
+                            <span class="field-text__help-text" data-error="surname"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Email</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="email" name="email" value="">
+                            <span class="field-text__help-text" data-error="email"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Contact Phone</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="tel" name="tel" value="">
+                            <span class="field-text__help-text" data-error="tel"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Project address</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="address" value="">
+                            <span class="field-text__help-text" data-error="address"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Town</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="town" value="">
+                            <span class="field-text__help-text" data-error="town"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <label class="field-text">
+                          <span class="field-text__name">Postcode of the Project</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--required" type="text" name="postcode" value="">
+                            <span class="field-text__help-text" data-error="postcode"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="step-form__col-input">
+                        <div class="field-file">
+                          <div class="field-file__name">Upload supporting files (optional)</div>
+                          <label class="field-file__input-wrap">
+                            <input class="field-file__input  novalidate" type="file" data-multiple-caption="files selected: {count}" multiple>
+                            <span class="field-file__name-text" data-button-text="Upload"></span>
+                            <span class="field-file__help-text"></span>
+                          </label>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="step-form__footer" style="margin-top: 16px;">
+                      <div class="row  step-form__contacts-row">
+
+                        <div class="step-form__col-input">
+                          <div class="field-checkbox">
+                            <p class="h4">Your preferred way of contact:</p>
+
+                            <div class="field-checkbox__input-wrap" style="margin-right: 0;">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input  novalidate" type="checkbox" name="call" value="">
+                                <span class="field-checkbox__name-text">Call Me</span>
+                              </label>
+                              <div class="field-checkbox__help-text-wrap">
+                                <div class="field-checkbox__help-text"></div>
+                              </div>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input  novalidate" type="checkbox" name="whatsapp" value="">
+                                <span class="field-checkbox__name-text">Write me on WhatsApp</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input  novalidate" type="checkbox" name="emailme" value="">
+                                <span class="field-checkbox__name-text">Mail me</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="step-form__col-input">
+                          <div class="step-form__add-info">
+
+                            <div class="field-checkbox">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input  novalidate" type="checkbox" name="agreement" value="" checked>
+                                <span class="field-checkbox__name-text" style="font-size: 14px; font-weight: 500;">I agree to receive to marketing information about offers and launches vie email</span>
+                              </label>
+                            </div>
+
+                            <p style="font-size: 14px; font-weight: 500;">By submitting this form, you agree that the personal information you provide will be used solely for the purposes of responding to your inquiry or providing the requested services. Your information will be treated with the utmost confidentiality and will not be disclosed to third parties without your explicit consent, unless required by law. Ultimate Glass Solutions Ltd. is committed to protecting your personal data and ensuring your privacy in accordance with applicable data protection laws.</p>
+
+                            <div class="step-form__captcha">
+                              <img src="img/reCaptcha.gif" alt="" width="304">
+                            </div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+              </div>
+
+              <div class="step-form__navigation">
+                <button class="btn step-form__btn step-form__btn--prev" type="button" disabled>
+                  <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-left"></use></svg>
+                  <span>Prev step</span>
+                </button>
+                <button class="btn step-form__btn step-form__btn--next" type="button">
+                  <span>Next step</span>
+                  <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+                </button>
+
+                <div class="step-form__warning"></div>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/mmenu/mmenu.html')
+  @@include('blocks/request-btn/request-btn.html')
+  @@include('blocks/info-panel/info-panel.html')
+
+  @@include('blocks/search-modal/search-modal.html')
+
+  <script>
+    document.addEventListener(
+      "DOMContentLoaded", () => {
+
+        const searchHtml = `
+          <form id="mob-search-form" class="simplesearch-search-form mmenu__search custom-search" action="#" method="get">
+            <input id="mob-search" class="mmenu__input" type="search" name="search" value="" placeholder="Enter your query here…">
+          </form>
+        `;
+
+        const mmenu = new Mmenu( "#menu", {
+          "offCanvas": {
+            "position": "left-front"
+          },
+          "theme": "white",
+          "navbars": [
+            {
+              "position": "top",
+              "content": [ searchHtml ]
+            },
+            {
+              "position": "top",
+              "content": [
+                "prev",
+                "title"
+              ]
+            },
+            {
+              "position": "bottom",
+              "content": [
+                "<div class='mmenu__footer'><a href='free-quote' class='btn video-call-btn' style='min-height:auto;'><span>Get a Free Quote</span></a><a href='tel:+447554766102' class='mmenu__link'><svg width='24' height='24' aria-hidden='true'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite-svg.svg#phone'></use></svg><span>+44 7554 766 102</span></a></div>"
+              ]
+            }
+          ]
+        }, {
+          // configuration
+          classNames: {
+            selected: "active"
+          }
+        });
+
+        const api = mmenu.API;
+        const toggler = document.getElementById('mmenu-toggler');
+        toggler.addEventListener(
+          "click", () => {
+            api.open();
+            setTogglerClose();
+          }
+        );
+
+        // Подписываемся на событие закрытия меню
+        // 100% сущестыующие события для 9.3: "open:after" и "close:after"
+        // https://mmenujs.com/docs/core/off-canvas.html - самый низ
+        api.bind("close:after", () => {
+          setTogglerBurger();
+        });
+
+        function setTogglerClose() {
+          toggler.classList.add('burger--close');
+        }
+
+        function setTogglerBurger() {
+          toggler.classList.remove('burger--close');
+        }
+      }
+    );
+  </script>
+
+  @@include('_include/page_bottom.html')
+
+  <script src="js/step-form-glazing.js" defer></script>
+
+</body>
+</html>
+

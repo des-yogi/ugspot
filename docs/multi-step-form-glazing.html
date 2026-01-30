@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Multi step form Conservatories</title>
+  <title>Multi step form Secondary Glazing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="MobileOptimized" content="320">
   <meta name="format-detection" content="telephone=no">
@@ -483,7 +483,7 @@
         <div class="container" style="padding-top: 64px; padding-bottom: 64px;">
           <h1 style="text-align: center;">Let us know what you need</h1>
 
-          <form class="form  step-form  step-form-conserva" action="#" method="post" enctype="multipart/form-data">
+          <form class="form  step-form  step-form-conserva  step-form-glazing" action="#" method="post" enctype="multipart/form-data">
 
             <div class="row">
               <div class="step-form__col-progress">
@@ -501,7 +501,7 @@
                     <span class="progress__flag" data-step="1"></span>
                     <span class="progress__flag" data-step="2"></span> -->
                   </div>
-                  <p class="progress__slide-num">(1 step out of 4)</p>
+                  <p class="progress__slide-num">(1 step out of 3)</p>
                 </div>
 
                 <p class="step-form__info">Aluminum is known for its strength and durability. It is resistant to rust, corrosion, and other environmental factors.</p>
@@ -513,613 +513,281 @@
 
                 <div class="swiper-slide  step-form__step-1">
 
-                  <fieldset class="step-form__step-inner  step-form__group"
-                            data-required-radio-group="true"
-                            data-group-title="We start the project by...">
-                    <div class="step-form__header">
-                      <h2 class="h3  step-form__step-title">We start the project by... <span>*</span></h2>
-                      <!-- <p>Select at least one card and then enter the desired number of items</p> -->
-                    </div>
+                  <div class="step-form-glazing__units" data-units-container></div>
 
-                    <div class="row  step-form__row">
+                  <template id="unit-template">
+                    <section class="step-form-glazing__unit">
+                      <div class="step-form-glazing__unit-header">
+                        <h2 class="step-form-glazing__unit-title">Unit type 1</h2>
 
-                      <div class="step-form__col-1-2">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="start" value="start">
-                            <span class="media-radiobtn__name-text">Build New</span>
-                          </label>
-                        </div>
-
+                        <button class="btn btn--pale step-form-glazing__unit-remove"
+                                type="button"
+                                data-action="remove-unit">
+                          <span>Remove</span>
+                        </button>
                       </div>
 
-                      <div class="step-form__col-1-2">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="start" value="start">
-                            <span class="media-radiobtn__name-text">Replace Existing</span>
-                          </label>
+                      <!-- ВАЖНО: base name'ы остаются "чистыми": name="width", name="design", ... -->
+                      <!-- JS сам превратит их в unit1_width, unit2_width, ... -->
+                      <fieldset class="step-form__step-inner  step-form__group"
+                              data-required-radio-group="true"
+                              data-group-title="Unit design option">
+                        <div class="step-form__header">
+                          <legend class="h3  step-form__step-title">Choose UNIT DESIGN OPTION <span>*</span></legend>
+                          <!-- <p>Select at least one card and then enter the desired number of items</p> -->
                         </div>
 
+                        <div class="row  step-form__row">
+
+                          <div class="step-form__col-2-4">
+
+                            <div class="media-radiobtn">
+                              <label class="media-radiobtn__lbl">
+                                <span class="media-radiobtn__img"
+                                      data-bg="img/material.jpg"
+                                      data-bg-webp="img/material.webp"
+                                      data-bg-speed="0.5"
+                                      role="img"
+                                      aria-label="Description of the image">
+                                </span>
+                                <!-- 720x540 big card img-size -->
+                                <!-- 540x405 small card img-size -->
+                                <input class="media-radiobtn__input" type="radio" name="design" value="design">
+                                <span class="media-radiobtn__name-text">Option name</span>
+                              </label>
+                            </div>
+
+                          </div>
+
+                          <div class="step-form__col-2-4">
+
+                            <div class="media-radiobtn">
+                              <label class="media-radiobtn__lbl">
+                                <span class="media-radiobtn__img"
+                                      data-bg="img/material.jpg"
+                                      data-bg-webp="img/material.webp"
+                                      data-bg-speed="0.5"
+                                      role="img"
+                                      aria-label="Description of the image">
+                                </span>
+                                <!-- 720x540 big card img-size -->
+                                <!-- 540x405 small card img-size -->
+                                <input class="media-radiobtn__input" type="radio" name="design" value="design">
+                                <span class="media-radiobtn__name-text">Option name</span>
+                              </label>
+                            </div>
+
+                          </div>
+
+                          <div class="step-form__col-2-4">
+
+                            <div class="media-radiobtn">
+                              <label class="media-radiobtn__lbl">
+                                <span class="media-radiobtn__img"
+                                      data-bg="img/material.jpg"
+                                      data-bg-webp="img/material.webp"
+                                      data-bg-speed="0.5"
+                                      role="img"
+                                      aria-label="Description of the image">
+                                </span>
+                                <!-- 720x540 big card img-size -->
+                                <!-- 540x405 small card img-size -->
+                                <input class="media-radiobtn__input" type="radio" name="design" value="design">
+                                <span class="media-radiobtn__name-text">Option name</span>
+                              </label>
+                            </div>
+
+                          </div>
+
+                          <div class="step-form__col-2-4">
+
+                            <div class="media-radiobtn">
+                              <label class="media-radiobtn__lbl">
+                                <span class="media-radiobtn__img"
+                                      data-bg="img/material.jpg"
+                                      data-bg-webp="img/material.webp"
+                                      data-bg-speed="0.5"
+                                      role="img"
+                                      aria-label="Description of the image">
+                                </span>
+                                <!-- 720x540 big card img-size -->
+                                <!-- 540x405 small card img-size -->
+                                <input class="media-radiobtn__input" type="radio" name="design" value="design">
+                                <span class="media-radiobtn__name-text">Option name</span>
+                              </label>
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </fieldset>
+
+                      <div class="step-form__step-inner  step-form__group">
+                        <div class="row  step-form__row  step-form__row--ext">
+
+                          <div class="step-form-glazing__col-1-1-2">
+                            <fieldset class="step-form-glazing__fieldset">
+                              <div class="step-form__header">
+                                <legend class="h3  step-form__step-title">Choose a colour <span>*</span></legend>
+                              </div>
+
+                              <div class="step-form-glazing__select-wrapper">
+
+                                <div class="field-select" style="margin-bottom: 0;">
+                                  <label class="field-select__select-wrap">
+                                    <span class="field-select__name">Colour options <span>*</span></span>
+                                    <select class="field-select__select  field-select__select--required" name="color-primary" data-placeholder="Colour option">
+                                      <option value="" selected disabled>Choose a colour</option>
+                                      <option value="value1">Option 1</option>
+                                      <option value="value2">Option 2</option>
+                                      <option value="value3">Option 3</option>
+                                      <option value="value4">Option 4</option>
+                                    </select>
+                                    <!-- <small class="field-select__help-text error"></small> -->
+                                  </label>
+                                </div>
+
+                                <div class="field-select" style="margin-bottom: 0;">
+                                  <label class="field-select__select-wrap">
+                                    <span class="field-select__name">Colour options #2</span>
+                                    <select class="field-select__select  novalidate" name="color-add" data-placeholder="Second colour option">
+                                      <option value="" selected disabled>Choose a colour</option>
+                                      <option value="value1">Option 1</option>
+                                      <option value="value2">Option 2</option>
+                                      <option value="value3">Option 3</option>
+                                      <option value="value4">Option 4</option>
+                                    </select>
+                                    <!-- <small class="field-select__help-text error"></small> -->
+                                  </label>
+                                </div>
+
+                                <p class="step-form-glazing__warning">ℹ️ If you do not have measurements, skip these fields</p>
+                              </div>
+
+                            </fieldset>
+                          </div>
+
+                          <div class="step-form-glazing__col-1-1-2">
+                            <fieldset class="step-form-glazing__fieldset">
+                              <div class="step-form__header">
+                                <legend class="h3  step-form__step-title">Measurements</legend>
+                              </div>
+
+                              <div class="step-form-glazing__select-wrapper">
+
+                                <label class="field-text" style="margin-bottom: 0;">
+                                  <span class="field-text__name">Width, mm</span>
+                                  <span class="field-text__input-wrap">
+                                    <input class="field-text__input"
+                                           type="text"
+                                           name="width"
+                                           inputmode="numeric"
+                                           data-validate="number-mm"
+                                           placeholder="0">
+                                    <span class="field-text__help-text"></span>
+                                  </span>
+                                </label>
+
+                                <label class="field-text" style="margin-bottom: 0;">
+                                  <span class="field-text__name">Height, mm</span>
+                                  <span class="field-text__input-wrap">
+                                    <input class="field-text__input"
+                                           type="text"
+                                           name="height"
+                                           inputmode="numeric"
+                                           data-validate="number-mm"
+                                           placeholder="0">
+                                    <span class="field-text__help-text"></span>
+                                  </span>
+                                </label>
+
+                                <p class="step-form-glazing__warning">ℹ️ If you do not have measurements, skip these fields</p>
+                              </div>
+
+                            </fieldset>
+                          </div>
+
+                          <div class="step-form__col-1-2  step-form__col-1-2--ext">
+                            <fieldset class="step-form-glazing__fieldset">
+                              <div class="step-form__header">
+                                <legend class="h3  step-form__step-title">Choose a glazing type <span>*</span></legend>
+                              </div>
+
+                              <div class="step-form-glazing__select-wrapper">
+
+                                <div class="field-select" style="margin-bottom: 0;">
+                                  <label class="field-select__select-wrap">
+                                    <span class="field-select__name">Glazing options</span>
+                                    <select class="field-select__select  field-select__select--required" name="glaz-type-options" data-placeholder="Glazing type">
+                                      <option value="" selected disabled>Glazing type</option>
+                                      <option value="value1">Option 1</option>
+                                      <option value="value2">Option 2</option>
+                                      <option value="value3">Option 3</option>
+                                      <option value="value4">Option 4</option>
+                                    </select>
+                                    <!-- <small class="field-select__help-text error"></small> -->
+                                  </label>
+                                </div>
+
+                              </div>
+
+                            </fieldset>
+                          </div>
+
+                          <div class="step-form__col-1-2  step-form__col-1-2--ext">
+                            <fieldset class="step-form-glazing__fieldset">
+                              <div class="step-form__header">
+                                <legend class="h3  step-form__step-title">Number of units <span>*</span></legend>
+                              </div>
+
+                              <div class="step-form-glazing__select-wrapper">
+
+                                <div class="field-num">
+                                  <span class="field-num__name">Quantity</span>
+                                  <span class="field-num__input-wrap">
+                                    <span class="field-num__input-and-btns">
+                                      <button class="field-num__btn field-num__btn--minus" type="button" aria-label="minus">-</button>
+                                      <button class="field-num__btn field-num__btn--plus" type="button" aria-label="plus">+</button>
+                                      <input class="field-num__input  field-num__input--required" type="number" name="french_door_quantity" value="0" max="50" min="0" step="1">
+                                    </span>
+                                    <span class="field-num__help-text"></span>
+                                  </span>
+                                </div>
+
+                              </div>
+
+                            </fieldset>
+                          </div>
+
+                        </div>
                       </div>
 
-                    </div>
-                  </fieldset>
+                      <div class="step-form-glazing__unit-footer">
+                        <div class="step-form-glazing__unit-add-ctrl">
+                          <button class="btn btn--pale step-form-glazing__unit-add"
+                                  type="button"
+                                  data-action="add-unit">
+                            <span>Add unit type 2</span>
+                          </button>
+                        </div>
+
+                        <div class="step-form-glazing__unit-extra">
+                          <label class="h3  field-text  step-form-glazing__unit-extra-label" style="margin-bottom: 0;">
+                            <span class="visually-hidden">Extra information</span>
+                            <textarea class="field-text__input" name="extra-info" rows="7" placeholder="Extra information you would like us to know"></textarea>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- сюда будем рендерить ошибки конкретного юнита -->
+                      <div class="step-form-glazing__unit-errors"></div>
+
+                    </section>
+                  </template>
 
                 </div>
 
                 <div class="swiper-slide  step-form__step-2">
-
-                  <fieldset class="step-form__step-inner  step-form__group"
-                            data-required-radio-group="true"
-                            data-group-title="Choose your material">
-                    <div class="step-form__header">
-                      <h2 class="h3  step-form__step-title">Choose your material <span>*</span></h2>
-                      <!-- <p>Select at least one card and then enter the desired number of items</p> -->
-                    </div>
-
-                    <div class="row  step-form__row">
-
-                      <div class="step-form__col-2-4">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="material" value="material">
-                            <span class="media-radiobtn__name-text">Window</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-2-4">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="material" value="material">
-                            <span class="media-radiobtn__name-text">Entrance and/or back door</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-2-4">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="material" value="material">
-                            <span class="media-radiobtn__name-text">Slider and/or bi-fold</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-2-4">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="material" value="material">
-                            <span class="media-radiobtn__name-text">French door</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-2-4">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="material" value="material">
-                            <span class="media-radiobtn__name-text">Glazed unit and/or secondary window</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-2-4">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="material" value="material">
-                            <span class="media-radiobtn__name-text">Roof Lanterns and/or walk on glass</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-2-4">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="material" value="material">
-                            <span class="media-radiobtn__name-text">Crittall Door and/or Wall</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-2-4">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="material" value="material">
-                            <span class="media-radiobtn__name-text">Conservatory</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                    </div>
-                  </fieldset>
-
-                  <fieldset class="step-form__step-inner  step-form__group"
-                            data-required-radio-group="true"
-                            data-group-title="Choose your type">
-                    <div class="step-form__header">
-                      <h2 class="h3  step-form__step-title">Choose your type <span>*</span></h2>
-                      <!-- <p>Select at least one card and then enter the desired number of items</p> -->
-                    </div>
-
-                    <div class="row  step-form__row">
-
-                      <div class="step-form__col-2-4">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="type" value="type">
-                            <span class="media-radiobtn__name-text">Window</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-2-4">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="type" value="type">
-                            <span class="media-radiobtn__name-text">Entrance and/or back door</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-2-4">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="type" value="type">
-                            <span class="media-radiobtn__name-text">Slider and/or bi-fold</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-2-4">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="type" value="type">
-                            <span class="media-radiobtn__name-text">French door</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-2-4">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="type" value="type">
-                            <span class="media-radiobtn__name-text">Glazed unit and/or secondary window</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-2-4">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="type" value="type">
-                            <span class="media-radiobtn__name-text">Roof Lanterns and/or walk on glass</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-2-4">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="type" value="type">
-                            <span class="media-radiobtn__name-text">Crittall Door and/or Wall</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-2-4">
-
-                        <div class="media-radiobtn">
-                          <label class="media-radiobtn__lbl">
-                            <span class="media-radiobtn__img"
-                                  data-bg="img/material.jpg"
-                                  data-bg-webp="img/material.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 720x540 big card img-size -->
-                            <!-- 540x405 small card img-size -->
-                            <input class="media-radiobtn__input" type="radio" name="type" value="type">
-                            <span class="media-radiobtn__name-text">Conservatory</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                    </div>
-                  </fieldset>
-
-                  <fieldset class="step-form__step-inner  step-form__group">
-                    <div class="row  step-form-conserva__sizes-row">
-
-                      <div class="step-form__col-1-2  step-form__col-1-2--ext">
-                        <section class="step-form-conserva__sizes">
-                          <div class="step-form__header">
-                            <h3 class="step-form__step-title">Measurements (optional)</h3>
-                          </div>
-
-                          <div class="step-form-conserva__group-wrapper">
-                            <label class="field-text">
-                              <span class="field-text__name">Depth, mm</span>
-                              <span class="field-text__input-wrap">
-                                <input class="field-text__input"
-                                       type="text"
-                                       name="depth"
-                                       inputmode="numeric"
-                                       data-validate="number-mm"
-                                       placeholder="0">
-                                <span class="field-text__help-text"></span>
-                              </span>
-                            </label>
-
-                            <label class="field-text">
-                              <span class="field-text__name">Width, mm</span>
-                              <span class="field-text__input-wrap">
-                                <input class="field-text__input"
-                                       type="text"
-                                       name="width"
-                                       inputmode="numeric"
-                                       data-validate="number-mm"
-                                       placeholder="0">
-                                <span class="field-text__help-text"></span>
-                              </span>
-                            </label>
-
-                            <label class="field-text">
-                              <span class="field-text__name">Height, mm</span>
-                              <span class="field-text__input-wrap">
-                                <input class="field-text__input"
-                                       type="text"
-                                       name="height"
-                                       inputmode="numeric"
-                                       data-validate="number-mm"
-                                       placeholder="0">
-                                <span class="field-text__help-text"></span>
-                              </span>
-                            </label>
-
-                            <p class="step-form-conserva__sizes-info">
-                              ℹ️ If you do not have measurements, skip these fields
-                            </p>
-                          </div>
-                        </section>
-                      </div>
-
-                      <div class="step-form__col-1-2  step-form__col-1-2--ext">
-                        <section class="step-form-conserva__extra-info">
-                          <div class="step-form__header">
-                            <h3 class="step-form__step-title">Extra information (optional)</h3>
-                          </div>
-
-                          <label class="field-text" style="margin-bottom: 0;">
-                              <span class="field-text__name  visually-hidden">Extra information textarea</span>
-                              <span class="field-text__input-wrap">
-                                <textarea class="field-text__input"
-                                          name="extra-info"
-                                          placeholder="Extra information you would like us to know"
-                                          rows="7"></textarea>
-                                <span class="field-text__help-text"></span>
-                              </span>
-                            </label>
-                        </section>
-                      </div>
-
-                    </div>
-                  </fieldset>
-
-                  <fieldset class="step-form__step-inner  step-form__group"
-                            data-required-radio-group="true"
-                            data-group-title="Select a color option">
-                    <div class="step-form__header">
-                      <h3 class="step-form__step-title">Selecting a color option <span>*</span></h3>
-                      <!-- <p>Select at least one</p> -->
-                    </div>
-
-                    <div class="row  step-form__colors">
-                      <div class="step-form__col-color">
-
-                        <div class="color-radio  one-only">
-                          <label class="color-radio__lbl">
-                            <span class="color-radio__img"
-                                  data-bg="img/colors-all.jpg"
-                                  data-bg-webp="img/colors-all.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 540x405 img-size -->
-                            <input class="color-radio__input" type="radio" name="color" value="color">
-                            <span class="color-radio__name-text">White</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-color">
-
-                        <div class="color-radio  one-only">
-                          <label class="color-radio__lbl">
-                            <span class="color-radio__img"
-                                  data-bg="img/colors-all.jpg"
-                                  data-bg-webp="img/colors-all.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 540x405 img-size -->
-                            <input class="color-radio__input" type="radio" name="color" value="color">
-                            <span class="color-radio__name-text">Black</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-color">
-
-                        <div class="color-radio  one-only">
-                          <label class="color-radio__lbl">
-                            <span class="color-radio__img"
-                                  data-bg="img/colors-all.jpg"
-                                  data-bg-webp="img/colors-all.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 540x405 img-size -->
-                            <input class="color-radio__input" type="radio" name="color" value="color">
-                            <span class="color-radio__name-text">Anthracite grey</span>
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div class="step-form__col-color">
-
-                        <div class="color-radio  one-only">
-                          <label class="color-radio__lbl">
-                            <span class="color-radio__img"
-                                  data-bg="img/colors-all.jpg"
-                                  data-bg-webp="img/colors-all.webp"
-                                  data-bg-speed="0.5"
-                                  role="img"
-                                  aria-label="Description of the image">
-                            </span>
-                            <!-- 540x405 img-size -->
-                            <input class="color-radio__input" type="radio" name="color" value="color">
-                            <span class="color-radio__name-text">Other color</span>
-                          </label>
-                        </div>
-
-                      </div>
-                    </div>
-                  </fieldset>
-
-                  <fieldset class="step-form__step-inner  step-form__group"
-                            data-required-radio-group="true"
-                            data-group-title="Permission">
-                    <div class="step-form__header">
-                      <h3 class="step-form__step-title">Planning permission obtained? <span>*</span></h3>
-                      <!-- <p>Select at least one item</p> -->
-                    </div>
-
-                    <div class="step-form-conserva__radio-btn-wrapper">
-
-                      <div class="radio-btn  one-only">
-                        <label class="radio-btn__lbl">
-                          <input class="radio-btn__input" type="radio" name="permission" value="permission">
-                          <span class="radio-btn__name-text">Yes</span>
-                        </label>
-                      </div>
-
-                      <div class="radio-btn  one-only">
-                        <label class="radio-btn__lbl">
-                          <input class="radio-btn__input" type="radio" name="permission" value="permission">
-                          <span class="radio-btn__name-text">No</span>
-                        </label>
-                      </div>
-
-                      <div class="radio-btn  one-only">
-                        <label class="radio-btn__lbl">
-                          <input class="radio-btn__input" type="radio" name="permission" value="permission">
-                          <span class="radio-btn__name-text">Not applicable</span>
-                        </label>
-                      </div>
-
-
-                    </div>
-
-                  </fieldset>
-
-                </div>
-
-                <div class="swiper-slide  step-form__step-3">
                   <div class="row">
                     <div class="step-form__col-details">
                       <fieldset class="step-form__step-inner  step-form__group">
@@ -1260,7 +928,7 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide  step-form__step-4">
+                <div class="swiper-slide  step-form__step-3">
                   <fieldset class="write-us  step-form__step-inner  step-form__group">
                     <div class="row  write-us__header">
 
@@ -1588,11 +1256,402 @@
 
   </div>
 
+  <nav id="menu" class="mmenu">
+    <ul class="level-1">
+      <li class="li-level-1">
+        <a href="/">Home</a>
+      </li>
+
+      <li class="li-level-1">
+        <a href="/windows/">Windows</a>
+        <ul class="ul-level-2">
+          <li class="li-level-2">
+            <span>Type</span>
+            <ul class="ul-level-3">
+              <li>
+                <a href="/link/">Bay & Bow Windows</a>
+              </li>
+              <li>
+                <a href="/link/">Tilt & Turn Windows</a>
+              </li>
+              <li>
+                <a href="/link/">Casement Windows</a>
+              </li>
+              <li>
+                <a href="/link/">Vertical Slider Windows</a>
+              </li>
+              <li>
+                <a href="/link/">Flush Windows</a>
+              </li>
+              <li>
+                <a href="/link/">Secondary Windows</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="li-level-2  active">
+            <span>Material</span>
+            <ul class="ul-level-3">
+              <li class="li-level-3  active">
+                <a href="/windows-allu">Aluminium Windows</a>
+
+                <ul class="ul-level-4">
+                  <li class="li-level-4 active">
+                    <a href="/link/">Bay & Bow</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Tilt & Turn</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Casement</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Vertical Slider</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="li-level-3">
+                <a href="/link/">uPVC Windows</a>
+
+                <ul class="ul-level-4">
+                  <li class="li-level-4">
+                    <a href="/link/">Bay & Bow</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Tilt & Turn</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Casement</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Vertical Slider</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="li-level-3">
+                <a href="/link/">Timber Windows</a>
+
+                <ul class="ul-level-4">
+                  <li class="li-level-4">
+                    <a href="/link/">Bay & Bow</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Tilt & Turn</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Casement</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Vertical Slider</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="li-level-3">
+                <a href="/link/">Timber look uPVC</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="li-level-2">
+            <span>Other</span>
+            <ul class="ul-level-3">
+              <li class="li-level-3">
+                <a href="/windows-allu">Other link</a>
+              </li>
+              <li class="li-level-3">
+                <a href="/windows-allu">Other link</a>
+              </li>
+              <li class="li-level-3">
+                <a href="/windows-allu">Other link</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li class="li-level-1">
+        <a href="/doors/">Doors</a>
+        <ul class="ul-level-2">
+          <li class="li-level-2">
+            <span>Type</span>
+            <ul class="ul-level-3">
+              <li>
+                <a href="/link/">Bay & Bow Doors</a>
+              </li>
+              <li>
+                <a href="/link/">Tilt & Turn Doors</a>
+              </li>
+              <li>
+                <a href="/link/">Casement Doors</a>
+              </li>
+              <li>
+                <a href="/link/">Vertical Slider Doors</a>
+              </li>
+              <li>
+                <a href="/link/">Flush Doors</a>
+              </li>
+              <li>
+                <a href="/link/">Secondary Doors</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="li-level-2">
+            <span>Material</span>
+            <ul class="ul-level-3">
+              <li class="li-level-3">
+                <a href="/Doors-allu">Aluminium Doors</a>
+
+                <ul class="ul-level-4">
+                  <li class="li-level-4">
+                    <a href="/link/">Bay & Bow</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Tilt & Turn</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Casement</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Vertical Slider</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="li-level-3">
+                <a href="/link/">uPVC Doors</a>
+
+                <ul class="ul-level-4">
+                  <li class="li-level-4">
+                    <a href="/link/">Bay & Bow</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Tilt & Turn</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Casement</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Vertical Slider</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="li-level-3">
+                <a href="/link/">Timber Doors</a>
+
+                <ul class="ul-level-4">
+                  <li class="li-level-4">
+                    <a href="/link/">Bay & Bow</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Tilt & Turn</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Casement</a>
+                  </li>
+                  <li class="li-level-4">
+                    <a href="/link/">Vertical Slider</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="li-level-3">
+                <a href="/link/">Timber look uPVC</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="li-level-2">
+            <span>Other</span>
+            <ul class="ul-level-3">
+              <li class="li-level-3">
+                <a href="/Doors-allu">Other link</a>
+              </li>
+              <li class="li-level-3">
+                <a href="/Doors-allu">Other link</a>
+              </li>
+              <li class="li-level-3">
+                <a href="/Doors-allu">Other link</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li><a href="/contact/">Conservatories</a></li>
+      <li><a href="/contact/">Glass Works</a></li>
+      <li><a href="/contact/">Roog Systems</a></li>
+      <li><a href="/contact/">Blog</a></li>
+      <li><a href="/contact/">About us</a></li>
+      <li><a href="/contact/">About us</a></li>
+      <li><a href="/contact/">Contacts</a></li>
+    </ul>
+  </nav>
+
+  <button class="fab  request-btn"
+          type="button"
+          aria-label="Request a service"
+          data-bs-toggle="modal"
+          data-bs-target="#infoModal"
+  >
+    <span class="label  request-btn__label" aria-hidden="true">Request a service</span>
+    <span class="icon  request-btn__icon" aria-hidden="true">
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#truck"></use></svg>
+    </span>
+  </button>
+
+  <div class="modal fade  modal--anchored  info-panel"
+       id="infoModal" tabindex="-1"
+       aria-labelledby="infoModalLabel"
+       aria-hidden="true"
+       data-bs-backdrop="false"
+  >
+
+    <div class="modal-dialog  info-panel__dialog">
+      <div class="modal-content  info-panel__content">
+        <div class="modal-header  info-panel__header">
+          <h4 class="modal-title  visually-hidden" id="infoModalLabel">Request a Service</h4>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+
+          <!-- размер фонового изображения 340х150 -->
+          <div class="info-panel__hero"
+               data-bg="img/info-panel-bg.jpg"
+               data-bg-webp="img/info-panel-bg.webp"
+               data-bg-speed="0.1"
+               aria-hidden="true"
+          >
+            <div class="info-panel__icon-viewport">
+              <div class="info-panel__icon-track">
+                 <span class="info-panel__icon  info-panel__icon--logo  first"></span>
+                 <span class="info-panel__icon  info-panel__icon--mail"></span>
+                 <span class="info-panel__icon  info-panel__icon--headphones"></span>
+                 <span class="info-panel__icon  info-panel__icon--tablet"></span>
+                 <span class="info-panel__icon  info-panel__icon--bus"></span>
+                 <span class="info-panel__icon  info-panel__icon--logo  first"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-body  info-panel__body">
+          <ul class="list-nostyled  info-panel__list">
+            <li class="info-panel__item">
+              <a href="https://ugspot.co.uk/surveying-visit" class="info-panel__link">
+                NO Obligation Surveying <span>request</span>
+              </a>
+            </li>
+            <li class="info-panel__item">
+              <a href="https://ugspot.co.uk/free-quote" class="info-panel__link">
+                Distance Quoting <span>request</span>
+              </a>
+            </li>
+            <li class="info-panel__item">
+              <a href="#" class="info-panel__link">
+                No-Obligation Zoom Call <span>request</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="modal fade  search-modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true" role="dialog">
+    <div class="modal-dialog  search-modal__dialog">
+      <div class="modal-content">
+        <div class="modal-header  search-modal__header">
+          <h4 class="modal-title" id="searchModalLabel">Website search form</h4>
+          <button type="button" class="btn  btn--pale  btn-close  close" data-bs-dismiss="modal" aria-label="Close" title="Close modal"><span></span></button>
+        </div>
+        <div class="modal-body">
+          <form id="searchForm" class="simplesearch-search-form  search-modal__form" action="#" method="post">
+            <label class="field-text" style="margin-bottom: 0;">
+              <span class="field-text__name  visually-hidden">Please enter your query here</span>
+              <span class="field-text__input-wrap">
+                <input id="search-input" class="field-text__input" type="search" name="search" value="" placeholder="Enter your query here…">
+                <span class="field-text__help-text"></span>
+              </span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    document.addEventListener(
+      "DOMContentLoaded", () => {
+
+        const searchHtml = `
+          <form id="mob-search-form" class="simplesearch-search-form mmenu__search custom-search" action="#" method="get">
+            <input id="mob-search" class="mmenu__input" type="search" name="search" value="" placeholder="Enter your query here…">
+          </form>
+        `;
+
+        const mmenu = new Mmenu( "#menu", {
+          "offCanvas": {
+            "position": "left-front"
+          },
+          "theme": "white",
+          "navbars": [
+            {
+              "position": "top",
+              "content": [ searchHtml ]
+            },
+            {
+              "position": "top",
+              "content": [
+                "prev",
+                "title"
+              ]
+            },
+            {
+              "position": "bottom",
+              "content": [
+                "<div class='mmenu__footer'><a href='free-quote' class='btn video-call-btn' style='min-height:auto;'><span>Get a Free Quote</span></a><a href='tel:+447554766102' class='mmenu__link'><svg width='24' height='24' aria-hidden='true'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='img/sprite-svg.svg#phone'></use></svg><span>+44 7554 766 102</span></a></div>"
+              ]
+            }
+          ]
+        }, {
+          // configuration
+          classNames: {
+            selected: "active"
+          }
+        });
+
+        const api = mmenu.API;
+        const toggler = document.getElementById('mmenu-toggler');
+        toggler.addEventListener(
+          "click", () => {
+            api.open();
+            setTogglerClose();
+          }
+        );
+
+        // Подписываемся на событие закрытия меню
+        // 100% сущестыующие события для 9.3: "open:after" и "close:after"
+        // https://mmenujs.com/docs/core/off-canvas.html - самый низ
+        api.bind("close:after", () => {
+          setTogglerBurger();
+        });
+
+        function setTogglerClose() {
+          toggler.classList.add('burger--close');
+        }
+
+        function setTogglerBurger() {
+          toggler.classList.remove('burger--close');
+        }
+      }
+    );
+  </script>
+
   <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->
   <script src="js/script.min.js"></script>
 
 
-  <script src="js/step-form-conserva.js" defer></script>
+  <script src="js/step-form-glazing.js" defer></script>
 
 </body>
 </html>

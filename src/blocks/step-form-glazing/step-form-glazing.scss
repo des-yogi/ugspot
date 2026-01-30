@@ -1,0 +1,161 @@
+.step-form-glazing {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .step-form__row {
+
+    &--ext {
+      gap: 40px 0;
+    }
+  }
+
+  .step-form__col-2-4 {
+    @include col(xs, 6);
+    @include col(md, 3);
+  }
+
+  .field-num__input {
+    height: 56px;
+  }
+
+  .field-num__btn {
+    width: 56px;
+  }
+
+  &__col-1-1-2 {
+    @include col(xs, 12);
+    @include col(xl, 6);
+  }
+
+  &__unit {
+
+    & + & {
+      margin-top: 64px;
+    }
+  }
+
+  &__unit-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 16px;
+    padding-bottom: 8px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $main-color;
+  }
+
+  &__unit-title {
+    flex: 1 1 auto;
+  }
+
+  &__unit-remove {
+    flex: 1 1 100%;
+
+    @media (min-width: $screen-md) {
+      flex: 0 0 160px;
+    }
+  }
+
+  &__unit-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  &__unit-add-ctrl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 24px;
+    position: relative;
+
+    @media (min-width: $screen-md) {
+      gap: 0 40px;
+    }
+
+    &::before,
+    &::after {
+      flex: 1 1 auto;
+      display: block;
+      content: "";
+      height: 1px;
+      //width: auto;
+      background-color: $main-color;
+    }
+  }
+
+  &__unit-add {
+    flex: 0 0 180px;
+    min-width: 170px;
+  }
+
+  &__unit-extra-label,
+  &__unit-errors {
+    max-width: 486px;
+    margin: 0 auto;
+
+    @media (min-width: $screen-xl) {
+      max-width: 792px;
+    }
+  }
+
+  &__unit-errors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    font-size: $font-size;
+    text-align: center;
+    color: $main-color;
+
+    &:empty {
+      display: none;
+    }
+
+    @media (min-width: $screen-md) {
+      text-wrap: balance;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  &__select-wrapper {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    background-color: $block-bg;
+    border-radius: $font-size;
+
+    & > *:not(#{$block-name}__warning) {
+      flex: 1;
+      flex-basis: min-content;
+
+      @media (max-width: $screen-md - 1) {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  &__warning {
+    flex: 1 1 100%;
+    margin: 0;
+  }
+}

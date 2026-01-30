@@ -3,7 +3,7 @@
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 
   &__name {
     @include field-name;
@@ -11,26 +11,29 @@
 
   &__input-wrap {
     display: block;
+    padding-right: 1px;
+    padding-left: 1px;
   }
 
   &__select {
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
     width: 100%;
-    padding: $field-padding-vertical $field-padding-horizontal;
-    font-size: inherit;
-    font-weight: inherit;
+    height: 56px;
+    padding: 0 48px 0 $field-padding-horizontal;
+    margin: 0;
+    line-height: $line-height;
+    font-size: $font-size;
     font-family: inherit;
-    line-height: inherit;
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
-    appearance: none;
-    color: $title-color;
+    color: $text-color;
     background-color: $white;
-    background-image: svg-load('../blocks/field-select/bg-img/select-down.svg', fill=$border-color);
+    background-image: svg-load('../blocks/field-select/bg-img/select-down.svg', fill=red);
     background-repeat: no-repeat;
     background-position: right 12px center;
     background-size: 20px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    appearance: none;
 
     &[multiple] {
       background-image: none;
@@ -62,4 +65,78 @@
   &__help-text {
     @include field-help-text;
   }
+}
+
+// птичка
+.choices[data-type*=select-one]::after {
+    content: "";
+    //border-style: solid;
+    //border-color: #333 transparent transparent;
+    //border-width: 5px;
+    position: absolute;
+    top: 50%;
+    right: 11px;
+    transform: translateY(-50%);
+    transform-origin: center;
+    height: 20px;
+    width: 20px;
+    //background-color: red;
+    margin-top: 0 !important;
+    background-position: center;
+    background-size: 20px;
+    background-image: svg-load('../blocks/field-select/bg-img/select-down.svg', fill=$text-color);
+    border: none;
+    pointer-events: none;
+}
+
+.choices[data-type*=select-one].is-open::after {
+  transform: translateY(-50%) scale(1,-1);
+  background-image: svg-load('../blocks/field-select/bg-img/select-down.svg', fill=$main-color);
+}
+
+.choices[data-type*=select-one].is-focused,
+.choices[data-type*=select-one].is-open {
+
+  .choices__inner {
+    border-color: $main-color;
+  }
+}
+
+.choices__inner {
+  height: 56px;
+  padding: 8px 24px;
+  font-size: inherit;
+  color: $text-color;
+  background-color: $white;
+  border-radius: $border-radius !important;
+  border: 1px solid $border-color;
+}
+
+.choices__list {
+  //display: block;
+  //margin: auto;
+  padding: 6px 0;
+
+  &--dropdown {
+
+    &.is-active {
+      border-radius: $border-radius;
+      overflow: hidden;
+    }
+  }
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  margin-top: 0;
+}
+
+.choices__list--dropdown .choices__item--selectable[data-select-text],
+.choices__list[aria-expanded] .choices__item--selectable[data-select-text] {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+.choices__placeholder {
+  opacity: 1;
 }
