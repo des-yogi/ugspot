@@ -274,6 +274,7 @@
       if (item.closest(".choices")) return;
       new Choices(item, {
         searchEnabled: false,
+        shouldSort: false,
         searchPlaceholderValue: "Search bar",
         itemSelectText: "Press to select",
       });
