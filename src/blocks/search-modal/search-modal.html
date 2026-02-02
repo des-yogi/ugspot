@@ -12,13 +12,19 @@
       </div>
       <div class="modal-body">
         <form id="searchForm" class="simplesearch-search-form  search-modal__form" action="#" method="post">
-          <label class="field-text" style="margin-bottom: 0;">
-            <span class="field-text__name  visually-hidden">Please enter your query here</span>
-            <span class="field-text__input-wrap">
-              <input id="search-input" class="field-text__input" type="search" name="search" value="" placeholder="Enter your query here…">
-              <span class="field-text__help-text"></span>
-            </span>
-          </label>
+          <div class="search-modal__input-wrapper">
+            <label class="field-text" style="margin-bottom: 0;">
+              <span class="field-text__name  visually-hidden">Please enter your query here</span>
+              <span class="field-text__input-wrap">
+                <input id="search-input" class="field-text__input" type="search" name="search" value="" placeholder="Enter your query here…">
+                <span class="field-text__help-text"></span>
+              </span>
+            </label>
+
+            <button class="main-nav__link  main-nav__link--apart" type="submit" name="submit" aria-label="Start searching" title="Start searching">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#search"></use></svg>
+            </button>
+          </div>
         </form>
       </div>
     </div>
