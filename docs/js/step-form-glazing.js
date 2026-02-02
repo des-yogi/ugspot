@@ -37,6 +37,43 @@
   const warningMessage = root.querySelector(".step-form__warning");
 
   // -------------------------
+  // Bootstrap confirm modal for removing unit
+  // (HTML already added by user: #confirmRemoveUnitModal)
+  // -------------------------
+  const confirmRemoveModalEl = document.getElementById("confirmRemoveUnitModal");
+  const confirmRemoveModal =
+    confirmRemoveModalEl && window.bootstrap
+      ? bootstrap.Modal.getOrCreateInstance(confirmRemoveModalEl)
+      : null;
+
+  let pendingRemoveUnitEl = null;
+
+  if (confirmRemoveModalEl) {
+    confirmRemoveModalEl.addEventListener("click", (e) => {
+      const okBtn = e.target.closest('[data-action="confirm-remove-unit"]');
+      if (!okBtn) return;
+
+      if (!pendingRemoveUnitEl) {
+        if (confirmRemoveModal) confirmRemoveModal.hide();
+        return;
+      }
+
+      if (unitsContainer.contains(pendingRemoveUnitEl)) {
+        pendingRemoveUnitEl.remove();
+        syncUnits();
+        updateSwiperHeight();
+      }
+
+      pendingRemoveUnitEl = null;
+      if (confirmRemoveModal) confirmRemoveModal.hide();
+    });
+
+    confirmRemoveModalEl.addEventListener("hidden.bs.modal", () => {
+      pendingRemoveUnitEl = null;
+    });
+  }
+
+  // -------------------------
   // Radio-card reliability fix (media-radiobtn + color-radio)
   // -------------------------
   (function initRadioCardPointerFix() {
@@ -57,7 +94,6 @@
       return radio;
     }
 
-    // capture: true — срабатываем раньше возможных обработчиков, "съедающих" событие
     root.addEventListener(
       "pointerdown",
       (e) => {
@@ -506,7 +542,6 @@
     // ADD
     const addBtn = e.target.closest('[data-action="add-unit"]');
     if (addBtn) {
-      // even if click lands on inner span, closest returns button; respect disabled
       if (addBtn.disabled) return;
 
       const currentUnit = e.target.closest(".step-form-glazing__unit");
@@ -551,7 +586,7 @@
       return;
     }
 
-    // REMOVE
+    // REMOVE (with confirmation modal)
     const removeBtn = e.target.closest('[data-action="remove-unit"]');
     if (removeBtn) {
       const unitEl = e.target.closest(".step-form-glazing__unit");
@@ -561,9 +596,19 @@
       if (units.length <= 1) return;
       if (!unitsContainer.contains(unitEl)) return;
 
-      unitEl.remove();
-      syncUnits();
-      updateSwiperHeight();
+      // If bootstrap modal is not available - fallback confirm()
+      if (!confirmRemoveModal) {
+        const ok = window.confirm("Remove this unit? This action cannot be undone.");
+        if (!ok) return;
+
+        unitEl.remove();
+        syncUnits();
+        updateSwiperHeight();
+        return;
+      }
+
+      pendingRemoveUnitEl = unitEl;
+      confirmRemoveModal.show();
       return;
     }
 

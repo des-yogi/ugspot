@@ -1,0 +1,28 @@
+<!--DEV
+@ @include('blocks/remove-modal/remove-modal.html')
+-->
+
+<!-- remove Unit confirm Modal -->
+<div class="modal fade  remove-modal" id="confirmRemoveUnitModal" tabindex="-1" aria-hidden="true" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Remove unit?</h4>
+        <button type="button" class="btn  btn--pale  btn-close  close" data-bs-dismiss="modal" aria-label="Close" title="Close modal"><span></span></button>
+      </div>
+
+      <div class="modal-body  remove-modal__body">
+        <p>This unit will be removed. This action cannot be undone!</p>
+      </div>
+
+      <div class="modal-footer  remove-modal__footer">
+        <button type="button" class="btn btn--pale" data-bs-dismiss="modal">
+          <span>Cancel</span>
+        </button>
+        <button type="button" class="btn" data-action="confirm-remove-unit">
+          <span>Remove</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
