@@ -15,6 +15,8 @@
 
   const form = root.closest("form") || root;
 
+  const MAX_QTY = 100;
+
   const swiper = new Swiper(swiperContainer, {
     speed: 400,
     slidesPerView: 1,
@@ -32,11 +34,58 @@
   const progressContainer = root.querySelector(".progress");
   const flagsContainer = root.querySelector(".progress__flags");
   const slideNum = root.querySelector(".progress__slide-num");
-  // шаг 1 пишет ошибки в unit-errors, но на шагах 2-3 оставляем общий контейнер
   const warningMessage = root.querySelector(".step-form__warning");
 
   // -------------------------
-  // Progress (как в старом скрипте)
+  // Radio-card reliability fix (media-radiobtn + color-radio)
+  // -------------------------
+  (function initRadioCardPointerFix() {
+    const CARD_SELECTORS = [".media-radiobtn__lbl", ".color-radio__lbl"].join(",");
+    const IGNORE_INSIDE_SELECTOR = "a, button";
+    const MIN_INTERVAL_MS = 50;
+    let lastTs = 0;
+
+    function findRadioForCard(card) {
+      let radio = card.querySelector('input[type="radio"]');
+      if (!radio && card.tagName === "LABEL") {
+        const id = card.getAttribute("for");
+        if (id) {
+          const maybe = document.getElementById(id);
+          if (maybe && maybe.type === "radio") radio = maybe;
+        }
+      }
+      return radio;
+    }
+
+    // capture: true — срабатываем раньше возможных обработчиков, "съедающих" событие
+    root.addEventListener(
+      "pointerdown",
+      (e) => {
+        const card = e.target.closest(CARD_SELECTORS);
+        if (!card) return;
+
+        if (e.target.closest(IGNORE_INSIDE_SELECTOR)) return;
+
+        const now = performance.now();
+        if (now - lastTs < MIN_INTERVAL_MS) return;
+        lastTs = now;
+
+        const radio = findRadioForCard(card);
+        if (!radio || radio.disabled) return;
+
+        e.preventDefault();
+
+        if (!radio.checked) {
+          radio.checked = true;
+          radio.dispatchEvent(new Event("change", { bubbles: true }));
+        }
+      },
+      true
+    );
+  })();
+
+  // -------------------------
+  // Progress
   // -------------------------
   function generateFlags() {
     if (!flagsContainer) return;
@@ -57,7 +106,7 @@
     if (!progressContainer || !car || !roadProgress || !flagsContainer) return;
 
     if (warningMessage) warningMessage.textContent = "";
-    root.querySelectorAll(".invalid").forEach(el => el.classList.remove("invalid"));
+    root.querySelectorAll(".invalid").forEach((el) => el.classList.remove("invalid"));
 
     const roadWidth = progressContainer.offsetWidth;
     const carWidth = car.offsetWidth;
@@ -91,9 +140,7 @@
       }
     }
 
-    if (slideNum) {
-      slideNum.textContent = `(Step ${currentStep} out of ${totalSlides})`;
-    }
+    if (slideNum) slideNum.textContent = `(Step ${currentStep} out of ${totalSlides})`;
   }
 
   function updateSwiperHeight() {
@@ -107,31 +154,26 @@
   // Helpers
   // -------------------------
   function getFieldLabel(el) {
-    // 1) fieldset legend/title — самый понятный label
     const fs = el.closest("fieldset");
     if (fs) {
       const legend = fs.querySelector("legend");
       if (legend) return legend.textContent.replace(/\*/g, "").trim();
-
       const title = fs.querySelector(".step-form__step-title");
       if (title) return title.textContent.replace(/\*/g, "").trim();
     }
 
-    // 2) field-text
     const fieldText = el.closest(".field-text");
     if (fieldText) {
       const n = fieldText.querySelector(".field-text__name");
       if (n) return n.textContent.trim();
     }
 
-    // 3) field-select
     const fieldSelect = el.closest(".field-select");
     if (fieldSelect) {
       const n = fieldSelect.querySelector(".field-select__name");
       if (n) return n.textContent.replace(/\*/g, "").trim();
     }
 
-    // 4) field-num
     const fieldNum = el.closest(".field-num");
     if (fieldNum) {
       const n = fieldNum.querySelector(".field-num__name");
@@ -147,7 +189,15 @@
   function attachNumericMmHandlers(scopeEl) {
     scopeEl.querySelectorAll("input[data-validate='number-mm']").forEach((input) => {
       input.addEventListener("keydown", function (e) {
-        const allowedControlKeys = ["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab", "Home", "End"];
+        const allowedControlKeys = [
+          "Backspace",
+          "Delete",
+          "ArrowLeft",
+          "ArrowRight",
+          "Tab",
+          "Home",
+          "End",
+        ];
         if (e.ctrlKey || e.metaKey) return;
 
         const key = e.key;
@@ -185,7 +235,7 @@
 
     const selects = scopeEl.querySelectorAll(".field-select__select");
     selects.forEach((item) => {
-      if (item.closest(".choices")) return; // already inited
+      if (item.closest(".choices")) return;
       new Choices(item, {
         searchEnabled: false,
         searchPlaceholderValue: "Search bar",
@@ -198,9 +248,7 @@
   // Lazy-bg hook (expects updated lazy-bg.js)
   // -------------------------
   function refreshLazyBg(scopeEl) {
-    if (typeof window.observeLazyLoad === "function") {
-      window.observeLazyLoad(scopeEl);
-    }
+    if (typeof window.observeLazyLoad === "function") window.observeLazyLoad(scopeEl);
   }
 
   // -------------------------
@@ -215,7 +263,6 @@
     const unitEl = fragment.querySelector(".step-form-glazing__unit");
     if (!unitEl) throw new Error("[step-form-glazing] Template must contain .step-form-glazing__unit root");
 
-    // reset values
     unitEl.querySelectorAll("input, textarea, select").forEach((el) => {
       if (el.type === "radio" || el.type === "checkbox") el.checked = false;
       else if (el.tagName === "SELECT") el.selectedIndex = 0;
@@ -223,13 +270,11 @@
       else el.value = "";
     });
 
-    unitEl.querySelectorAll(".invalid").forEach(el => el.classList.remove("invalid"));
+    unitEl.querySelectorAll(".invalid").forEach((el) => el.classList.remove("invalid"));
 
     attachNumericMmHandlers(unitEl);
     attachIntegerOnlyHandlers(unitEl);
     initChoices(unitEl);
-
-    // crucial: newly added bg elements must be observed
     refreshLazyBg(unitEl);
 
     return unitEl;
@@ -253,6 +298,11 @@
       const removeBtn = unitEl.querySelector('[data-action="remove-unit"]');
       if (removeBtn) removeBtn.disabled = units.length <= 1;
 
+      // Add is enabled ONLY on last unit
+      const addBtn = unitEl.querySelector('[data-action="add-unit"]');
+      const isLast = idx === units.length - 1;
+      if (addBtn) addBtn.disabled = !isLast;
+
       const addBtnText = unitEl.querySelector('[data-action="add-unit"] span');
       if (addBtnText) addBtnText.textContent = `Add unit type ${unitIndex + 1}`;
 
@@ -275,9 +325,7 @@
     const box = unitEl.querySelector(".step-form-glazing__unit-errors");
     if (!box) return;
 
-    box.innerHTML = messages.length
-      ? `<ul>${messages.map(m => `<li>${m}</li>`).join("")}</ul>`
-      : "";
+    box.innerHTML = messages.length ? `<ul>${messages.map((m) => `<li>${m}</li>`).join("")}</ul>` : "";
   }
 
   // -------------------------
@@ -287,10 +335,10 @@
     const radios = groupEl.querySelectorAll('input[type="radio"]');
     if (!radios.length) return [];
 
-    const isAnyChecked = Array.from(radios).some(r => r.checked);
+    const isAnyChecked = Array.from(radios).some((r) => r.checked);
     if (isAnyChecked) return [];
 
-    radios.forEach(r => r.classList.add("invalid"));
+    radios.forEach((r) => r.classList.add("invalid"));
 
     let title = groupEl.getAttribute("data-group-title");
     if (!title) {
@@ -319,9 +367,9 @@
       return [`${getFieldLabel(input)}: please enter a quantity greater than 0.`];
     }
 
-    if (n > 50) {
+    if (n > MAX_QTY) {
       input.classList.add("invalid");
-      return [`${getFieldLabel(input)}: maximum allowed is 50.`];
+      return [`${getFieldLabel(input)}: maximum allowed is ${MAX_QTY}.`];
     }
 
     return [];
@@ -368,7 +416,7 @@
 
   function validateStep(currentIndex) {
     if (warningMessage) warningMessage.textContent = "";
-    root.querySelectorAll(".invalid").forEach(el => el.classList.remove("invalid"));
+    root.querySelectorAll(".invalid").forEach((el) => el.classList.remove("invalid"));
 
     const slideEl = swiper.slides[currentIndex];
     if (!slideEl) return true;
@@ -397,7 +445,7 @@
       return ok;
     }
 
-    // STEP 2-3: required text/email/tel + one-of
+    // STEP 2-3
     const errors = [];
 
     slideEl.querySelectorAll("input:not(.novalidate), textarea:not(.novalidate)").forEach((input) => {
@@ -436,16 +484,16 @@
       const heading = fs.querySelector("h2,h3,h4,h5,h6,th,legend");
       const title = heading ? heading.textContent.trim() : "This section";
       const checkboxes = fs.querySelectorAll("input[type='checkbox']:not(.novalidate)");
-      const isAnyChecked = Array.from(checkboxes).some(cb => cb.checked);
+      const isAnyChecked = Array.from(checkboxes).some((cb) => cb.checked);
 
       if (!isAnyChecked) {
-        checkboxes.forEach(cb => cb.classList.add("invalid"));
+        checkboxes.forEach((cb) => cb.classList.add("invalid"));
         errors.push(`${title}: please select at least one option.`);
       }
     });
 
     if (errors.length && warningMessage) {
-      warningMessage.innerHTML = "<ul>" + errors.map(msg => `<li>${msg}</li>`).join("") + "</ul>";
+      warningMessage.innerHTML = "<ul>" + errors.map((msg) => `<li>${msg}</li>`).join("") + "</ul>";
     }
 
     return errors.length === 0;
@@ -455,11 +503,19 @@
   // Click delegation (ADD/REMOVE/+/-)
   // -------------------------
   root.addEventListener("click", (e) => {
-    // ADD: validate current unit, then insert new after it (inside container)
+    // ADD
     const addBtn = e.target.closest('[data-action="add-unit"]');
     if (addBtn) {
+      // even if click lands on inner span, closest returns button; respect disabled
+      if (addBtn.disabled) return;
+
       const currentUnit = e.target.closest(".step-form-glazing__unit");
       if (!currentUnit) return;
+
+      // hard guarantee: only last unit can add
+      const units = getUnits();
+      const lastUnit = units[units.length - 1];
+      if (currentUnit !== lastUnit) return;
 
       const r = validateUnit(currentUnit);
       updateSwiperHeight();
@@ -518,7 +574,7 @@
       const input = wrap ? wrap.querySelector(".field-num__input") : null;
       if (!input) return;
 
-      const max = input.max ? parseInt(input.max, 10) : 50;
+      const max = input.max ? parseInt(input.max, 10) : MAX_QTY;
       const cur = parseInt(input.value || "0", 10);
       const next = Math.min(max, (Number.isNaN(cur) ? 0 : cur) + 1);
       input.value = String(next);
@@ -540,35 +596,8 @@
     }
   });
 
-  // Надёжный выбор radio-карточек при быстрых кликах (desktop/touchpad)
-  // Используем pointerdown, чтобы отработать даже если click не случится.
-  (function initRadioCardPointerFix() {
-    let lastTs = 0;
-
-    root.addEventListener("pointerdown", (e) => {
-      const label = e.target.closest(".media-radiobtn__lbl");
-      if (!label) return;
-
-      // Простая защита от двойного срабатывания на очень быстрых кликах
-      const now = performance.now();
-      if (now - lastTs < 50) return;
-      lastTs = now;
-
-      const radio = label.querySelector('input[type="radio"]');
-      if (!radio) return;
-
-      // Не даём фокусу/selection прыгать по тексту
-      e.preventDefault();
-
-      if (!radio.checked) {
-        radio.checked = true;
-        radio.dispatchEvent(new Event("change", { bubbles: true }));
-      }
-    });
-  })();
-
   // -------------------------
-  // Focus + navigation (как в старом)
+  // Focus + navigation
   // -------------------------
   function focusFieldInSlide(slideIndex, toFirstField = true) {
     const slideEl = swiper.slides[slideIndex];
@@ -632,13 +661,11 @@
   // -------------------------
   generateFlags();
 
-  // create first unit
   if (getUnits().length === 0) {
     const firstUnit = createUnitFromTemplate();
     unitsContainer.appendChild(firstUnit);
   }
 
-  // init for existing DOM
   attachNumericMmHandlers(root);
   attachIntegerOnlyHandlers(root);
   initChoices(root);
@@ -648,4 +675,3 @@
   updateProgress();
   updateSwiperHeight();
 })();
-

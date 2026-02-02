@@ -9,6 +9,29 @@
   &__header {
     align-items: center;
   }
+
+  &__input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    button {
+      position: absolute;
+      top: 50%;
+      right: 2px;
+      transform: translateY(-50%);
+      //flex: 0 0 56px;
+      height: 54px;
+      width: 54px;
+      //padding: 0;
+      border: 1px solid transparent;
+      border-radius: $border-radius;
+    }
+
+    .field-text {
+      flex: 1;
+    }
+  }
 }
 
 .mm-wrapper:has(.page-header--slideUp) {
