@@ -1,0 +1,13 @@
+.remove-modal {
+  $block-name:                &; // #{$block-name}__element
+
+  &__body {
+    font-weight: 500;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0 40px;
+  }
+}

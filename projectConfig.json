@@ -108,7 +108,8 @@
     "smarter-roof": [],
     "header-animation": [],
     "search-modal": [],
-    "step-form-glazing": []
+    "step-form-glazing": [],
+    "remove-modal": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
