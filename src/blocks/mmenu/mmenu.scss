@@ -131,3 +131,6 @@
   border-top: none;
 }
 
+.mm-menu--position-left-front {
+  --mm-translate-horizontal: calc(-100% - 2px);
+}
